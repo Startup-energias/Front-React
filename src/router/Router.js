@@ -7,7 +7,7 @@ const HelpNow = lazy(() => import('../views/HelpNow'));
 const indexRouter = () => (
   <BrowserRouter>
     <Suspense fallback={<div>Loading...</div>}>
-      <Switch >
+      <Switch>
         <Route path="/help" component={HelpNow} />
         <Route path="/" component={Index} />
       </Switch>
