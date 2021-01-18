@@ -23,7 +23,7 @@ function HowWorks() {
       content:
         'His room, a proper human room although a little too small, lay peacefully between its four familiar',
       icon: 'heart',
-    },
+    }
   ]);
 
   let renderSteps = () => {
