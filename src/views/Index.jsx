@@ -1,6 +1,6 @@
 import InfoSection from '../components/InfoSection';
 import HowWorks from '../components/HowWorks';
-//import ProjectsList from '../components/ProjectsList';
+import ProjectsList from '../components/ProjectsList';
 import '../assets/scss/06_pages/index.scss';
 
 function Index() {
@@ -8,6 +8,7 @@ function Index() {
     <div className="index has-background-white">
       <InfoSection />
       <HowWorks />
+      <ProjectsList />
     </div>
   );
 }

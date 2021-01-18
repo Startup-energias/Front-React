@@ -28,9 +28,9 @@ function HowWorks() {
 
   let renderSteps = () => {
     return steps.map((item) => (
-      <div className="column" key={item.title}>
+      <div className="column is-one-third-widescreen" key={item.title}>
         <div className="card">
-          <div className="column container is-one-quarter">
+          <div className="column container is-one-third-widescreen">
             <div className="box has-background-primary">
               <FontAwesomeIcon icon={item.icon} size="2x" color="white" />
             </div>
@@ -51,7 +51,7 @@ function HowWorks() {
       <div className="container  has-text-centered">
         <h2 className="title is-2">HOW IT WORKS</h2>
         &nbsp;
-        <div className="columns mx-3">{renderSteps()}</div>
+        <div className="columns is-multiline mx-3">{renderSteps()}</div>
       </div>
     </section>
   );
