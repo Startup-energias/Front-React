@@ -37,9 +37,8 @@ function HowWorks() {
           </div>
           <div className="card-content">
             <div className="media">
-              <p className="title is-4">{item.title}</p>
+              <p className="title is-4 has-text-primary-dark">{item.title}</p>
             </div>
-
             <div className="content">{item.content}</div>
           </div>
         </div>
@@ -48,11 +47,13 @@ function HowWorks() {
   };
 
   return (
-    <div className="container my-5 has-text-centered">
-      <h2 className="title is-2">HOW IT WORKS</h2>
-      &nbsp;
-      <div className="columns mx-3">{renderSteps()}</div>
-    </div>
+    <section className="section my-5">
+      <div className="container  has-text-centered">
+        <h2 className="title is-2">HOW IT WORKS</h2>
+        &nbsp;
+        <div className="columns mx-3">{renderSteps()}</div>
+      </div>
+    </section>
   );
 }
 
