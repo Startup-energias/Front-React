@@ -47,8 +47,8 @@ function HowWorks() {
   };
 
   return (
-    <section className="section my-5">
-      <div className="container  has-text-centered">
+    <section className="section has-background-light mb-5">
+      <div className="container has-text-centered">
         <h2 className="title is-2">HOW IT WORKS</h2>
         &nbsp;
         <div className="columns is-multiline mx-3">{renderSteps()}</div>

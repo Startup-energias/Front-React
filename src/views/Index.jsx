@@ -1,6 +1,7 @@
 import InfoSection from '../components/InfoSection';
 import HowWorks from '../components/HowWorks';
 import ProjectsList from '../components/ProjectsList';
+import HomeFooter from '../components/HomeFooter';
 import '../assets/scss/06_pages/index.scss';
 
 function Index() {
@@ -9,6 +10,7 @@ function Index() {
       <InfoSection />
       <HowWorks />
       <ProjectsList />
+      <HomeFooter />
     </div>
   );
 }
