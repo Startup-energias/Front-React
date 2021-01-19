@@ -23,16 +23,13 @@ function Navbar() {
           <a href="a.com" className="navbar-item">
             Home
           </a>
-
           <a href="a.com" className="navbar-item">
             Documentation
           </a>
-
           <div className="navbar-item has-dropdown is-hoverable">
             <a href="a.com" className="navbar-link">
               More
             </a>
-
             <div className="navbar-dropdown">
               <a href="a.com" className="navbar-item">
                 About
@@ -50,7 +47,6 @@ function Navbar() {
             </div>
           </div>
         </div>
-
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
