@@ -1,9 +1,11 @@
-function Navbar() {
+import LogoDefault from '../assets/images/logo.png';
+
+function Navbar({ items, logo }) {
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar py-2 is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="https://bulma.io">
-          <img alt="hol" src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+          <img alt="iKonnekta logo" src={logo || LogoDefault} width="112" height="28" />
         </a>
         <a
           href="a.com"
@@ -20,31 +22,15 @@ function Navbar() {
       </div>
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a href="a.com" className="navbar-item">
-            Home
-          </a>
-          <a href="a.com" className="navbar-item">
-            Documentation
-          </a>
-          <div className="navbar-item has-dropdown is-hoverable">
-            <a href="a.com" className="navbar-link">
-              More
+          {items.map((e) => (
+            <a key={e} href={`#${e}`} className="navbar-item">
+              {e}
             </a>
-            <div className="navbar-dropdown">
-              <a href="a.com" className="navbar-item">
-                About
-              </a>
-              <a href="a.com" className="navbar-item">
-                Jobs
-              </a>
-              <a href="a.com" className="navbar-item">
-                Contact
-              </a>
-              <hr className="navbar-divider"></hr>
-              <a href="a.com" className="navbar-item">
-                Report an issue
-              </a>
-            </div>
+          ))}
+          <div className="buttons ml-5">
+            <a href="a.com" className="button is-info">
+              <strong>Help now</strong>
+            </a>
           </div>
         </div>
         <div className="navbar-end">
