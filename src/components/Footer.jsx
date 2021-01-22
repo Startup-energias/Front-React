@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function HomeFooter() {
+function Footer() {
   let [socialMedia] = useState(['twitter', 'facebook', 'instagram', 'linkedin', 'pinterest']);
   let [rentals] = useState(['Rooms', 'Map on top', 'Side map', 'No map', 'Room detail']);
   let [pages] = useState(['Comparison', 'Team', 'Contact']);
@@ -36,22 +36,23 @@ function HomeFooter() {
     <footer className="footer has-background-grey-lighter">
       <div className="columns is-multiline mx-6">
         <div className="column is-half-desktop is-one-quarter-widescreen">
-          <h5 className="title is-5">Directory</h5>
+          <h5 className="title is-5">DIRECTORY</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-          &nbsp;
-          <RenderSocialMedia />
+          <div className="content mt-3">
+            <RenderSocialMedia />
+          </div>
         </div>
 
         <div className="column is-half-desktop is-one-quarter-widescreen">
-          <RenderFullList list={rentals} title="Rentals" />
+          <RenderFullList list={rentals} title="RENTALS" />
         </div>
 
         <div className="column is-half-desktop is-one-quarter-widescreen">
-          <RenderFullList list={pages} title="Pages" />
+          <RenderFullList list={pages} title="PAGES" />
         </div>
 
         <div className="column is-half-desktop is-one-quarter-widescreen">
-          <RenderFullList list={rentals} title="Rentals" />
+          <RenderFullList list={rentals} title="RENTALS" />
         </div>
       
       </div>
@@ -59,4 +60,4 @@ function HomeFooter() {
   );
 }
 
-export default HomeFooter;
+export default Footer;

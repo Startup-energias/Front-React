@@ -31,13 +31,13 @@ function HowWorks() {
       <div className="column is-one-third-widescreen" key={item.title}>
         <div className="card">
           <div className="column container is-one-third-widescreen">
-            <div className="box has-background-primary">
+            <div className="box has-background-info">
               <FontAwesomeIcon icon={item.icon} size="2x" color="white" />
             </div>
           </div>
           <div className="card-content">
             <div className="media">
-              <p className="title is-4 has-text-primary-dark">{item.title}</p>
+              <p className="title is-4 has-text-info-dark">{item.title}</p>
             </div>
             <div className="content">{item.content}</div>
           </div>

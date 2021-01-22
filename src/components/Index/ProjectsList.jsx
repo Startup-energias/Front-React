@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import LinesEllipsis from 'react-lines-ellipsis';
-import image1 from '../assets/images/Projects/Img1.jpg';
+import image1 from '../../assets/images/Projects/Img1.jpg';
 
 function ProjectsList() {
   let [projects] = useState([
@@ -58,7 +59,7 @@ function ProjectsList() {
             <div className="media">
               <div className="media-content">
                 <p className="subtitle has-text-grey-light mt-1 is-5">{item.category}</p>
-                <p className="title is-5">{item.name}</p>
+                <p className="title is-5"><Link to='/projects'>{item.name}</Link></p>
               </div>
             </div>
             <div className="content">
@@ -79,7 +80,7 @@ function ProjectsList() {
   };
 
   return (
-    <section className="section my-5 has-background-light">
+    <section className="section my-5">
       <div className="container">
         <p className="subtitle is-4 has-text-primary-dark">
           PROJECTS AND INICIATIVES FROM COLOMBIA
