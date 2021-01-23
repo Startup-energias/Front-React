@@ -4,10 +4,11 @@ import Navbar from './components/Navbar';
 import Router from './router/Router';
 import 'font-awesome/css/font-awesome.css';
 import './assets/scss/01_vendors/_bulma.scss';
+import { indexItems } from './helpers/constants/navbarItems';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
+    <Navbar items={indexItems} />
     <Router />
   </React.StrictMode>,
   document.getElementById('root'),
