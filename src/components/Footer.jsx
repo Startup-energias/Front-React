@@ -24,7 +24,7 @@ function Footer() {
 
     return(
       <div className="content">
-        <h5 className="title is-5">{title}</h5>
+        <h5 className="title is-5 is-family-monospace">{title}</h5>
           <ul>
             {listObjects}
           </ul>
@@ -34,28 +34,33 @@ function Footer() {
 
   return (
     <footer className="footer has-background-grey-lighter">
-      <div className="columns is-multiline mx-6">
-        <div className="column is-half-desktop is-one-quarter-widescreen">
-          <h5 className="title is-5">DIRECTORY</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-          <div className="content mt-3">
-            <RenderSocialMedia />
+        <div className="container">
+          <div className="columns is-multiline mx-6 mt-4">
+            <div className="column is-half-desktop is-one-quarter-widescreen">
+              <h5 className="title is-5 is-family-monospace">DIRECTORY</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+              <div className="content mt-3">
+                <RenderSocialMedia />
+              </div>
+            </div>
+
+            <div className="column is-half-desktop is-one-quarter-widescreen">
+              <RenderFullList list={rentals} title="RENTALS" />
+            </div>
+
+            <div className="column is-half-desktop is-one-quarter-widescreen">
+              <RenderFullList list={pages} title="PAGES" />
+            </div>
+
+            <div className="column is-half-desktop is-one-quarter-widescreen">
+              <RenderFullList list={rentals} title="RENTALS" />
+            </div>
+          
           </div>
         </div>
 
-        <div className="column is-half-desktop is-one-quarter-widescreen">
-          <RenderFullList list={rentals} title="RENTALS" />
-        </div>
-
-        <div className="column is-half-desktop is-one-quarter-widescreen">
-          <RenderFullList list={pages} title="PAGES" />
-        </div>
-
-        <div className="column is-half-desktop is-one-quarter-widescreen">
-          <RenderFullList list={rentals} title="RENTALS" />
-        </div>
       
-      </div>
+      
     </footer>
   );
 }

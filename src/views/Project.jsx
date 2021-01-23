@@ -16,6 +16,7 @@ import '../assets/scss/06_pages/project.scss';
 function Project() {
   let [project] = useState({
     id: 1,
+    supporting: 79,
     content: {
       category: 'Solar',
       name: 'Access to drink water: seawater desalination unit powered with solar energy.',
@@ -68,7 +69,7 @@ function Project() {
 
   return (
     <div className="has-background-white">
-      <div className="container">
+      <div className="container mb-6 pb-3">
         <div className="columns is-desktop is-8 mt-6 mx-6">
           <div className="column is-8">
 
@@ -93,6 +94,11 @@ function Project() {
                   </select>
                 </div>
               </div>
+              <div className="container mt-5">
+                <button className="button is-fullwidth is-primary is-family-monospace">SUPPORT NOW</button>
+                <p className="mt-3 has-text-grey has-text-centered">{project.supporting} people are supporting this project</p>
+              </div>
+
             </div>
           </div>
         </div>
