@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMap, faHandHoldingUsd, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faHandHoldingUsd, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faMap, faHandHoldingUsd, faHeart);
+library.add(faSearch, faHandHoldingUsd, faHeart);
 
 function HowWorks() {
   let [steps] = useState([
     {
       title: 'Find the project(s) you want to support.',
       content: 'Chose the projects you want to help',
-      icon: 'map',
+      icon: 'search',
     },
     {
       title: 'Choose the way you want to help: either money or knowledge.',
@@ -29,19 +29,15 @@ function HowWorks() {
   let renderSteps = () => {
     return steps.map((item) => (
       <div className="column is-one-third-widescreen" key={item.title}>
-        <div className="card">
-          <div className="column container is-one-third-widescreen">
-            <div className="box has-background-info">
-              <FontAwesomeIcon icon={item.icon} size="2x" color="white" />
-            </div>
-          </div>
-          <div className="card-content">
-            <div className="media">
-              <p className="title is-4 has-text-info-dark">{item.title}</p>
-            </div>
-            <div className="content">{item.content}</div>
+        
+        <div className="circleContainer is-flex is-justify-content-center">
+          <div className="circle has-background-primary-light has-text-primary-dark is-align-items-center is-justify-content-center is-flex ">
+            <FontAwesomeIcon icon={item.icon} size="2x" />
           </div>
         </div>
+        
+        <p className="title is-4 has-text-primary-dark mt-4">{item.title}</p>
+        <div className="has-text-grey">{item.content}</div>
       </div>
     ));
   };
@@ -49,9 +45,8 @@ function HowWorks() {
   return (
     <section className="section has-background-light mb-5">
       <div className="container has-text-centered">
-        <h2 className="title is-2">HOW IT WORKS</h2>
-        &nbsp;
-        <div className="columns is-multiline mx-3">{renderSteps()}</div>
+        <h2 className="title is-2 mb-6">HOW IT WORKS</h2>
+        <div className="columns is-multiline is-8 mx-6">{renderSteps()}</div>
       </div>
     </section>
   );

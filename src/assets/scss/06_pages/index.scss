@@ -5,3 +5,12 @@
 .card {
   height: 100%;
 }
+
+.circleContainer{
+  width: 100%;
+  .circle {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+  }
+}
