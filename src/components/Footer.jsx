@@ -4,36 +4,34 @@ function Footer() {
   let [socialMedia] = useState(['twitter', 'facebook', 'instagram', 'linkedin', 'pinterest']);
   let [rentals] = useState(['Rooms', 'Map on top', 'Side map', 'No map', 'Room detail']);
   let [pages] = useState(['Comparison', 'Team', 'Contact']);
+  let [payments] = useState(['cc-mastercard', 'cc-visa', 'cc-paypal']);
 
   function RenderSocialMedia() {
     return socialMedia.map((item) => (
-        <span className="icon-text" key={item}>
-          <span className="icon">
-            <i className={'fa fa-'+item}></i>
-          </span>
+      <span className="icon-text" key={item}>
+        <span className="icon">
+          <i className={'fa fa-' + item}></i>
         </span>
+      </span>
     ));
   }
 
-  function RenderFullList({list, title}){
+  function RenderFullList({ list, title }) {
     const listObjects = list.map((item) => {
-      return(
-        <li key={item}>{item}</li>
-      );
+      return <li key={item}>{item}</li>;
     });
 
-    return(
+    return (
       <div className="content">
         <h5 className="title is-5 is-family-monospace">{title}</h5>
-          <ul>
-            {listObjects}
-          </ul>
+        <ul>{listObjects}</ul>
       </div>
     );
   }
 
   return (
-    <footer className="footer has-background-grey-lighter">
+    <footer className="footer has-background-grey-lighter p-0">
+      <div className="py-5">
         <div className="container">
           <div className="columns is-multiline mx-6 mt-4">
             <div className="column is-half-desktop is-one-quarter-widescreen">
@@ -55,12 +53,27 @@ function Footer() {
             <div className="column is-half-desktop is-one-quarter-widescreen">
               <RenderFullList list={rentals} title="RENTALS" />
             </div>
-          
           </div>
         </div>
-
-      
-      
+      </div>
+      <div className="has-background-black has-text-white">
+        <div className="container py-5">
+          <nav className="level">
+            <div className="level-left">
+              <div className="level-item">
+                <p>© 2020, Your company. All rights reserved.</p>
+              </div>
+            </div>
+            <div className="level-right">
+              {payments.map((item) => (
+                  <span className="icon" key={item}>
+                    <i className={'fa fa-' + item}></i>
+                  </span>
+              ))}
+            </div>
+          </nav>
+        </div>
+      </div>
     </footer>
   );
 }

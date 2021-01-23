@@ -44,19 +44,19 @@ function ProjectInfo(props) {
 
     return(
         <div className="content">
-            <h5 className="subtitle is-5 has-text-success">
-              <FontAwesomeIcon icon={faMapMarkerAlt} /> {props.info.location}
-            </h5>
-            <h2 className="title is-2 has-text-primary-dark is-spaced mt-1">{props.info.name}</h2>
-            <h5 className="subtitle is-5 has-text-info-dark">{props.info.category}</h5>
-            <div className="content">
-              <RenderCaracteristics list={props.info.caracteristics} />
-            </div>
-            <p className="has-text-grey">{props.info.description}</p>
-            <hr />
+          <h5 className="subtitle is-5 has-text-success">
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> {props.info.location}
+          </h5>
+          <h2 className="title is-2 has-text-primary-dark is-spaced mt-1">{props.info.name}</h2>
+          <h5 className="subtitle is-5 has-text-grey is-uppercase">{props.info.category}</h5>
+          <div className="content">
+            <RenderCaracteristics list={props.info.caracteristics} />
+          </div>
+          <p className="has-text-grey">{props.info.description}</p>
+          <hr />
 
-            <h4 className="title is-4 has-text-primary-dark is-spaced">Gallery</h4>
-            <RenderGallery list = {props.info.images}/>
+          <h4 className="title is-4 has-text-primary-dark is-spaced">Gallery</h4>
+          <RenderGallery list = {props.info.images}/>
         </div>
     );
 }

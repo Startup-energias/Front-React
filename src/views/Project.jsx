@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Iframe from 'react-iframe';
+
 import Footer from '../components/Footer';
 import ProjectInfo from '../components/Project/ProjectInfo';
 import ProjectTeam from '../components/Project/ProjectTeam';
@@ -68,41 +70,52 @@ function Project() {
   });
 
   return (
-    <div className="has-background-white">
-      <div className="container mb-6 pb-3">
-        <div className="columns is-desktop is-8 mt-6 mx-6">
-          <div className="column is-8">
+    <div className="content has-background-white">
+      <section className="project">
+        <div className="container mb-6 pb-3">
+          <div className="columns is-desktop is-8 mt-4 mx-6">
+            <div className="column is-8">
 
-            <ProjectInfo info={project.content} />
-            <ProjectTeam team={project.team} />
-
-          </div>
-          <div className="column">
-            <div className="box sticky-top px-5">
-              <p>
-                <span className="is-size-3 has-text-primary-dark has-text-weight-bold">$5 </span>
-                or more per month, or help with expertise
-              </p>
+              <ProjectInfo info={project.content} />
+              <ProjectTeam team={project.team} />
               <hr />
+              <div className="">
+                <h3 className="title is-3">Project Location</h3>
 
-              <p className="is-size-6 mb-2">TYPE OF SUPPORT *</p>
-              <div className="control">
-                <div className="select is-fullwidth">
-                  <select>
-                    <option>Support with cash</option>
-                    <option>Support with knowledge</option>
-                  </select>
+                <div className="map-wrapper-300 mb-3">
+                  <Iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002303.1909407254!2d-73.51029478988822!3d11.425797455703325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8b8914627238ff%3A0x22e6d8831a7d9716!2sLa%20Guajira%2C%20Colombia!5e0!3m2!1sen!2sch!4v1603451522243!5m2!1sen!2sch" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></Iframe>
                 </div>
-              </div>
-              <div className="container mt-5">
-                <button className="button is-fullwidth is-primary is-family-monospace">SUPPORT NOW</button>
-                <p className="mt-3 has-text-grey has-text-centered">{project.supporting} people are supporting this project</p>
               </div>
 
             </div>
+            <div className="column">
+              <div className="box sticky-top px-5">
+                <p>
+                  <span className="is-size-3 has-text-primary-dark has-text-weight-bold">$5 </span>
+                  or more per month, or help with expertise
+                </p>
+                <hr />
+
+                <p className="is-size-6 mb-2">TYPE OF SUPPORT *</p>
+                <div className="control">
+                  <div className="select is-fullwidth">
+                    <select>
+                      <option>Support with cash</option>
+                      <option>Support with knowledge</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="container mt-5">
+                  <button className="button is-fullwidth is-primary is-family-monospace">SUPPORT NOW</button>
+                  <p className="mt-3 has-text-grey has-text-centered">{project.supporting} people are supporting this project</p>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      
 
       <Footer />
     </div>
