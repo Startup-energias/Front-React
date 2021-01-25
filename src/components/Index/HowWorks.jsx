@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { FormattedMessage } from "react-intl";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faHandHoldingUsd, faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -47,11 +46,7 @@ function HowWorks() {
     <section className="section" id="How it works">
       <div className="container has-text-centered">
         <h1 className="title is-2 mb-6 is-uppercase has-text-primary">
-          <FormattedMessage
-            id="howworks.title"
-            defaultMessage="How it works"
-            values={{ what: "react-intl" }}
-          />
+          How it works
         </h1>
         <div className="columns is-multiline is-8 mx-6 mb-2">{renderSteps()}</div>
       </div>

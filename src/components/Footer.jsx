@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Footer({selector}) {
+function Footer() {
   let [socialMedia] = useState(['twitter', 'facebook', 'instagram', 'linkedin', 'pinterest']);
   let [rentals] = useState(['Rooms', 'Map on top', 'Side map', 'No map', 'Room detail']);
   let [pages] = useState(['Comparison', 'Team', 'Contact']);
@@ -64,7 +64,6 @@ function Footer({selector}) {
               </div>
             </div>
             <div className="level-right">
-              {selector()}
             </div>
           </nav>
         </div>

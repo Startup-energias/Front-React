@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './components/Navbar';
@@ -19,6 +20,7 @@ const messages = {
 const defaultLocale = localStorage['locale'] ? localStorage['locale'] : 'en';
 
 const App = () => {
+  localStorage.clear();
   const [currentLocale, setCurrentLocale] = useState(defaultLocale);
 
   const onChangeLanguage = (e) => {
@@ -28,8 +30,8 @@ const App = () => {
   }
 
   const localeList = [
-    { name: 'English', code: 'en', lang: 'English' },
-    { name: 'Español', code: 'es', lang: 'Spanish' }
+    { name: 'English', code: 'en', lang: 'English'},
+    { name: 'Español', code: 'es', lang: 'Spanish'}
   ];
 
   let LangSelector = () => {
@@ -49,7 +51,7 @@ const App = () => {
       <React.StrictMode>
         <Navbar items={indexItems} />
         <Router />
-        <Footer selector={LangSelector} />
+        <Footer />
       </React.StrictMode>
     </IntlProvider>
   );
@@ -58,5 +60,11 @@ const App = () => {
 ReactDOM.render(
   <App />, document.getElementById('root'),
 );
+
+var dropdown = document.querySelector('.dropdown');
+  dropdown.addEventListener('click', function(event) {
+    event.stopPropagation();
+    dropdown.classList.toggle('is-active');
+  });
 
 

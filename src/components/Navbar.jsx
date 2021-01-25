@@ -22,6 +22,26 @@ function Navbar({ items, logo }) {
       </div>
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
+          <div className="navbar-item">
+            <div className="dropdown">
+              <div className="dropdown-trigger">
+                <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span>EN/ES</span>
+                  <span className="icon is-small">
+                    <i className="fa fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div className="dropdown-menu" id="dropdown-menu" role="menu">
+                <a href="#Home" className="dropdown-item is-active">
+                  English
+                </a>
+                <a href="#Home" className="dropdown-item">
+                  Español
+                </a>
+              </div>
+            </div>
+          </div>
           {items.map((e) => (
             <a key={e} href={`#${e}`} className="navbar-item">
               {e}
