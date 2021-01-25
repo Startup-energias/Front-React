@@ -1,9 +1,24 @@
+@import '../02_base/colors';
+@import '../_mixins/custom';
+
 section h1{
   margin-top: 60px
 }
 
 .card {
   height: 100%;
+}
+
+.filler_card1{
+  @include flexCenterOpacity(0.5);
+}
+
+.filler_card2{
+  @include flexCenterOpacity(0.3);
+}
+
+.filler_card3{
+  @include flexCenterOpacity(0.1);
 }
 
 .circleContainer{
@@ -13,4 +28,16 @@ section h1{
     height: 70px;
     width: 70px;
   }
+}
+
+.link {
+  color: $info 
+}
+
+.bigger {
+  font-size: 450%;
+}
+
+.big {
+  font-size: 375%;
 }

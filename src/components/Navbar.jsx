@@ -1,23 +1,14 @@
 import LogoDefault from '../assets/images/logo.png';
+import '../assets/scss/_navbar.scss';
 
 function Navbar({ items, logo }) {
+  const langs = ['English', 'Español'];
+  
   return (
-    <nav className="navbar py-2 is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-dark is-fixed-top py-2" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="https://bulma.io">
-          <img alt="iKonnekta logo" src={logo || LogoDefault} width="112" height="28" />
-        </a>
-        <a
-          href="a.com"
-          role="button"
-          className="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-          data-target="navbarBasicExample"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+          <img alt="iKonnekta logo" src={logo || LogoDefault} />
         </a>
       </div>
       <div id="navbarBasicExample" className="navbar-menu">
@@ -25,33 +16,28 @@ function Navbar({ items, logo }) {
           <div className="navbar-item">
             <div className="dropdown">
               <div className="dropdown-trigger">
-                <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                  <span>EN/ES</span>
+                <button className="button is-info is-small" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span><strong>EN/ES</strong></span>
                   <span className="icon is-small">
                     <i className="fa fa-angle-down" aria-hidden="true"></i>
                   </span>
                 </button>
               </div>
-              <div className="dropdown-menu" id="dropdown-menu" role="menu">
+              <div className="dropdown-menu has-background-info-light has-text-dark" id="dropdown-menu" role="menu">
                 <a href="#Home" className="dropdown-item is-active">
-                  English
+                  {langs[0]}
                 </a>
                 <a href="#Home" className="dropdown-item">
-                  Español
+                  {langs[1]}
                 </a>
               </div>
             </div>
           </div>
           {items.map((e) => (
-            <a key={e} href={`#${e}`} className="navbar-item">
+            <a key={e} href={`#${e}`} className="navbar-item has-text-primary">
               {e}
             </a>
           ))}
-          <div className="buttons ml-5">
-            <a href="a.com" className="button is-info">
-              <strong>Help now</strong>
-            </a>
-          </div>
         </div>
         <div className="navbar-end">
           <div className="navbar-item">

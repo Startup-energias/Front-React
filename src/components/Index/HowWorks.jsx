@@ -43,7 +43,7 @@ function HowWorks() {
   };
 
   return (
-    <section className="section" id="How it works">
+    <section className="section has-background-dark" id="How it works">
       <div className="container has-text-centered">
         <h1 className="title is-2 mb-6 is-uppercase has-text-primary">
           How it works

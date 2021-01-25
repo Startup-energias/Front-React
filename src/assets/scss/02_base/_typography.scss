@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'finador';
+    src: url(../../typo/Finador/Finador-Regular.ttf);
+    font-style: normal
+}
+@font-face {
+    font-family: 'finador-black';
+    src: url(../../typo/Finador/Finador-Black.ttf);
+    font-style: normal
+}
+
+$family-serif: finador;
+$family-primary: $family-serif;
+$family-secondary: finador-black;
+
+.title, .subtitle{
+    font-family: $family-secondary;
+}

@@ -1,46 +1,19 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import LinesEllipsis from 'react-lines-ellipsis';
 import image1 from '../../assets/images/Projects/Img1.jpg';
 
 function ProjectsList() {
+  const soon = ['1','2','3'];
   let [projects] = useState([
     {
       id: 1,
       category: 'Solar',
       name: 'Access to drink water: seawater desalination unit powered with solar energy.',
       description:
-        'Still in XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area with deforestation, mining exploitation, and disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea, and presence of groundwater) make it possible to develop an environmental friendly solution: a seawater desalination unit powered with solar energy. This portable unit would transform 150 L of salt water into drinking water on a daily basis, supplying a community of 20 people. Help us raise the money to make this project come true! #DrinkingWaterForAll.',
-      date: new Date(2016, 1, 16).toLocaleString(),
+        'Sea for Change is a humanitarian project thought and designed by a team of interdisciplinary young minds who seek to bring water to the communities that need it most. Even in the XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area that suffers from deforestation, mining exploitation and the disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea and the presence of groundwater) allow the development of an environmentally friendly solution using solar energy. We want to provide drinking water as soon as possible to the Wayuus, an indigenous community in the area that has suffered from a shortage of drinking water for more than 40 years. We created an innovative portable machine that uses solar energy to desalinate and treat sea, groundwater or surface reservoir water. It\'s attractive in terms of cost, design, versatility, and of course portability. The unit has the capacity to provide drinking water to more than 30 people, equivalent to a minimum of 150 liters per day. We have designed the machine’s first version and it is ready to be built, tested and optimized. We will use the funds raised to finance the construction and testing of our prototype. Join Sea for Change as an investor or team member. After building our prototype and doing field tests this year (2021), we hope to scale our business in 2022. Our goal is to mass produce our desalinators in an economically, socially and environmentally sustainable manner. We believe in the power of solidarity, technology and collaboration as engines of progress in societies. Help us and be an active entity of change! #PotableWaterForAll. ',
+      team_name: 'Sea for Change',
       image: image1,
-    },
-    {
-      id: 2,
-      category: 'Solar',
-      name: 'Access to drink water: seawater desalination unit powered with solar energy.',
-      description:
-        'Still in XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area with deforestation, mining exploitation, and disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea, and presence of groundwater) make it possible to develop an environmental friendly solution: a seawater desalination unit powered with solar energy. This portable unit would transform 150 L of salt water into drinking water on a daily basis, supplying a community of 20 people. Help us raise the money to make this project come true! #DrinkingWaterForAll.',
-      date: new Date(2016, 1, 16).toLocaleString(),
-      image: image1,
-    },
-    {
-      id: 3,
-      category: 'Solar',
-      name: 'Access to drink water: seawater desalination unit powered with solar energy.',
-      description:
-        'Still in XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area with deforestation, mining exploitation, and disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea, and presence of groundwater) make it possible to develop an environmental friendly solution: a seawater desalination unit powered with solar energy. This portable unit would transform 150 L of salt water into drinking water on a daily basis, supplying a community of 20 people. Help us raise the money to make this project come true! #DrinkingWaterForAll.',
-      date: new Date(2016, 1, 16).toLocaleString(),
-      image: image1,
-    },
-    {
-      id: 4,
-      category: 'Solar',
-      name: 'Access to drink water: seawater desalination unit powered with solar energy.',
-      description:
-        'Still in XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area with deforestation, mining exploitation, and disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea, and presence of groundwater) make it possible to develop an environmental friendly solution: a seawater desalination unit powered with solar energy. This portable unit would transform 150 L of salt water into drinking water on a daily basis, supplying a community of 20 people. Help us raise the money to make this project come true! #DrinkingWaterForAll.',
-      date: new Date(2016, 1, 16).toLocaleString(),
-      image: image1,
-    },
+    }
   ]);
 
   let renderProjects = () => {
@@ -58,8 +31,9 @@ function ProjectsList() {
           <div className="card-content ">
             <div className="media">
               <div className="media-content">
-                <p className="subtitle has-text-grey-light mt-1 is-5">{item.category}</p>
-                <p className="title is-5"><Link to='/projects'>{item.name}</Link></p>
+                <p className="subtitle is-5 has-text-grey-light mt-1 is-5 is-spaced">{item.category}</p>
+                <h2 className="title is-4 has-text-primary-dark">{item.team_name}</h2>
+                <h3 className="subtitle is-5"><a className="link" href='/projects'>{item.name}</a></h3>
               </div>
             </div>
             <div className="content">
@@ -70,8 +44,7 @@ function ProjectsList() {
                 trimRight
                 basedOn="letters"
               />
-              <p className="title is-6 mt-2">{item.date}</p>
-              <button className="button is-primary is-light mt-2">Donate Now</button>
+              <button className="button is-info is-light mt-2">Donate Now</button>
             </div>
           </div>
         </div>
@@ -80,14 +53,25 @@ function ProjectsList() {
   };
 
   return (
-    <section className="section has-background-light projectsListSection py-6" id="Projects">
+    <section className="section has-background-white projectsListSection py-6" id="Projects">
       <div className="container">
-        <h1 className="subtitle is-4 has-text-primary-dark">
-          PROJECTS AND INICIATIVES FROM COLOMBIA
+        <h1 className="title bigger has-text-info-dark">
+          Inverte Proyects
         </h1>
-        <p className="title is-2">Let&apos;s make social good</p>
-        &nbsp;
-        <div className="columns is-multiline">{renderProjects()}</div>
+        <div className="columns is-multiline">
+          {renderProjects()}
+          {
+            soon.map((n) => (
+              <div key={"filler_card"+n} className="column is-full-tablet-mobile is-full-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+                <div className={"card filler_card"+n+" has-background-info"}>
+                  <h2 className="title big has-text-info-dark">
+                    SOON
+                  </h2>
+                </div>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </section>
   );
