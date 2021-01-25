@@ -1,11 +1,13 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 //Lazy loading optimization
 import { lazy, Suspense } from 'react';
+import Footer from '../components/Footer';
+
 const Index = lazy(() => import('../views/Index'));
 const HelpNow = lazy(() => import('../views/HelpNow'));
 const Project = lazy(() => import('../views/Project'));
 
-const indexRouter = () => (
+const indexRouter = (props) => (
   <BrowserRouter>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
@@ -13,6 +15,7 @@ const indexRouter = () => (
         <Route path="/help" component={HelpNow} />
         <Route path="/projects" component={Project} />
       </Switch>
+      <Footer onChangeLanguage={props.onChangeLanguage}/>
     </Suspense>
   </BrowserRouter>
 );

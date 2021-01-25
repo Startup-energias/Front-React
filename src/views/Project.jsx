@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Iframe from 'react-iframe';
 
-import Footer from '../components/Footer';
 import ProjectInfo from '../components/Project/ProjectInfo';
 import ProjectTeam from '../components/Project/ProjectTeam';
 
@@ -13,7 +12,7 @@ import avatar2 from '../assets/images/Project1/Team/avatar-10.jpg';
 import avatar3 from '../assets/images/Project1/Team/avatar-default.jpg';
 
 import '../assets/scss/06_pages/project.scss';
-
+import '../assets/scss/02_base/_normalize.scss';
 
 function Project() {
   let [project] = useState({
@@ -116,8 +115,6 @@ function Project() {
         </div>
       </section>
       
-
-      <Footer />
     </div>
   );
 }

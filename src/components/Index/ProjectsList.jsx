@@ -80,7 +80,7 @@ function ProjectsList() {
   };
 
   return (
-    <section className="section projectsListSection my-5">
+    <section className="section has-background-light projectsListSection py-6" id="Projects">
       <div className="container">
         <p className="subtitle is-4 has-text-primary-dark">
           PROJECTS AND INICIATIVES FROM COLOMBIA

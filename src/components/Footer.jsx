@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
-function Footer() {
+function Footer(props) {
   let [socialMedia] = useState(['twitter', 'facebook', 'instagram', 'linkedin', 'pinterest']);
   let [rentals] = useState(['Rooms', 'Map on top', 'Side map', 'No map', 'Room detail']);
   let [pages] = useState(['Comparison', 'Team', 'Contact']);
-  let [payments] = useState(['cc-mastercard', 'cc-visa', 'cc-paypal']);
-
+  
   function RenderSocialMedia() {
     return socialMedia.map((item) => (
       <span className="icon-text" key={item}>
@@ -65,11 +64,14 @@ function Footer() {
               </div>
             </div>
             <div className="level-right">
-              {payments.map((item) => (
-                  <span className="icon" key={item}>
-                    <i className={'fa fa-' + item}></i>
-                  </span>
-              ))}
+
+            <div className="select">
+              <select onBlur={(e) => props.onChangeLanguage(e)}>
+                <option value="en" id="en">English</option>
+                <option value="es" id="es">Español</option>
+              </select>
+            </div>
+              
             </div>
           </nav>
         </div>

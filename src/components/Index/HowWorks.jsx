@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FormattedMessage } from "react-intl";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSearch, faHandHoldingUsd, faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -37,15 +38,21 @@ function HowWorks() {
         </div>
         
         <p className="title is-4 has-text-primary-dark mt-4">{item.title}</p>
-        <div className="has-text-grey">{item.content}</div>
+        <div className="has-text-info">{item.content}</div>
       </div>
     ));
   };
 
   return (
-    <section className="section howWorksSection has-background-light mb-5">
+    <section className="section has-background-dark pb-6" id="How%20it%20works">
       <div className="container has-text-centered">
-        <h2 className="title is-2 mb-6">HOW IT WORKS</h2>
+        <h2 className="title is-2 mb-6 is-uppercase has-text-primary">
+          <FormattedMessage
+            id="howworks.title"
+            defaultMessage="How it works"
+            values={{ what: "react-intl" }}
+          />
+        </h2>
         <div className="columns is-multiline is-8 mx-6">{renderSteps()}</div>
       </div>
     </section>
