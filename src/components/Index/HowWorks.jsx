@@ -44,16 +44,16 @@ function HowWorks() {
   };
 
   return (
-    <section className="section has-background-dark pb-6" id="How it works">
+    <section className="section" id="How it works">
       <div className="container has-text-centered">
-        <h2 className="title is-2 mb-6 is-uppercase has-text-primary">
+        <h1 className="title is-2 mb-6 is-uppercase has-text-primary">
           <FormattedMessage
             id="howworks.title"
             defaultMessage="How it works"
             values={{ what: "react-intl" }}
           />
-        </h2>
-        <div className="columns is-multiline is-8 mx-6">{renderSteps()}</div>
+        </h1>
+        <div className="columns is-multiline is-8 mx-6 mb-2">{renderSteps()}</div>
       </div>
     </section>
   );

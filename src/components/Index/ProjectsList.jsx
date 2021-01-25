@@ -82,9 +82,9 @@ function ProjectsList() {
   return (
     <section className="section has-background-light projectsListSection py-6" id="Projects">
       <div className="container">
-        <p className="subtitle is-4 has-text-primary-dark">
+        <h1 className="subtitle is-4 has-text-primary-dark">
           PROJECTS AND INICIATIVES FROM COLOMBIA
-        </p>
+        </h1>
         <p className="title is-2">Let&apos;s make social good</p>
         &nbsp;
         <div className="columns is-multiline">{renderProjects()}</div>

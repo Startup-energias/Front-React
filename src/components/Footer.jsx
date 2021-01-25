@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Footer(props) {
+function Footer({selector}) {
   let [socialMedia] = useState(['twitter', 'facebook', 'instagram', 'linkedin', 'pinterest']);
   let [rentals] = useState(['Rooms', 'Map on top', 'Side map', 'No map', 'Room detail']);
   let [pages] = useState(['Comparison', 'Team', 'Contact']);
@@ -64,14 +64,7 @@ function Footer(props) {
               </div>
             </div>
             <div className="level-right">
-
-            <div className="select">
-              <select onBlur={(e) => props.onChangeLanguage(e)}>
-                <option value="en" id="en">English</option>
-                <option value="es" id="es">Español</option>
-              </select>
-            </div>
-              
+              {selector()}
             </div>
           </nav>
         </div>
