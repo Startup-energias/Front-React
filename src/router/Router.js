@@ -9,9 +9,9 @@ const indexRouter = () => (
   <BrowserRouter>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        <Route exact path="/" component={Index} />
-        <Route path="/help" component={HelpNow} />
-        <Route path="/projects" component={Project} />
+        <Route exact path="/help" component={HelpNow} />
+        <Route exact path="/projects" component={Project} />
+        <Route path="/" component={Index} />
       </Switch>
     </Suspense>
   </BrowserRouter>
