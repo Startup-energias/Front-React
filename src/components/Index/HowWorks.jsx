@@ -44,7 +44,7 @@ function HowWorks() {
   };
 
   return (
-    <section className="section has-background-dark pb-6" id="How%20it%20works">
+    <section className="section has-background-dark pb-6" id="How it works">
       <div className="container has-text-centered">
         <h2 className="title is-2 mb-6 is-uppercase has-text-primary">
           <FormattedMessage
