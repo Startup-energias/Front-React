@@ -1,5 +1,5 @@
 
-function AboutUs() {
+function AboutSection() {
 
     let renderContent = () => {
         <div className="content py-2">
@@ -30,4 +30,4 @@ function AboutUs() {
     );
 }
 
-export default AboutUs;
+export default AboutSection;

@@ -1,3 +1,5 @@
+
+
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -5,21 +7,21 @@ import { faSearch, faHandHoldingUsd, faHeart } from '@fortawesome/free-solid-svg
 
 library.add(faSearch, faHandHoldingUsd, faHeart);
 
-function HowWorks() {
+function ImpactSection() {
   let [steps] = useState([
     {
-      title: 'Find the project(s) you want to support.',
+      title: 'Contamination',
       content: 'Chose the projects you want to help',
       icon: 'search',
     },
     {
-      title: 'Choose the way you want to help: either money or knowledge.',
+      title: 'Collected money',
       content:
         'The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit',
       icon: 'hand-holding-usd',
     },
     {
-      title: 'Track and share the impact you created!',
+      title: 'Inverters',
       content:
         'His room, a proper human room although a little too small, lay peacefully between its four familiar',
       icon: 'heart',
@@ -43,10 +45,10 @@ function HowWorks() {
   };
 
   return (
-    <section className="section has-background-dark" id="How it works">
+    <section className="section has-background-primary" id="Our impact">
       <div className="container has-text-centered">
-        <h1 className="title is-2 mb-6 is-uppercase has-text-primary">
-          How it works
+        <h1 className="title is-2 mb-6 is-uppercase has-text-white">
+          Our impact
         </h1>
         <div className="columns is-multiline is-8 mx-6 mb-2">{renderSteps()}</div>
       </div>
@@ -54,4 +56,4 @@ function HowWorks() {
   );
 }
 
-export default HowWorks;
+export default ImpactSection;

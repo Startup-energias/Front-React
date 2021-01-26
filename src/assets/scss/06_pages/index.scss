@@ -1,12 +1,118 @@
 @import '../02_base/colors';
 @import '../_mixins/custom';
 
+
+$image_square: 480px;
+$image_square_small: 50px;
+$image_inc: 20px;
+
 section h1{
   margin-top: 60px
 }
 
 .card {
   height: 100%;
+}
+
+.centerDiv{
+  @include flexCenterDir(row);
+}
+.howContainer{
+  @include flexCenterDir(row);
+}
+
+@media only screen and (max-width: 1219px) {
+  .howContainer{
+    flex-direction: column;
+  }
+  .howStep{
+    height: $image_square_small;
+    max-height: $image_square_small;
+    width:$image_square_small;
+    max-width:$image_square_small;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .howStep{
+    margin: 0;
+
+    height: 10px;
+    max-height: 10px;
+    width:10px;
+    max-width:10px;
+  }
+}
+
+
+.howStep
+{
+  background-color: rgba(0, 0, 0, 1);
+  background-repeat: 'no-repeat';
+  background-position: center;
+
+  height: $image_square;
+  max-height: $image_square;
+  width:$image_square;
+  max-width:$image_square;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h2{
+    color: white;
+  }
+
+  p{
+    color: white;
+    height: 60px;
+  }
+}
+
+#tabs-with-content .tabs:not(:last-child){
+  margin-bottom: 0;
+}
+
+#tabs-with-content{
+  margin: 2em 8rem 2em;
+
+  .tab-content {
+    margin: 2em;
+    padding: 1rem;
+    display: none;
+  }
+  .tab-content.is-active {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1219px) {
+  #tabs-with-content{
+    margin: 2em 0rem 2em;
+  
+    .tab-content {
+      margin: 0em;
+    }
+  }
+}
+
+.tabs li.is-active{
+  background: $info;
+  color: $primary !important;
+}
+
+.tabs li{
+  background: $dark;
+  color: white !important;
+}
+
+.bigger {
+  font-size: 400%;
+}
+
+.big {
+  font-size: 300%;
 }
 
 .filler_card1{
@@ -30,14 +136,10 @@ section h1{
   }
 }
 
-.link {
-  color: $info 
+.darken-link {
+  color: darken($link, 15%);
 }
 
-.bigger {
-  font-size: 450%;
-}
-
-.big {
-  font-size: 375%;
+.black-link{
+  color: black;
 }

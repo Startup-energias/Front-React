@@ -2,7 +2,7 @@ import { useState } from 'react';
 import LinesEllipsis from 'react-lines-ellipsis';
 import image1 from '../../assets/images/Projects/Img1.jpg';
 
-function ProjectsList() {
+function ProjectsSection() {
   const soon = ['1','2','3'];
   let [projects] = useState([
     {
@@ -33,7 +33,7 @@ function ProjectsList() {
               <div className="media-content">
                 <p className="subtitle is-5 has-text-grey-light mt-1 is-5 is-spaced">{item.category}</p>
                 <h2 className="title is-4 has-text-primary-dark">{item.team_name}</h2>
-                <h3 className="subtitle is-5"><a className="link" href='/projects'>{item.name}</a></h3>
+                <h3 className="subtitle is-5"><a className="darken-link" href='/projects'>{item.name}</a></h3>
               </div>
             </div>
             <div className="content">
@@ -77,4 +77,4 @@ function ProjectsList() {
   );
 }
 
-export default ProjectsList;
+export default ProjectsSection;

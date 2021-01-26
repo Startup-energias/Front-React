@@ -4,6 +4,13 @@
     justify-content: center;
 }
 
+@mixin flexCenterDir($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
 @mixin flexCenterOpacity ($opacity){
     @include flexCenter();
     opacity: $opacity;

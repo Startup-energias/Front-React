@@ -1,7 +1,7 @@
-import { keywords } from '../helpers/constants/infoSection';
-import mainImage from '../assets/images/forestLake.jpg';
+import { keywords } from '../../helpers/constants/infoSection';
+import mainImage from '../../assets/images/forestLake.jpg';
 import Typed from 'react-typed';
-import '../assets/scss/04_layout/_infoSection.scss';
+import '../../assets/scss/04_layout/_infoSection.scss';
 
 function InfoSection() {
   return (
