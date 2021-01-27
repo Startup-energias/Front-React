@@ -50,7 +50,7 @@ function TabContent({titles,info}) {
         <ul>
           {titles.map((title) => (
               <li key={"tab_"+title}>
-                <a className="has-text-primary" href={"#"+title}>{title}</a>
+                <a className="" href={"#"+title}>{title}</a>
               </li>
           ))}
         </ul>

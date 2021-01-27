@@ -2,7 +2,7 @@ import LogoDefault from '../assets/images/logo.png';
 import '../assets/scss/_navbar.scss';
 
 function Navbar({ items, logo }) {
-  const langs = ['English', 'Español'];
+  //const langs = ['English', 'Español'];
   
   return (
     <nav className="navbar is-dark is-fixed-top py-2" role="navigation" aria-label="main navigation">
@@ -13,7 +13,7 @@ function Navbar({ items, logo }) {
       </div>
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <div className="navbar-item">
+          {/*<div className="navbar-item">
             <div className="dropdown">
               <div className="dropdown-trigger">
                 <button className="button is-info is-small" aria-haspopup="true" aria-controls="dropdown-menu">
@@ -32,9 +32,9 @@ function Navbar({ items, logo }) {
                 </a>
               </div>
             </div>
-          </div>
+          </div>*/}
           {items.map((e) => (
-            <a key={e} href={`#${e}`} className="navbar-item has-text-primary">
+            <a key={e} href={`#${e}`} className="navbar-item is-size-5 has-text-primary">
               {e}
             </a>
           ))}

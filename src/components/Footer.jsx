@@ -35,17 +35,11 @@ function Footer() {
       <div className="py-5">
         <div className="container">
           <div className="columns is-multiline mx-6 mt-4">
-            <div className="column is-2-desktop is-2-widescreen is-flex is-align-items-center is-justify-content-center is-flex-direction-column">
+            <div className="column is-5-desktop is-flex is-align-items-center is-justify-content-center is-flex-direction-column">
               <RenderLinkList list={inoverte} />
             </div>
 
-            <div className="column is-7-desktop is-7-widescreen is-flex is-align-items-center is-justify-content-center is-flex-direction-column">
-              <div className="container is-flex is-align-items-center is-justify-content-center">
-                <p className="title has-text-centered is-size-6-desktop is-size-4-widescreen">Are you passionate about our environment and want to help communities that need electricity and clean water? We also! Join the INNOVIERTE community. Innovate and Invest - now!</p>
-              </div>
-            </div>
-
-            <div className="column is-3-desktop is-3-widescreen is-flex is-align-items-center is-justify-content-center is-flex-direction-column">
+            <div className="column is-7-desktop is-flex is-align-items-center is-justify-content-center is-flex-direction-column">
               <h5 className="title is-5 is-family-monospace">Contact Us!</h5>
               <address className="has-text-centered">
 		              Bogotá, Colombia<br/>
