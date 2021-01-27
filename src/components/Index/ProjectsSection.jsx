@@ -56,7 +56,7 @@ function ProjectsSection() {
     <section className="section has-background-white projectsListSection py-6" id="Projects">
       <div className="container">
         <h1 className="title bigger has-text-info-dark">
-          Inverte Proyects
+          Inoverte Proyects
         </h1>
         <div className="columns is-multiline">
           {renderProjects()}

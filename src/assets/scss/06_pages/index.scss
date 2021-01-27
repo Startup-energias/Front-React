@@ -1,10 +1,25 @@
 @import '../02_base/colors';
 @import '../_mixins/custom';
 
+$how_height: 480px;
+$how_width: 600px;
 
-$image_square: 480px;
-$image_square_small: 50px;
+$how_height_small: 240px;
+$how_width_small: 300px;
+
+$how_height_extra_small: 120px;
+$how_width_extra_small: 150px;
+
 $image_inc: 20px;
+
+.rightText{
+  float:right;
+  margin-right: 5em;
+}
+
+.leftText{
+  float:left;
+}
 
 section h1{
   margin-top: 60px
@@ -26,10 +41,8 @@ section h1{
     flex-direction: column;
   }
   .howStep{
-    height: $image_square_small;
-    max-height: $image_square_small;
-    width:$image_square_small;
-    max-width:$image_square_small;
+    height: $how_height_small;
+    width:$how_width_small;
   }
 }
 
@@ -37,24 +50,20 @@ section h1{
   .howStep{
     margin: 0;
 
-    height: 10px;
-    max-height: 10px;
-    width:10px;
-    max-width:10px;
+    height: $how_height_extra_small;
+    width:$how_width_extra_small;
   }
 }
 
 
 .howStep
 {
-  background-color: rgba(0, 0, 0, 1);
-  background-repeat: 'no-repeat';
+  background-repeat: no-repeat;
   background-position: center;
-
-  height: $image_square;
-  max-height: $image_square;
-  width:$image_square;
-  max-width:$image_square;
+  background-size: cover;
+  
+  height: $how_height;
+  width:$how_width;
   
   display: flex;
   flex-direction: column;
@@ -127,10 +136,28 @@ section h1{
   @include flexCenterOpacity(0.1);
 }
 
-.circleContainer{
+.about{
+  h1{
+    font-size: 500%;
+  }
+
+  .about_image{
+    display: block;
+    max-width:300px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+  }
+}
+
+.reverse-columns {
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+.iconContainer{
   width: 100%;
-  .circle {
-    border-radius: 50%;
+  .iconImage {
     height: 70px;
     width: 70px;
   }
@@ -142,4 +169,37 @@ section h1{
 
 .black-link{
   color: black;
+}
+
+.supporter_logo{
+  display: block;
+  max-width:230Px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+}
+
+.blog{
+  .background{
+    padding-top: 12em;
+    padding-bottom: 12em;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    h1{
+      font-size: 400%;
+    }
+  }
+  
+}
+
+.contact{
+  .container{
+    margin-right: 25em;
+  }
+  .label{
+    color: darken($primary,40%);
+  }
 }

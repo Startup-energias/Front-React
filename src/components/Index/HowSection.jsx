@@ -1,4 +1,7 @@
 import TabContent from '../utils/TabContent';
+import Step1 from '../../assets/images/howWorks/step1.jpg';
+import Step2 from '../../assets/images/howWorks/step2.jpg';
+import Step3 from '../../assets/images/howWorks/step3.jpg';
 
 function HowSection() {
   const steps =[
@@ -6,21 +9,21 @@ function HowSection() {
       id: 1,
       title: '1. Find the project(s) you want to support',
       content: 'Choose the project (s) you like the most in our catalog.',
-      icon: 'search',
+      image: Step1,
     },
     {
       id: 2,
       title: '2. Choose how you want to support the project: money, knowledge or outreach',
       content:
         'You can make a monetary contribution, be an active member or mentor in the project development team, or share the project on your network.',
-      icon: 'hand-holding-usd',
+        image: Step2,
     },
     {
       id: 3,
       title: '3. Track the impact you created',
       content:
         'Follow the project progress periodically.',
-      icon: 'heart',
+      image: Step3,
     },
   ];
 
@@ -67,22 +70,20 @@ function HowSection() {
     }
   ];
 
-  let RenderStep = ({step}) => {
-    return (
-      <div className="howStep has-text-justified p-6" key={step.title} style={{ backgroundImage: 'url(https://bulma.io/images/placeholders/480x480.png)'}} >
+  let RenderSteps = ({steps}) => {
+    return steps.map((step) => (
+      <div className="howStep has-text-justified p-6" key={step.title} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${step.image})`}} >
         <h2 className="title is-3">{step.title}</h2>
         <p className="is-6">{step.content}</p>
       </div>
-    );
+    ));
   };
 
   return (
     <section className="section has-background-dark howSection">
       <div className="centerDiv mb-5">
         <div className="howContainer  pl-5 container mx-6 my-4">
-          <RenderStep step={steps[0]} />
-          <RenderStep step={steps[1]} />
-          <RenderStep step={steps[2]} />
+          <RenderSteps steps={steps} />
         </div>
       </div>
 

@@ -2,9 +2,9 @@
 
 function ContactSection() {
   return (
-    <section className="has-background-info is-flex is-justify-content-center is-align-content-center py-1">
-      <div className="container ml-4 mb-6">
-        <h1 className="title is-1 ml-6 pl-6">Contact Us! </h1>
+    <section className="contact has-background-info is-flex is-justify-content-center is-align-content-center py-1">
+      <div className="container mb-6">
+        <h1 className="title has-text-dark is-1 ml-6 pl-6">Contact Us! </h1>
         <div className="field is-horizontal">
           <div className="field-label is-normal">
             <label className="label" >Full Name</label>
@@ -80,7 +80,7 @@ function ContactSection() {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <button type="submit" className="button is-link">Send message</button>
+                <button type="submit" className="button is-dark">Send message</button>
               </div>
             </div>
           </div>

@@ -1,9 +1,9 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMapMarkerAlt, faFaucet, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faFaucet, faUsers, faBalanceScale } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faMapMarkerAlt, faFaucet, faUsers);
+library.add(faMapMarkerAlt, faFaucet, faUsers, faBalanceScale);
  
 function ProjectInfo(props) {
 
@@ -35,7 +35,7 @@ function ProjectInfo(props) {
     
         return (
             <div className="caracteristics">
-              <ul className="has-text-warning">
+              <ul className="has-text-info">
                 {listIcons}
               </ul>
             </div>
@@ -44,15 +44,21 @@ function ProjectInfo(props) {
 
     return(
         <div className="content">
-          <h5 className="subtitle is-5 has-text-success">
+          <h5 className="subtitle is-5 has-text-link-dark">
             <FontAwesomeIcon icon={faMapMarkerAlt} /> {props.info.location}
           </h5>
-          <h2 className="title is-2 has-text-primary-dark is-spaced mt-1">{props.info.name}</h2>
+          <h2 className="title is-2 has-text-primary is-spaced mt-1">{props.info.name}</h2>
           <h5 className="subtitle is-5 has-text-grey is-uppercase">{props.info.category}</h5>
           <div className="content">
             <RenderCaracteristics list={props.info.caracteristics} />
           </div>
-          <p className="has-text-grey">{props.info.description}</p>
+          {
+          props.info.description.map((paragraph, i) => {
+            return(
+              <p className="has-text-grey" key={"p_number_"+i}>{paragraph}</p>
+            );
+          })}
+
           <hr />
 
           <h4 className="title is-4 has-text-primary-dark is-spaced">Gallery</h4>
