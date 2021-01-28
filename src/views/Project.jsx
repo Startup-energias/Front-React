@@ -1,15 +1,21 @@
 import { useState } from 'react';
 import Iframe from 'react-iframe';
 
-import ProjectInfo from '../components/Project/ProjectInfo';
-import ProjectTeam from '../components/Project/ProjectTeam';
+import ProjectInfo from '../components/project/ProjectInfo';
+import ProjectTeam from '../components/project/ProjectTeam';
 
-import image1 from '../assets/images/Project1/img.jpg';
-import image2 from '../assets/images/Project1/img2.jpg';
+import peopleIcon from '../assets/images/project/peopleIcon.png';
+import waterIcon from '../assets/images/project/waterIcon.png';
+import weightIcon from '../assets/images/project/weightIcon.png';
 
-import avatar1 from '../assets/images/Project1/Team/avatar-10-1.jpg';
-import avatar2 from '../assets/images/Project1/Team/avatar-10.jpg';
-import avatar3 from '../assets/images/Project1/Team/avatar-default.jpg';
+import banner from '../assets/images/project1/banner.jpg';
+import logo from '../assets/images/project1/logo.png';
+import image1 from '../assets/images/project1/gallery/img.jpg';
+import image2 from '../assets/images/project1/gallery/img2.jpg';
+
+import avatar1 from '../assets/images/project1/team/avatar-10-1.jpg';
+import avatar2 from '../assets/images/project1/team/avatar-10.jpg';
+import avatar3 from '../assets/images/project1/team/avatar-default.jpg';
 
 import '../assets/scss/06_pages/project.scss';
 import '../assets/scss/02_base/_normalize.scss';
@@ -17,7 +23,9 @@ import '../assets/scss/02_base/_normalize.scss';
 function Project() {
   let [project] = useState({
     id: 1,
-    supporting: 79,
+    goal: "4.000",
+    goaln: 4000,
+    amount: 2700,
     content: {
       category: 'Solar',
       name: 'Access to drink water: seawater desalination unit powered with solar energy.',
@@ -42,17 +50,18 @@ function Project() {
           content: image2,
         },
       ],
+      banner: banner,
       caracteristics: [
         {
-          icon: 'faucet',
+          icon: waterIcon,
           info: 'Helps 20 people/day',
         },
         {
-          icon: 'users',
+          icon: peopleIcon,
           info: 'Indigenous ethnic group Wayuu',
         },
         {
-          icon: 'balance-scale',
+          icon: weightIcon,
           info: '# of tons of Co2 equivalent to X whales '
         }
       ],
@@ -78,46 +87,45 @@ function Project() {
       },
     ],
   });
-
+  
   return (
-    <section className="project mt-5 has-background-white">
+    <section className="mt-3 has-background-white">
+      <img src={banner} alt="banner"/>
       <div className="container mb-6 pb-3">
         <div className="columns is-desktop is-8 mt-4 mx-6">
-          <div className="column is-8">
+          <div className="column is-7">
             <ProjectInfo info={project.content} />
-            <ProjectTeam team={project.team} />
             <hr />
-            <div className="">
-              <h3 className="title is-3">Project Location</h3>
+            <div className="content mx-1">
+              <h3 className="title is-3 has-text-primary">Project Location</h3>
 
-              <div className="map-wrapper-300 mb-3">
-                <Iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002303.1909407254!2d-73.51029478988822!3d11.425797455703325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8b8914627238ff%3A0x22e6d8831a7d9716!2sLa%20Guajira%2C%20Colombia!5e0!3m2!1sen!2sch!4v1603451522243!5m2!1sen!2sch" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></Iframe>
+              <div className="map-container map-wrapper-300 mb-3">
+                <Iframe className="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002303.1909407254!2d-73.51029478988822!3d11.425797455703325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8b8914627238ff%3A0x22e6d8831a7d9716!2sLa%20Guajira%2C%20Colombia!5e0!3m2!1sen!2sch!4v1603451522243!5m2!1sen!2sch" width="auto" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></Iframe>
               </div>
             </div>
 
           </div>
-          <div className="column">
-            <div className="box sticky-top px-5">
-              <p>
-                <span className="is-size-3 has-text-primary-dark has-text-weight-bold">$5 </span>
-                or more per month, or help with expertise
-              </p>
-              <hr />
-
-              <p className="is-size-6 mb-2">TYPE OF SUPPORT *</p>
-              <div className="control">
-                <div className="select is-fullwidth">
-                  <select>
-                    <option>Support with cash</option>
-                    <option>Support with knowledge</option>
-                  </select>
-                </div>
-              </div>
+          <div className="column has-background-dark">
+            <div className="content mt-3 px-5">
+              <h1 className="title is-2 has-text-primary has-text-centered is-size-2-widescreen is-size-4-desktop">Goal: ${project.goal}</h1>
+            
               <div className="container mt-5">
-                <button className="button is-fullwidth is-primary is-family-monospace">SUPPORT NOW</button>
-                <p className="mt-3 has-text-grey has-text-centered">{project.supporting} people are supporting this project</p>
+                <button className="button is-size-5 is-fullwidth is-primary is-family-monospace has-text-dark">SUPPORT NOW</button>
               </div>
 
+              <h2 className="title is-3 has-text-info">Progress: </h2>
+              <progress className="progress is-primary" value={Math.round(project.amount * 100/project.goaln)} max="100">15%</progress>
+
+              <button className="button is-size-5 is-fullwidth is-primary is-family-monospace has-text-dark">Other type of support</button>
+
+              <div className="mt-6 is-flex is-align-items-center is-justify-content-center">
+                <div className="circle has-background-link is-flex is-align-items-center">
+                  <img className="project-logo" src={logo} alt="project_logo"/> 
+                </div>
+                <h1 className="title ml-3 is-2 has-text-info-dark">Team</h1> 
+              </div>
+              
+              <ProjectTeam team={project.team} />
             </div>
           </div>
         </div>

@@ -1,33 +1,35 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMapMarkerAlt, faFaucet, faUsers, faBalanceScale } from '@fortawesome/free-solid-svg-icons';
-
-library.add(faMapMarkerAlt, faFaucet, faUsers, faBalanceScale);
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+library.add(faMapMarkerAlt);
  
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
 function ProjectInfo(props) {
 
     function RenderGallery({list}) {
         const listImages = list.map((item) => {
           return(
-            <div className="column is-one-quarter-desktop is-half-tablet" key={item.name}>
-                  <img src={item.content} alt={item.name}/>
+            <div key={item.name}>
+              <img className="center-img" src={item.content} alt={item.name}/>
             </div>
           );
         });
     
         return(
-          <div className="columns is-multiline">
+          <Carousel dynamicHeight={true}>
             {listImages}
-          </div>
+          </Carousel>
         );
       }
 
       function RenderCaracteristics({list}){
-        const listIcons = list.map((item) => {
+        const listIcons = list.map((item, i) => {
           return(
-            <li className="mr-3" key={item.icon}>
-              <FontAwesomeIcon className="mr-1" icon={item.icon}/>
+            <li className="mr-3" key={"project_icon_"+i}>
+              <img className="project-icon mr-1" src={item.icon} alt={"project_icon_"+i} />
               <span className="is-size-6 has-text-grey-dark">{item.info}</span>
             </li>
           );
@@ -61,7 +63,7 @@ function ProjectInfo(props) {
 
           <hr />
 
-          <h4 className="title is-4 has-text-primary-dark is-spaced">Gallery</h4>
+          <h4 className="title is-2 has-text-primary-dark is-spaced">Gallery</h4>
           <RenderGallery list = {props.info.images}/>
         </div>
     );

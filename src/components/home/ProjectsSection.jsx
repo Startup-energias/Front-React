@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import LinesEllipsis from 'react-lines-ellipsis';
-import image1 from '../../assets/images/Projects/Img1.jpg';
+import image1 from '../../assets/images/projects/Img1.jpg';
 
 function ProjectsSection() {
   const soon = ['1','2','3'];

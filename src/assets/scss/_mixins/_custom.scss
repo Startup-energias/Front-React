@@ -15,3 +15,9 @@
     @include flexCenter();
     opacity: $opacity;
 }
+
+@mixin scaleImage($height){
+    max-height: $height;
+    width: auto;
+    height: auto;
+}

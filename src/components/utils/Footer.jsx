@@ -32,9 +32,9 @@ function Footer() {
 
   return (
     <footer className="footer has-background-grey-lighter p-0">
-      <div className="py-5">
+      <div className="py-1">
         <div className="container">
-          <div className="columns is-multiline mx-6 mt-4">
+          <div className="columns is-multiline mx-6">
             <div className="column is-5-desktop is-flex is-align-items-center is-justify-content-center is-flex-direction-column">
               <RenderLinkList list={inoverte} />
             </div>
