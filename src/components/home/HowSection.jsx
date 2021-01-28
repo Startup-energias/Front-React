@@ -7,20 +7,20 @@ function HowSection() {
   const steps =[
     {
       id: 1,
-      title: '1. Find the project(s) you want to support',
+      title: 'Find your favorite project',
       content: 'Choose the project (s) you like the most in our catalog.',
       image: Step1,
     },
     {
       id: 2,
-      title: '2. Choose how you want to support the project: money, knowledge or outreach',
+      title: 'Choose how you want to support the project',
       content:
         'You can make a monetary contribution, be an active member or mentor in the project development team, or share the project on your network.',
         image: Step2,
     },
     {
       id: 3,
-      title: '3. Track the impact you created',
+      title: 'Track the impact you created',
       content:
         'Follow the project progress periodically.',
       image: Step3,
@@ -73,14 +73,14 @@ function HowSection() {
   let RenderSteps = ({steps}) => {
     return steps.map((step) => (
       <div className="howStep has-text-justified p-6" key={step.title} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${step.image})`}} >
-        <h2 className="title is-size-3-widescreen is-size-5-touch">{step.title}</h2>
+        <h2 className="title is-size-3-widescreen is-size-5-touch is-flex ">{step.title}</h2>
         <p className="is-size-6">{step.content}</p>
       </div>
     ));
   };
 
   return (
-    <section className="section has-background-dark howSection">
+    <section className="section has-background-white howSection">
       <div className="centerDiv mb-5">
         <div className="howContainer  pl-5 container mx-6 my-4">
           <RenderSteps steps={steps} />

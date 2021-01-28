@@ -29,12 +29,12 @@ import '../assets/scss/02_base/_normalize.scss';
 function Project() {
   let [project] = useState({
     id: 1,
-    goal: "4.000",
-    goaln: 4000,
+    goal: "5.800",
+    goaln: 5800,
     amount: 2700,
     content: {
       category: 'Solar',
-      name: 'Access to drink water: seawater desalination unit powered with solar energy.',
+      name: 'Solar energy for generate drinkable water.',
       description: [
         'Sea for Change is a humanitarian project thought and designed by a team of interdisciplinary young minds who seek to bring water to the communities that need it most.',
         'Even in the XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area that suffers from deforestation, mining exploitation and the disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea and the presence of groundwater) allow the development of an environmentally friendly solution using solar energy.',
@@ -45,7 +45,7 @@ function Project() {
         'We believe in the power of solidarity, technology and collaboration as engines of progress in societies. Help us and be an active entity of change! #PotableWaterForAll.'
       ],
       date: new Date(2016, 1, 16).toLocaleString(),
-      location: 'La Guajira, Colombia',
+      location: 'Buenavista, Riohacha, La Guajira, Colombia',
       images: [
         {
           name: 'image1',
@@ -60,7 +60,7 @@ function Project() {
       caracteristics: [
         {
           icon: waterIcon,
-          info: 'Helps 20 people/day',
+          info: 'Helps 30 people/day',
         },
         {
           icon: peopleIcon,
@@ -111,14 +111,13 @@ function Project() {
   
   return (
     <section className="mt-3 has-background-white">
-      <img src={banner} alt="banner"/>
-      <div className="container mb-6 pb-3">
-        <div className="columns is-desktop is-8 mt-4 mx-6">
-          <div className="column is-7">
+      <img className="m-0" src={banner} alt="banner"/>
+      <div className="content mx-6 mb-6 pb-3">
+        <div className="columns is-desktop is-6 mt-1 mx-6">
+          <div className="column is-8 mr-6">
             <ProjectInfo info={project.content} />
-            <hr />
             <div className="content mx-1">
-              <h3 className="title is-3 has-text-primary">Project Location</h3>
+              <h3 className="title is-3 has-text-dark">Project Location</h3>
 
               <div className="map-container map-wrapper-300 mb-3">
                 <Iframe className="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002303.1909407254!2d-73.51029478988822!3d11.425797455703325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8b8914627238ff%3A0x22e6d8831a7d9716!2sLa%20Guajira%2C%20Colombia!5e0!3m2!1sen!2sch!4v1603451522243!5m2!1sen!2sch" width="auto" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></Iframe>
@@ -126,18 +125,21 @@ function Project() {
             </div>
 
           </div>
-          <div className="column has-background-dark">
-            <div className="content mt-3 px-5">
-              <h1 className="title is-2 has-text-primary has-text-centered is-size-2-widescreen is-size-4-desktop">Goal: ${project.goal}</h1>
+          <div className="column has-background-dark p-0">
+            <div className="content mt-3 mx-1 mb-1 px-5">
+              <h1 className="title is-2 has-text-info is-size-3-widescreen is-size-5-desktop">Goal <span className="">${project.goal} USD</span></h1>
             
-              <div className="container mt-5">
-                <button className="button is-size-5 is-fullwidth is-primary is-family-monospace has-text-dark">SUPPORT NOW</button>
+              <div className="container is-flex is-align-items-center is-justify-content-center mt-5">
+                <button className="button is-size-6 is-info has-text-dark">SUPPORT NOW</button>
               </div>
 
-              <h2 className="title is-3 has-text-info">Progress: </h2>
-              <progress className="progress is-primary" value={Math.round(project.amount * 100/project.goaln)} max="100">15%</progress>
-
-              <button id="openSupport" className="button is-size-5 is-fullwidth is-primary is-family-monospace has-text-dark">Other type of support</button>
+              <div className="is-flex is-align-items-center is-justify-content-center my-5">
+              <h2 className=" is-size-6 mr-2 has-text-info">Progress</h2>
+              <progress className="progress is-info is-small" value={Math.round(project.amount * 100/project.goaln)} max="100">15%</progress>
+              </div>
+              <div className="container is-flex is-align-items-center is-justify-content-center mt-5">
+                <button id="openSupport" className="button is-size-6 is-info has-text-dark">Other type of support</button>
+              </div>
               
               <div className="modal" id="supportModal">
                 <div className="modal-background"></div>
@@ -160,15 +162,18 @@ function Project() {
                 </div>
               </div>
 
-              <div className="mt-6 is-flex is-align-items-center is-justify-content-center">
-                <div className="circle has-background-link is-flex is-align-items-center">
+              
+              
+              
+            </div>
+
+            <div className="mt-6 is-flex is-align-items-center is-justify-content-center has-background-info py-3">
+                <div className="is-flex is-align-items-center">
                   <img className="project-logo" src={logo} alt="project_logo"/> 
                 </div>
-                <h1 className="title ml-3 is-2 has-text-info-dark">Team</h1> 
+                <h1 className="title ml-3 is-2 has-text-dark">Team</h1> 
               </div>
-              
               <ProjectTeam team={project.team} />
-            </div>
           </div>
         </div>
       </div>

@@ -31,8 +31,8 @@ function Footer() {
   }
 
   return (
-    <footer className="footer has-background-grey-lighter p-0">
-      <div className="py-1">
+    <footer className="footer has-background-white p-0">
+      <div className="py-1 pt-6">
         <div className="container">
           <div className="columns is-multiline mx-6">
             <div className="column is-5-desktop is-flex is-align-items-center is-justify-content-center is-flex-direction-column">
@@ -54,7 +54,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="has-background-black has-text-white">
+      <div className=" has-text-black">
         <div className="container py-3">
           <nav className="level">
             <div className="level-left">
@@ -63,10 +63,10 @@ function Footer() {
               </div>
             </div>
             <div className="level-right">
-            <p className="m-1 is-size-4-widescreen is-size-6-desktop has-text-white"><i className="fa fa-cc-paypal fa-lg"></i></p>
-            <p className="m-1 is-size-4-widescreen is-size-6-desktop has-text-white"><i className="fa fa-cc-mastercard fa-lg"></i></p>
-            <p className="m-1 is-size-4-widescreen is-size-6-desktop has-text-white"><i className="fa fa-cc-visa fa-lg"></i></p>
-            <p className="m-1 is-size-4-widescreen is-size-6-desktop has-text-white"><i className="fa fa-cc-diners-club fa-lg"></i></p>
+            <p className="m-1 is-size-4-widescreen is-size-6-desktop has-text-dark"><i className="fa fa-cc-paypal fa-lg"></i></p>
+            <p className="m-1 is-size-4-widescreen is-size-6-desktop has-text-dark"><i className="fa fa-cc-mastercard fa-lg"></i></p>
+            <p className="m-1 is-size-4-widescreen is-size-6-desktop has-text-dark"><i className="fa fa-cc-visa fa-lg"></i></p>
+            <p className="m-1 is-size-4-widescreen is-size-6-desktop has-text-dark"><i className="fa fa-cc-diners-club fa-lg"></i></p>
             </div>
           </nav>
         </div>

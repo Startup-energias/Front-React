@@ -1,8 +1,15 @@
 @import './02_base/colors';
 
 .navbar-item{
-  color: $primary;
-  
+  color: white;
+}
+
+.navbar-brand{
+  margin-left: 120px;
+}
+
+.navbar-line {
+    border-right: 5px white;
 }
 
 .dropdown-menu{

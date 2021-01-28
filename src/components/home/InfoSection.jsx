@@ -1,5 +1,5 @@
 import { keywords } from '../../helpers/constants/infoSection';
-import mainImage from '../../assets/images/Banner.jpg';
+import mainImage from '../../assets/images/banner.jpg';
 import Typed from 'react-typed';
 import '../../assets/scss/04_layout/_infoSection.scss';
 
@@ -8,7 +8,7 @@ function InfoSection() {
     <div
       className="infoSection py-6"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${mainImage})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(${mainImage})`,
       }}
       id ="Home"
     >

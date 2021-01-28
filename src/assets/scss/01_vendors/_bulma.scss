@@ -2,7 +2,9 @@
 @import '../02_base/colors';
 @import '../02_base/typography';
 
-$navbar-height: 4rem;
+$navbar-height: 3.5rem;
+$navbar-item-hover-color : darken($dark, 30%);
+$navbar-item-hover-background-color : darken(white, 30%);
 
 $tabs-link-color: white;
 $tabs-link-hover-color: WhiteSmoke;
@@ -10,7 +12,6 @@ $tabs-link-active-color: $dark;
 
 $tabs-boxed-link-hover-background-color: darken($primary,30%);
 $tabs-boxed-link-active-background-color: $primary;
-
 
 //Import bulma
 @import '~bulma';

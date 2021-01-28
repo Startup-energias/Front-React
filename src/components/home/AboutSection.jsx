@@ -1,6 +1,7 @@
 import image1 from '../../assets/images/about/objective.jpg';
 import image2 from '../../assets/images/about/sdg6.png';
 import image3 from '../../assets/images/about/sdg7.png';
+import image4 from '../../assets/images/about/about2.jpeg';
 
 function AboutSection() {
   const info = [
@@ -18,7 +19,7 @@ function AboutSection() {
     {
       content:
         'We connect sustainable projects with financing and human talent so that they can be implemented in the communities that need it through the visibility and dissemination that our platform promotes ',
-      image: image3,
+      image: image4,
     },
   ];
 
@@ -31,7 +32,7 @@ function AboutSection() {
             <img className="about_image" src={info.image} alt={'about_image'} />
           </div>
           <div className="column is-6 is-flex is-align-items-center is-justify-content-center">
-            <p className="is-size-3 has-text-white">{info.content}</p>
+            <p className="is-size-6 has-text-white">{info.content}</p>
           </div>
           <div className="column is-1"></div>
         </div>
@@ -47,7 +48,7 @@ function AboutSection() {
             <img className="about_image" src={info.image} alt={'about_image'} />
           </div>
           <div className="column is-6 is-flex is-align-items-center is-justify-content-center">
-            <p className="is-size-3 has-text-right-tablet has-text-white">{info.content}</p>
+            <p className="is-size-6 has-text-right-tablet has-text-white">{info.content}</p>
           </div>
         </div>
       </div>
@@ -56,7 +57,7 @@ function AboutSection() {
 
   return (
     <section className="section about has-background-dark pb-6" id="About us">
-      <h1 className="title has-text-white has-text-centered">About us</h1>
+      <h1 className="title has-text-white bigger has-text-centered">About us</h1>
       <div className="container p-6">
         <div className="container">
           <div className={'columns mb-6 is-6'}>
@@ -65,7 +66,7 @@ function AboutSection() {
               <img className="about_image" src={info[0].image2} alt={'about_image'} />
             </div>
             <div className="column is-6 is-flex is-align-items-center is-justify-content-center">
-              <p className="is-size-3 has-text-white">{info[0].content}</p>
+              <p className="is-size-6 has-text-white">{info[0].content}</p>
             </div>
           </div>
         </div>

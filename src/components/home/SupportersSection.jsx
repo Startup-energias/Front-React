@@ -12,7 +12,6 @@ function SupportersSection() {
     <section className="has-background-white py-6">
       <div className="container mb-6">
         <h1 className="title is-1 has-text-centered has-text-dark"> Supporters</h1>
-        <hr />
         <div className="columns is-multiline is-centered">
           {logos.map((logo, i) => (
             <div

@@ -109,7 +109,7 @@ section h1{
 }
 
 .bigger {
-  font-size: 400%;
+  font-size: 300%;
 }
 
 .big {
@@ -117,11 +117,11 @@ section h1{
 }
 
 .filler_card1{
-  @include flexCenterOpacity(0.5);
+  @include flexCenterOpacity(0.1);
 }
 
 .filler_card2{
-  @include flexCenterOpacity(0.3);
+  @include flexCenterOpacity(0.1);
 }
 
 .filler_card3{
@@ -129,9 +129,6 @@ section h1{
 }
 
 .about{
-  h1{
-    font-size: 500%;
-  }
 
   .about_image{
     display: block;
@@ -156,7 +153,7 @@ section h1{
 }
 
 .darken-link {
-  color: darken($link, 15%);
+  color: $dark;
 }
 
 .black-link{

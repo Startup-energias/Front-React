@@ -1,13 +1,13 @@
-import LogoDefault from '../assets/images/logo.png';
+import LogoDefault from '../assets/images/logo-black.png';
 import '../assets/scss/_navbar.scss';
 
 function Navbar({ items, logo }) {
   //const langs = ['English', 'Español'];
   
   return (
-    <nav className="navbar is-dark is-fixed-top py-2" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-white is-fixed-top py-2" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+        <a className="navbar-item" href="/">
           <img alt="iKonnekta logo" src={logo || LogoDefault} />
         </a>
       </div>
@@ -33,19 +33,22 @@ function Navbar({ items, logo }) {
               </div>
             </div>
           </div>*/}
-          {items.map((e) => (
-            <a key={e} href={`#${e}`} className="navbar-item is-size-5 has-text-primary">
-              {e}
-            </a>
-          ))}
+            
+          
         </div>
         <div className="navbar-end">
+          {items.map((e) => (
+              <a key={e} href={`#${e}`} className="navbar-item is-size-5 mx-6 has-text-dark">
+                {e}
+              </a>
+            ))}
           <div className="navbar-item">
             <div className="buttons">
-              <a href="a.com" className="button is-primary">
+              <a href="a.com" className=" has-text-dark ml-6 mr-4">
                 <strong>Sign up</strong>
               </a>
-              <a href="a.com" className="button is-light">
+              <div className="navbar-line"></div>
+              <a href="a.com" className=" has-text-dark ml-4 mr-6">
                 Log in
               </a>
             </div>

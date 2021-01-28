@@ -46,10 +46,10 @@ function ProjectInfo(props) {
 
     return(
         <div className="content">
-          <h5 className="subtitle is-5 has-text-link-dark">
+          <h5 className="subtitle is-5 has-text-info">
             <FontAwesomeIcon icon={faMapMarkerAlt} /> {props.info.location}
           </h5>
-          <h2 className="title is-2 has-text-primary is-spaced mt-1">{props.info.name}</h2>
+          <h2 className="title is-2 has-text-dark is-spaced mt-1">{props.info.name}</h2>
           <h5 className="subtitle is-5 has-text-grey is-uppercase">{props.info.category}</h5>
           <div className="content">
             <RenderCaracteristics list={props.info.caracteristics} />
@@ -60,7 +60,6 @@ function ProjectInfo(props) {
               <p className="has-text-grey" key={"p_number_"+i}>{paragraph}</p>
             );
           })}
-          <hr />
 
           <h4 className="title is-2 has-text-primary-dark is-spaced">Gallery</h4>
           <RenderGallery list = {props.info.images}/>

@@ -64,7 +64,7 @@ function TabContent({titles,info}) {
                 <div className="column" key={"element_"+step.id}>
                   <div className="block has-text-justified" >
                     <h2 className="is-4 title has-text-primary mb-0">{step.title}</h2>
-                    <p className="is-6 has-text-white">{step.content}</p>
+                    <p className="is-6 has-text-dark">{step.content}</p>
                   </div>
                 </div>
               ))}

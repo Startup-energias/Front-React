@@ -9,9 +9,20 @@
     font-style: normal
 }
 
-$family-serif: finador;
+@font-face {
+    font-family: 'hknova-medium';
+    src: url(../../typo/Nova/TTF/HKNova-Medium.ttf);
+    font-style: normal
+}
+@font-face {
+    font-family: 'spartan-black';
+    src: url(../../typo/Spartan/Spartan-Black.ttf);
+    font-style: normal
+}
+
+$family-serif: hknova-medium;
 $family-primary: $family-serif;
-$family-secondary: finador-black;
+$family-secondary: spartan-black;
 
 .title, .subtitle{
     font-family: $family-secondary;
