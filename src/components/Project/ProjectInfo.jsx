@@ -60,7 +60,6 @@ function ProjectInfo(props) {
               <p className="has-text-grey" key={"p_number_"+i}>{paragraph}</p>
             );
           })}
-
           <hr />
 
           <h4 className="title is-2 has-text-primary-dark is-spaced">Gallery</h4>

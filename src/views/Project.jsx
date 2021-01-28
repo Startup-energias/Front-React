@@ -1,5 +1,11 @@
-import { useState } from 'react';
+
+
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import { useState, useEffect  } from 'react';
 import Iframe from 'react-iframe';
+import BulmaModal from '../components/utils/BulmaModal';
+
 
 import ProjectInfo from '../components/project/ProjectInfo';
 import ProjectTeam from '../components/project/ProjectTeam';
@@ -87,6 +93,21 @@ function Project() {
       },
     ],
   });
+
+  useEffect(() => {
+    // Actualiza el título del documento usando la API del navegador
+    var btn = document.querySelector("#openSupport")
+    var mdl = new BulmaModal("#supportModal")
+
+    btn.addEventListener("click", function () {
+      mdl.show()
+    })
+
+  }, []);
+  
+  function showSharing() {
+    document.getElementById('sharing-content').style.display = "block";
+ }
   
   return (
     <section className="mt-3 has-background-white">
@@ -116,7 +137,28 @@ function Project() {
               <h2 className="title is-3 has-text-info">Progress: </h2>
               <progress className="progress is-primary" value={Math.round(project.amount * 100/project.goaln)} max="100">15%</progress>
 
-              <button className="button is-size-5 is-fullwidth is-primary is-family-monospace has-text-dark">Other type of support</button>
+              <button id="openSupport" className="button is-size-5 is-fullwidth is-primary is-family-monospace has-text-dark">Other type of support</button>
+              
+              <div className="modal" id="supportModal">
+                <div className="modal-background"></div>
+                <div className="modal-card">
+                  <header className="modal-card-head">
+                    <p className="modal-card-title m-0">Choose another type of support</p>
+                    <button className="delete" aria-label="close" data-bulma-modal="close"></button>
+                  </header>
+                  <section className="modal-card-body">
+                  <div id="sharing-content">
+                  </div>
+                  <div className="buttons has-addons">
+                    <div className="button is-info">Support with knowledge</div>
+                    <div className="button is-link" onClick={showSharing}>Support sharing!</div>
+                  </div>
+                  </section>
+                  <footer className="modal-card-foot">
+                    <button className="button" data-bulma-modal="close">Cancel</button>
+                  </footer>
+                </div>
+              </div>
 
               <div className="mt-6 is-flex is-align-items-center is-justify-content-center">
                 <div className="circle has-background-link is-flex is-align-items-center">

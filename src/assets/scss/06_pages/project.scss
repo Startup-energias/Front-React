@@ -1,5 +1,4 @@
 @import '../02_base/colors';
-
 @import '../_mixins/custom';
 
 .container{
@@ -39,6 +38,10 @@
 
 .circle{
     border-radius: 50%;
+}
+
+#sharing-content{
+    display: none;
 }
 
 .map-container {
