@@ -1,8 +1,6 @@
-
 import money from '../../assets/images/impact/money.png';
 import weight from '../../assets/images/impact/weight.png';
 import people from '../../assets/images/impact/people.png';
-
 
 function ImpactSection() {
   const steps = [

@@ -73,8 +73,8 @@ function HowSection() {
   let RenderSteps = ({steps}) => {
     return steps.map((step) => (
       <div className="howStep has-text-justified p-6" key={step.title} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${step.image})`}} >
-        <h2 className="title is-3">{step.title}</h2>
-        <p className="is-6">{step.content}</p>
+        <h2 className="title is-size-3-widescreen is-size-5-touch">{step.title}</h2>
+        <p className="is-size-6">{step.content}</p>
       </div>
     ));
   };

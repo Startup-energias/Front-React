@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
-import logo from '../assets/images/logo-black.png';
-import '../assets/scss/_footer.scss';
+import logo from '../../assets/images/logo-black.png';
+import '../../assets/scss/_footer.scss';
 
 function Footer() {
   const inoverte = ['Home','Projects', 'About us', 'Our impact'];
