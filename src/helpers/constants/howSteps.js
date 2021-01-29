@@ -1,25 +1,24 @@
-import Step1 from '../../assets/images/howWorks/step1.jpg';
-import Step2 from '../../assets/images/howWorks/step2.jpg';
-import Step3 from '../../assets/images/howWorks/step3.jpg';
+import Step1 from '../../assets/images/howWorks/step1.png';
+import Step2 from '../../assets/images/howWorks/step2.png';
+import Step3 from '../../assets/images/howWorks/step3.png';
 
 export const steps = [
     {
       id: 1,
       title: 'Find your favorite project',
-      content: 'Choose the project (s) you like the most in our catalog.',
+      content: 'Filter your preferences by type of technology, region and university',
       image: Step1,
     },
     {
       id: 2,
-      title: 'Choose how you want to support the project',
-      content:
-        'You can make a monetary contribution, be an active member or mentor in the project development team, or share the project on your network.',
+      title: 'Support the project',
+      content:'Choose how you want to help: money, knowledge or sharing in social media.',
       image: Step2,
     },
     {
       id: 3,
-      title: 'Track the impact you created',
-      content: 'Follow the project progress periodically.',
+      title: 'Track the impact',
+      content: 'Watch it grows! Follow the process to see the impact in the community',
       image: Step3,
     },
   ];

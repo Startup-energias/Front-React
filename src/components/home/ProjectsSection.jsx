@@ -3,7 +3,6 @@ import image1 from '../../assets/images/projects/Img1.jpg';
 import './scss/_projectsSection.scss';
 
 function ProjectsSection() {
-  const soon = ['1', '2', '3'];
 
   let [projects] = useState([
     {
@@ -15,12 +14,30 @@ function ProjectsSection() {
       team_name: 'Sea for Change',
       image: image1,
     },
+    {
+      id: 2,
+      category: 'Solar',
+      name: 'Solar energy for generate drinkable water.',
+      description:
+        'Sea for Change is a humanitarian project aiming to tackle potable water shortage in vulnerable communities through an innovative water desalination unit.',
+      team_name: 'Sea for Change',
+      image: image1,
+    },
+    {
+      id: 3,
+      category: 'Solar',
+      name: 'Solar energy for generate drinkable water.',
+      description:
+        'Sea for Change is a humanitarian project aiming to tackle potable water shortage in vulnerable communities through an innovative water desalination unit.',
+      team_name: 'Sea for Change',
+      image: image1,
+    }
   ]);
 
   let renderProjects = () => {
     return projects.map((item) => (
       <div
-        className="column is-full-tablet-mobile is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
+        className="column is-12-mobile is-12-tablet is-4-desktop is-4-widescreen is-4-fullhd"
         key={item.id}
       >
         <div className="card">
@@ -58,20 +75,10 @@ function ProjectsSection() {
       className="section projects has-background-white projectsListSection py-6"
       id="Projects"
     >
-      <div className="container">
-        <h1 className="title is-1 has-text-success">Projects</h1>
-        <div className="columns is-multiline">
+      <div className="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+        <h1 className="title is-1 has-text-centered has-text-dark">Hot Projects</h1>
+        <div className="columns is-multiline is-variable is-1-mobile is-1-tablet is-5-desktop is-8-widescreen is-8-fullhd is-centered projects-container mt-2">
           {renderProjects()}
-          {soon.map((n) => (
-            <div
-              key={'filler_card' + n}
-              className="column is-full-tablet-mobile is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
-            >
-              <div className={'card filler_card has-background-info'}>
-                <h2 className="title big has-text-info-dark">SOON</h2>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

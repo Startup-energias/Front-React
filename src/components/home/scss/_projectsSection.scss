@@ -2,6 +2,12 @@
 @import '../../../assets/scss/03_utils/custom';
 
 .projects {
+  .projects-container{
+    @media (min-width: 520px){
+      margin: 0 8em 0;
+    }
+  }
+  
   .card {
     height: 100%;
     h2{
