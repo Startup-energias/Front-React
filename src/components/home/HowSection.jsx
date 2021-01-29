@@ -89,13 +89,21 @@ function HowSection() {
 
       <TabContent titles={["Finance a proyect", "Support with knowledge"]} info={support} />
       
+      <div className="columns mx-6">
+        <div className="column is-offset-2 is-8">
 
-      <div className="buttons has-addons is-centered mt-6">
-          <div className="button is-link is-medium"><a className="black-link" href="#Projects">Support a proyect</a></div>
-          <div className="button is-primary is-medium">Register a proyect</div>
+        <nav className="level">
+          <div className="level-left">
+            <div className="button is-link is-medium"><a className="black-link" href="#Projects">Support a proyect</a></div>
+          </div>
+          <div className="level-right">
+            <div className="button is-primary is-medium">Register a proyect</div>
+          </div>
+        </nav>
+
+        </div>
       </div>
 
-      
     </section>
   );
 }

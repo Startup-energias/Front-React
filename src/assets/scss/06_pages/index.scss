@@ -116,15 +116,7 @@ section h1{
   font-size: 300%;
 }
 
-.filler_card1{
-  @include flexCenterOpacity(0.1);
-}
-
-.filler_card2{
-  @include flexCenterOpacity(0.1);
-}
-
-.filler_card3{
+.filler_card{
   @include flexCenterOpacity(0.1);
 }
 

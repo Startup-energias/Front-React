@@ -61,8 +61,8 @@ function ProjectsSection() {
           {renderProjects()}
           {
             soon.map((n) => (
-              <div key={"filler_card1"} className="column is-full-tablet-mobile is-full-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
-                <div className={"card filler_card"+n+" has-background-info"}>
+              <div key={"filler_card"+n} className="column is-full-tablet-mobile is-full-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+                <div className={"card filler_card has-background-info"}>
                   <h2 className="title big has-text-info-dark">
                     SOON
                   </h2>

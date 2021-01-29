@@ -45,9 +45,9 @@ function TabContent({titles,info}) {
 
 
   return(
-    <div id="tabs-with-content">
+    <div id="tabs-with-content" className="has-background-dark">
       <div className="tabs is-boxed is-centered">
-        <ul>
+        <ul className="has-background-white">
           {titles.map((title) => (
               <li key={"tab_"+title}>
                 <a className="" href={"#"+title}>{title}</a>
@@ -59,12 +59,12 @@ function TabContent({titles,info}) {
         {info.map((item) => (
           <div className="tab-content" key={"content_"+item.title}>
             
-            <div className="columns is-4">
+            <div className="columns pb-6 is-4">
               {item.steps.map((step) => (
                 <div className="column" key={"element_"+step.id}>
                   <div className="block has-text-justified" >
                     <h2 className="is-4 title has-text-primary mb-0">{step.title}</h2>
-                    <p className="is-6 has-text-dark">{step.content}</p>
+                    <p className="is-6 has-text-white">{step.content}</p>
                   </div>
                 </div>
               ))}
