@@ -1,0 +1,21 @@
+@import '../../../assets/scss/02_base/colors';
+@import '../../../assets/scss/03_utils/custom';
+
+.infoSection {
+  margin-top: 4.3rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 35rem;
+  display: flex;
+  align-items: center;
+  .title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+  }
+  .rightText {
+    float: right;
+    margin-right: 5em;
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../../assets/scss/02_base/colors';
+@import '../../../assets/scss/03_utils/custom';
+
+.footer {
+  a {
+    color: darken(white, 10%);
+  }
+  .icon-container{
+    background-color: darken(white, 10%);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    &:hover{
+      background-color: darken(white, 50%);
+      color: white;
+    }
+  }
+}

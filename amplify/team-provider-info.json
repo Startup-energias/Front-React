@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-frontreact-dev-214748-authRole",
+      "UnauthRoleArn": "arn:aws:iam::312947540757:role/amplify-frontreact-dev-214748-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::312947540757:role/amplify-frontreact-dev-214748-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-frontreact-dev-214748-deployment",
+      "UnauthRoleName": "amplify-frontreact-dev-214748-unauthRole",
+      "StackName": "amplify-frontreact-dev-214748",
+      "StackId": "arn:aws:cloudformation:us-east-1:312947540757:stack/amplify-frontreact-dev-214748/0cdcb790-604a-11eb-830e-0a720c487c5f",
+      "AmplifyAppId": "d2eqvlo1638q0l"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2eqvlo1638q0l",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "frontreact78a1c6a9": {
+          "userPoolId": "us-east-1_x41GIXdAb",
+          "userPoolName": "development_inverte",
+          "webClientId": "55r85u8b1h4rf0tm849q8mqnha",
+          "nativeClientId": "uji67bf0kkgpi6clcoud5nb6c"
+        }
+      }
+    }
+  }
+}

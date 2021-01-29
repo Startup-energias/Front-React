@@ -2,5 +2,16 @@
 @import '../02_base/colors';
 @import '../02_base/typography';
 
+$navbar-height: 3.5rem;
+$navbar-item-hover-color : darken($dark, 30%);
+$navbar-item-hover-background-color : darken(white, 30%);
+
+$tabs-link-color: $dark;
+$tabs-link-hover-color: darken($info, 30%);
+$tabs-link-active-color: $info;
+$tabs-link-active-border-bottom-color: lighten($info, 30%);
+
+
 //Import bulma
 @import '~bulma';
+

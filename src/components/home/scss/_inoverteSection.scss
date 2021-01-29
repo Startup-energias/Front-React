@@ -1,0 +1,23 @@
+.inoverteSection {
+  margin-top: 6rem;
+  .quoteCard {
+    border-radius: 10px;
+    padding: 0;
+    max-width: 31rem;
+    box-shadow: 3px 3px 14px 0px rgba(50, 50, 50, 0.64);
+    &__body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1.4rem;
+      height: 65%;
+      font-weight: bold;
+    }
+    &__footer {
+      padding: 1.4rem;
+      height: 35%;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+}
