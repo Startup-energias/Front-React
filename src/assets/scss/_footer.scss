@@ -15,4 +15,25 @@
       color: white;
     }
   }
+  .icons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    @media(max-width: 590px){ 
+      flex-direction: column;
+    }
+  }
+
+  .text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    @media(max-width: 590px){ 
+      flex-direction: column;
+    }
+  }
 }

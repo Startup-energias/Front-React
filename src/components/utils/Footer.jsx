@@ -12,7 +12,7 @@ function Footer() {
       </div>
     ));
     return (
-      <div className="is-flex is-justify-content-center is-align-items-center">
+      <div className="icons-container">
         {list}
       </div>
     );
@@ -23,7 +23,7 @@ function Footer() {
       <a className="mx-3 is-uppercase" href={"#"+link} key={"footer-"+link}>{link}</a>
     ));
     return(
-      <div className="is-flex is-justify-content-center is-align-items-center">
+      <div className="text-container is-flex is-justify-content-center is-align-items-center">
         <span className="mx-3">
         @COPYRIGHT 2021
         </span>

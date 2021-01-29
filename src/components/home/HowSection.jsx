@@ -19,12 +19,10 @@ function HowSection() {
   };
 
   return (
-    <section className="section how has-background-white">
-      <div className="container mt-6">
+    <section className="section how p-0 has-background-white">
         <div className="columns is-multiline">
           <RenderSteps steps={steps} />
         </div>
-      </div>
 
       <TabContent titles={['Finance a proyect', 'Support with knowledge']} info={support} />
 

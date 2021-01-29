@@ -3,7 +3,7 @@ import './scss/_contactSection.scss';
 
 function ContactSection() {
   return (
-    <section className="contact has-background-info is-flex is-justify-content-center is-align-content-center py-1">
+    <section className="contact has-background-info is-flex is-justify-content-center is-align-content-center py-1 pt-6">
       <div className="container mb-6">
         <h1 className="title has-text-dark is-1 ml-6 pl-6">Contact Us! </h1>
         <div className="field is-horizontal">

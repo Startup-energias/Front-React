@@ -2,7 +2,7 @@ import './scss/_blogSection.scss';
 
 function BlogSection() {
   return (
-    <section className="blog has-background-info">
+    <section className="blog section p-0 has-background-info">
       <div
         className="background"
       >

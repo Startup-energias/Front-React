@@ -7,13 +7,14 @@ library.add(faMapMarkerAlt);
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
-function ProjectInfo(props) {
+function ProjectInfo({info, icons}) {
 
     function RenderGallery({list}) {
         const listImages = list.map((item, i) => {
           return(
-            <div className="gallery-container" key={"gallery-"+i}>
-              <img className="center-img" src={item} alt={"gallery-"+i}/>
+            <div className="gallery-container" key={"gallery-"+i} style={{
+              backgroundImage: `url(${item})`,
+            }}>
             </div>
           );
         });
@@ -25,12 +26,12 @@ function ProjectInfo(props) {
         );
       }
 
-      function RenderCaracteristics({list}){
+      function RenderCaracteristics({list, icons}){
         const listIcons = list.map((item, i) => {
           return(
             <li className="mr-3" key={"project_icon_"+i}>
-              <img className="project-icon mr-1" src={item.icon} alt={"project_icon_"+i} />
-              <span className="is-size-6 has-text-grey-dark">{item.info}</span>
+              <img className="project-icon mr-1" src={icons[i]} alt={"project_icon_"+i} />
+              <span className="is-size-6 has-text-grey-dark">{item}</span>
             </li>
           );
         });
@@ -47,22 +48,22 @@ function ProjectInfo(props) {
     return(
         <div className="content">
           <h5 className="subtitle is-5 has-text-info">
-            <FontAwesomeIcon icon={faMapMarkerAlt} /> {props.info.location}
+            <FontAwesomeIcon icon={faMapMarkerAlt} /> {info.location}
           </h5>
-          <h2 className="title is-2 has-text-dark is-spaced mt-1">{props.info.name}</h2>
-          <h5 className="subtitle is-5 has-text-grey is-uppercase">{props.info.category}</h5>
+          <h2 className="title is-2 has-text-dark is-spaced mt-1">{info.name}</h2>
+          <h5 className="subtitle is-5 has-text-grey is-uppercase">{info.category}</h5>
           <div className="content">
-            <RenderCaracteristics list={props.info.caracteristics} />
+            <RenderCaracteristics list={info.caracteristics} icons={icons}/>
           </div>
           {
-          props.info.description.map((paragraph, i) => {
+          info.description.map((paragraph, i) => {
             return(
               <p className="has-text-grey" key={"p_number_"+i}>{paragraph}</p>
             );
           })}
 
-          <h4 className="title is-2 has-text-primary-dark is-spaced">Gallery</h4>
-          <RenderGallery list = {props.info.images}/>
+          <h4 className="title is-2 has-text-dark is-spaced">Gallery</h4>
+          <RenderGallery list = {info.images}/>
         </div>
     );
 }
