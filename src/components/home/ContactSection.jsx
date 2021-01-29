@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import './scss/_contactSection.scss';
 
 function ContactSection() {
   return (

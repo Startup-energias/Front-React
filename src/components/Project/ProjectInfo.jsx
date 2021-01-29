@@ -10,16 +10,16 @@ import { Carousel } from 'react-responsive-carousel';
 function ProjectInfo(props) {
 
     function RenderGallery({list}) {
-        const listImages = list.map((item, i) => {
+        const listImages = list.map((item) => {
           return(
-            <div className="gallery-container" key={"gallery-"+i}>
-              <img className="center-img" src={item} alt={"gallery-"+i}/>
+            <div key={item.name}>
+              <img className="center-img" src={item.content} alt={item.name}/>
             </div>
           );
         });
     
         return(
-          <Carousel centerMode={true} showThumbs={false} autoPlay={false} showStatus={false}>
+          <Carousel dynamicHeight={true}>
             {listImages}
           </Carousel>
         );

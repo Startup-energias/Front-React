@@ -1,7 +1,6 @@
 import money from '../../assets/images/impact/money.png';
 import weight from '../../assets/images/impact/weight.png';
 import people from '../../assets/images/impact/people.png';
-import './scss/_impactSection.scss';
 
 function ImpactSection() {
   const steps = [
@@ -28,15 +27,15 @@ function ImpactSection() {
   let renderSteps = () => {
     return steps.map((item) => (
       <div className="column is-one-third-widescreen" key={item.title}>
-        <div className="icon-container is-flex is-justify-content-center">
-          <div className="icon-image has-text-white is-align-items-center is-justify-content-center is-flex ">
+        
+        <div className="iconContainer is-flex is-justify-content-center">
+          <div className="iconImage has-text-white is-align-items-center is-justify-content-center is-flex ">
             <img src={item.icon} alt={item.title} />
           </div>
         </div>
         
-        <h2 className="title is-2 has-text-white mt-4">
-          {item.title}
-          {item.sub && <sub>{item.sub}</sub>}
+        <h2 className="title is-2 has-text-white mt-4">{item.title} 
+        {item.sub && <sub>{item.sub}</sub> }
         </h2>
         <p className="is-size-5 has-text-white">{item.content}</p>
       </div>
@@ -44,9 +43,11 @@ function ImpactSection() {
   };
 
   return (
-    <section className="section impact has-background-primary" id="Our impact">
+    <section className="section has-background-primary" id="Our impact">
       <div className="container has-text-centered">
-        <h1 className="title is-1 mb-6 is-uppercase has-text-white">Our impact</h1>
+        <h1 className="title is-1 mb-6 is-uppercase has-text-white">
+          Our impact
+        </h1>
         <div className="columns is-multiline is-8 mx-6 mb-2">{renderSteps()}</div>
       </div>
     </section>

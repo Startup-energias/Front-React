@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import image1 from '../../assets/images/projects/Img1.jpg';
-import './scss/_projectsSection.scss';
+import LinesEllipsis from 'react-lines-ellipsis';
+import image1 from '../../assets/images/Projects/Img1.jpg';
 
 function ProjectsSection() {
   const soon = ['1', '2', '3'];
-
   let [projects] = useState([
     {
       id: 1,
@@ -20,7 +19,7 @@ function ProjectsSection() {
   let renderProjects = () => {
     return projects.map((item) => (
       <div
-        className="column is-full-tablet-mobile is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
+        className="column is-full-tablet-mobile is-full-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
         key={item.id}
       >
         <div className="card">
@@ -35,16 +34,22 @@ function ProjectsSection() {
                 <p className="subtitle is-5 has-text-grey-light mt-1 is-5 is-spaced">
                   {item.category}
                 </p>
-                <h2 className="title is-4">{item.team_name}</h2>
-                <h3 className="subtitle is-5">
-                  <a href="/projects">{item.name}</a>
+                <h2 className="title is-4 has-text-info">{item.team_name}</h2>
+                <h3 className="subtitle has-text-dark is-5">
+                  <a className="darken-link" href="/projects">
+                    {item.name}
+                  </a>
                 </h3>
               </div>
             </div>
             <div className="content">
-              <p>
-                {item.description}
-              </p>
+              <LinesEllipsis
+                text={item.description}
+                maxLine="5"
+                ellipsis="..."
+                trimRight
+                basedOn="letters"
+              />
               <button className="button is-info is-light mt-2">Support Now</button>
             </div>
           </div>
@@ -54,18 +59,15 @@ function ProjectsSection() {
   };
 
   return (
-    <section
-      className="section projects has-background-white projectsListSection py-6"
-      id="Projects"
-    >
+    <section className="section has-background-white projectsListSection py-6" id="Projects">
       <div className="container">
-        <h1 className="title is-1 has-text-success">Projects</h1>
+        <h1 className="title bigger has-text-success">Projects</h1>
         <div className="columns is-multiline">
           {renderProjects()}
           {soon.map((n) => (
             <div
               key={'filler_card' + n}
-              className="column is-full-tablet-mobile is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
+              className="column is-full-tablet-mobile is-full-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"
             >
               <div className={'card filler_card has-background-info'}>
                 <h2 className="title big has-text-info-dark">SOON</h2>

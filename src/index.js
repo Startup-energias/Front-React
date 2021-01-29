@@ -1,5 +1,5 @@
-
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from './components/Navbar';
 import Router from './router/Router';

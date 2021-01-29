@@ -4,12 +4,12 @@ function ProjectTeam(props) {
       return (
         <div className="block mx-6" key={item.name}>
           <div className="media">
-            <figure className="media-left mx-0">
+            <figure className="media-left">
               <figure className="image is-64x64">
                 <img className="is-rounded" src={item.image} alt={item.name} />
               </figure>
             </figure>
-            
+
             <div className="media-content">
               <div className="content">
                 <p>

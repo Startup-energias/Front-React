@@ -5,23 +5,19 @@ import Iframe from 'react-iframe';
 import BulmaModal from '../components/utils/BulmaModal';
 import ProjectInfo from '../components/project/ProjectInfo';
 import ProjectTeam from '../components/project/ProjectTeam';
-//icons
+//Project images
 import peopleIcon from '../assets/images/project/peopleIcon.png';
 import waterIcon from '../assets/images/project/waterIcon.png';
 import weightIcon from '../assets/images/project/weightIcon.png';
-// project images
+// generics assets
 import banner from '../assets/images/project1/banner.jpg';
 import logo from '../assets/images/project1/logo.png';
 import image1 from '../assets/images/project1/gallery/img.jpg';
 import image2 from '../assets/images/project1/gallery/img2.jpg';
-import image3 from '../assets/images/project1/gallery/img3.jpg';
-import image4 from '../assets/images/project1/gallery/img4.jpg';
-import image5 from '../assets/images/project1/gallery/img5.jpg';
 import avatar1 from '../assets/images/project1/team/avatar-10-1.jpg';
 import avatar2 from '../assets/images/project1/team/avatar-10.jpg';
 import avatar3 from '../assets/images/project1/team/avatar-default.jpg';
-//scss
-import './scss/project.scss';
+import '../assets/scss/06_pages/project.scss';
 
 function Project() {
   let [project] = useState({
@@ -43,7 +39,16 @@ function Project() {
       ],
       date: new Date(2016, 1, 16).toLocaleString(),
       location: 'Buenavista, Riohacha, La Guajira, Colombia',
-      images: [image1, image2, image3, image4, image5 ],
+      images: [
+        {
+          name: 'image1',
+          content: image1,
+        },
+        {
+          name: 'image2',
+          content: image2,
+        },
+      ],
       banner: banner,
       caracteristics: [
         {
@@ -97,10 +102,10 @@ function Project() {
   }
 
   return (
-    <section className="project mt-3 has-background-white p-0">
+    <section className="mt-3 has-background-white">
       <img className="m-0" src={banner} alt="banner" />
-      <div className=" mx-6 mb-6">
-        <div className="columns is-desktop is-6 mx-6">
+      <div className="content mx-6 mb-6 pb-3">
+        <div className="columns is-desktop is-6 mt-1 mx-6">
           <div className="column is-8 mr-6">
             <ProjectInfo info={project.content} />
             <div className="content mx-1">
@@ -121,7 +126,7 @@ function Project() {
               </div>
             </div>
           </div>
-          <div className="goal-col column has-background-dark p-0">
+          <div className="column has-background-dark p-0">
             <div className="content mt-3 mx-1 mb-1 px-5">
               <h1 className="title is-2 has-text-info is-size-3-widescreen is-size-5-desktop">
                 Goal <span className="">${project.goal} USD</span>
