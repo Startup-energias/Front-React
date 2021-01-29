@@ -1,0 +1,12 @@
+@import '../../../assets/scss/02_base/colors';
+@import '../../../assets/scss/03_utils/custom';
+
+.supporters{
+    .supporter_logo{
+        display: block;
+        max-width:230Px;
+        max-height:95px;
+        width: auto;
+        height: auto;
+      }
+}

@@ -1,14 +1,18 @@
 @import './02_base/colors';
-@import './_mixins/custom';
+@import './03_utils/custom';
 
-.footer{
-    list-style: circle;
-    a{
-        color: darken($link, 30%);
+.footer {
+  a {
+    color: darken(white, 10%);
+  }
+  .icon-container{
+    background-color: darken(white, 10%);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    &:hover{
+      background-color: darken(white, 50%);
+      color: white;
     }
-    .logo{
-        display: block;
-        max-width:8em;
-        height: auto;
-    }
+  }
 }
