@@ -1,5 +1,5 @@
 import Iframe from 'react-iframe';
-import '../../assets/scss/04_layout/_inoverteSection.scss';
+import './scss/_inoverteSection.scss';
 
 function InoverteSection() {
   return (

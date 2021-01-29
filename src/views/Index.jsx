@@ -7,7 +7,7 @@ import SupportersSection from '../components/home/SupportersSection';
 import ImpactSection from '../components/home/ImpactSection';
 import BlogSection from '../components/home/BlogSection';
 import ContactSection from '../components/home/ContactSection';
-import '../assets/scss/06_pages/index.scss';
+import './scss/index.scss';
 
 function Index() {  
   return (
