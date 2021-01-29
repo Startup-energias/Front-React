@@ -9,27 +9,18 @@ $how_width_small: 300px;
 
 $image_inc: 20px;
 
-.rightText{
-  float:right;
-  margin-right: 5em;
-}
-
-.leftText{
-  float:left;
-}
-
-section h1{
-  margin-top: 60px
+section h1 {
+  margin-top: 60px;
 }
 
 .card {
   height: 100%;
 }
 
-.centerDiv{
+.centerDiv {
   @include flexCenterDir(row);
 }
-.howContainer{
+.howContainer {
   @include flexCenterDir(row);
 }
 
@@ -37,10 +28,10 @@ section h1{
   $how_height: 240px;
   $how_width: 300px;
 
-  .howContainer{
+  .howContainer {
     flex-direction: column;
   }
-  .howStep{
+  .howStep {
     margin: 0;
 
     height: $how_height_small;
@@ -48,34 +39,33 @@ section h1{
   }
 }
 
-.howStep
-{
+.howStep {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+
   height: $how_height;
-  width:$how_width;
-  
+  width: $how_width;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 
-  h2{
+  h2 {
     color: white;
   }
 
-  p{
+  p {
     color: white;
     height: 60px;
   }
 }
 
-#tabs-with-content .tabs:not(:last-child){
+#tabs-with-content .tabs:not(:last-child) {
   margin-bottom: 0;
 }
 
-#tabs-with-content{
+#tabs-with-content {
   margin: 2em 8rem 2em;
 
   .tab-content {
@@ -89,21 +79,21 @@ section h1{
 }
 
 @media only screen and (max-width: 1219px) {
-  #tabs-with-content{
+  #tabs-with-content {
     margin: 2em 0rem 2em;
-  
+
     .tab-content {
       margin: 0em;
     }
   }
 }
 
-.tabs li.is-active{
+.tabs li.is-active {
   background: $info;
   color: $primary !important;
 }
 
-.tabs li{
+.tabs li {
   background: $dark;
   color: white !important;
 }
@@ -116,15 +106,14 @@ section h1{
   font-size: 300%;
 }
 
-.filler_card{
+.filler_card {
   @include flexCenterOpacity(0.1);
 }
 
-.about{
-
-  .about_image{
+.about {
+  .about_image {
     display: block;
-    max-width:300px;
+    max-width: 300px;
     max-height: 400px;
     width: auto;
     height: auto;
@@ -136,7 +125,7 @@ section h1{
   display: flex;
 }
 
-.iconContainer{
+.iconContainer {
   width: 100%;
   .iconImage {
     height: 70px;
@@ -148,20 +137,20 @@ section h1{
   color: $dark;
 }
 
-.black-link{
+.black-link {
   color: black;
 }
 
-.supporter_logo{
+.supporter_logo {
   display: block;
-  max-width:230Px;
-  max-height:95px;
+  max-width: 230px;
+  max-height: 95px;
   width: auto;
   height: auto;
 }
 
-.blog{
-  .background{
+.blog {
+  .background {
     padding-top: 12em;
     padding-bottom: 12em;
 
@@ -169,22 +158,21 @@ section h1{
     background-position: center;
     background-size: cover;
 
-    h1{
+    h1 {
       font-size: 400%;
     }
   }
-  
 }
 
-.contact{
-  .container{
+.contact {
+  .container {
     @media only screen and (max-width: 780px) {
       margin-right: 1em;
       margin-left: 1em;
     }
     margin-right: 12em;
   }
-  .label{
-    color: darken($primary,40%);
+  .label {
+    color: darken($primary, 40%);
   }
 }
