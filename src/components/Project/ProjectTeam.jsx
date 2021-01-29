@@ -2,7 +2,7 @@ function ProjectTeam(props) {
   function RenderMemebers({ list }) {
     return list.map((item) => {
       return (
-        <div className="block" key={item.name}>
+        <div className="block mx-6" key={item.name}>
           <div className="media">
             <figure className="media-left">
               <figure className="image is-64x64">
@@ -14,23 +14,19 @@ function ProjectTeam(props) {
               <div className="content">
                 <p>
                   <br />
-                  <strong>{item.name}</strong>
+                  <strong className="title is-size-6 has-text-info">{item.name}</strong>
                 </p>
               </div>
             </div>
           </div>
-          <p className="is-italic has-text-grey-light">{"\""+item.comment+"\""}</p>
+          <p className=" has-text-white is-italic">{"\""+item.comment+"\""}</p>
         </div>
       );
     });
   }
 
   return (
-    <div className="content">
-      <hr />
-      <h6 className="subtitle is-6 has-text-grey">PROJECT BY</h6>
-      <hr />
-
+    <div className="content mt-6">
       <RenderMemebers list={props.team} />
     </div>
   );

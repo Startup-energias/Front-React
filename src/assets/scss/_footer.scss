@@ -1,0 +1,14 @@
+@import './02_base/colors';
+@import './_mixins/custom';
+
+.footer{
+    list-style: circle;
+    a{
+        color: darken($link, 30%);
+    }
+    .logo{
+        display: block;
+        max-width:8em;
+        height: auto;
+    }
+}

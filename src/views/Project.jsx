@@ -1,31 +1,44 @@
-import { useState } from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import { useState, useEffect } from 'react';
 import Iframe from 'react-iframe';
-
-import Footer from '../components/Footer';
-import ProjectInfo from '../components/Project/ProjectInfo';
-import ProjectTeam from '../components/Project/ProjectTeam';
-
-import image1 from '../assets/images/Project1/img.jpg';
-import image2 from '../assets/images/Project1/img2.jpg';
-
-import avatar1 from '../assets/images/Project1/Team/avatar-10-1.jpg';
-import avatar2 from '../assets/images/Project1/Team/avatar-10.jpg';
-import avatar3 from '../assets/images/Project1/Team/avatar-default.jpg';
-
+import BulmaModal from '../components/utils/BulmaModal';
+import ProjectInfo from '../components/project/ProjectInfo';
+import ProjectTeam from '../components/project/ProjectTeam';
+//Project images
+import peopleIcon from '../assets/images/project/peopleIcon.png';
+import waterIcon from '../assets/images/project/waterIcon.png';
+import weightIcon from '../assets/images/project/weightIcon.png';
+// generics assets
+import banner from '../assets/images/project1/banner.jpg';
+import logo from '../assets/images/project1/logo.png';
+import image1 from '../assets/images/project1/gallery/img.jpg';
+import image2 from '../assets/images/project1/gallery/img2.jpg';
+import avatar1 from '../assets/images/project1/team/avatar-10-1.jpg';
+import avatar2 from '../assets/images/project1/team/avatar-10.jpg';
+import avatar3 from '../assets/images/project1/team/avatar-default.jpg';
 import '../assets/scss/06_pages/project.scss';
-
 
 function Project() {
   let [project] = useState({
     id: 1,
-    supporting: 79,
+    goal: '5.800',
+    goaln: 5800,
+    amount: 2700,
     content: {
       category: 'Solar',
-      name: 'Access to drink water: seawater desalination unit powered with solar energy.',
-      description:
-        'Still in XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area with deforestation, mining exploitation, and disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea, and presence of groundwater) make it possible to develop an environmental friendly solution: a seawater desalination unit powered with solar energy. This portable unit would transform 150 L of salt water into drinking water on a daily basis, supplying a community of 20 people. Help us raise the money to make this project come true! #DrinkingWaterForAll.',
+      name: 'Solar energy for generate drinkable water.',
+      description: [
+        'Sea for Change is a humanitarian project thought and designed by a team of interdisciplinary young minds who seek to bring water to the communities that need it most.',
+        'Even in the XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area that suffers from deforestation, mining exploitation and the disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea and the presence of groundwater) allow the development of an environmentally friendly solution using solar energy.',
+        'We want to provide drinking water as soon as possible to the Wayuus, an indigenous community in the area that has suffered from a shortage of drinking water for more than 40 years.',
+        "We created an innovative portable machine that uses solar energy to desalinate and treat sea, groundwater or surface reservoir water. It's attractive in terms of cost, design, versatility, and of course portability. The unit has the capacity to provide drinking water to more than 30 people, equivalent to a minimum of 150 liters per day.",
+        'We have designed the machine’s first version and it is ready to be built, tested and optimized. We will use the funds raised to finance the construction and testing of our prototype.',
+        'Join Sea for Change as an investor or team member. After building our prototype and doing field tests this year (2021), we hope to scale our business in 2022. Our goal is to mass produce our desalinators in an economically, socially and environmentally sustainable manner.',
+        'We believe in the power of solidarity, technology and collaboration as engines of progress in societies. Help us and be an active entity of change! #PotableWaterForAll.',
+      ],
       date: new Date(2016, 1, 16).toLocaleString(),
-      location: 'La Guajira, Colombia',
+      location: 'Buenavista, Riohacha, La Guajira, Colombia',
       images: [
         {
           name: 'image1',
@@ -36,14 +49,19 @@ function Project() {
           content: image2,
         },
       ],
+      banner: banner,
       caracteristics: [
         {
-          icon: 'faucet',
-          info: 'Helps 20 people/day',
+          icon: waterIcon,
+          info: 'Helps 30 people/day',
         },
         {
-          icon: 'users',
+          icon: peopleIcon,
           info: 'Indigenous ethnic group Wayuu',
+        },
+        {
+          icon: weightIcon,
+          info: '# of tons of Co2 equivalent to X whales ',
         },
       ],
     },
@@ -69,56 +87,107 @@ function Project() {
     ],
   });
 
+  useEffect(() => {
+    // Actualiza el título del documento usando la API del navegador
+    var btn = document.querySelector('#openSupport');
+    var mdl = new BulmaModal('#supportModal');
+
+    btn.addEventListener('click', function () {
+      mdl.show();
+    });
+  }, []);
+
+  function showSharing() {
+    document.getElementById('sharing-content').style.display = 'block';
+  }
+
   return (
-    <div className="content has-background-white">
-      <section className="project">
-        <div className="container mb-6 pb-3">
-          <div className="columns is-desktop is-8 mt-4 mx-6">
-            <div className="column is-8">
+    <section className="mt-3 has-background-white">
+      <img className="m-0" src={banner} alt="banner" />
+      <div className="content mx-6 mb-6 pb-3">
+        <div className="columns is-desktop is-6 mt-1 mx-6">
+          <div className="column is-8 mr-6">
+            <ProjectInfo info={project.content} />
+            <div className="content mx-1">
+              <h3 className="title is-3 has-text-dark">Project Location</h3>
 
-              <ProjectInfo info={project.content} />
-              <ProjectTeam team={project.team} />
-              <hr />
-              <div className="">
-                <h3 className="title is-3">Project Location</h3>
-
-                <div className="map-wrapper-300 mb-3">
-                  <Iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002303.1909407254!2d-73.51029478988822!3d11.425797455703325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8b8914627238ff%3A0x22e6d8831a7d9716!2sLa%20Guajira%2C%20Colombia!5e0!3m2!1sen!2sch!4v1603451522243!5m2!1sen!2sch" width="600" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></Iframe>
-                </div>
-              </div>
-
-            </div>
-            <div className="column">
-              <div className="box sticky-top px-5">
-                <p>
-                  <span className="is-size-3 has-text-primary-dark has-text-weight-bold">$5 </span>
-                  or more per month, or help with expertise
-                </p>
-                <hr />
-
-                <p className="is-size-6 mb-2">TYPE OF SUPPORT *</p>
-                <div className="control">
-                  <div className="select is-fullwidth">
-                    <select>
-                      <option>Support with cash</option>
-                      <option>Support with knowledge</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="container mt-5">
-                  <button className="button is-fullwidth is-primary is-family-monospace">SUPPORT NOW</button>
-                  <p className="mt-3 has-text-grey has-text-centered">{project.supporting} people are supporting this project</p>
-                </div>
-
+              <div className="map-container map-wrapper-300 mb-3">
+                <Iframe
+                  className="responsive-iframe"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002303.1909407254!2d-73.51029478988822!3d11.425797455703325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8b8914627238ff%3A0x22e6d8831a7d9716!2sLa%20Guajira%2C%20Colombia!5e0!3m2!1sen!2sch!4v1603451522243!5m2!1sen!2sch"
+                  width="auto"
+                  height="auto"
+                  frameborder="0"
+                  style="border:0;"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></Iframe>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      
+          <div className="column has-background-dark p-0">
+            <div className="content mt-3 mx-1 mb-1 px-5">
+              <h1 className="title is-2 has-text-info is-size-3-widescreen is-size-5-desktop">
+                Goal <span className="">${project.goal} USD</span>
+              </h1>
 
-      <Footer />
-    </div>
+              <div className="container is-flex is-align-items-center is-justify-content-center mt-5">
+                <button className="button is-size-6 is-info has-text-dark">SUPPORT NOW</button>
+              </div>
+
+              <div className="is-flex is-align-items-center is-justify-content-center my-5">
+                <h2 className=" is-size-6 mr-2 has-text-info">Progress</h2>
+                <progress
+                  className="progress is-info is-small"
+                  value={Math.round((project.amount * 100) / project.goaln)}
+                  max="100"
+                >
+                  15%
+                </progress>
+              </div>
+              <div className="container is-flex is-align-items-center is-justify-content-center mt-5">
+                <button id="openSupport" className="button is-size-6 is-info has-text-dark">
+                  Other type of support
+                </button>
+              </div>
+
+              <div className="modal" id="supportModal">
+                <div className="modal-background"></div>
+                <div className="modal-card">
+                  <header className="modal-card-head">
+                    <p className="modal-card-title m-0">Choose another type of support</p>
+                    <button className="delete" aria-label="close" data-bulma-modal="close"></button>
+                  </header>
+                  <section className="modal-card-body">
+                    <div id="sharing-content"></div>
+                    <div className="buttons has-addons">
+                      <div className="button is-info">Support with knowledge</div>
+                      <div className="button is-link" onClick={showSharing}>
+                        Support sharing!
+                      </div>
+                    </div>
+                  </section>
+                  <footer className="modal-card-foot">
+                    <button className="button" data-bulma-modal="close">
+                      Cancel
+                    </button>
+                  </footer>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 is-flex is-align-items-center is-justify-content-center has-background-info py-3">
+              <div className="is-flex is-align-items-center">
+                <img className="project-logo" src={logo} alt="project_logo" />
+              </div>
+              <h1 className="title ml-3 is-2 has-text-dark">Team</h1>
+            </div>
+            <ProjectTeam team={project.team} />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
