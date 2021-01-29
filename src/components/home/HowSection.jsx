@@ -19,7 +19,7 @@ function HowSection() {
   };
 
   return (
-    <section className="section how p-0 has-background-white">
+    <section className="section how mt-6 p-0 has-background-white">
         <div className="columns is-multiline">
           <RenderSteps steps={steps} />
         </div>

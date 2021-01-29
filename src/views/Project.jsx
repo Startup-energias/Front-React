@@ -47,11 +47,11 @@ function Project() {
   };
 
   return (
-    <section className="project mt-3 has-background-white p-0">
-      <img className="m-0" src={project.banner} alt="banner" />
+    <section className="project mt-6 has-background-white p-0">
+      <img className="mx-0 mb-0 mt-2" src={project.banner} alt="banner" />
       <div className=" mx-6 mb-6">
         <div className="columns is-multiline is-6 mx-6">
-          <div className="column is-8-widescreen is-7-desktop is-12-tablet mr-6">
+          <div className="column mt-4 is-8-widescreen is-7-desktop is-12-tablet mr-6">
             <ProjectInfo info={project.content} icons={icons}/>
             <div className="content mx-1">
               <h3 className="title is-3 has-text-dark">Project Location</h3>
@@ -86,9 +86,9 @@ function Project() {
                 </div>
               </div>
               <div className="buttons is-centered">
-                <button className="button subtitle is-size-6 is-info has-text-dark">Donate!</button>
-                <button className="button subtitle is-size-6 is-link has-text-dark">Join the team!</button>
-                <button id="openSupport" className="button subtitle is-size-6 is-info has-text-dark"> Share! </button>
+                <button className="goal-btn button subtitle is-size-6">Donate!</button>
+                <button className="goal-btn button subtitle is-size-6">Join the team!</button>
+                <button id="openSupport" className="goal-btn button subtitle is-size-6"> Share! </button>
               </div>
 
               <div className="modal" id="supportModal">

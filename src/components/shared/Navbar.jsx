@@ -27,9 +27,15 @@ function Navbar({ items, logo }) {
                 onClick={() => {
                   Auth.federatedSignIn();
                 }}
-                className="button is-success"
+                className="button is-white"
               >
                 Login
+              </button>
+              <div className="navbar-line"></div>
+              <button
+                className="button is-white"
+              >
+                Sign up
               </button>
             </div>
           </div>
