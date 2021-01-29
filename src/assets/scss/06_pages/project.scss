@@ -1,25 +1,25 @@
-.caracteristics{
-    ul{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-} 
+.caracteristics {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
 
 @media (min-width: 768px) {
-    .caracteristics{
-        li{
-            display: inline;
-        }
-    } 
-}
-    
-.sticky-top{
-    position:sticky;
-    -webkit-position: sticky;
-    top:70px;
+  .caracteristics {
+    li {
+      display: inline;
+    }
+  }
 }
 
-.project { 
-    padding-top: 65px; 
+.sticky-top {
+  position: sticky;
+  -webkit-position: sticky;
+  top: 70px;
+}
+
+.project {
+  padding-top: 65px;
 }

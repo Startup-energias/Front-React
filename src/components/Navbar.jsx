@@ -1,4 +1,5 @@
 import LogoDefault from '../assets/images/logo.png';
+import { Auth } from 'aws-amplify';
 
 function Navbar({ items, logo }) {
   return (
@@ -36,12 +37,14 @@ function Navbar({ items, logo }) {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a href="a.com" className="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a href="a.com" className="button is-light">
-                Log in
-              </a>
+              <button
+                onClick={() => {
+                  Auth.federatedSignIn();
+                }}
+                className="button is-success"
+              >
+                Login
+              </button>
             </div>
           </div>
         </div>
