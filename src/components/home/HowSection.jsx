@@ -1,4 +1,4 @@
-import TabContent from '../utils/TabContent';
+import TabContent from '../shared/TabContent';
 import {steps, support} from '../../helpers/constants/howSteps.js';
 import './scss/_howSection.scss';
 

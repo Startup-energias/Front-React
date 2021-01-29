@@ -1,5 +1,5 @@
 
-import '../../assets/scss/_footer.scss';
+import './scss/_footer.scss';
 
 function Footer() {
   const inoverte = ['Home','Projects', 'About us', 'Our impact'];

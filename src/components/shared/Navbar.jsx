@@ -1,6 +1,6 @@
 import { Auth } from 'aws-amplify';
-import LogoDefault from '../assets/images/logo-black.png';
-import '../assets/scss/_navbar.scss';
+import LogoDefault from '../../assets/images/logo-black.png';
+import './scss/_navbar.scss';
 
 function Navbar({ items, logo }) {
   return (

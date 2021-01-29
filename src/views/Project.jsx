@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useEffect } from 'react';
 import Iframe from 'react-iframe';
-import BulmaModal from '../components/utils/BulmaModal';
+import BulmaModal from '../utils/bulmaModal';
 import ProjectInfo from '../components/project/ProjectInfo';
 import ProjectTeam from '../components/project/ProjectTeam';
 //icons
