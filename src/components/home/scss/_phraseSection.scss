@@ -1,2 +1,20 @@
 @import '../../../assets/scss/02_base/colors';
+@import '../../../assets/scss/02_base/typography';
 @import '../../../assets/scss/03_utils/custom';
+
+.phraseSection {
+  padding: 3rem;
+  &__title {
+    .title {
+      font-size: 26px;
+      font-family: montserrat-bold;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  div {
+    width: 33rem;
+  }
+}
