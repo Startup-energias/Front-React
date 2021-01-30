@@ -1,7 +1,9 @@
 @import '../../../assets/scss/02_base/colors';
+@import '../../../assets/scss/02_base/screenSizes';
 @import '../../../assets/scss/03_utils/custom';
 
 .infoSection {
+  background-image: url('../../../assets/images/banner.jpg');
   margin-top: 4.3rem;
   background-position: top;
   background-size: cover;
@@ -9,13 +11,13 @@
   height: 41rem;
   display: flex;
   align-items: center;
-  .title {
-    font-size: 4rem;
-    font-weight: bold;
-    color: white;
+  justify-content: center;
+  padding: 1rem;
+  background-blend-mode: luminosity;
+  @include screenQuery($medium - 30px) {
+    padding: 0 4rem;
   }
-  .rightText {
-    float: right;
-    margin-right: 5em;
+  .title {
+    font-size: 3.125rem;
   }
 }

@@ -1,16 +1,25 @@
-.navbar-item {
-  color: white;
-}
+nav {
+  font-size: 19px;
+  .navbar-item {
+    color: white;
+  }
 
-.navbar-brand {
-  margin-left: 120px;
-}
+  .navbar-brand {
+    margin-left: 120px;
+  }
 
-.navbar-line {
-  border-left: 1px solid black;
-  padding-left: 2px;
-}
+  .navbar-line {
+    border-left: 1px solid black;
+    padding-left: 2px;
+  }
 
-.dropdown-menu {
-  width: 2 rem;
+  .dropdown-menu {
+    width: 2rem;
+  }
+  .navbar-divider {
+  }
+
+  .buttons > button {
+    font-size: 13px;
+  }
 }

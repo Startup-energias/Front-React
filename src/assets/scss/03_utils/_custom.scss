@@ -1,23 +1,29 @@
 @mixin flexCenter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @mixin flexCenterDir($direction) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: $direction;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
 }
 
-@mixin flexCenterOpacity ($opacity){
-    @include flexCenter();
-    opacity: $opacity;
+@mixin flexCenterOpacity($opacity) {
+  @include flexCenter();
+  opacity: $opacity;
 }
 
-@mixin scaleImage($height){
-    max-height: $height;
-    width: auto;
-    height: auto;
+@mixin scaleImage($height) {
+  max-height: $height;
+  width: auto;
+  height: auto;
+}
+
+@mixin screenQuery($size: $medium) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
 }

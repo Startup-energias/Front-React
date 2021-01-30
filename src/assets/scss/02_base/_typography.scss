@@ -1,29 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @font-face {
-    font-family: 'finador';
-    src: url(../../typo/Finador/Finador-Regular.ttf);
-    font-style: normal
+  font-family: 'montserrat-regular';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  font-style: normal;
 }
 @font-face {
-    font-family: 'finador-black';
-    src: url(../../typo/Finador/Finador-Black.ttf);
-    font-style: normal
-}
-
-@font-face {
-    font-family: 'hknova-medium';
-    src: url(../../typo/Nova/TTF/HKNova-Medium.ttf);
-    font-style: normal
-}
-@font-face {
-    font-family: 'spartan-black';
-    src: url(../../typo/Spartan/Spartan-Black.ttf);
-    font-style: normal
+  font-family: 'montserrat-semibold';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 }
 
-$family-serif: finador;
-$family-primary: $family-serif;
-$family-secondary: finador-black;
+@font-face {
+  font-family: 'montserrat-bold';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+}
 
-.title, .subtitle{
-    font-family: $family-secondary;
+$family-primary: montserrat-regular;
+$family-secondary: montserrat-semibold;
+
+.title,
+.subtitle {
+  font-family: $family-secondary;
 }
