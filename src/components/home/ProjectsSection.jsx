@@ -72,7 +72,7 @@ function ProjectsSection() {
 
   return (
     <section
-      className="section projects has-background-white projectsListSection py-6"
+      className="section projects has-background-white projectsListSection pt-6 pb-0"
       id="Projects"
     >
       <div className="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center">

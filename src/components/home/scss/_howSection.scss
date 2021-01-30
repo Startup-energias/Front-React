@@ -21,4 +21,16 @@
   #how-3 .text-content{
     padding: 0 6em 0;
   }
+
+  @media (max-width: 1409px){
+    #how-1 .text-content, #how-2 .text-content, #how-3 .text-content{
+      padding: 0 5em 0;
+    }
+  }
+
+  @media (max-width: 1216px){
+    #how-1 .text-content, #how-2 .text-content, #how-3 .text-content{
+      padding: 0 2em 0;
+    }
+  }
 }

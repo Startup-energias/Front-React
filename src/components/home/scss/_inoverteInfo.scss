@@ -1,0 +1,17 @@
+@import '../../../assets/scss/02_base/colors';
+@import '../../../assets/scss/03_utils/custom';
+.info{
+    .content-tag{
+        background-color: white;
+        margin: 0 20px 0;
+        border-style: solid;
+        border: 3px solid grey;
+        width: 170px;
+        display: inline-block;
+    }
+
+    .btn-selected{
+        background-color: lighten($color: grey, $amount: 40);
+    }
+}
+    

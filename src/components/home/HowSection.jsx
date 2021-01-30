@@ -12,7 +12,7 @@ function HowSection() {
           </div>
         </div>
         
-        <h2 className="is-size-5 has-text-dark mt-4 mb-2">
+        <h2 className="is-size-4     has-text-dark mt-4 mb-2">
           {item.title}
         </h2>
         <div className="container text-content">
