@@ -6,9 +6,9 @@ import BulmaModal from '../utils/bulmaModal';
 import ProjectInfo from '../components/project/ProjectInfo';
 import ProjectTeam from '../components/project/ProjectTeam';
 //icons
-import peopleIcon from '../assets/images/project/peopleIcon.png';
-import waterIcon from '../assets/images/project/waterIcon.png';
-import weightIcon from '../assets/images/project/weightIcon.png';
+import peopleIcon from '../assets/images/icons/people.png';
+import waterIcon from '../assets/images/icons/water.png';
+import weightIcon from '../assets/images/icons/contamination.png';
 // project images
 //scss
 import project from '../helpers/constants/projectInfo';

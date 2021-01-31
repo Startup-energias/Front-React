@@ -1,11 +1,11 @@
-import Iframe from 'react-iframe';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 library.add(faMapMarkerAlt);
  
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel, YoutubeSlide } from 'react-responsive-carousel';
+import { Carousel } from 'react-responsive-carousel';
 
 function ProjectInfo({info, icons}) {
 
@@ -21,8 +21,6 @@ function ProjectInfo({info, icons}) {
     
         return(
           <Carousel centerMode={true} showThumbs={false} autoPlay={false} showStatus={false}>
-            <YoutubeSlide key="youtube-1" url="https://www.youtube.com/embed/_K1imkQTy7w" />
-          <Iframe width="auto" height="600" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe>
             {listImages}
           </Carousel>
         );
@@ -55,7 +53,7 @@ function ProjectInfo({info, icons}) {
           <h2 className="title is-2 has-text-dark is-spaced mt-1">{info.name}</h2>
           <h5 className="subtitle is-5 has-text-grey is-uppercase">{info.category}</h5>
           <div className="content">
-            <RenderCaracteristics list={info.caracteristics} icons={icons}/>
+            <RenderCaracteristics list={info.characteristics} icons={icons}/>
           </div>
           {
           info.description.map((paragraph, i) => {
