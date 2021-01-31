@@ -7,7 +7,6 @@ import InoverteInfo from '../components/home/InoverteInfo';
 import SupportersSection from '../components/home/SupportersSection';
 import ImpactSection from '../components/home/ImpactSection';
 import BlogSection from '../components/home/BlogSection';
-import SupportersSection from '../components/home/SupportersSection';
 import './scss/index.scss';
 
 function Index() {

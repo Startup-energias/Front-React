@@ -1,13 +1,13 @@
-import money from '../../assets/images/impact/money.png';
-import weight from '../../assets/images/impact/weight.png';
-import people from '../../assets/images/impact/people.png';
+import money from '../../assets/images/icons/money.png';
+import contamination from '../../assets/images/icons/contamination.png';
+import people from '../../assets/images/icons/people.png';
 
 export default [
   {
     title: 'Tons of CO',
     sub: '2',
     content: 'Chose the projects you want to help',
-    icon: weight,
+    icon: contamination,
   },
   {
     title: 'Collected money',

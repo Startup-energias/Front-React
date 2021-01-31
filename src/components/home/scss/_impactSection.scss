@@ -5,7 +5,12 @@
   .impactCard {
     img {
       height: 7rem;
-      width: 7rem;
+      width: auto;
+    }
+    &__content {
+        @media (min-width: 1000px) {
+          padding: 0 6em 0;
+        }
     }
   }
 }

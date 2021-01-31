@@ -2,7 +2,7 @@ import statics from '../../assets/images/info/statics.png';
 import handTool from '../../assets/images/info/handTool.png';
 import world from '../../assets/images/info/world.png';
 import benefits from '../../assets/images/info/benefits.png';
-import handThree from '../../assets/images/info/handThree.png';
+import handTree from '../../assets/images/info/handTree.png';
 import support from '../../assets/images/info/support.png';
 import transparency from '../../assets/images/info/transparency.png';
 import box from '../../assets/images/info/box.png';
@@ -76,7 +76,7 @@ export const sections = [
   {
     multiples: [
       {
-        image: handThree,
+        image: handTree,
         title: 'Reducing CO2 emissions',
         content: `With every project we support, we seek to
           reduce the greatest amount of carbon emis-

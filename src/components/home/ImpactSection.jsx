@@ -6,11 +6,11 @@ function ImpactSection() {
     return steps.map((item) => (
       <div className="impactCard column is-one-third-widescreen" key={item.title}>
         <img src={item.icon} alt={item.title} />
-        <p className="title is-size-5 has-text-white mt-4">
+        <p className="title is-size-5 has-text-dark mt-4">
           {item.title}
           {item.sub && <sub>{item.sub}</sub>}
         </p>
-        <p className="is-size-7 has-text-white">{item.content}</p>
+        <p className="impactCard__content is-size-7 has-text-dark">{item.content}</p>
       </div>
     ));
   };
