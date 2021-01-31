@@ -16,40 +16,39 @@ function InoverteInfo() {
       >
         <img className="section-image" src={section.image} alt="section-icon" />
         <div className="section-title is-flex is-justify-content-center is-align-items-center">
-          <h2 className="title is-size-4 has-text-white my-2">{section.title}</h2>
+          <h2 className="monserrat-bold is-size-4 has-text-white my-2">{section.title}</h2>
         </div>
         <div className="section-text is-flex is-justify-content-center is-align-items-center">
-          <p className=" has-text-centered is-size-6">{section.content}</p>
+          <p className=" has-text-centered is-size-7">{section.content}</p>
         </div>
       </div>
     );
   };
 
-  let RenderLgSection = ({ section }) => {
+  let RenderLgSection = ({ section: { multiples, color } }) => {
     return (
       <div
         className="sectionLg-container is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-white px-6"
         style={{
-          backgroundColor: `${section.color}`,
+          backgroundColor: `${color}`,
         }}
       >
         <div className="cont-lg">
-          <img className="section-image" src={section.image} alt="section-icon" />
+          <img className="section-image" src={multiples[0].image} alt="section-icon" />
           <div className="section-title is-flex is-justify-content-center">
-            <h2 className="title is-size-4 has-text-white my-2">{section.title}</h2>
+            <h2 className="monserrat-bold is-size-4 has-text-white my-2">{multiples[0].title}</h2>
           </div>
           <div className="section-text is-flex is-justify-content-center is-align-items-center">
-            <p className=" has-text-centered is-size-6">{section.content}</p>
+            <p className=" has-text-centered is-size-7">{multiples[0].content}</p>
           </div>
         </div>
-
         <div className="cont-lg">
-          <img className="section-image" src={section.image} alt="section-icon" />
+          <img className="section-image mr-2" src={multiples[1].image} alt="section-icon" />
           <div className="section-title is-flex is-justify-content-center">
-            <h2 className="title is-size-4 has-text-white my-2">{section.title}</h2>
+            <h2 className="monserrat-bold is-size-4 has-text-white my-2">{multiples[1].title}</h2>
           </div>
           <div className="section-text is-flex is-justify-content-center is-align-items-center">
-            <p className=" has-text-centered is-size-6">{section.content}</p>
+            <p className=" has-text-centered is-size-7">{multiples[1].content}</p>
           </div>
         </div>
       </div>
@@ -79,6 +78,8 @@ function InoverteInfo() {
         <RenderSection section={sections[3]} />
         <RenderLgSection section={sections[4]} />
         <RenderSection section={sections[5]} />
+        <RenderSection section={sections[6]} />
+        <RenderSection section={sections[7]} />
       </div>
     </section>
   );

@@ -1,9 +1,12 @@
-import image1 from '../../assets/images/info/1.png';
-import image2 from '../../assets/images/info/2.png';
-import image3 from '../../assets/images/info/3.png';
-import image4 from '../../assets/images/info/4.png';
-import image5 from '../../assets/images/info/5.png';
-import image6 from '../../assets/images/info/6.png';
+import statics from '../../assets/images/info/statics.png';
+import handTool from '../../assets/images/info/handTool.png';
+import world from '../../assets/images/info/world.png';
+import benefits from '../../assets/images/info/benefits.png';
+import handThree from '../../assets/images/info/handThree.png';
+import support from '../../assets/images/info/support.png';
+import transparency from '../../assets/images/info/transparency.png';
+import box from '../../assets/images/info/box.png';
+import communication from '../../assets/images/info/communication.png';
 
 export const tags = [
   {
@@ -26,45 +29,105 @@ export const tags = [
 
 export const sections = [
   {
-    image: image1,
-    title: 'Crowd-talent',
-    content:
-      'Help with your knowledge! In Inoverte we are convinced that anyone can be part of a renewable energy project. Do you want to return to the ecosystem what it offer you? You can be a mentor or join as a member of the team.',
-    color: '#a3d9ea',
-  },
-  {
-    image: image2,
-    title: 'Sourcing',
-    content:
-      'You company is valuable! In Inoverte our projects can share their specific needs such as products, services and spaces. Do you want to be one of our partner suppliers and create positive impact? contact us! ',
-    color: '#a3e8d4',
-  },
-  {
-    image: image3,
-    title: 'Share',
-    content:
-      'You can be part of the renewable change! Even if you do not have the money, the knowledge or the resource, you can still make the idea viral. Support innovation dedicated for the ones who need it the most with Inoverte!',
-    color: '#e5a3a3',
-  },
-  {
-    image: image4,
+    image: statics,
     title: 'Follow up',
-    content:
-      'In Inoverte we go further than only finding funds. Follow the evolution of the project, its implementation and the impact generated through our platform. Receive monthly updates on the status of your investment and the project.',
-    color: '#e0d99b',
+    content: `Inoverte we go further than only
+      finding funds. Follow the evolution of
+      the project, its implementation and
+      the impact generated through our
+      platform. Receive monthly updates on
+      the status of your investment and the
+
+      project.`,
+    color: '#4eb6e1',
   },
   {
-    image: image5,
-    title: 'Inoverte community',
-    content:
-      'The perfect community for people passionate about renewable energy. Connect with people from all over the world who want to rock innovative projects! Anyone, everywhere, anytime.',
-    color: '#e8bfa3',
+    image: handTool,
+    title: 'Crowd-talent',
+    content: `Help with your knowledge! In Inoverte
+      we are convinced that anyone can be
+      part of a renewable energy project. Do
+      you want to return to the ecosystem
+      what it offer you? You can be a mentor
+      or join as a member of the team.`,
+    color: '#eeaa3d',
   },
   {
-    image: image6,
+    image: world,
     title: 'Inoverte community',
-    content:
-      'The perfect community for people passionate about renewable energy. Connect with people from all over the world who want to rock innovative projects! Anyone, everywhere, anytime.',
-    color: '#b99bdd',
+    content: `The perfect community for people
+      passionate about renewable energy.
+      Connect with people from all over the
+      world who want to rock innovative
+      projects! Anyone, everywhere,
+      anytime.`,
+    color: '#e67d58',
+  },
+  {
+    image: benefits,
+    title: 'Stay tuned',
+    content: `Learn about what is happening in
+      Colombia and the world in sustainabi-
+      lity and innovation. With our blog, you
+      can discover the latest news and
+      discuss with other innoverters.`,
+    color: '#9dc69e',
+  },
+  {
+    multiples: [
+      {
+        image: handThree,
+        title: 'Reducing CO2 emissions',
+        content: `With every project we support, we seek to
+          reduce the greatest amount of carbon emis-
+          sions. Know the specific amount in the
+          details of each project. Together for our
+          environment.`,
+      },
+      {
+        image: support,
+        title: 'People first',
+        content: `The perfect community for people passiona-
+        te about renewable energy. Connect with
+        people from all over the world who want to
+        rock innovative projects! Anyone, everywhe-
+        re, anytime.`,
+      },
+    ],
+    color: '#7e9794',
+  },
+  {
+    image: transparency,
+    title: 'Transparency',
+    content: `Our Inoverte projects go through a
+      rigorous feasibility evaluation process.
+      We make sure they meet all the legal,
+      technological and financial require-
+      ments to provide real implementable
+      solutions`,
+    color: '#c3a485',
+  },
+  {
+    image: box,
+    title: 'Sourcing',
+    content: `You company is valuable! In Inoverte
+      our projects can share their specific
+      needs such as products, services and
+      spaces. Do you want to be one of our
+      partner suppliers and create positive
+      impact? contact us!`,
+    color: '#5acbaf',
+  },
+  {
+    image: communication,
+    title: 'Share',
+    content: `You can be part of the renewable
+      change! Even if you do not have the
+      money, the knowledge or the resour-
+      ce, you can still make the idea viral.
+      Support innovation dedicated for the
+      ones who need it the most with Ino-
+      verte!`,
+    color: '#883aed',
   },
 ];
