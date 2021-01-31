@@ -19,5 +19,6 @@
   }
   .title {
     font-size: 3.125rem;
+    text-shadow: -0.5px 0 $dark, 0 0.5px $dark, 0.5px 0 $dark, 0 -0.5px $dark;
   }
 }

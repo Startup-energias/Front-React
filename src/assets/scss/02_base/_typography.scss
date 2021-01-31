@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @font-face {
   font-family: 'montserrat-regular';
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  src: url(../../typo/montserrat/Montserrat-Regular.ttf);
   font-style: normal;
 }
 @font-face {
   font-family: 'montserrat-semibold';
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+  src: url(../../typo/montserrat/Montserrat-Regular.ttf);
+  font-style: semibold;
 }
 
 @font-face {
   font-family: 'montserrat-bold';
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+  src: url(../../typo/montserrat/Montserrat-Bold.ttf);
 }
 
 $family-primary: montserrat-regular;
@@ -20,4 +20,7 @@ $family-secondary: montserrat-semibold;
 .title,
 .subtitle {
   font-family: $family-secondary;
+}
+.monserrat-bold {
+  font-family: montserrat-bold;
 }

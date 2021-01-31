@@ -15,8 +15,10 @@ function Navbar({ items }) {
         </a>
       </div>
       <div id="navbarBasicExample" className="navbar-menu">
-        <div className="navbar-end pr-4
-        ">
+        <div
+          className="navbar-end pr-4
+        "
+        >
           {items.map((e) => (
             <a key={e} href={`#${e}`} className="navbar-item mx-6 has-text-dark">
               {e}
