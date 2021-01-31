@@ -15,14 +15,13 @@ import avatar6 from '../../assets/images/project1/team/avatar-default.jpg';
 
 const project = {
     id: 1,
-    goal: '5.800',
-    goaln: 5800,
-    amount: 2700,
     banner: banner,
     logo: logo,
+    images: [ image2, image6, image3, image4, image7, image5],
     content: {
-      category: 'Solar',
-      name: 'Solar energy for generate drinkable water.',
+      title: 'Solar energy for treating sea, subterranean or superficial reservoir water to generate drinkable water.',
+      categories: ['solar'],
+      location: 'Buenavista, Riohacha, La Guajira, Colombia',
       description: [
         'Sea for Change is a humanitarian project thought and designed by a team of interdisciplinary young minds who seek to bring water to the communities that need it most.',
         'Even in the XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area that suffers from deforestation, mining exploitation and the disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea and the presence of groundwater) allow the development of an environmentally friendly solution using solar energy.',
@@ -32,10 +31,13 @@ const project = {
         'Join Sea for Change as an investor or team member. After building our prototype and doing field tests this year (2021), we hope to scale our business in 2022. Our goal is to mass produce our desalinators in an economically, socially and environmentally sustainable manner.',
         'We believe in the power of solidarity, technology and collaboration as engines of progress in societies. Help us and be an active entity of change! #PotableWaterForAll.',
       ],
-      date: new Date(2016, 1, 16).toLocaleString(),
-      location: 'Buenavista, Riohacha, La Guajira, Colombia',
-      images: [ image2, image6, image3, image4, image7, image5],
-      caracteristics: ['Helps 30 people/day','Indigenous ethnic group Wayuu','# of tons of Co2 equivalent to X whales '],
+      characteristics: ['Helps 30 people/day','Indigenous ethnic group Wayuu','# of tons of Co2 equivalent to X whales '],
+      category: 'Solar',
+    },
+    details: {
+      goal: '5.800',
+      goaln: 5800,
+      amount: 2700,
     },
     team: [
       {
@@ -75,6 +77,7 @@ const project = {
         image: avatar6,
       },
     ],
+    maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31287.59846400292!2d-72.91969962945211!3d11.411189281123761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8b652d09fa863d%3A0x23f73c8eccb1c1a3!2sBuenavista%2C%20Riohacha%2C%20La%20Guajira!5e0!3m2!1ses-419!2sco!4v1611933964698!5m2!1ses-419!2sco',
   }
 
   export default project;

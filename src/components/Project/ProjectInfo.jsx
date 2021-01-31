@@ -1,71 +1,49 @@
-import Iframe from 'react-iframe';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-library.add(faMapMarkerAlt);
- 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel, YoutubeSlide } from 'react-responsive-carousel';
+/* eslint-disable no-unused-vars */
+import './scss/_projectInfo.scss';
+import location_icon from '../../assets/images/icons/location.png';
+import water_icon from '../../assets/images/icons/water.png';
+import people_icon from '../../assets/images/icons/people.png';
+import contamination_icon from '../../assets/images/icons/contamination.png';
 
-function ProjectInfo({info, icons}) {
+function ProjectInfo({ title, categories, location, description, characteristics }) {
+  const icons=[water_icon, people_icon, contamination_icon];
 
-    function RenderGallery({list}) {
-        const listImages = list.map((item, i) => {
-          return(
-            <div className="gallery-container" key={"gallery-"+i} style={{
-              backgroundImage: `url(${item})`,
-            }}>
+  return (
+    <div className="is-flex is-flex-direction-column is-justify-content-center">
+      <div className="is-flex is-align-items-center is-flex-wrap-wrap">
+        <div className="project__categories mr-5">
+          {categories?.map((category, i) => (
+            <div className="project__category is-flex is-align-items-flex-end" key={category + i}>
+              <div className={category} />
+              <p className="ml-1 mr-2 my-4 is-size-7">
+                <span className="is-capitalized">{category}</span> energy
+              </p>
             </div>
-          );
-        });
-    
-        return(
-          <Carousel centerMode={true} showThumbs={false} autoPlay={false} showStatus={false}>
-            <YoutubeSlide key="youtube-1" url="https://www.youtube.com/embed/_K1imkQTy7w" />
-          <Iframe width="auto" height="600" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe>
-            {listImages}
-          </Carousel>
-        );
-      }
-
-      function RenderCaracteristics({list, icons}){
-        const listIcons = list.map((item, i) => {
-          return(
-            <li className="mr-3" key={"project_icon_"+i}>
-              <img className="project-icon mr-1" src={icons[i]} alt={"project_icon_"+i} />
-              <span className="is-size-6 has-text-grey-dark">{item}</span>
-            </li>
-          );
-        });
-    
-        return (
-            <div className="caracteristics">
-              <ul className="has-text-info">
-                {listIcons}
-              </ul>
-            </div>
-        );
-      }
-
-    return(
-        <div className="content">
-          <h5 className="subtitle is-5 has-text-info">
-            <FontAwesomeIcon icon={faMapMarkerAlt} /> {info.location}
-          </h5>
-          <h2 className="title is-2 has-text-dark is-spaced mt-1">{info.name}</h2>
-          <h5 className="subtitle is-5 has-text-grey is-uppercase">{info.category}</h5>
-          <div className="content">
-            <RenderCaracteristics list={info.caracteristics} icons={icons}/>
-          </div>
-          {
-          info.description.map((paragraph, i) => {
-            return(
-              <p className="has-text-grey" key={"p_number_"+i}>{paragraph}</p>
-            );
-          })}
-          <RenderGallery list = {info.images}/>
+          ))}
         </div>
-    );
+        <div className="project__location is-align-self-flex-end is-flex is-align-items-center mb-2">
+          <img src={location_icon} alt="location_icon" />
+          <p className="is-size-7 is-align-self-center">{location}</p>
+        </div>
+      </div>
+      <h1 className="title is-4 has-text-dark mt-4">{title}</h1>
+      <div className="project__characteristics">
+        {characteristics?.map((characteristic, i) => (
+          <div className="project__characteristic is-flex is-align-items-flex-center" key={characteristics + i}>
+            <img src={icons[i]} alt={"icon_"+i} />
+            <p className="ml-1 mr-2 is-size-7 pt-1">
+              {characteristic}
+            </p>
+          </div>
+        ))}
+      </div>
+      <div className="project__description mt-4">
+        {description.map((paragraph, i) => (
+          <p className="has-text-grey" key={"p_number_"+i}>{paragraph}</p>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default ProjectInfo;

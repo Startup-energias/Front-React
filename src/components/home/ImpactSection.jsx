@@ -18,7 +18,7 @@ function ImpactSection() {
   return (
     <section className="section impact has-background-primary" id="Our impact">
       <div className="container has-text-centered">
-        <h6 className="title is-1 mb-6 is-uppercase has-text-white">Our impact</h6>
+        <h1 className="title is-1 mb-6 mt-2 has-text-dark">Our impact</h1>
         <div className="columns is-multiline is-8 mx-6 mb-2">{renderSteps()}</div>
       </div>
     </section>

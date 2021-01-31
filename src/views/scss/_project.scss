@@ -1,0 +1,31 @@
+
+@import '../../assets/scss/02_base/colors';
+
+.project{
+    .columns{
+        @media (min-width: 1112px){
+            $margin-sides: 10em;
+            margin-right: $margin-sides;
+            margin-left: $margin-sides;
+        }
+        @media (max-width: 1111px){
+            $margin-sides: 4em;
+            margin-right: $margin-sides;
+            margin-left: $margin-sides;
+        }
+    }
+    &__main{
+        margin-top: 4px;
+        $padding-sides: 20px;
+        padding: 0 $padding-sides 0;
+    }
+    &__side{
+        margin-top: 6px;
+    }
+    hr {
+        margin: auto;
+        width: 95%;
+        height: 4px;
+        background-color: $dark;
+      }
+}
