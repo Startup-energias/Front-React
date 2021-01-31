@@ -38,7 +38,7 @@ function AboutSection() {
   };
 
   return (
-    <section className="section is-flex is-flex-direction-column is-justify-items-center about has-background-dark pb-6" id="About us">
+    <section className="section is-flex is-flex-direction-column is-justify-items-center about has-background-dark pb-6">
       <h1 className="title has-text-white is-1 has-text-centered">About us</h1>
       <div className="container is-flex is-flex-direction-column is-justify-items-center p-6">
         <RenderContent info={info[0]} image={<div className="is-flex is-flex-direction-row"><img className="about-image-small" src={info[0].image} alt={'about_image'} />

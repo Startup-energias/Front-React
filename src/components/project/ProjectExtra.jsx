@@ -1,5 +1,11 @@
+/* eslint-disable no-unused-vars */
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper.scss';
 import Iframe from 'react-iframe';
 
 import './scss/_projectExtra.scss';
@@ -17,6 +23,7 @@ function ProjectExtra({images, maps}){
     
         return(
           <Carousel className="mt-5" centerMode={true} showThumbs={false} autoPlay={false} showStatus={false}>
+            <Iframe width="auto" height="100%" src="https://www.youtube.com/embed/_K1imkQTy7w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Iframe>
             {listImages}
           </Carousel>
         );

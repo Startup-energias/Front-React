@@ -67,8 +67,7 @@ export const sections = [
     image: benefits,
     title: 'Stay tuned',
     content: `Learn about what is happening in
-      Colombia and the world in sustainabi-
-      lity and innovation. With our blog, you
+      Colombia and the world in sustainability and innovation. With our blog, you
       can discover the latest news and
       discuss with other innoverters.`,
     color: '#9dc69e',
@@ -79,19 +78,16 @@ export const sections = [
         image: handTree,
         title: 'Reducing CO2 emissions',
         content: `With every project we support, we seek to
-          reduce the greatest amount of carbon emis-
-          sions. Know the specific amount in the
+          reduce the greatest amount of carbon emissions. Know the specific amount in the
           details of each project. Together for our
           environment.`,
       },
       {
         image: support,
         title: 'People first',
-        content: `The perfect community for people passiona-
-        te about renewable energy. Connect with
+        content: `The perfect community for people passionate about renewable energy. Connect with
         people from all over the world who want to
-        rock innovative projects! Anyone, everywhe-
-        re, anytime.`,
+        rock innovative projects! Anyone, everywhere, anytime.`,
       },
     ],
     color: '#7e9794',
@@ -102,8 +98,7 @@ export const sections = [
     content: `Our Inoverte projects go through a
       rigorous feasibility evaluation process.
       We make sure they meet all the legal,
-      technological and financial require-
-      ments to provide real implementable
+      technological and financial requirements to provide real implementable
       solutions`,
     color: '#c3a485',
   },
@@ -123,11 +118,9 @@ export const sections = [
     title: 'Share',
     content: `You can be part of the renewable
       change! Even if you do not have the
-      money, the knowledge or the resour-
-      ce, you can still make the idea viral.
+      money, the knowledge or the resource, you can still make the idea viral.
       Support innovation dedicated for the
-      ones who need it the most with Ino-
-      verte!`,
+      ones who need it the most with Inoverte!`,
     color: '#883aed',
   },
 ];
