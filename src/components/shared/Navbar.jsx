@@ -1,5 +1,5 @@
 import { Auth } from 'aws-amplify';
-import LogoDefault from '../../assets/images/logo.png';
+import LogoDefault from '../../assets/images/logo-black.jpg';
 import './scss/_navbar.scss';
 
 function Navbar({ items }) {
@@ -9,10 +9,8 @@ function Navbar({ items }) {
       role="navigation"
       aria-label="main navigation"
     >
-      <div className="navbar-brand">
-        <a className="navbar-item" href="/">
-          <img alt="iKonnekta logo" src={LogoDefault} />
-        </a>
+      <div className="navbar-brand is-align-items-center">
+        <img alt="Inoverte logo" src={LogoDefault} />
       </div>
       <div id="navbarBasicExample" className="navbar-menu">
         <div
@@ -24,7 +22,7 @@ function Navbar({ items }) {
               {e}
             </a>
           ))}
-          <hr className="navbar-divider" />
+          <div className="navbar-divider" />
           <div className="navbar-item">
             <div className="buttons">
               <button

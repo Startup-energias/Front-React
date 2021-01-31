@@ -12,7 +12,7 @@ function HowSection() {
           </div>
         </div>
         
-        <h2 className="is-size-4     has-text-dark mt-4 mb-2">
+        <h2 className="text-title is-size-4 has-text-dark mt-4 mb-2">
           {item.title}
         </h2>
         <div className="container text-content">
@@ -25,7 +25,7 @@ function HowSection() {
   return (
     <section className="section how has-background-light" id="How it works">
       <div className="container has-text-centered">
-        <h1 className="title is-1 mb-1 has-text-dark">How it works</h1>
+        <h1 className=" mb-1 has-text-dark">How it works</h1>
         <div className="columns is-multiline is-8 mx-6 mb-2">{renderSteps()}</div>
       </div>
     </section>

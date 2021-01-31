@@ -6,9 +6,12 @@ import image4 from '../../assets/images/project1/gallery/img4.jpg';
 import image5 from '../../assets/images/project1/gallery/img5.jpg';
 import image6 from '../../assets/images/project1/gallery/img6.png';
 import image7 from '../../assets/images/project1/gallery/img7.png';
-import avatar1 from '../../assets/images/project1/team/avatar-10-1.jpg';
-import avatar2 from '../../assets/images/project1/team/avatar-10.jpg';
-import avatar3 from '../../assets/images/project1/team/avatar-default.jpg';
+import avatar1 from '../../assets/images/project1/team/avatar-default.jpg';
+import avatar2 from '../../assets/images/project1/team/Pedro Rubiano.jpg';
+import avatar3 from '../../assets/images/project1/team/Simón García.jpg';
+import avatar4 from '../../assets/images/project1/team/Rafael Rubiano.jpg';
+import avatar5 from '../../assets/images/project1/team/Santiago Pinzón.jpg';
+import avatar6 from '../../assets/images/project1/team/avatar-default.jpg';
 
 const project = {
     id: 1,
@@ -36,22 +39,40 @@ const project = {
     },
     team: [
       {
-        name: 'Paula Andrea Leon Tabares',
+        name: 'María Camila Prieto ',
         comment:
-          'I believe that engineering should be a source to solve many of the problems that arise today, so I have joined this project in order to help the communities of the Guajira through my career. It is necessary to generate conscience in many aspects, not only in helping the communities that suffer a state oblivion, but also through the renewable energies. With this project I hope to reduce my carbon footprint and help others do the same, while also making a basic need such as potable water accessible to many people',
+          'This project reminds me that we are just temporarily in this world, and whatever we do must be in favor of life, through kindness and empathy.',
         image: avatar1,
       },
       {
-        name: 'Pedro Felipe Rubiano Perez',
+        name: 'Pedro Felipe Rubiano Perez ',
         comment:
-          'The main motivation in doing this project relies in the desire to propose an effective solution for a problem that has prevailed over 15 years in La Guajira, despite of all the efforts made by the government and other entities. During this process I want to show and prove that engineering applied for social purposes needs sensible and human study dimensions to really work and generate positive social impact. Moreover, I believe that engineering projects should be conceived deeming an artistic approach to be more successful and well-received. And that is what I want for this project, a collective construction between engineers and communities, of a device powered by the sun capable of supplying drinkable water from the sea and conceived as an artwork',
+          'I am a mechanical engineer and artist with an enormous social and environmental focus in my work. I spend most of my time thinking about how to provide drinkable water to communities that need it the most.',
         image: avatar2,
       },
       {
         name: 'Simón David García',
         comment:
-          'The biggest challenge for development is the access to basic needs like water, energy or food. This project is a substantial aid for people from La Guajira to access drinking water through an innovative solution. The main goal is to give this community all the essential tools they need to provide real social impact. Engineering should always be an ally in the pursuit of better life quality. Therefore, my objective is to build, iterate and produce a long term system that could use available resources to change their lives dramatically while working together with the community',
+          'Throughout my career I have engineered for people. For me, the biggest challenge is the access to basic needs like water.',
         image: avatar3,
+      },
+      {
+        name: 'Rafael Rubiano',
+        comment:
+          'I have been in the regional Real Estate markets of Chile, Colombia, Perú, Uruguay and Mexico with SURA Asset Management. Now I am working in Sea for Change financial forecast and seeking diverse sources of fundraising.',
+        image: avatar4,
+      },
+      {
+        name: 'Santiago Pinzón',
+        comment:
+          'I love to see my profession as a tool to create a positive impact on people. It motivates me to promote the development of remote communities in Colombia and contribute my sand grain to make this world a better place.',
+        image: avatar5,
+      },
+      {
+        name: 'Paula Leon',
+        comment:
+          'I believe that engineering should be a driver to solve many of the problems that affect humanity today. In this occasion, I have joined this project to help the indigenous communities that live in La Guajira have access to potable water.',
+        image: avatar6,
       },
     ],
   }

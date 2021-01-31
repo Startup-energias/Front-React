@@ -26,6 +26,7 @@
     "react-share": "^4.3.1",
     "react-transition-group": "^4.4.1",
     "react-typed": "^1.2.0",
+    "swiper": "^6.4.10",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

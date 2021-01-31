@@ -3,6 +3,8 @@ import PhraseSection from '../components/home/PhraseSection';
 import HowSection from '../components/home/HowSection';
 import ProjectsSection from '../components/home/ProjectsSection';
 import InoverteInfo from '../components/home/InoverteInfo';
+import ImpactSection from '../components/home/ImpactSection';
+import BlogSection from '../components/home/BlogSection';
 import './scss/index.scss';
 
 function Index() {  
@@ -13,6 +15,8 @@ function Index() {
       <HowSection />
       <ProjectsSection />
       <InoverteInfo />
+      <ImpactSection />
+      <BlogSection />
     </div>
   );
 }
