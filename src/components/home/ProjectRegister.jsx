@@ -6,7 +6,7 @@ function proyectRegister() {
     <section className="projectRegister is-flex is-justify-content-center has-background-light">
       <img src={register} alt="Logo of Register your project section" />
       <div className="projectRegister__body is-flex is-flex-direction-column">
-        <h5 className="monserrat-bold mb-5">Register your project</h5>
+        <h5 className="monserrat-bold has-text-dark mb-5">Register your project</h5>
         <ul>
           <li>
             - Click at the button and fill the format: We want to know everything about your

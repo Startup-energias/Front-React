@@ -7,7 +7,7 @@ nav {
   }
 
   .navbar-brand {
-    margin-left: 120px;
+    margin-left: 7rem;
     img {
       width: 10rem;
       height: 3rem;
@@ -29,7 +29,9 @@ nav {
     align-self: center;
   }
 
-  .buttons > button {
-    font-size: 13px;
+  .navbar__registration {
+    button {
+      font-size: 13px;
+    }
   }
 }

@@ -2,11 +2,10 @@
 @import '../../../assets/scss/03_utils/custom';
 
 .impact {
-  .icon-container {
-    width: 100%;
-    .icon-image {
-      height: 70px;
-      width: 70px;
+  .impactCard {
+    img {
+      height: 7rem;
+      width: 7rem;
     }
   }
 }

@@ -6,6 +6,7 @@ import ProjectRegister from '../components/home/ProjectRegister';
 import InoverteInfo from '../components/home/InoverteInfo';
 import ImpactSection from '../components/home/ImpactSection';
 import BlogSection from '../components/home/BlogSection';
+import SupportersSection from '../components/home/SupportersSection';
 import './scss/index.scss';
 
 function Index() {
@@ -17,6 +18,7 @@ function Index() {
       <ProjectsSection />
       <InoverteInfo />
       <ProjectRegister />
+      <SupportersSection />
       <ImpactSection />
       <BlogSection />
     </div>
