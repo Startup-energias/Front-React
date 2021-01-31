@@ -15,9 +15,6 @@ import avatar6 from '../../assets/images/project1/team/avatar-default.jpg';
 
 const project = {
     id: 1,
-    goal: '5.800',
-    goaln: 5800,
-    amount: 2700,
     banner: banner,
     logo: logo,
     images: [ image2, image6, image3, image4, image7, image5],
@@ -36,6 +33,11 @@ const project = {
       ],
       characteristics: ['Helps 30 people/day','Indigenous ethnic group Wayuu','# of tons of Co2 equivalent to X whales '],
       category: 'Solar',
+    },
+    details: {
+      goal: '5.800',
+      goaln: 5800,
+      amount: 2700,
     },
     team: [
       {

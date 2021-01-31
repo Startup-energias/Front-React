@@ -4,8 +4,13 @@
 .project{
     margin-top: 60px;
     .columns{
-        @media (min-width: 1024px){
+        @media (min-width: 1112px){
             $margin-sides: 10em;
+            margin-right: $margin-sides;
+            margin-left: $margin-sides;
+        }
+        @media (max-width: 1111px){
+            $margin-sides: 4em;
             margin-right: $margin-sides;
             margin-left: $margin-sides;
         }
@@ -18,5 +23,10 @@
     &__side{
         margin-top: 6px;
     }
-    
+    hr {
+        margin: auto;
+        width: 95%;
+        height: 4px;
+        background-color: $dark;
+      }
 }

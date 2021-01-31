@@ -5,7 +5,7 @@ import ProjectDetails from '../components/project/ProjectDetails';
 import ProjectTeam from '../components/project/ProjectTeam';
 
 //helpers
-import project from '../helpers/constants/projectInfo';
+import project from '../helpers/constants/pilotProject';
 //styles
 import './scss/_project.scss';
 
@@ -19,8 +19,9 @@ function Project() {
           <ProjectExtra images={project.images} maps={project.maps}/>
         </div>
         <div className="project__side column has-background-light ">
-          <ProjectDetails />
-          <ProjectTeam />
+          <ProjectDetails {...project.details}/>
+          <hr />
+          <ProjectTeam team={project.team}/>
         </div>
       </div>
     </div>

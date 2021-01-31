@@ -14,7 +14,7 @@ function ProjectInfo({ title, categories, location, description, characteristics
         <div className="project__categories mr-5">
           {categories?.map((category, i) => (
             <div className="project__category is-flex is-align-items-flex-end" key={category + i}>
-              <div className={category} title={`Proyecto pertenece a la categoria ${category}`} />
+              <div className={category} />
               <p className="ml-1 mr-2 my-4 is-size-7">
                 <span className="is-capitalized">{category}</span> energy
               </p>
