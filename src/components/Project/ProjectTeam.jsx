@@ -3,9 +3,9 @@ function ProjectTeam(props) {
     return list.map((item) => {
       return (
         <div className="block mx-6" key={item.name}>
-          <div className="content team-content">
-              <img src={item.image} alt={item.name} />
-              <strong className="title is-size-6 has-text-info">{item.name}</strong>
+          <div className="content team-content is-flex is">
+              <img className="team-icon" src={item.image} alt={item.name} />
+              <strong className="title team-name is-size-6 has-text-info">{item.name}</strong>
           </div>
           <p className=" has-text-white is-italic">{"\""+item.comment+"\""}</p>
         </div>

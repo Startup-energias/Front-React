@@ -1,2 +1,34 @@
 @import '../../../assets/scss/02_base/colors';
 @import '../../../assets/scss/03_utils/custom';
+
+.phrase{
+    .text-title{
+        font-size: 29px;
+        font-weight: bold;
+        line-height: 20px;
+    }
+    .text-subtitle{
+        font-size: 23px;
+    }
+    .text-content{
+        line-height: 19px;
+        transform: scale(1, 0.9);
+        padding-left: 22px;
+      }
+
+        @media (max-width: 1348px){
+            .text-title{
+                font-size: 23px;
+                font-weight: bold;
+                line-height: 23px;
+            }
+            .text-subtitle{
+                font-size: 20px;
+            }
+            .text-content{
+                line-height: 20px;
+                transform: scale(1, 1);
+                padding-left: 10px;
+            }
+        }
+}

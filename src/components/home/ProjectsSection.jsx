@@ -76,7 +76,7 @@ function ProjectsSection() {
       id="Projects"
     >
       <div className="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
-        <h1 className="title is-1 has-text-centered has-text-dark">Hot Projects</h1>
+        <h1 className="has-text-centered has-text-dark">Hot projects</h1>
         <div className="columns is-multiline is-variable is-1-mobile is-1-tablet is-5-desktop is-8-widescreen is-8-fullhd is-centered projects-container mt-2">
           {renderProjects()}
         </div>
