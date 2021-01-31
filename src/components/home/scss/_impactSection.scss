@@ -2,11 +2,17 @@
 @import '../../../assets/scss/03_utils/custom';
 
 .impact {
+  $icon-size:180px;
   .icon-container {
     width: 100%;
     .icon-image {
-      height: 70px;
-      width: 70px;
+      height: $icon-size;
+      width: $icon-size;
+    }
+  }
+  .impact-content{
+    @media (min-width: 1000px){
+      margin: 0 4.5em 0;
     }
   }
 }

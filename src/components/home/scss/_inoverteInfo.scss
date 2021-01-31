@@ -16,10 +16,11 @@
   }
 
   $section-width: 350px;
-  $section-height: 370px;
+  $section-height: 380px;
   $section-margin: 8px;
 
   .sections-container {
+    margin: 0 5px 0;
     .section-image {
       height: auto;
       width: 160px;
@@ -54,7 +55,10 @@
         line-height: 95%;
       }
       .section-title {
+        margin-left: 5px;
+        width: 230px;
         align-self: flex-start;
+        justify-content: flex-start;
       }
       .cont-lg {
         display: flex;
@@ -64,10 +68,14 @@
       }
       @media (max-width: 856px) {
         height: $section-height * 2;
-        width: $section-width;
+        width: (($section-width) * 2 + ($section-margin) * 2);
 
         .section-title {
           align-self: center;
+          margin-left: 0;
+          width: auto;
+          align-self: center;
+          justify-content: center;
         }
 
         .cont-lg {
