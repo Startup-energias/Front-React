@@ -9,10 +9,9 @@
       height: 45px;
       width: 160px;
     }
-  }
-
-  .btn-selected {
-    background-color: lighten($color: grey, $amount: 40);
+    .btn-selected {
+      background-color: lighten($color: grey, $amount: 40);
+    }
   }
 
   $section-width: 350px;

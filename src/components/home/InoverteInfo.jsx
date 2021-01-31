@@ -57,10 +57,8 @@ function InoverteInfo() {
   };
 
   return (
-    <section className="section info pt-0 ">
-      <h1 className="has-text-centered is-1 title has-text-dark">
-        In Inoverte we help not only with money
-      </h1>
+    <section className="section info pt-0 mt-6">
+      <h1 className="has-text-centered is-1 title has-text-dark">Benefits of being an inoverter</h1>
       <div className="blocks-container is-flex is-justify-content-center is-flex-wrap-wrap">
         {tags.map((tag) => (
           <button
