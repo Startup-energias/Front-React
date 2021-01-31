@@ -2,6 +2,7 @@
 import { Auth } from 'aws-amplify';
 import LogoDefault from '../../assets/images/logo-black.jpg';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './scss/_navbar.scss';
 
 function Navbar({ items }) {
@@ -13,7 +14,9 @@ function Navbar({ items }) {
       aria-label="main navigation"
     >
       <div className="navbar-brand is-align-items-center">
-        <img alt="Inoverte logo" src={LogoDefault} />
+        <Link to="/">
+          <img alt="Inoverte logo || Redirect to home" src={LogoDefault} />
+        </Link>
         <button
           onClick={() => setNavToggle(!navToggle)}
           className={`${navToggle && 'is-active'} button is-white navbar-burger mr-4`}
