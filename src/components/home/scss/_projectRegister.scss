@@ -1,0 +1,16 @@
+.projectRegister {
+  padding: 2.5rem 2rem;
+  img {
+    height: 20rem;
+  }
+  .monserrat-bold {
+    font-size: 40px;
+  }
+  &__body {
+    width: 40%;
+    p,
+    a {
+      font-size: 18px;
+    }
+  }
+}
