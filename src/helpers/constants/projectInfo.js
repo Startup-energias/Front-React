@@ -20,7 +20,6 @@ const project = {
     amount: 2700,
     banner: banner,
     logo: logo,
-    images: [ image2, image6, image3, image4, image7, image5],
     content: {
       title: 'Solar energy for treating sea, subterranean or superficial reservoir water to generate drinkable water.',
       categories: ['solar'],
@@ -35,6 +34,7 @@ const project = {
         'We believe in the power of solidarity, technology and collaboration as engines of progress in societies. Help us and be an active entity of change! #PotableWaterForAll.',
       ],
       characteristics: ['Helps 30 people/day','Indigenous ethnic group Wayuu','# of tons of Co2 equivalent to X whales '],
+      images: [ image2, image6, image3, image4, image7, image5],
       category: 'Solar',
     },
     team: [
