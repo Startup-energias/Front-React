@@ -1,9 +1,23 @@
 
-.project__galleryimg{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: white;
-    height: 600px;
-    width: auto;
+.project{
+    &__galleryimg{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: white;
+        height: 600px;
+        width: auto;
+    }
+
+    &__list1{
+        list-style-type: circle;
+    }
+
+    &__list2{
+        padding-left: 10%;
+        list-style-type: square;
+    }
 }
+
+
+

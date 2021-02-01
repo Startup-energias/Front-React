@@ -20,8 +20,8 @@ function ProjectDetails({
           <span className="is-size-2 has-text-dark">{percentage}%</span>
         </i>
       </div>
-      <h1 className="is-size-3 has-text-centered">${goalt} Raised</h1>
-      <h2 className="is-size-5 has-text-centered has-text-black">of ${goalt}</h2>
+      <p className="project__raised is-size-3 has-text-centered">${goalt} Raised</p>
+      <p className="project__raised is-size-5 has-text-centered has-text-black">of ${goalt}</p>
       <button className="project__button is-align-self-center is-flex is-justify-content-center is-align-items-center is-size-4 title has-text-dark has-background-light">
         Support now
       </button>

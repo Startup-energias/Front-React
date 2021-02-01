@@ -42,6 +42,18 @@ const project = {
         slogan: 'Water and sun for life',
         logo: logo,
     },
+    resources: [
+        'Suppliers: RO membrane', 'High pressure pump suppliers 800 PSI and 10-20 L/min - affordable', 'DC motor suppliers, 1HP - affordable', 'Efficient and compact solar panels suppliers - affordable '
+    ],
+    skills: [{ skill: 'Mentors! We are open to new ideas, suggestions or feedback. Knowledge in MOFs technology for water desalination, pretreatment alternatives and power efficiency are very well received!' }, {
+        skill: 'We are looking for interested parties on funding or buying our desalination units', subs: ['ONGS',
+            'Humanitarian organizations',
+            'Privates',
+            'Universities',
+            'Governments'
+        ]
+    },
+    ],
     team: [
         {
             name: 'María Camila Prieto ',

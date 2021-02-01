@@ -13,11 +13,9 @@
     align-items: center;
     font-style: normal;
   }
-
-  h1 {
-    font-family: $family-primary;
+  &__raised{
+    font-weight: 100;
   }
-
   &__button {
     margin: 10px 20px 0;
     border-style: solid;

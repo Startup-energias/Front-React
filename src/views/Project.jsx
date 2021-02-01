@@ -11,12 +11,12 @@ import './scss/_project.scss';
 
 function Project() {
   return (
-    <div className="project">
+    <div className="project is-flex is-flex-direction-column is-align-items-centar">
       <img src={project.banner} alt="banner" />
       <div className="columns is-multiline is-centered is-6 mb-6">
         <div className="project__main p-0 column is-12-mobile is-12-tablet is-8-desktop is-8-widescreen is-8-fullhd pl-1 pr-5">
           <ProjectInfo {...project.content} />
-          <ProjectExtra images={project.images} maps={project.maps}/>
+          <ProjectExtra images={project.images} maps={project.maps} resources={project.resources} skills= {project.skills}/>
         </div>
         <div className="project__side column has-background-light ">
           <ProjectDetails {...project.details}/>
