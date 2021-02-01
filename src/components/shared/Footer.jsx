@@ -20,7 +20,7 @@ function Footer() {
 
   let Links = ({links}) => {
     const list = links.map((link) => (
-      <a className="mx-3 is-uppercase" href={"#"+link} key={"footer-"+link}>{link}</a>
+      <a className="mx-3 is-uppercase" href={"/#"+link} key={"footer-"+link}>{link}</a>
     ));
     return(
       <div className="text-container is-flex is-justify-content-center is-align-items-center">

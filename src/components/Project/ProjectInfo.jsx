@@ -27,9 +27,9 @@ function ProjectInfo({ title, categories, location, description, characteristics
         </div>
       </div>
       <h1 className="title is-4 has-text-dark mt-4">{title}</h1>
-      <div className="project__characteristics">
+      <div className="project__characteristics is-flex is-flex-wrap-wrap">
         {characteristics?.map((characteristic, i) => (
-          <div className="project__characteristic is-flex is-align-items-flex-center" key={characteristics + i}>
+          <div className="project__characteristic is-flex is-align-items-flex-center is-flex-wrap-wrap" key={characteristics + i}>
             <img src={icons[i]} alt={"icon_"+i} />
             <p className="ml-1 mr-2 is-size-7 pt-1">
               {characteristic}

@@ -47,15 +47,7 @@ function ProjectExtra({ images, maps, resources, skills }) {
       <RenderGallery list={images} />
       <h1 className="title is-2 has-text-dark mt-4">Skills &amp; resources needed</h1>
       <div className="columns is-6 is-multiline m-0">
-        <div className="column is-half">
-          <h2 className="title is-4 has-text-dark mb-2">Resources</h2>
-          <ul className="project__list1">
-            {resources.map((resource, i) => (
-              <li key={'reosource_' + i}>{resource}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="column">
+      <div className="column">
           <h2 className="title is-4 has-text-dark mb-2">Skills</h2>
           {skills.map((skill, i) => (
             <ul className="project__list1" key={'skill_' + i}>
@@ -69,6 +61,14 @@ function ProjectExtra({ images, maps, resources, skills }) {
               )}
             </ul>
           ))}
+        </div>
+        <div className="column is-half">
+          <h2 className="title is-4 has-text-dark mb-2">Resources</h2>
+          <ul className="project__list1">
+            {resources.map((resource, i) => (
+              <li key={'reosource_' + i}>{resource}</li>
+            ))}
+          </ul>
         </div>
       </div>
       <h1 className="title is-2 has-text-dark mt-4">Project location</h1>
