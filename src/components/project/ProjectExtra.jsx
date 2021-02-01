@@ -33,6 +33,14 @@ function ProjectExtra({images, maps}){
         <div className="is-flex is-flex-direction-column is-justify-content-center">
             <RenderGallery list = {images}/>
             <h1 className="title is-2 has-text-dark mt-4">Skills &amp; resources needed</h1>
+            <div className="columns">
+              <div className="column">
+                
+              </div>
+              <div className="column">
+
+              </div>
+            </div>
             <p>Skills &amp; resources needed</p>
             <h1 className="title is-2 has-text-dark mt-4">Project location</h1>
             <Iframe

@@ -13,7 +13,8 @@ function Navbar({ items }) {
       aria-label="main navigation"
     >
       <div className="navbar-brand is-align-items-center">
-        <img alt="Inoverte logo" src={LogoDefault} />
+        <a href="/">
+        <img alt="Inoverte logo" src={LogoDefault} /></a>
         <button
           onClick={() => setNavToggle(!navToggle)}
           className={`${navToggle && 'is-active'} button is-white navbar-burger mr-4`}

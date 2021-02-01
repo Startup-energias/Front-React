@@ -3,7 +3,6 @@ import logo from '../../assets/images/project1/logo.png';
 import image2 from '../../assets/images/project1/gallery/img2.jpg';
 import image3 from '../../assets/images/project1/gallery/img3.jpg';
 import image4 from '../../assets/images/project1/gallery/img4.jpg';
-import image5 from '../../assets/images/project1/gallery/img5.jpg';
 import image6 from '../../assets/images/project1/gallery/img6.png';
 import image7 from '../../assets/images/project1/gallery/img7.png';
 import avatar1 from '../../assets/images/project1/team/avatar-default.jpg';
@@ -16,7 +15,7 @@ import avatar6 from '../../assets/images/project1/team/avatar-default.jpg';
 const project = {
     id: 1,
     banner: banner,
-    images: [image2, image6, image3, image4, image7, image5],
+    images: [image2, image6, image3, image7, image4],
     content: {
         title: 'Solar energy for treating sea, subterranean or superficial reservoir water to generate drinkable water.',
         categories: ['solar'],
@@ -30,8 +29,7 @@ const project = {
             'Join Sea for Change as an investor or team member. After building our prototype and doing field tests this year (2021), we hope to scale our business in 2022. Our goal is to mass produce our desalinators in an economically, socially and environmentally sustainable manner.',
             'We believe in the power of solidarity, technology and collaboration as engines of progress in societies. Help us and be an active entity of change! #PotableWaterForAll.',
         ],
-        characteristics: ['Helps 30 people/day', 'Indigenous ethnic group Wayuu', '# of tons of Co2 equivalent to X whales '],
-        category: 'Solar',
+        characteristics: ['Helps 30 people/day', 'Indigenous ethnic group Wayuu', '150 Kg CO2 saved per year']
     },
     details: {
         goalt: '5.800',
