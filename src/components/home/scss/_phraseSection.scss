@@ -6,10 +6,14 @@
   position: relative;
   padding: 3rem;
   &__title {
-    @media (min-width: 1414px){
+    @media (min-width: 1316px){
       position: absolute;
-      top: 20%;
-      left: 14%;
+      width: 44em;
+      &__text{
+        width: auto;
+        position: absolute;
+        left: -5%;
+      }
     }
     .title {
       font-size: 32px;
@@ -24,7 +28,7 @@
   }
   &__subtext {
     width: 33rem;
-    @media (min-width: 1414px){
+    @media (min-width: 1316px){
       padding-top: 15%;
     } 
   }
