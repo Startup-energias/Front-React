@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import BulmaModal from '../../utils/bulmaModal';
 import './scss/_projectInfo.scss';
 import location_icon from '../../assets/images/icons/location.png';
 import water_icon from '../../assets/images/icons/water.png';
@@ -7,23 +5,6 @@ import people_icon from '../../assets/images/icons/people.png';
 import contamination_icon from '../../assets/images/icons/contamination.png';
 
 function ProjectInfo({ title, categories, location, description, characteristics }) {
-  useEffect(() => {
-    var btn = document.querySelector('#supportBtn');
-    var mdl = new BulmaModal('#supportModalBtn');
-
-    btn.addEventListener('click', function () {
-      mdl.show();
-    });
-
-    mdl.addEventListener('modal:show', function () {
-      console.log('opened');
-    });
-
-    mdl.addEventListener('modal:close', function () {
-      console.log('closed');
-    });
-  }, []);
-
   const icons=[water_icon, people_icon, contamination_icon];
 
   return (
