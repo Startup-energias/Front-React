@@ -16,11 +16,13 @@
     }
     &__main{
         margin-top: 10px;
-        $padding-sides: 20px;
-        padding: 0 $padding-sides 0;
+        $padding-sides1: 20px;
+        padding: 0 $padding-sides1 0;
     }
     &__side{
         margin-top: 12px;
+        $padding-sides2: 50px;
+        padding: 0 $padding-sides2 0;
     }
     hr {
         margin: auto;

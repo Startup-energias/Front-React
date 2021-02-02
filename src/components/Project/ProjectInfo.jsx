@@ -10,8 +10,8 @@ function ProjectInfo({ title, categories, location, description, characteristics
 
   return (
     <div className="is-flex is-flex-direction-column is-justify-content-center">
-      <div className="is-flex is-align-items-center is-flex-wrap-wrap">
-        <div className="project__categories mr-5">
+      <div className="is-flex is-align-items-center is-flex-wrap-wrap is-justify-content-space-between">
+        <div className="project__categories">
           {categories?.map((category, i) => (
             <div className="project__category is-flex is-align-items-flex-end" key={category + i}>
               <div className={category} />
@@ -21,7 +21,7 @@ function ProjectInfo({ title, categories, location, description, characteristics
             </div>
           ))}
         </div>
-        <div className="project__location is-align-self-flex-end is-flex is-align-items-center mb-2">
+        <div className="project__location is-align-self-flex-end is-flex is-align-items-center mb-2 mr-5">
           <img src={location_icon} alt="location_icon" />
           <p className="is-size-7 is-align-self-center">{location}</p>
         </div>

@@ -7,14 +7,11 @@
     width: $pecentage-size;
     height: $pecentage-size;
     border-radius: 50%;
-    border: 5px solid $dark;
+    border: 2px solid $dark;
     display: flex;
     justify-content: center;
     align-items: center;
     font-style: normal;
-  }
-  &__raised{
-    font-weight: 100;
   }
   &__button {
     margin: 10px 20px 0;
@@ -23,7 +20,6 @@
     height: 50px;
     width: 200px;
   }
-
   &__details {
     h2 {
       padding-left: 10%;

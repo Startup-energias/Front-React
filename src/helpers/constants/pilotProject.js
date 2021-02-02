@@ -3,8 +3,14 @@ import logo from '../../assets/images/project1/logo.png';
 import image2 from '../../assets/images/project1/gallery/img2.jpg';
 import image3 from '../../assets/images/project1/gallery/img3.jpg';
 import image4 from '../../assets/images/project1/gallery/img4.jpg';
-import image6 from '../../assets/images/project1/gallery/img6.png';
-import image7 from '../../assets/images/project1/gallery/img7.png';
+import sal1 from '../../assets/images/project1/gallery/sal1.png';
+import sal2 from '../../assets/images/project1/gallery/sal2.png';
+import sal3 from '../../assets/images/project1/gallery/sal3.png';
+import sal4 from '../../assets/images/project1/gallery/sal4.png';
+import sal5 from '../../assets/images/project1/gallery/sal5.png';
+import sal6 from '../../assets/images/project1/gallery/sal6.png';
+import sal7 from '../../assets/images/project1/gallery/sal7.png';
+import sal8 from '../../assets/images/project1/gallery/sal8.png';
 import avatar1 from '../../assets/images/project1/team/avatar-default.jpg';
 import avatar2 from '../../assets/images/project1/team/Pedro Rubiano.jpg';
 import avatar3 from '../../assets/images/project1/team/Simón García.jpg';
@@ -15,7 +21,7 @@ import avatar6 from '../../assets/images/project1/team/avatar-default.jpg';
 const project = {
     id: 1,
     banner: banner,
-    images: [image2, image6, image3, image7, image4],
+    images: [image2, image3, image4, sal1, sal2, sal3, sal4, sal5, sal6, sal7, sal8],
     content: {
         title: 'Solar energy for treating sea, subterranean or superficial reservoir water to generate drinkable water.',
         categories: ['solar'],
@@ -32,9 +38,9 @@ const project = {
         characteristics: ['Helps 30 people/day', 'Indigenous ethnic group Wayuu', '150 Kg CO2 saved per year']
     },
     details: {
-        goalt: '5.800',
-        goal: 5800,
-        amount: 5800,
+        goalt: '9000',
+        goal: 9000,
+        amount: 0,
         organization: 'Startup',
         supporters: 300,
         university: 'Universidad de los andes',
@@ -42,17 +48,19 @@ const project = {
         slogan: 'Water and sun for life',
         logo: logo,
     },
-    resources: [
-        'Suppliers: RO membrane', 'High pressure pump suppliers 800 PSI and 10-20 L/min - affordable', 'DC motor suppliers, 1HP - affordable', 'Efficient and compact solar panels suppliers - affordable '
+    skills: [
+        'Mentors',
+        'ONGS',
+        'Humanitarian organizations',
+        'Privates',
+        'Universities',
+        'Governments'
     ],
-    skills: [{ skill: 'Mentors! We are open to new ideas, suggestions or feedback. Knowledge in MOFs technology for water desalination, pretreatment alternatives and power efficiency are very well received!' }, {
-        skill: 'We are looking for interested parties on funding or buying our desalination units', subs: ['ONGS',
-            'Humanitarian organizations',
-            'Privates',
-            'Universities',
-            'Governments'
-        ]
-    },
+    resources: [
+        'Membranes',
+        'Pumps',
+        'Motors',
+        'Solar panels'
     ],
     team: [
         {

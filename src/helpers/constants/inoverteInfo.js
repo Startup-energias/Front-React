@@ -18,11 +18,11 @@ export const tags = [
     selected: false,
   },
   {
-    value: 'Benefits',
+    value: 'Benefits of being an Inoverte project',
     selected: false,
   },
   {
-    value: 'Support',
+    value: 'Benefits of being an Inoverte supporter',
     selected: false,
   },
 ];
