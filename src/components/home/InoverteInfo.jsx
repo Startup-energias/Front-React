@@ -33,24 +33,20 @@ function InoverteInfo() {
           backgroundColor: `${color}`,
         }}
       >
-        <div className="cont-lg">
-          <img className="section-image" src={multiples[0].image} alt="section-icon" />
+        {
+          multiples.map((item, i)=>(
+            <div className="cont-lg mt-5" key={"lg_"+i}>
+          <img className="section-image" src={item.image} alt="section-icon" />
           <div className="section-title is-flex">
-            <h2 className="monserrat-bold is-size-4 has-text-white my-2">{multiples[0].title}</h2>
+            <h2 className="monserrat-bold is-size-4 has-text-white my-2">{item.title}</h2>
           </div>
           <div className="section-text is-flex is-justify-content-center is-align-items-center">
-            <p className=" has-text-centered is-size-7">{multiples[0].content}</p>
+            <p className=" has-text-centered is-size-7">{item.content}</p>
           </div>
         </div>
-        <div className="cont-lg mt-5">
-          <img className="section-image" src={multiples[1].image} alt="section-icon" />
-          <div className="section-title is-flex">
-            <h2 className="monserrat-bold is-size-4 has-text-white my-2">{multiples[1].title}</h2>
-          </div>
-          <div className="section-text is-flex is-justify-content-center is-align-items-center">
-            <p className=" has-text-centered is-size-7">{multiples[1].content}</p>
-          </div>
-        </div>
+          ))
+        }
+        
       </div>
     );
   };

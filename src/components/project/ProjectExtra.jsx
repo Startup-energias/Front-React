@@ -10,10 +10,7 @@ function ProjectExtra({ images, maps, resources, skills }) {
   function RenderGallery({ list }) {
     const listImages = list.map((item, i) => {
       return (
-        <div
-          className="project__galleryimg"
-          key={'gallery-' + i}
-        >
+        <div className="project__galleryimg" key={'gallery-' + i}>
           <img src={item} alt={'gallery-' + i} />
         </div>
       );
@@ -35,7 +32,7 @@ function ProjectExtra({ images, maps, resources, skills }) {
   return (
     <div className="is-flex is-flex-direction-column is-justify-content-center mt-4">
       <Iframe
-        className="mb-6"
+        className="mb-3"
         width="auto"
         height="400"
         src="https://www.youtube.com/embed/_K1imkQTy7w"
