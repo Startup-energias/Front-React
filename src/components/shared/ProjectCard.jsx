@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function ProjectCard({
   image,
   categories,
-  team_name,
+  name,
   description,
   ubication,
   university,
@@ -40,7 +40,7 @@ function ProjectCard({
         <div className="projectCard__content pt-4">
           <p className="ubication mb-2">{ubication}</p>
           <div>
-            <p className="title mb-2">{team_name}</p>
+            <p className="title mb-2">{name}</p>
             <p>{description}</p>
           </div>
         </div>
@@ -67,7 +67,7 @@ function ProjectCard({
             <Link
               className="has-text-dark"
               to="/projects"
-              title={`Ver más detalles del proyecto ${team_name}`}
+              title={`Ver más detalles del proyecto ${name}`}
             >
               Conoce más
             </Link>

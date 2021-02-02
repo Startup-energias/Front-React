@@ -1,4 +1,6 @@
 import image1 from '../../assets/images/projects/Img1.jpg';
+import eolicTower from '../../assets/images/projects/eolicTower.jpg';
+import container from '../../assets/images/projects/container.jpg';
 import andesLogo from '../../assets/images/projects/andes.png';
 
 export default [
@@ -25,11 +27,11 @@ export default [
   {
     id: 2,
     categories: ['solar', 'water', 'oil'],
-    name: 'Solar energy for generate drinkable water.',
+    name: 'Microgrid for rural electrification.',
     description:
       'Sea for Change is a humanitarian project aiming to tackle potable water shortage in vulnerable communities through an innovative water desalination unit.',
     team_name: 'Sea for Change',
-    image: image1,
+    image: eolicTower,
     university: {
       name: 'Javeriana',
       img: andesLogo,
@@ -38,18 +40,18 @@ export default [
       percentage: '100%',
       goal: 50000,
     },
-    ubication: 'La Gaujira - Colombia',
+    ubication: 'Putumayo, Colombia',
     supporters: 300,
     status: false,
   },
   {
     id: 3,
     categories: ['solar'],
-    name: 'Solar energy for generate drinkable water.',
+    name: 'Tiny House: containers for self-sustainable rural housing',
     description:
       'Sea for Change is a humanitarian project aiming to tackle potable water shortage in vulnerable communities through an innovative water desalination unit.',
     team_name: 'Sea for Change',
-    image: image1,
+    image: container,
     university: {
       name: 'Javeriana',
       img: andesLogo,
@@ -58,7 +60,7 @@ export default [
       percentage: '100%',
       goal: 50000,
     },
-    ubication: 'La Gaujira - Colombia',
+    ubication: 'El Choco , Colombia',
     supporters: 300,
     status: false,
   },

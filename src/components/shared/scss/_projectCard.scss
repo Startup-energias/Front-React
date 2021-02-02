@@ -1,7 +1,9 @@
 @import '../../../assets/scss/02_base/colors';
 
 .projectCard {
+  overflow: hidden;
   width: 20rem;
+  height: 36rem;
   background-color: #f8f5f5;
   position: relative;
   margin: 1rem 2rem;
@@ -38,6 +40,7 @@
   &__body {
     position: relative;
     padding-bottom: 2rem;
+    min-height: 21rem;
     &--unavailable {
       position: absolute;
       top: 0;
