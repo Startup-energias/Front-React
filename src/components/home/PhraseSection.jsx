@@ -9,7 +9,7 @@ function PhraseSection() {
           <p className="title mb-1">Are you passionate about renewable energy?</p>
           <p>We too! Join Inoverte community.</p>
         </div>
-        <p>
+        <p className="phraseSection__subtext">
           We find human talent and funds to support innovative renewable energy projects from
           universities that provide electricity and water solutions.
         </p>

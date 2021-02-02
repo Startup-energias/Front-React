@@ -35,16 +35,16 @@ function InoverteInfo() {
       >
         <div className="cont-lg">
           <img className="section-image" src={multiples[0].image} alt="section-icon" />
-          <div className="section-title is-flex is-justify-content-center">
+          <div className="section-title is-flex">
             <h2 className="monserrat-bold is-size-4 has-text-white my-2">{multiples[0].title}</h2>
           </div>
           <div className="section-text is-flex is-justify-content-center is-align-items-center">
             <p className=" has-text-centered is-size-7">{multiples[0].content}</p>
           </div>
         </div>
-        <div className="cont-lg">
-          <img className="section-image mr-2" src={multiples[1].image} alt="section-icon" />
-          <div className="section-title is-flex is-justify-content-center">
+        <div className="cont-lg mt-5">
+          <img className="section-image" src={multiples[1].image} alt="section-icon" />
+          <div className="section-title is-flex">
             <h2 className="monserrat-bold is-size-4 has-text-white my-2">{multiples[1].title}</h2>
           </div>
           <div className="section-text is-flex is-justify-content-center is-align-items-center">
@@ -58,13 +58,13 @@ function InoverteInfo() {
   return (
     <section className="section info pt-0 mt-6" id="About us">
       <h1 className="has-text-centered is-1 title has-text-dark">Benefits of being an inoverter</h1>
-      <div className="blocks-container is-flex is-justify-content-center is-flex-wrap-wrap">
+      <div className="blocks-container is-flex is-justify-content-center is-flex-wrap-wrap ">
         {tags.map((tag) => (
           <button
             id={'btn-' + tag.value}
             className={`${
               tag.selected && 'btn-selected'
-            } content-tag is-flex is-justify-content-center is-align-items-center is-size-4 title has-text-dark`}
+            } content-tag is-flex is-justify-content-center is-align-items-center has-text-dark`}
             key={'btn-' + tag.value}
           >
             {tag.value}

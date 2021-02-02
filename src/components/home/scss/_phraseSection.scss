@@ -3,18 +3,35 @@
 @import '../../../assets/scss/03_utils/custom';
 
 .phraseSection {
+  position: relative;
   padding: 3rem;
   &__title {
+    @media (min-width: 1414px){
+      position: absolute;
+      top: 20%;
+      left: 14%;
+    }
     .title {
-      font-size: 26px;
+      font-size: 32px;
       font-family: montserrat-bold;
     }
     p {
-      font-size: 20px;
+      font-size: 26px;
     }
   }
-
-  div {
+  p{
+    color: $dark;
+  }
+  &__subtext {
     width: 33rem;
+    @media (min-width: 1414px){
+      padding-top: 15%;
+    } 
+  }
+  @media (max-width: 612px){
+    padding: 3em 10%;
+    &__subtext{
+      width: auto;
+    }
   }
 }

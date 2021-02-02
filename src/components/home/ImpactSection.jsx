@@ -10,7 +10,7 @@ function ImpactSection() {
           {item.title}
           {item.sub && <sub>{item.sub}</sub>}
         </p>
-        <p className="impactCard__content is-size-7 has-text-dark">{item.content}</p>
+        <p className="impactCard__content is-size-7 has-text-dark">{item.num + ' ' + item.content}</p>
       </div>
     ));
   };

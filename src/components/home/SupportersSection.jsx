@@ -16,7 +16,7 @@ function SupportersSection() {
         <div className="columns is-multiline is-centered">
           {logos.map((logo, i) => (
             <div
-              className="column is-one-third is-flex is-justify-content-center is-align-items-center"
+              className="column is-2-widescreen is-flex is-justify-content-center is-align-items-center"
               key={'logo_' + i}
             >
               <img className="supporter_logo m-4" src={logo} alt={'logo_' + i} />
