@@ -14,15 +14,11 @@ export const tags = [
     selected: true,
   },
   {
-    value: 'Features',
+    value: 'Why have my project at Inoverte',
     selected: false,
   },
   {
-    value: 'Benefits of being an Inoverte project',
-    selected: false,
-  },
-  {
-    value: 'Benefits of being an Inoverte supporter',
+    value: 'Why support a Inoverte Project',
     selected: false,
   },
 ];
