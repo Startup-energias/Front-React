@@ -2,6 +2,7 @@
   padding: 2.5rem 2rem;
   img {
     height: 20rem;
+    width: auto;
   }
   .monserrat-bold {
     font-size: 40px;
@@ -11,6 +12,20 @@
     p,
     a {
       font-size: 18px;
+    }
+  }
+  @media (max-width:689px){
+    flex-direction: column;
+    padding: 2.5rem 1rem;
+    &__body {
+      width: 90%;
+      align-items: center;
+      h5{
+        text-align: center;
+      }
+      ul{
+        padding-left: 15%;
+      }
     }
   }
 }

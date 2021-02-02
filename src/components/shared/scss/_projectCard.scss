@@ -85,6 +85,7 @@
     display: flex;
     justify-content: center;
     .badge {
+      width: 3rem;
       margin: 0 1rem;
       display: flex;
       flex-direction: column;
@@ -109,7 +110,6 @@
       }
     }
     .divisor {
-      border: 1px solid $dark;
       background-color: $dark;
       height: 100%;
     }
