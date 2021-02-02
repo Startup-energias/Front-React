@@ -31,7 +31,7 @@ function Navbar({ items }) {
       <div id="navbarBasicExample" className={`${navToggle && 'is-active'} navbar-menu`}>
         <div className="navbar-end pr-4">
           {items.map((e) => (
-            <a key={e} href={`#${e}`} className="navbar-item mx-6 has-text-dark">
+            <a key={e} href={`/#${e}`} className="navbar-item mx-6 has-text-dark">
               {e}
             </a>
           ))}

@@ -1,8 +1,25 @@
+.project {
+  &__galleryimg {
+      height: 500px;
+      width: auto;
+      background-color: white;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
 
-.project__galleryimg{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: white;
-    height: 600px;
+  &__lstIcon {
+    margin-right: 5px;
+    height: 30px;
+    width: auto;
+  }
+  &__list {
+    list-style-type: none;
+    margin-left: 12%;
+  }
+  .small-fixed {
+    width: 60%;
+  }
 }

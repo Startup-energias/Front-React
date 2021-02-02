@@ -9,18 +9,20 @@
             margin-left: $margin-sides;
         }
         @media (max-width: 1111px){
-            $margin-sides: 4em;
+            $margin-sides: 1em;
             margin-right: $margin-sides;
             margin-left: $margin-sides;
         }
     }
     &__main{
-        margin-top: 4px;
-        $padding-sides: 20px;
-        padding: 0 $padding-sides 0;
+        margin-top: 10px;
+        $padding-sides1: 20px;
+        padding: 0 $padding-sides1 0;
     }
     &__side{
-        margin-top: 6px;
+        margin-top: 12px;
+        $padding-sides2: 50px;
+        padding: 0 $padding-sides2 0;
     }
     hr {
         margin: auto;

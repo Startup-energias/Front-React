@@ -4,6 +4,10 @@
   overflow: hidden;
   width: 20rem;
   height: 36rem;
+  p,
+  i {
+    color: $dark;
+  }
   background-color: #f8f5f5;
   position: relative;
   margin: 1rem 2rem;
@@ -52,7 +56,9 @@
       justify-content: center;
       align-items: center;
       font-size: 30px;
-      color: #babfc6;
+      p {
+        color: #babfc6;
+      }
     }
   }
   &__content {
@@ -104,6 +110,7 @@
     }
     .divisor {
       border: 1px solid $dark;
+      background-color: $dark;
       height: 100%;
     }
   }

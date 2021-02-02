@@ -6,19 +6,22 @@ export default [
   {
     title: 'Tons of CO',
     sub: '2',
-    content: 'Chose the projects you want to help',
+    num: '10',
+    content: 'tons, equivalent to x whales',
     icon: contamination,
   },
   {
     title: 'Collected money',
+    num: '10',
     content:
-      'The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit',
+      'USD collected until now',
     icon: money,
   },
   {
     title: 'Inverters',
+    num: '30',
     content:
-      'His room, a proper human room although a little too small, lay peacefully between its four familiar',
+      'people is supporting the project',
     icon: people,
   },
 ];

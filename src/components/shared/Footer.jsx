@@ -26,7 +26,7 @@ function Footer() {
 
   let Links = ({ links }) => {
     const list = links.map((link) => (
-      <a className="mx-3 is-uppercase" href={'#' + link} key={'footer-' + link}>
+      <a className="mx-3 is-uppercase" href={'/#' + link} key={'footer-' + link}>
         {link}
       </a>
     ));
