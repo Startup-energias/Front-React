@@ -20,6 +20,12 @@
     height: 50px;
     width: 200px;
   }
+  .modal{
+    &__icon{
+      width: 200px;
+      height: auto;
+    }
+  }
   &__details {
     h2 {
       padding-left: 10%;
