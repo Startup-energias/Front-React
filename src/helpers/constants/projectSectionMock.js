@@ -2,6 +2,7 @@ import image1 from '../../assets/images/projects/Img1.jpg';
 import eolicTower from '../../assets/images/projects/eolicTower.jpg';
 import container from '../../assets/images/projects/container.jpg';
 import andesLogo from '../../assets/images/projects/andes.png';
+import javerianaLogo from '../../assets/images/projects/javeriana.png';
 
 export default [
   {
@@ -13,7 +14,7 @@ export default [
     team_name: 'Sea for Change',
     image: image1,
     university: {
-      name: 'Javeriana',
+      name: 'Los andes',
       img: andesLogo,
     },
     raised: {
@@ -34,7 +35,7 @@ export default [
     image: eolicTower,
     university: {
       name: 'Javeriana',
-      img: andesLogo,
+      img: javerianaLogo,
     },
     raised: {
       percentage: '100%',
@@ -54,7 +55,7 @@ export default [
     image: container,
     university: {
       name: 'Javeriana',
-      img: andesLogo,
+      img: javerianaLogo,
     },
     raised: {
       percentage: '100%',

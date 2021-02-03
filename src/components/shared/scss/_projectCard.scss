@@ -72,6 +72,7 @@
   &__content {
     padding: 0 2rem;
     width: 100%;
+    height: 11.5rem;
     .ubication {
       width: 100%;
       text-align: right;
@@ -93,11 +94,11 @@
     display: flex;
     justify-content: center;
     .badge {
-      width: 3rem;
+      width: 3.5rem;
+      height: 100%;
       margin: 0 1rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       font-size: 10px;
       img {

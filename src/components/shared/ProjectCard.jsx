@@ -48,7 +48,7 @@ function ProjectCard({
           <div className="projectCard__badges my-5">
             <div className="badge">
               <img className="mb-2" src={university.img} alt="university logo" />
-              <p>{university.name}</p>
+              <p className="has-text-centered">{university.name}</p>
             </div>
             <div className="divisor" />
             <div className="badge">
