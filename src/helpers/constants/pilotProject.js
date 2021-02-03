@@ -47,6 +47,7 @@ const project = {
         company: 'Sea for change',
         slogan: 'Water and sun for life',
         logo: logo,
+        email: 'inoverte@gmail.com'
     },
     skills: [
         'Mentors',

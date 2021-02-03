@@ -12,6 +12,14 @@
   position: relative;
   margin: 1rem 2rem;
   box-shadow: -4px 14px 47px -9px rgba(25, 36, 64, 1);
+  
+  position: relative;
+  top: 0;
+  transition: 0.75s;
+  &:hover{
+    top: -20px;
+  }
+  
   &__image {
     height: 15rem;
     background-position: center;
@@ -112,6 +120,7 @@
     .divisor {
       background-color: $dark;
       height: 100%;
+      width: 2px;
     }
   }
   &__link {
