@@ -1,10 +1,12 @@
 import './scss/_projectRegister.scss';
-import register from '../../assets/images/register/register.png';
 
 function proyectRegister() {
   return (
     <section className="projectRegister is-flex is-justify-content-center is-align-items-center has-background-light">
-      <img src={register} alt="Logo of Register your project section" />
+      <img
+        src={process.env.REACT_APP_IMAGES_SRC + 'register/register.png'}
+        alt="Logo of Register your project section"
+      />
       <div className="projectRegister__body is-flex is-flex-direction-column">
         <h5 className="monserrat-bold has-text-dark mb-5">Register your project</h5>
         <ul>

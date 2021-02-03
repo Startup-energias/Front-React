@@ -1,25 +1,22 @@
-import Step1 from '../../assets/images/howWorks/step1.png';
-import Step2 from '../../assets/images/howWorks/step2.png';
-import Step3 from '../../assets/images/howWorks/step3.png';
-
+const folder = 'howWorks/';
 export const steps = [
   {
     id: 1,
     title: 'Find your favorite project',
     content: 'Filter your preferences by type of technology, region and university',
-    image: Step1,
+    image: process.env.REACT_APP_IMAGES_SRC + folder + 'step1.png',
   },
   {
     id: 2,
     title: 'Support the project',
     content: 'Choose how you want to help: money, knowledge or sharing in social media.',
-    image: Step2,
+    image: process.env.REACT_APP_IMAGES_SRC + folder + 'step2.png',
   },
   {
     id: 3,
     title: 'Track the impact',
     content: 'Watch it grows! Follow the process to see the impact in the community',
-    image: Step3,
+    image: process.env.REACT_APP_IMAGES_SRC + folder + 'step3.png',
   },
 ];
 

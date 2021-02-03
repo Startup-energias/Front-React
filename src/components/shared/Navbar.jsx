@@ -1,6 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Auth } from 'aws-amplify';
-import LogoDefault from '../../assets/images/logo-black.jpg';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './scss/_navbar.scss';
@@ -15,7 +13,10 @@ function Navbar({ items }) {
     >
       <div className="navbar-brand is-align-items-center">
         <Link to="/">
-          <img alt="Inoverte logo || Redirect to home" src={LogoDefault} />
+          <img
+            alt="Inoverte logo || Redirect to home"
+            src={process.env.REACT_APP_IMAGES_SRC + 'logo-black.jpg'}
+          />
         </Link>
         <button
           onClick={() => setNavToggle(!navToggle)}

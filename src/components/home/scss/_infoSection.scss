@@ -1,9 +1,11 @@
 @import '../../../assets/scss/02_base/colors';
 @import '../../../assets/scss/02_base/screenSizes';
 @import '../../../assets/scss/03_utils/custom';
+@import '../../../assets/scss/03_utils/variables';
+
 
 .infoSection {
-  background-image: url('../../../assets/images/back2.jpg');
+  background-image: url($images_url + 'back2.jpg');
   margin-top: 4.3rem;
   background-position: center;
   background-size: cover;

@@ -1,10 +1,9 @@
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import Iframe from 'react-iframe';
-import skillsImg from '../../assets/images/projects/skills.png';
-import resourcesImg from '../../assets/images/projects/resouces.png';
-
 import './scss/_projectExtra.scss';
+
+const images__icons = process.env.REACT_APP_IMAGES_SRC + 'projects/page/';
 
 function ProjectExtra({ images, maps, resources, skills }) {
   function RenderGallery({ list }) {
@@ -46,7 +45,7 @@ function ProjectExtra({ images, maps, resources, skills }) {
       <div className="columns is-6 is-multiline m-0">
         <div className="column">
           <div className="is-flex">
-            <img className="project__lstIcon" src={skillsImg} alt="skills" />
+            <img className="project__lstIcon" src={images__icons + 'skills.png'} alt="skills" />
             <h2 className="title is-4 has-text-dark mb-2">Skills</h2>
           </div>
           <ul className="project__list">
@@ -57,7 +56,11 @@ function ProjectExtra({ images, maps, resources, skills }) {
         </div>
         <div className="column is-half">
           <div className="is-flex">
-            <img className="project__lstIcon" src={resourcesImg} alt="resources" />
+            <img
+              className="project__lstIcon"
+              src={images__icons + 'resources.png'}
+              alt="resources"
+            />
             <h2 className="title is-4 has-text-dark mb-2">Resources</h2>
           </div>
           <ul className="project__list">

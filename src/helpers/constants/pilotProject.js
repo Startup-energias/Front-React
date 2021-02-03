@@ -1,27 +1,23 @@
-import banner from '../../assets/images/project1/banner.jpg';
-import logo from '../../assets/images/project1/logo.png';
-import image2 from '../../assets/images/project1/gallery/img2.jpg';
-import image3 from '../../assets/images/project1/gallery/img3.jpg';
-import image4 from '../../assets/images/project1/gallery/img4.jpg';
-import sal1 from '../../assets/images/project1/gallery/sal1.png';
-import sal2 from '../../assets/images/project1/gallery/sal2.png';
-import sal3 from '../../assets/images/project1/gallery/sal3.png';
-import sal4 from '../../assets/images/project1/gallery/sal4.png';
-import sal5 from '../../assets/images/project1/gallery/sal5.png';
-import sal6 from '../../assets/images/project1/gallery/sal6.png';
-import sal7 from '../../assets/images/project1/gallery/sal7.png';
-import sal8 from '../../assets/images/project1/gallery/sal8.png';
-import avatar1 from '../../assets/images/project1/team/avatar-default.jpg';
-import avatar2 from '../../assets/images/project1/team/Pedro Rubiano.jpg';
-import avatar3 from '../../assets/images/project1/team/Simón García.jpg';
-import avatar4 from '../../assets/images/project1/team/Rafael Rubiano.jpg';
-import avatar5 from '../../assets/images/project1/team/Santiago Pinzón.jpg';
-import avatar6 from '../../assets/images/project1/team/avatar-default.jpg';
+const images__project = process.env.REACT_APP_IMAGES_SRC + 'projects/projects__images/project__1/';
+const images__gallery = images__project + 'gallery/';
+const images__team = images__project + 'team/';
 
 const project = {
   id: 1,
-  banner: banner,
-  images: [image2, image3, image4, sal1, sal2, sal3, sal4, sal5, sal6, sal7, sal8],
+  banner: images__project + 'banner.jpg',
+  images: [
+    images__gallery + 'img2.jpg',
+    images__gallery + 'img3.jpg',
+    images__gallery + 'img4.jpg',
+    images__gallery + 'sal1.png',
+    images__gallery + 'sal2.png',
+    images__gallery + 'sal3.png',
+    images__gallery + 'sal4.png',
+    images__gallery + 'sal5.png',
+    images__gallery + 'sal6.png',
+    images__gallery + 'sal7.png',
+    images__gallery + 'sal8.png',
+  ],
   content: {
     title:
       'Solar energy for treating sea, subterranean or superficial reservoir water to generate drinkable water.',
@@ -51,7 +47,7 @@ const project = {
     university: 'Universidad de los andes',
     company: 'Sea for change',
     slogan: 'Water and sun for life',
-    logo: logo,
+    logo: images__project + 'logo.png',
     email: 'inoverte@gmail.com',
   },
   skills: [
@@ -69,42 +65,42 @@ const project = {
       comment:
         'This project reminds me that we are just temporarily in this world, and whatever we do must be in favor of life, through kindness and empathy.',
       role: 'Communications ',
-      image: avatar1,
+      image: images__team + 'avatar-default.jpg',
     },
     {
       name: 'Pedro Felipe Rubiano Perez ',
       comment:
         'I am a mechanical engineer and artist with an enormous social and environmental focus in my work. I spend most of my time thinking about how to provide drinkable water to communities that need it the most.',
       role: 'Project manager',
-      image: avatar2,
+      image: images__team + 'Pedro Rubiano.jpg',
     },
     {
       name: 'Simón David García',
       comment:
         'Throughout my career I have engineered for people. For me, the biggest challenge is the access to basic needs like water.',
       role: 'Structural and Integration Engineer',
-      image: avatar3,
+      image: images__team + 'Simón García.jpg',
     },
     {
       name: 'Rafael Rubiano',
       comment:
         'I have been in the regional Real Estate markets of Chile, Colombia, Perú, Uruguay and Mexico with SURA Asset Management. Now I am working in Sea for Change financial forecast and seeking diverse sources of fundraising.',
       role: 'Business Financials',
-      image: avatar4,
+      image: images__team + 'Rafael Rubiano.jpg',
     },
     {
       name: 'Santiago Pinzón',
       comment:
         'I love to see my profession as a tool to create a positive impact on people. It motivates me to promote the development of remote communities in Colombia and contribute my sand grain to make this world a better place.',
       role: 'Power design engineer',
-      image: avatar5,
+      image: images__team + 'Santiago Pinzón.jpg',
     },
     {
       name: 'Paula Leon',
       comment:
         'I believe that engineering should be a driver to solve many of the problems that affect humanity today. In this occasion, I have joined this project to help the indigenous communities that live in La Guajira have access to potable water.',
       role: 'Power control Engineer',
-      image: avatar6,
+      image: images__team + 'avatar-default.jpg',
     },
   ],
   maps:
