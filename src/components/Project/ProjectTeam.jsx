@@ -17,9 +17,7 @@ function ProjectTeam({ team }) {
             </div>
           </div>
           <div className="member__content">
-              <p>
-                {"\""+member.comment+"\""}
-              </p>
+            <p>{'"' + member.comment + '"'}</p>
           </div>
         </div>
       ))}

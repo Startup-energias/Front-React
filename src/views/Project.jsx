@@ -16,12 +16,17 @@ function Project() {
       <div className="columns is-multiline is-centered is-6 mb-5">
         <div className="project__main p-0 column is-12-mobile is-12-tablet is-8-desktop is-8-widescreen is-8-fullhd pl-1 pr-5">
           <ProjectInfo {...project.content} />
-          <ProjectExtra images={project.images} maps={project.maps} resources={project.resources} skills= {project.skills}/>
+          <ProjectExtra
+            images={project.images}
+            maps={project.maps}
+            resources={project.resources}
+            skills={project.skills}
+          />
         </div>
         <div className="project__side column has-background-light ">
-          <ProjectDetails {...project.details}/>
+          <ProjectDetails {...project.details} />
           <hr />
-          <ProjectTeam team={project.team}/>
+          <ProjectTeam team={project.team} />
         </div>
       </div>
     </div>

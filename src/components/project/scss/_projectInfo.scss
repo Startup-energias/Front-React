@@ -1,17 +1,20 @@
 @import '../../../views/scss/project';
+@import '../../../assets/scss/03_utils/variables';
+
+$images_icons : $images_url + 'projects/energy/';
 
 .project{
     &__categories{
       display: flex;
       justify-content: flex-start;
       .solar {
-        background-image: url('../../../assets/images/projects/sun.png');
+        background-image: url($images_icons + 'sun.png');
       }
       .water {
-        background-image: url('../../../assets/images/projects/water.png');
+        background-image: url($images_icons + 'water.png');
       }
       .oil {
-        background-image: url('../../../assets/images/projects/ecoOil.png');
+        background-image: url($images_icons + 'oil.png');
       }
     }
     &__category div{

@@ -1,5 +1,6 @@
 @import '../../../assets/scss/02_base/colors';
 @import '../../../assets/scss/03_utils/custom';
+@import '../../../assets/scss/03_utils/variables';
 
 .blog {
   .background {
@@ -7,7 +8,7 @@
     padding-top: 12em;
     padding-bottom: 12em;
     // Image style
-    background-image: url("../../../assets/images/forestLake.jpg");
+    background-image: url($images_url + "forestLake.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

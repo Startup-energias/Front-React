@@ -1,4 +1,3 @@
-import people from '../../assets/images/home/gente.png';
 import './scss/_phraseSection.scss';
 
 function PhraseSection() {
@@ -7,7 +6,7 @@ function PhraseSection() {
       <div className="phraseSection__container py-3">
         <div className="phraseSection__title mb-5">
           <div className="phraseSection__title__text">
-          <p className="title mb-1">Are you passionate about renewable energy?</p>
+            <p className="title mb-1">Are you passionate about renewable energy?</p>
             <p>We too! Join Inoverte community.</p>
           </div>
         </div>
@@ -16,7 +15,11 @@ function PhraseSection() {
           universities that provide electricity and water solutions.
         </p>
       </div>
-      <img className="mt-4" src={people} alt="people collaborating to get clean energies" />
+      <img
+        className="mt-4"
+        src={process.env.REACT_APP_IMAGES_SRC + 'home/gente.png'}
+        alt="people collaborating to get clean energies"
+      />
     </section>
   );
 }

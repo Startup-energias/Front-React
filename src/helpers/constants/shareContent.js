@@ -1,14 +1,16 @@
-/* eslint-disable no-unused-vars */
-import facebook from '../../assets/images/projects/share/facebook.png';
-import instagram from '../../assets/images/projects/share/instagram.png';
-import twitter from '../../assets/images/projects/share/twitter.png';
-import linkedin from '../../assets/images/projects/share/linkedin.png';
-import money from '../../assets/images/projects/share/money.png';
-import resources from '../../assets/images/projects/share/resources.png';
-import skills from '../../assets/images/projects/share/skills.png';
-import share from '../../assets/images/projects/share/share.png';
+const images__modal = process.env.REACT_APP_IMAGES_SRC + 'projects/page/modal/';
 
 export const modalIcons = {
-    media:[linkedin, twitter, facebook, instagram],
-    support:[money, resources, skills, share]
+  media: [
+    images__modal + 'linkedin.png',
+    images__modal + 'twitter.png',
+    images__modal + 'facebook.png',
+    images__modal + 'instagram.png',
+  ],
+  support: [
+    images__modal + 'money.png',
+    images__modal + 'resources.png',
+    images__modal + 'skills.png',
+    images__modal + 'share.png',
+  ],
 };

@@ -1,4 +1,6 @@
 @import '../../../assets/scss/02_base/colors';
+@import '../../../assets/scss/03_utils/variables';
+$energy_images: $images_url + 'projects/energy/';
 
 .projectCard {
   overflow: hidden;
@@ -40,13 +42,13 @@
       background-size: cover;
     }
     .solar {
-      background-image: url('../../../assets/images/projects/sun.png');
+      background-image: url($energy_images + 'sun.png');
     }
     .water {
-      background-image: url('../../../assets/images/projects/water.png');
+      background-image: url($energy_images + 'water.png');
     }
     .oil {
-      background-image: url('../../../assets/images/projects/ecoOil.png');
+      background-image: url($energy_images + 'oil.png');
     }
   }
   &__body {
@@ -72,6 +74,7 @@
   &__content {
     padding: 0 2rem;
     width: 100%;
+    height: 11.5rem;
     .ubication {
       width: 100%;
       text-align: right;
@@ -93,11 +96,11 @@
     display: flex;
     justify-content: center;
     .badge {
-      width: 3rem;
+      width: 3.5rem;
+      height: 100%;
       margin: 0 1rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       font-size: 10px;
       img {

@@ -1,12 +1,4 @@
-import statics from '../../assets/images/info/statics.png';
-import handTool from '../../assets/images/info/handTool.png';
-import world from '../../assets/images/info/world.png';
-import benefits from '../../assets/images/info/benefits.png';
-import handTree from '../../assets/images/info/handTree.png';
-import support from '../../assets/images/info/support.png';
-import transparency from '../../assets/images/info/transparency.png';
-import box from '../../assets/images/info/box.png';
-import communication from '../../assets/images/info/communication.png';
+const info__images = process.env.REACT_APP_IMAGES_SRC + 'info/';
 
 export const tags = [
   {
@@ -25,7 +17,7 @@ export const tags = [
 
 export const sections = [
   {
-    image: statics,
+    image: info__images + 'statics.png',
     title: 'Follow up',
     content: `Inoverte we go further than only
       finding funds. Follow the evolution of
@@ -38,7 +30,7 @@ export const sections = [
     color: '#4eb6e1',
   },
   {
-    image: handTool,
+    image: info__images + 'handTool.png',
     title: 'Crowd-talent',
     content: `Help with your knowledge! In Inoverte
       we are convinced that anyone can be
@@ -49,7 +41,7 @@ export const sections = [
     color: '#eeaa3d',
   },
   {
-    image: world,
+    image: info__images + 'world.png',
     title: 'Inoverte community',
     content: `The perfect community for people
       passionate about renewable energy.
@@ -60,7 +52,7 @@ export const sections = [
     color: '#e67d58',
   },
   {
-    image: benefits,
+    image: info__images + 'benefits.png',
     title: 'Stay tuned',
     content: `Learn about what is happening in
       Colombia and the world in sustainability and innovation. With our blog, you
@@ -71,7 +63,7 @@ export const sections = [
   {
     multiples: [
       {
-        image: handTree,
+        image: info__images + 'handTree.png',
         title: 'Reducing CO2 emissions',
         content: `With every project we support, we seek to
           reduce the greatest amount of carbon emissions. Know the specific amount in the
@@ -79,7 +71,7 @@ export const sections = [
           environment.`,
       },
       {
-        image: support,
+        image: info__images + 'support.png',
         title: 'People first',
         content: `The perfect community for people passionate about renewable energy. Connect with
         people from all over the world who want to
@@ -89,7 +81,7 @@ export const sections = [
     color: '#7e9794',
   },
   {
-    image: transparency,
+    image: info__images + 'transparency.png',
     title: 'Transparency',
     content: `Our Inoverte projects go through a
       rigorous feasibility evaluation process.
@@ -99,7 +91,7 @@ export const sections = [
     color: '#c3a485',
   },
   {
-    image: box,
+    image: info__images + 'box.png',
     title: 'Sourcing',
     content: `You company is valuable! In Inoverte
       our projects can share their specific
@@ -110,7 +102,7 @@ export const sections = [
     color: '#5acbaf',
   },
   {
-    image: communication,
+    image: info__images + 'communication.png',
     title: 'Share',
     content: `You can be part of the renewable
       change! Even if you do not have the
