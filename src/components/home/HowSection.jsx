@@ -1,20 +1,17 @@
 import './scss/_howSection.scss';
-import {steps} from '../../helpers/constants/howSteps.js';
+import { steps } from '../../helpers/constants/howSteps.js';
 
 function HowSection() {
-
   let renderSteps = () => {
     return steps.map((item) => (
-      <div className="column is-one-third-widescreen" key={item.title} id={"how-"+item.id}>
+      <div className="column is-one-third-widescreen" key={item.title} id={'how-' + item.id}>
         <div className="icon-container is-flex is-justify-content-center">
           <div className="icon-image is-flex is-align-items-center is-justify-content-center">
             <img src={item.image} alt={item.title} />
           </div>
         </div>
-        
-        <h2 className="text-title is-size-4 has-text-dark mt-4 mb-2">
-          {item.title}
-        </h2>
+
+        <h2 className="text-title is-size-4 has-text-dark mt-4 mb-2">{item.title}</h2>
         <div className="container text-content">
           <p className="is-size-6 has-text-dark">{item.content}</p>
         </div>

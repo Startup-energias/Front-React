@@ -5,7 +5,7 @@ import people_icon from '../../assets/images/icons/people.png';
 import contamination_icon from '../../assets/images/icons/contamination.png';
 
 function ProjectInfo({ title, categories, location, description, characteristics }) {
-  const icons=[water_icon, people_icon, contamination_icon];
+  const icons = [water_icon, people_icon, contamination_icon];
 
   return (
     <div className="is-flex is-flex-direction-column is-justify-content-center">
@@ -28,17 +28,20 @@ function ProjectInfo({ title, categories, location, description, characteristics
       <h1 className="title is-4 has-text-dark mt-4">{title}</h1>
       <div className="project__characteristics is-flex is-flex-wrap-wrap">
         {characteristics?.map((characteristic, i) => (
-          <div className="project__characteristic is-flex is-align-items-flex-center is-flex-wrap-wrap" key={characteristics + i}>
-            <img src={icons[i]} alt={"icon_"+i} />
-            <p className="ml-1 mr-2 is-size-7 pt-1">
-              {characteristic}
-            </p>
+          <div
+            className="project__characteristic is-flex is-align-items-flex-center is-flex-wrap-wrap"
+            key={characteristics + i}
+          >
+            <img src={icons[i]} alt={'icon_' + i} />
+            <p className="ml-1 mr-2 is-size-7 pt-1">{characteristic}</p>
           </div>
         ))}
       </div>
       <div className="project__description mt-4">
         {description.map((paragraph, i) => (
-          <p className="has-text-grey" key={"p_number_"+i}>{paragraph}</p>
+          <p className="has-text-grey" key={'p_number_' + i}>
+            {paragraph}
+          </p>
         ))}
       </div>
     </div>

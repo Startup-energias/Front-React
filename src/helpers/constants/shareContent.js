@@ -9,6 +9,6 @@ import skills from '../../assets/images/projects/share/skills.png';
 import share from '../../assets/images/projects/share/share.png';
 
 export const modalIcons = {
-    media:[linkedin, twitter, facebook, instagram],
-    support:[money, resources, skills, share]
+  media: [linkedin, twitter, facebook, instagram],
+  support: [money, resources, skills, share],
 };

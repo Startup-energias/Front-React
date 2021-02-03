@@ -8,7 +8,7 @@ function ContactSection() {
         <h1 className="title has-text-dark is-1 ml-6 pl-6">Contact Us! </h1>
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label" >Full Name</label>
+            <label className="label">Full Name</label>
           </div>
           <div className="field-body">
             <div className="field">
@@ -34,11 +34,7 @@ function ContactSection() {
           <div className="field-body">
             <div className="field">
               <p className="control is-expanded has-icons-left has-icons-right">
-                <input
-                  className="input"
-                  type="email"
-                  placeholder="alex@smith.com"
-                />
+                <input className="input" type="email" placeholder="alex@smith.com" />
                 <span className="icon is-small is-left">
                   <i className="fa fa-envelope"></i>
                 </span>
@@ -81,7 +77,9 @@ function ContactSection() {
           <div className="field-body">
             <div className="field">
               <div className="control">
-                <button type="submit" className="button is-dark">Send message</button>
+                <button type="submit" className="button is-dark">
+                  Send message
+                </button>
               </div>
             </div>
           </div>

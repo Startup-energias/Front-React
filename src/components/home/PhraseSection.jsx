@@ -7,7 +7,7 @@ function PhraseSection() {
       <div className="phraseSection__container py-3">
         <div className="phraseSection__title mb-5">
           <div className="phraseSection__title__text">
-          <p className="title mb-1">Are you passionate about renewable energy?</p>
+            <p className="title mb-1">Are you passionate about renewable energy?</p>
             <p>We too! Join Inoverte community.</p>
           </div>
         </div>

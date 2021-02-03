@@ -43,10 +43,7 @@ function TabContent({ titles, info }) {
         <ul className="has-background-white">
           {titles.map((title) => (
             <li key={'tab_' + title}>
-              <a
-                className="is-size-5"
-                href={'#' + title}
-              >
+              <a className="is-size-5" href={'#' + title}>
                 {title}
               </a>
             </li>
@@ -62,9 +59,8 @@ function TabContent({ titles, info }) {
                   className="column is-4-fullhd is-4-widescreen is-4-desktop is-12-tablet"
                   key={'element_' + step.id}
                 >
-                  
                   <h2 className="is-size-4-widescreen is-size-5-desktop is-size-5-tablet is-size-5-mobile has-text-info mb-0">
-                  <i className={"fa fa-"+step.icon+" fa-lg"}></i> {step.title}
+                    <i className={'fa fa-' + step.icon + ' fa-lg'}></i> {step.title}
                   </h2>
                   <p className="is-6 has-text-dark">{step.content}</p>
                 </div>

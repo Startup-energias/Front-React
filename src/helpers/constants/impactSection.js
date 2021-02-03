@@ -13,15 +13,13 @@ export default [
   {
     title: 'Collected money',
     num: '10',
-    content:
-      'USD collected until now',
+    content: 'USD collected until now',
     icon: money,
   },
   {
     title: 'Inverters',
     num: '30',
-    content:
-      'people is supporting the project',
+    content: 'people is supporting the project',
     icon: people,
   },
 ];

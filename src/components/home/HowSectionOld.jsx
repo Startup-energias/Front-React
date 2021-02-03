@@ -1,5 +1,5 @@
 import TabContent from '../shared/TabContent';
-import {steps, support} from '../../helpers/constants/howSteps.js';
+import { steps, support } from '../../helpers/constants/howSteps.js';
 import './scss/_howSectionOld.scss';
 
 function HowSection() {
@@ -20,9 +20,9 @@ function HowSection() {
 
   return (
     <section className="section how mt-6 p-0 has-background-white">
-        <div className="columns is-multiline">
-          <RenderSteps steps={steps} />
-        </div>
+      <div className="columns is-multiline">
+        <RenderSteps steps={steps} />
+      </div>
 
       <TabContent titles={['Finance a proyect', 'Support with knowledge']} info={support} />
 

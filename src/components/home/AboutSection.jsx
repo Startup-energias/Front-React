@@ -26,14 +26,12 @@ function AboutSection() {
 
   let RenderContent = ({ info, image, rev, align }) => {
     return (
-    <div className={'m-0 columns '+rev+' is-gapless'}>
-          <div className="column image-comp is-6 ">
-            {image}
-          </div>
-          <div className={"column text-comp is-6 "+align}>
-            <p className="is-size-6 has-text-white">{info.content}</p>
-          </div>
+      <div className={'m-0 columns ' + rev + ' is-gapless'}>
+        <div className="column image-comp is-6 ">{image}</div>
+        <div className={'column text-comp is-6 ' + align}>
+          <p className="is-size-6 has-text-white">{info.content}</p>
         </div>
+      </div>
     );
   };
 
@@ -41,10 +39,37 @@ function AboutSection() {
     <section className="section is-flex is-flex-direction-column is-justify-items-center about has-background-dark pb-6">
       <h1 className="title has-text-white is-1 has-text-centered">About us</h1>
       <div className="container is-flex is-flex-direction-column is-justify-items-center p-6">
-        <RenderContent info={info[0]} image={<div className="is-flex is-flex-direction-row"><img className="about-image-small" src={info[0].image} alt={'about_image'} />
-        <img className="about-image-small" src={info[0].image2} alt={'about_image'} /></div>} rev="" align=""/>
-        <RenderContent info={info[1]} image={<div><img className="about-image" src={info[1].image} alt={'about_image'} /></div>} rev="reverse-columns" align="has-text-right-tablet"/>
-        <RenderContent info={info[2]} image={<div><img className="about-image" src={info[2].image} alt={'about_image'} /></div>} rev="" align=""/>
+        <RenderContent
+          info={info[0]}
+          image={
+            <div className="is-flex is-flex-direction-row">
+              <img className="about-image-small" src={info[0].image} alt={'about_image'} />
+              <img className="about-image-small" src={info[0].image2} alt={'about_image'} />
+            </div>
+          }
+          rev=""
+          align=""
+        />
+        <RenderContent
+          info={info[1]}
+          image={
+            <div>
+              <img className="about-image" src={info[1].image} alt={'about_image'} />
+            </div>
+          }
+          rev="reverse-columns"
+          align="has-text-right-tablet"
+        />
+        <RenderContent
+          info={info[2]}
+          image={
+            <div>
+              <img className="about-image" src={info[2].image} alt={'about_image'} />
+            </div>
+          }
+          rev=""
+          align=""
+        />
       </div>
     </section>
   );
