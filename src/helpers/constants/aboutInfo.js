@@ -2,6 +2,34 @@ const images__about = process.env.REACT_APP_IMAGES_SRC + 'about/';
 
 export const aboutInfo = {
     banner: images__about + 'banner.jpg',
+    team: images__about + 'team.jpg',
+    members:[
+        {
+            name: 'Valentina',
+            rol: 'CEO',
+            email: 'valentina@inverte.com'
+        },
+        {
+            name: 'Mariana',
+            rol: 'rol',
+            email: 'valentina@inverte.com'
+        },
+        {
+            name: 'Nicolas',
+            rol: 'rol',
+            email: 'nicolas@inverte.com'
+        },
+        {
+            name: 'Christian',
+            rol: 'rol',
+            email: 'valentina@inverte.com'
+        },
+        {
+            name: 'Gustavo',
+            rol: 'rol',
+            email: 'valentina@inverte.com'
+        },
+    ],
     items: [{
         right: false,
         title: 'MISION',
