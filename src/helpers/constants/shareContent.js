@@ -8,9 +8,41 @@ export const modalIcons = {
     images__modal + 'instagram.png',
   ],
   support: [
-    images__modal + 'money.png',
-    images__modal + 'resources.png',
-    images__modal + 'skills.png',
-    images__modal + 'share.png',
-  ],
+    {
+      image: images__modal + 'money.png',
+      link: "/payment"
+    },
+    {
+      image: images__modal + 'resources.png',
+    },
+    {
+      image: images__modal + 'skills.png',
+    },
+    {
+      image: images__modal + 'share.png',
+    }
+  ]
 };
+
+export const payContent = {
+  sections: [
+    {
+      title: 'Make the Transaction',
+      content: 'Select the payment method and follow the steps.',
+      image: images__modal + 'card.png',
+      left: true
+    },
+    {
+      title: 'Access project information',
+      content: 'Track how your money is being invested through monthly newsletters issued on the board of our plataform',
+      image: images__modal + 'info.png',
+      left: false
+    },
+    {
+      title: 'Receive your reward',
+      content: 'Depending on the amount you donated,receive a donation certificate, a creaft made by the impacted community, or a guided tour of the completed project.',
+      image: images__modal + 'box.png',
+      left: true
+    }
+  ]
+}
