@@ -1,0 +1,44 @@
+.about{
+    &__left{
+        p{
+            padding-left: 20%;
+        }
+    }
+    &__right{
+        p{
+            padding-right: 20%;
+        }
+        .item{
+            &__title{
+                text-align: right;
+            }
+            &__content{
+                order: 2;
+            }
+            &__image{
+                order: 1;
+            }
+        }
+    }
+}
+
+.item{
+    &__image{
+        height: 450px;
+        width:  600px;
+        object-fit: cover;
+    }
+    
+    &__reduced{
+        width: 60%;
+    }
+    
+    &__title{
+        font-weight: bold;
+        font-size: 400%;
+    }
+
+    &__subtext{
+        padding: 2% 20%;
+    }
+}

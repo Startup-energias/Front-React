@@ -1,0 +1,9 @@
+.about {
+  &__banner {
+    img {
+        height: 725px;
+        width: 100%;
+      object-fit: cover;
+    }
+  }
+}

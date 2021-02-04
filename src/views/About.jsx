@@ -1,9 +1,16 @@
 import './scss/_about.scss';
-const images__about = process.env.REACT_APP_IMAGES_SRC + 'about/';
+import { aboutInfo } from '../helpers/constants/aboutInfo';
+import AboutComponent from '../components/about/AboutComponent';
+
 function About() {
   return (
-    <div className="is-flex is-justify-content-center">
-      <img src={images__about + 'banner.jpg'} alt="banner img" />
+    <div className="about is-flex is-flex-direction-column is-aling-items-center mb-5">
+      <div className="about__banner">
+        <img src={aboutInfo.banner} alt="banner img" />
+      </div>
+      {aboutInfo.items.map((item) => (
+        <AboutComponent {...item} key={item.title + 'component'} />
+      ))}
     </div>
   );
 }
