@@ -12,11 +12,10 @@ function About() {
         <AboutComponent {...item} key={item.title + 'component'} />
       ))}
       <div className="team is-flex is-flex-direction-column">
-      <div className="team__image">
-        <img src={aboutInfo.team} alt="team img" />
+        <div className="team__image">
+          <img src={aboutInfo.team} alt="team img" />
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 }
