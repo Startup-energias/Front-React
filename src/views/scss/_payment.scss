@@ -1,0 +1,42 @@
+.payment {
+  margin-top: 6rem;
+  &__left {
+    background: #f4f3f3;
+    @media (min-width: 891px) {
+      padding-left: 17%;
+    }
+  }
+  &__right {
+    background: white;
+    @media (min-width: 891px) {
+      padding-right: 17%;
+      flex-direction: row-reverse;
+      justify-content: right;
+    }
+  }
+  &__icon {
+    img {
+      height: auto;
+      width: 10rem;
+    }
+  }
+  &__text {
+    p {
+      width: 30rem;
+      padding-left: 7%;
+    }
+  }
+  @media (max-width: 890px) {
+    &__left,
+    &__right {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__text {
+        p,h2 {
+          width: auto;
+          text-align: center;
+        }
+      }
+  }
+}
