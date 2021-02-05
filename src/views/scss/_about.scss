@@ -1,0 +1,19 @@
+.about {
+  &__banner {
+    img {
+      max-height: 725px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .team {
+    margin-top: 5rem;
+    &__image {
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+      }
+    }
+  }
+}
