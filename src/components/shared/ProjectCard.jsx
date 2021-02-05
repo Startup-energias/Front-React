@@ -1,5 +1,4 @@
 import './scss/_projectCard.scss';
-import userLogo from '../../assets/images/projects/user.png';
 import { Link } from 'react-router-dom';
 
 function ProjectCard({
@@ -58,7 +57,11 @@ function ProjectCard({
             </div>
             <div className="divisor" />
             <div className="badge">
-              <img className="mb-2" src={userLogo} alt="user logo" />
+              <img
+                className="mb-2"
+                src={process.env.REACT_APP_IMAGES_SRC + 'projects/user.png'}
+                alt="user logo"
+              />
               <p>Supports</p>
               <p className="badge__text--little">{supporters}</p>
             </div>

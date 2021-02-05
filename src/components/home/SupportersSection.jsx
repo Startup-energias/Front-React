@@ -1,12 +1,14 @@
-import logo1 from '../../assets/images/supporters/logo1.png';
-import logo3 from '../../assets/images/supporters/logo3.png';
-import logo4 from '../../assets/images/supporters/logo4.png';
-import logo5 from '../../assets/images/supporters/logo5.png';
-import logo6 from '../../assets/images/supporters/logo6.png';
-import logo8 from '../../assets/images/supporters/logo8.png';
+const images__logos = process.env.REACT_APP_IMAGES_SRC + 'supporters/';
 import './scss/_supportersSection.scss';
 
-const logos = [logo1, logo3, logo4, logo5, logo6, logo8];
+const logos = [
+  images__logos + 'startglobal.png',
+  images__logos + 'udelosandes.png',
+  images__logos + 'extigon.png',
+  images__logos + 'ustgallen.png',
+  images__logos + 'startfield.png',
+  images__logos + 'startup.png',
+];
 
 function SupportersSection() {
   return (

@@ -1,8 +1,5 @@
-import image1 from '../../assets/images/projects/Img1.jpg';
-import eolicTower from '../../assets/images/projects/eolicTower.jpg';
-import container from '../../assets/images/projects/container.jpg';
-import andesLogo from '../../assets/images/projects/andes.png';
-import javerianaLogo from '../../assets/images/projects/javeriana.png';
+const projects__img = process.env.REACT_APP_IMAGES_SRC + 'projects/projects__images/';
+const projects__un = process.env.REACT_APP_IMAGES_SRC + 'projects/universities/';
 
 export default [
   {
@@ -12,10 +9,10 @@ export default [
     description:
       'Sea for Change is a humanitarian project aiming to tackle potable water shortage in vulnerable communities through an innovative water desalination unit.',
     team_name: 'Sea for Change',
-    image: image1,
+    image: projects__img + 'project__1/card.jpg',
     university: {
-      name: 'Los andes',
-      img: andesLogo,
+      name: 'U. de los Andes',
+      img: projects__un + 'andes.png',
     },
     raised: {
       percentage: '100%',
@@ -32,10 +29,10 @@ export default [
     description:
       'Sea for Change is a humanitarian project aiming to tackle potable water shortage in vulnerable communities through an innovative water desalination unit.',
     team_name: 'Sea for Change',
-    image: eolicTower,
+    image: projects__img + 'project__2/card.jpg',
     university: {
-      name: 'Javeriana',
-      img: javerianaLogo,
+      name: 'U. Javeriana',
+      img: projects__un + 'javeriana.png',
     },
     raised: {
       percentage: '100%',
@@ -52,10 +49,10 @@ export default [
     description:
       'Sea for Change is a humanitarian project aiming to tackle potable water shortage in vulnerable communities through an innovative water desalination unit.',
     team_name: 'Sea for Change',
-    image: container,
+    image: projects__img + 'project__3/card.jpg',
     university: {
-      name: 'Javeriana',
-      img: javerianaLogo,
+      name: 'U. Javeriana',
+      img: projects__un + 'javeriana.png',
     },
     raised: {
       percentage: '100%',

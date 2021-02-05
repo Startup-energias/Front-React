@@ -1,4 +1,3 @@
-import people from '../../assets/images/home/gente.png';
 import './scss/_phraseSection.scss';
 
 function PhraseSection() {
@@ -16,7 +15,11 @@ function PhraseSection() {
           universities that provide electricity and water solutions.
         </p>
       </div>
-      <img className="mt-4" src={people} alt="people collaborating to get clean energies" />
+      <img
+        className="mt-4"
+        src={process.env.REACT_APP_IMAGES_SRC + 'home/gente.png'}
+        alt="people collaborating to get clean energies"
+      />
     </section>
   );
 }

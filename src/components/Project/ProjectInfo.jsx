@@ -1,11 +1,13 @@
 import './scss/_projectInfo.scss';
-import location_icon from '../../assets/images/icons/location.png';
-import water_icon from '../../assets/images/icons/water.png';
-import people_icon from '../../assets/images/icons/people.png';
-import contamination_icon from '../../assets/images/icons/contamination.png';
+
+const images__icons = process.env.REACT_APP_IMAGES_SRC + 'icons/';
 
 function ProjectInfo({ title, categories, location, description, characteristics }) {
-  const icons = [water_icon, people_icon, contamination_icon];
+  const icons = [
+    images__icons + 'water.png',
+    images__icons + 'people.png',
+    images__icons + 'contamination.png',
+  ];
 
   return (
     <div className="is-flex is-flex-direction-column is-justify-content-center">
@@ -21,7 +23,7 @@ function ProjectInfo({ title, categories, location, description, characteristics
           ))}
         </div>
         <div className="project__location is-align-self-flex-end is-flex is-align-items-center mb-2 mr-5">
-          <img src={location_icon} alt="location_icon" />
+          <img src={images__icons + 'location.png'} alt="location_icon" />
           <p className="is-size-7 is-align-self-center">{location}</p>
         </div>
       </div>
