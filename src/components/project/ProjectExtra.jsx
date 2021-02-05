@@ -19,9 +19,6 @@ function ProjectExtra({ images, maps, resources, skills }) {
       <Carousel
         autoPlay={false}
         showStatus={false}
-        swipeable={true}
-        emulateTouch={true}
-        infiniteLoop={true}
       >
         {listImages}
       </Carousel>
