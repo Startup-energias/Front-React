@@ -4,7 +4,6 @@ import './scss/_projectDetails.scss';
 import { modalIcons } from '../../helpers/constants/shareContent';
 
 function ProjectDetails({
-  goalt,
   goal,
   amount,
   organization,
@@ -30,18 +29,17 @@ function ProjectDetails({
   }, []);
 
   function ChangeModal(arrayId) {
-    if(arrayId != -1 && modalIcons.support[arrayId].link){
+    if (arrayId != -1 && modalIcons.support[arrayId].link) {
       window.location = modalIcons.support[arrayId].link;
-    }
-    else{
+    } else {
       arrayId += 1;
-    let temp = [false, false, false, false, false];
-    temp[arrayId] = true;
+      arrayId += 1;
+      let temp = [false, false, false, false, false];
+      temp[arrayId] = true;
 
-    setTitle(titles[arrayId]);
-    setShow(temp);
+      setTitle(titles[arrayId]);
+      setShow(temp);
     }
-    
   }
 
   return (
@@ -51,8 +49,8 @@ function ProjectDetails({
           <span className="is-size-2 has-text-dark">{percentage}%</span>
         </i>
       </div>
-      <p className=" is-size-3 has-text-centered">${goalt} Raised</p>
-      <p className=" is-size-5 has-text-centered has-text-black">of ${goalt}</p>
+      <p className=" is-size-3 has-text-centered">${goal} Raised</p>
+      <p className=" is-size-5 has-text-centered has-text-black">of ${goal}</p>
       <p className=" is-size-2 has-text-centered is-italic">Starting soon!</p>
       <button
         id="supportBtn"

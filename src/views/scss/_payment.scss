@@ -1,17 +1,8 @@
 .payment {
   margin-top: 6rem;
-  &__left {
-    background: #f4f3f3;
+  &__container {
     @media (min-width: 891px) {
       padding-left: 17%;
-    }
-  }
-  &__right {
-    background: white;
-    @media (min-width: 891px) {
-      padding-right: 17%;
-      flex-direction: row-reverse;
-      justify-content: right;
     }
   }
   &__icon {
@@ -33,10 +24,11 @@
       align-items: center;
     }
     &__text {
-        p,h2 {
-          width: auto;
-          text-align: center;
-        }
+      p,
+      h2 {
+        width: auto;
+        text-align: center;
       }
+    }
   }
 }
