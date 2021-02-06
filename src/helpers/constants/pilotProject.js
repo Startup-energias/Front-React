@@ -39,7 +39,6 @@ const project = {
     ],
   },
   details: {
-    goalt: '9000',
     goal: 9000,
     amount: 0,
     organization: 'Startup',
