@@ -4,7 +4,6 @@ import './scss/_projectDetails.scss';
 import { modalIcons } from '../../helpers/constants/shareContent';
 
 function ProjectDetails({
-  goalt,
   goal,
   amount,
   organization,
@@ -30,12 +29,17 @@ function ProjectDetails({
   }, []);
 
   function ChangeModal(arrayId) {
-    arrayId += 1;
-    let temp = [false, false, false, false, false];
-    temp[arrayId] = true;
+    if (arrayId != -1 && modalIcons.support[arrayId].link) {
+      window.location = modalIcons.support[arrayId].link;
+    } else {
+      arrayId += 1;
+      arrayId += 1;
+      let temp = [false, false, false, false, false];
+      temp[arrayId] = true;
 
-    setTitle(titles[arrayId]);
-    setShow(temp);
+      setTitle(titles[arrayId]);
+      setShow(temp);
+    }
   }
 
   return (
@@ -45,8 +49,8 @@ function ProjectDetails({
           <span className="is-size-2 has-text-dark">{percentage}%</span>
         </i>
       </div>
-      <p className=" is-size-3 has-text-centered">${goalt} Raised</p>
-      <p className=" is-size-5 has-text-centered has-text-black">of ${goalt}</p>
+      <p className=" is-size-3 has-text-centered">${goal} Raised</p>
+      <p className=" is-size-5 has-text-centered has-text-black">of ${goal}</p>
       <p className=" is-size-2 has-text-centered is-italic">Starting soon!</p>
       <button
         id="supportBtn"
@@ -80,7 +84,7 @@ function ProjectDetails({
                 {modalIcons.support.map((icon, i) => (
                   <div className="modal__icon mx-2" key={'modal-icon' + i}>
                     <img
-                      src={icon}
+                      src={icon.image}
                       alt={'modal-support' + i}
                       onClick={() => ChangeModal(i)}
                       onKeyDown={() => ChangeModal(-1)}
@@ -90,18 +94,26 @@ function ProjectDetails({
                 ))}
               </div>
             )}
-            {show[1] && <div id="mdl-example">hola1</div>}
             {show[2] && (
               <div className="is-flex is-justify-content-center mx-5">
                 <div className="modal__icon mx-3">
-                  <img src={modalIcons.support[1]} alt={'resources-icon'} />
+                  <img src={modalIcons.support[1].image} alt={'resources-icon'} />
                 </div>
                 <p className="is-size-6 is-flex is-flex-direction-column is-justify-content-center">
                   Please contact us at {email} to give resources to the project
                 </p>
               </div>
             )}
-            {show[3] && <div id="mdl-example">hola3</div>}
+            {show[3] && (
+              <div className="is-flex is-justify-content-center mx-5">
+                <div className="modal__icon mx-3">
+                  <img src={modalIcons.support[2].image} alt={'skills-icon'} />
+                </div>
+                <p className="is-size-6 is-flex is-flex-direction-column is-justify-content-center">
+                  Fill the form and share your skills with the team! Contact us at {email}
+                </p>
+              </div>
+            )}
             {show[4] && (
               <div className="is-flex is-justify-content-center">
                 {modalIcons.media.map((icon, i) => (
