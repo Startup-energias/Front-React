@@ -41,18 +41,18 @@
       "AmplifyAppId": "d2eqvlo1638q0l"
     },
     "categories": {
-      "auth": {
-        "frontreact78a1c6a9": {
-          "userPoolId": "us-east-1_x41GIXdAb",
-          "userPoolName": "development_inverte",
-          "webClientId": "55r85u8b1h4rf0tm849q8mqnha",
-          "nativeClientId": "uji67bf0kkgpi6clcoud5nb6c"
-        }
-      },
       "hosting": {
         "amplifyhosting": {
           "appId": "d2eqvlo1638q0l",
           "type": "manual"
+        }
+      },
+      "auth": {
+        "frontreact62765df5": {
+          "userPoolId": "us-east-1_D4DWH9dyZ",
+          "userPoolName": "prod_inoverte",
+          "webClientId": "19kj1ed72fuklbgh6clbjlm158",
+          "nativeClientId": "7pge9jh532vifh0m5jtj4oqjpg"
         }
       }
     }
