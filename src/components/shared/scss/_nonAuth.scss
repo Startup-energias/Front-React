@@ -1,0 +1,22 @@
+.nonAuth {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  background-color: #2e2c36;
+  background-image: url('https://cdn.dribbble.com/users/103176/screenshots/2548586/summoning.gif');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  &__actions {
+    display: flex;
+    justify-content: space-around;
+    width: 20rem;
+  }
+}
