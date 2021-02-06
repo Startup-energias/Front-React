@@ -16,10 +16,7 @@ function ProjectExtra({ images, maps, resources, skills }) {
     });
 
     return (
-      <Carousel
-        autoPlay={false}
-        showStatus={false}
-      >
+      <Carousel autoPlay={false} showStatus={false}>
         {listImages}
       </Carousel>
     );

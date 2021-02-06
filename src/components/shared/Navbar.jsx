@@ -15,7 +15,7 @@ function Navbar({ items }) {
         <Link to="/">
           <img
             alt="Inoverte logo || Redirect to home"
-            src={process.env.REACT_APP_IMAGES_SRC + 'logo-black.jpg'}
+            src={process.env.REACT_APP_IMAGES_SRC + 'logo.jpg'}
           />
         </Link>
         <button
@@ -31,11 +31,20 @@ function Navbar({ items }) {
       </div>
       <div id="navbarBasicExample" className={`${navToggle && 'is-active'} navbar-menu`}>
         <div className="navbar-end pr-4">
-          {items.map((e) => (
-            <a key={e} href={`/#${e}`} className="navbar-item mx-6 has-text-dark">
+          <a href={`/#${items[0]}`} className="navbar-item mx-6 has-text-dark">
+            {items[0]}
+          </a>
+          <a href={`/about`} className="navbar-item mx-6 has-text-dark">
+            {items[1]}
+          </a>
+          <a href={`/#${items[2]}`} className="navbar-item mx-6 has-text-dark">
+            {items[2]}
+          </a>
+          {/*items.map((e) => (
+            <a key={e} href={`/${e}`} className="navbar-item mx-6 has-text-dark">
               {e}
             </a>
-          ))}
+          ))*/}
           <div className="navbar-divider" />
           <div className="navbar-item navbar__registration">
             <div className="buttons is-justify-content-center">
