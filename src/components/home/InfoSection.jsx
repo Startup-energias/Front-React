@@ -1,9 +1,22 @@
-import LaunchModal from './LaunchModal';
+import { useEffect } from 'react';
+import BulmaModal from '../../utils/bulmaModal';
+import LaunchModal from './modals/LaunchModal';
+import RegisterModal from './modals/RegisterModal';
 import './scss/_infoSection.scss';
 
 const images = process.env.REACT_APP_IMAGES_SRC + 'home/';
+const registerId = 'registerModal';
 
 function InfoSection() {
+  useEffect(() => {
+    var btn = document.querySelector('#registerBtn');
+    var mdl = new BulmaModal('#' + registerId);
+
+    btn.addEventListener('click', function () {
+      mdl.show();
+    });
+  }, []);
+
   return (
     <div className="infoSection is-flex is-flex-wrap-wrap is-align-items-center" id="Home">
       <div className="infoSection__container">
@@ -18,6 +31,7 @@ function InfoSection() {
         </p>
         <div className="buttons mt-3">
           <button
+            id="registerBtn"
             className="infoSection__button has-text-centered"
             style={{
               color: '#247dff',
@@ -43,6 +57,7 @@ function InfoSection() {
         alt="people collaborating to get clean energies"
       />
       <LaunchModal />
+      <RegisterModal idModal={registerId} />
     </div>
   );
 }

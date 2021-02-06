@@ -1,0 +1,38 @@
+.register {
+  .modal-content {
+    width: 65%;
+  }
+  &__container {
+    padding: 2.5rem 0;
+    img {
+      height: 20rem;
+      width: auto;
+    }
+    .monserrat-bold {
+      font-size: 40px;
+    }
+    &__body {
+      width: 40%;
+      p,
+      a {
+        font-size: 18px;
+      }
+      ul {
+        padding-left: 15%;
+      }
+    }
+    @media (max-width: 689px) {
+      flex-direction: column;
+      &__body {
+        width: 90%;
+        align-items: center;
+        h5 {
+          text-align: center;
+        }
+        ul {
+          padding-left: 15%;
+        }
+      }
+    }
+  }
+}

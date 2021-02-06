@@ -1,0 +1,29 @@
+$section-width: 300px;
+  $section-height: 380px;
+  $section-margin: 8px;
+  .section {
+    margin: 0 5px 0;
+    &__image {
+      height: auto;
+      width: 160px;
+    }
+
+    &__container {
+      margin: $section-margin;
+      width: $section-width;
+
+      height: $section-height;
+
+      @media (max-width: 856px) {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      height: 100px;
+      line-height: 95%;
+      @media (max-width: 856px) {
+        width: 250px;
+      }
+    }
+  }
