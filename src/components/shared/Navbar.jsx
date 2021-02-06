@@ -15,7 +15,7 @@ function Navbar({ items }) {
         <Link to="/">
           <img
             alt="Inoverte logo || Redirect to home"
-            src={process.env.REACT_APP_IMAGES_SRC + 'logo-black.jpg'}
+            src={process.env.REACT_APP_IMAGES_SRC + 'logo.jpg'}
           />
         </Link>
         <button
