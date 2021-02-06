@@ -29,20 +29,17 @@ export const payContent = {
     {
       title: 'Make the Transaction',
       content: 'Select the payment method and follow the steps.',
-      image: images__modal + 'card.png',
-      left: true
+      image: images__modal + 'card.png'
     },
     {
       title: 'Access project information',
       content: 'Track how your money is being invested through monthly newsletters issued on the board of our plataform',
-      image: images__modal + 'info.png',
-      left: false
+      image: images__modal + 'info.png'
     },
     {
       title: 'Receive your reward',
       content: 'Depending on the amount you donated,receive a donation certificate, a creaft made by the impacted community, or a guided tour of the completed project.',
-      image: images__modal + 'box.png',
-      left: true
+      image: images__modal + 'box.png'
     }
   ]
 }
