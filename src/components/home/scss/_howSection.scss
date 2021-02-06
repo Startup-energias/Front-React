@@ -2,53 +2,59 @@
 @import '../../../assets/scss/03_utils/custom';
 
 .how {
+  padding: 10rem 0;
   $icon-size: 230px;
   .icon-container {
     width: 100%;
     .icon-image {
       height: $icon-size;
-      width: $icon-size;  
+      width: $icon-size;
     }
   }
 
-  .text-content{
+  .text-content {
     line-height: 19px;
-    transform: scale(1, 0.9);
   }
 
-  #how-1 .text-content{
-    padding: 0 4.8em 0;
+  #how-1 .text-content {
+    padding: 0 5em 0;
   }
 
-  #how-2 .text-content{
-    padding: 0 6.2em 0;
+  #how-2 .text-content {
+    padding: 0 5.5em 0;
   }
 
-  #how-3 .text-content{
-    padding: 0 6em 0;
+  #how-3 .text-content {
+    padding: 0 5.8em 0;
   }
 
-  @media (max-width: 1409px){
-    #how-1 .text-content, #how-2 .text-content, #how-3 .text-content{
+  @media (max-width: 1409px) {
+    #how-1 .text-content,
+    #how-2 .text-content,
+    #how-3 .text-content {
       padding: 0 4.5em 0;
     }
   }
 
-  @media (max-width: 1216px){
-    #how-1 .text-content, #how-2 .text-content, #how-3 .text-content{
+  @media (max-width: 1216px) {
+    #how-1 .text-content,
+    #how-2 .text-content,
+    #how-3 .text-content {
       padding: 0 2em 0;
     }
   }
 
-  @media (max-width: 350px){
-    .icon-container{
+  @media (max-width: 350px) {
+    .icon-container {
       height: $icon-size - 50px;
     }
-    .text-title{
+    .text-title {
       line-height: 22px;
     }
 
-    #how-1 .text-content, #how-2 .text-content, #how-3 .text-content{
+    #how-1 .text-content,
+    #how-2 .text-content,
+    #how-3 .text-content {
       padding: 0 0 0;
     }
   }

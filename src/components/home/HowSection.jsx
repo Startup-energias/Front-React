@@ -20,10 +20,10 @@ function HowSection() {
   };
 
   return (
-    <section className="section how has-background-light" id="How it works">
-      <div className="container has-text-centered">
-        <h1 className=" mb-1 has-text-dark">How it works</h1>
-        <div className="columns is-multiline is-8 mx-6 mb-2">{renderSteps()}</div>
+    <section className="section how has-background-info" id="How it works">
+      <div className="container">
+        <h1 className=" mb-1 has-text-white">How it works</h1>
+        <div className="columns has-text-centered is-multiline is-8 mx-6 mb-2">{renderSteps()}</div>
       </div>
     </section>
   );
