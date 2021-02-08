@@ -46,12 +46,29 @@
       width: auto;
     }
   }
+
+  @mixin setColor($color) {
+    color: $color;
+    border-color: $color;
+    background-color: white;
+    &:hover {
+      background-color: $color;
+      color: white;
+    }
+  }
+  #financeBtn {
+    @include setColor(#23cee0);
+  }
+  #registerBtn {
+    @include setColor(#247dff);
+  }
   &__button {
     margin: 0.5rem 1rem;
-    background-color: white;
     border-style: solid;
     height: 2.5rem;
     width: 10rem;
+    cursor: pointer;
+    transition: 0.5s;
   }
   &__img {
     margin-left: 8%;

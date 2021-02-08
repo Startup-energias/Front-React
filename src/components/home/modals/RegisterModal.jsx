@@ -5,6 +5,9 @@ function RegisterModal({ idModal }) {
     <div className="modal register" id={idModal}>
       <div className="modal-background"></div>
       <div className="modal-content">
+        <div className="register__head is-flex is-justify-content-flex-end">
+          <button className="register__close" aria-label="close" data-bulma-modal="close"></button>
+        </div>
         <div className="register__container is-flex is-justify-content-center is-align-items-center has-background-light">
           <img
             src={process.env.REACT_APP_IMAGES_SRC + 'home/register.png'}

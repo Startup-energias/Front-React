@@ -1,7 +1,30 @@
+@import '../../../../assets/scss/03_utils/variables';
+$images: $images_url + 'home/';
 .register {
   .modal-content {
     width: 65%;
   }
+
+  &__close {
+    left: 80%;
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    background-image: url($images + 'close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  &__head {
+    position: absolute;
+    width: 100%;
+  }
+
   &__container {
     padding: 2.5rem 0;
     img {
