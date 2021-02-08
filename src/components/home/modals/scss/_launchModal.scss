@@ -1,8 +1,8 @@
-@import '../../../assets/scss/02_base/colors';
-@import '../../../assets/scss/03_utils/variables';
+@import '../../../../assets/scss/02_base/colors';
+@import '../../../../assets/scss/03_utils/variables';
 $images: $images_url + 'home/';
 
-.modal {
+.launch {
   .modal-content {
     width: 69%;
     height: 100%;
@@ -13,7 +13,7 @@ $images: $images_url + 'home/';
   }
   &__logo {
     margin: 2rem;
-    width: 10rem;
+    width: 15%;
     height: auto;
   }
 
@@ -43,7 +43,7 @@ $images: $images_url + 'home/';
 
   &__icon {
     margin: 1rem;
-    width: 8rem;
+    width: 12%;
     height: auto;
   }
 
@@ -79,6 +79,16 @@ $images: $images_url + 'home/';
   &__countdown {
     .title {
       font-size: 400%;
+    }
+    @media (max-width: 638px) {
+      .title {
+        font-size: 200%;
+      }
+    }
+    @media (max-width: 538px) {
+      .countdown {
+        flex-direction: column;
+      }
     }
   }
 }
