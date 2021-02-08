@@ -35,7 +35,7 @@ export const sections = [
   {
     image: info__images + 'statics.png',
     opacity: info__images + 'staticsOp.png',
-    title: 'Follow up',
+    title: 'Tracking',
     content: `Inoverte we go further than only
       finding funds. Follow the evolution of
       the project, its implementation and

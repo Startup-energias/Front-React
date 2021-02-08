@@ -30,25 +30,14 @@ function InfoSection() {
           We connect renewable energy projects and financing to benefit off-grid communities
         </p>
         <div className="buttons mt-3">
-          <button
-            id="registerBtn"
-            className="infoSection__button has-text-centered"
-            style={{
-              color: '#247dff',
-              borderColor: '#247dff',
-            }}
-          >
+          <button id="registerBtn" className="infoSection__button has-text-centered">
             Boost your renewable project
           </button>
-          <button
-            className="infoSection__button has-text-centered"
-            style={{
-              color: '#23cee0',
-              borderColor: '#23cee0',
-            }}
-          >
-            Finance a renawable project
-          </button>
+          <a href="#Projects">
+            <button id="financeBtn" className="infoSection__button has-text-centered">
+              Finance a renawable project
+            </button>
+          </a>
         </div>
       </div>
       <img
