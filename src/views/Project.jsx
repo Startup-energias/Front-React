@@ -16,7 +16,7 @@ function Project() {
     <div className="project is-flex is-flex-direction-column">
       <img src={images__project + project.banner} alt="banner" />
       <div className="columns is-multiline is-centered is-6 mb-5">
-        <div className="project__main p-0 column is-12-mobile is-12-tablet is-8-desktop is-8-widescreen is-8-fullhd pl-1 pr-5">
+        <div className="project__main column is-12-mobile is-12-tablet is-8-desktop is-8-widescreen is-8-fullhd">
           <ProjectInfo
             title={project.title}
             categories={project.categories}

@@ -1,34 +1,33 @@
-
 @import '../../assets/scss/02_base/colors';
 
-.project{
+.project {
+  margin-top: 10px;
+  .columns {
+    @media (min-width: 1112px) {
+      $margin-sides: 10em;
+      margin-right: $margin-sides;
+      margin-left: $margin-sides;
+    }
+    @media (max-width: 1111px) {
+      $margin-sides: 1em;
+      margin-right: $margin-sides;
+      margin-left: $margin-sides;
+    }
+  }
+  &__main {
     margin-top: 10px;
-    .columns{
-        @media (min-width: 1112px){
-            $margin-sides: 10em;
-            margin-right: $margin-sides;
-            margin-left: $margin-sides;
-        }
-        @media (max-width: 1111px){
-            $margin-sides: 1em;
-            margin-right: $margin-sides;
-            margin-left: $margin-sides;
-        }
-    }
-    &__main{
-        margin-top: 10px;
-        $padding-sides1: 20px;
-        padding: 0 $padding-sides1 0;
-    }
-    &__side{
-        margin-top: 12px;
-        $padding-sides2: 20px;
-        padding: 0 $padding-sides2 0;
-    }
-    hr {
-        margin: auto;
-        width: 95%;
-        height: 4px;
-        background-color: $dark;
-      }
+    padding-right: 5%;
+    padding-left: 0%;
+  }
+  &__side {
+    margin-top: 12px;
+    $padding-sides2: 20px;
+    padding: 0 $padding-sides2 0;
+  }
+  hr {
+    margin: auto;
+    width: 95%;
+    height: 4px;
+    background-color: $dark;
+  }
 }

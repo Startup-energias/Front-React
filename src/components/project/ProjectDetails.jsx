@@ -73,7 +73,7 @@ function ProjectDetails({
                 {title}
               </p>
               <button
-                className="delete"
+                className="modal__close"
                 aria-label="close"
                 data-bulma-modal="close"
                 onClick={() => ChangeModal(-1)}
@@ -82,7 +82,7 @@ function ProjectDetails({
             {show[0] && (
               <div className="is-flex is-justify-content-center">
                 {modalIcons.support.map((icon, i) => (
-                  <div className="modal__icon mx-2" key={'modal-icon' + i}>
+                  <div className="modal__icon modal__pointer mx-2" key={'modal-icon' + i}>
                     <img
                       src={icon.image}
                       alt={'modal-support' + i}
@@ -117,7 +117,7 @@ function ProjectDetails({
             {show[4] && (
               <div className="is-flex is-justify-content-center">
                 {modalIcons.media.map((icon, i) => (
-                  <div className="modal__icon mx-2" key={'modal-icon' + i}>
+                  <div className="modal__icon modal__pointer mx-2" key={'modal-icon' + i}>
                     <img
                       src={icon}
                       alt={'modal-share' + i}
