@@ -1,43 +1,43 @@
 @import '../../../views/scss/project';
 @import '../../../assets/scss/03_utils/variables';
 
-$images_icons : $images_url + 'projects/energy/';
+$images_icons: $images_url + 'projects/energy/';
 
-.project{
-    &__categories{
-      display: flex;
-      justify-content: flex-start;
-      .solar {
-        background-image: url($images_icons + 'sun.png');
-      }
-      .water {
-        background-image: url($images_icons + 'water.png');
-      }
-      .oil {
-        background-image: url($images_icons + 'oil.png');
-      }
+.project {
+  &__categories {
+    display: flex;
+    justify-content: flex-start;
+    .solar {
+      background-image: url($images_icons + 'sun.png');
     }
-    &__category div{
-      width: 3rem;
-      height: 4.5rem;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+    .water {
+      background-image: url($images_icons + 'water.png');
     }
-    &__location{
-      img{
-        $location-size: 30px;
-        width: auto;
-        height: $location-size;
-      }
+    .oil {
+      background-image: url($images_icons + 'oil.png');
     }
-    &__characteristics{
-      display: flex;
-      justify-content: flex-start;
-    }
-    &__characteristic img{
-      $location-size: 1.5rem;
-      height: $location-size;
+  }
+  &__category div {
+    width: 3rem;
+    height: 4.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__location {
+    img {
+      $location-size: 30px;
       width: auto;
+      height: $location-size;
     }
+  }
+  &__characteristics {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__characteristic img {
+    $location-size: 1.5rem;
+    height: $location-size;
+    width: auto;
+  }
 }

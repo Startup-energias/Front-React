@@ -5,12 +5,12 @@ import './scss/_projectExtra.scss';
 
 const images__icons = process.env.REACT_APP_IMAGES_SRC + 'projects/page/';
 
-function ProjectExtra({ images, maps, resources, skills }) {
+function ProjectExtra({ images, maps, resources, skills, imgSrc }) {
   function RenderGallery({ list }) {
     const listImages = list.map((item, i) => {
       return (
         <div className="project__galleryimg" key={'gallery-' + i}>
-          <img src={item} alt={'gallery-' + i} />
+          <img src={imgSrc + 'gallery/' + item} alt={'gallery-' + i} />
         </div>
       );
     });

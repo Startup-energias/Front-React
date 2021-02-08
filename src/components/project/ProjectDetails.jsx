@@ -13,6 +13,7 @@ function ProjectDetails({
   slogan,
   logo,
   email,
+  imgSrc,
 }) {
   const percentage = Math.round((amount * 100) / goal);
   const titles = ['Support now', 'Pay now', 'Resources', 'Skills', 'Share'];
@@ -32,7 +33,6 @@ function ProjectDetails({
     if (arrayId != -1 && modalIcons.support[arrayId].link) {
       window.location = modalIcons.support[arrayId].link;
     } else {
-      arrayId += 1;
       arrayId += 1;
       let temp = [false, false, false, false, false];
       temp[arrayId] = true;
@@ -157,7 +157,7 @@ function ProjectDetails({
         <p className="is-size-6 has-text-weight-bold mb-2">{company}</p>
         <h2 className="subtitle is-size-5 has-text-dark mb-2">Slogan</h2>
         <p className="is-size-6 has-text-weight-bold mb-2">{slogan}</p>
-        <img className="is-align-self-center" src={logo} alt="company_logo" />
+        <img className="is-align-self-center" src={imgSrc + logo} alt="company_logo" />
       </div>
     </div>
   );
