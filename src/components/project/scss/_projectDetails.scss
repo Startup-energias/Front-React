@@ -1,5 +1,6 @@
 @import '../../../assets/scss/02_base/colors';
 @import '../../../assets/scss/02_base/typography';
+@import '../../../assets/scss/03_utils/variables';
 
 .project {
   &__percentage i {
@@ -25,7 +26,22 @@
       width: 200px;
       height: auto;
     }
+    &__pointer {
+      cursor: pointer;
+    }
+    &__close {
+      width: 2rem;
+      height: 2rem;
+      background-image: url($images_url + 'home/close.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
   }
+
   &__details {
     h2 {
       padding-left: 10%;
@@ -37,7 +53,7 @@
       max-width: 100px;
     }
   }
-  &__pay{
+  &__pay {
     width: 300px;
   }
 }
