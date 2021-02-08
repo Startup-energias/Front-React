@@ -3,7 +3,7 @@ import './scss/_infoCard.scss';
 import ReactCardFlip from 'react-card-flip';
 import { useState } from 'react';
 
-function InfoCard({ section, id }) {
+function InfoCard({ section }) {
   const [isFlipped, setFlipped] = useState(false);
   const handleClick = () => {
     setFlipped(!isFlipped);

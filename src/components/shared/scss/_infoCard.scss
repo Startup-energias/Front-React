@@ -1,3 +1,5 @@
+@import '../../../assets/scss/02_base/colors';
+
 $section-width: 280px;
 $section-height: 250px;
 $section-margin: 8px;
@@ -10,18 +12,17 @@ $section-margin: 8px;
     height: auto;
     width: 160px;
   }
-
   &__container {
+    cursor: pointer;
+    border-style: none;
     position: relative;
     margin: $section-margin;
     width: $section-width;
     height: $section-height;
-
     @media (max-width: 856px) {
       width: 100%;
     }
   }
-
   &__title {
     margin-bottom: 2%;
     h2 {
