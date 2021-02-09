@@ -7,21 +7,26 @@ import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
 import { Auth } from 'aws-amplify';
+import { Provider } from 'react-redux';
+import store from './store/store';
+import { setAuth } from './store/modules/user/actions';
 require('dotenv').config();
 
 const App = () => {
   return (
     <React.StrictMode>
-      <Router />
+      <Provider store={store}>
+        <Router />
+      </Provider>
     </React.StrictMode>
   );
 };
 
-function checkUser() {
-  Auth.currentAuthenticatedUser()
-    .then((user) => console.log({ user }))
-    .catch((err) => console.error(err));
-}
-checkUser();
+Auth.currentAuthenticatedUser()
+  .then((user) => {
+    console.log(user);
+    store.dispatch(setAuth(true));
+  })
+  .catch(() => store.dispatch(setAuth(true)));
 
 ReactDOM.render(<App />, document.getElementById('root'));

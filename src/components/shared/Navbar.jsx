@@ -1,9 +1,10 @@
 import { Auth } from 'aws-amplify';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './scss/_navbar.scss';
 
-function Navbar({ items }) {
+function Navbar({ items, auth }) {
   const [navToggle, setNavToggle] = useState(false);
   return (
     <nav
@@ -40,22 +41,28 @@ function Navbar({ items }) {
           <a href={`/#${items[2]}`} className="navbar-item mx-6 has-text-dark">
             {items[2]}
           </a>
-          {/*items.map((e) => (
-            <a key={e} href={`/${e}`} className="navbar-item mx-6 has-text-dark">
-              {e}
-            </a>
-          ))*/}
           <div className="navbar-divider" />
           <div className="navbar-item navbar__registration">
             <div className="buttons is-justify-content-center">
-              <button
-                onClick={() => {
-                  Auth.federatedSignIn();
-                }}
-                className="button is-white has-text-weight-bold"
-              >
-                Login / Sign up
-              </button>
+              {auth ? (
+                <button
+                  onClick={() => {
+                    console.log('session closes');
+                  }}
+                  className="button is-white has-text-weight-bold"
+                >
+                  Sign out
+                </button>
+              ) : (
+                <button
+                  onClick={() => {
+                    Auth.federatedSignIn();
+                  }}
+                  className="button is-white has-text-weight-bold"
+                >
+                  Login / Sign up
+                </button>
+              )}
             </div>
           </div>
         </div>
@@ -63,5 +70,8 @@ function Navbar({ items }) {
     </nav>
   );
 }
+const props = (state) => ({
+  auth: state.user.auth,
+});
 
-export default Navbar;
+export default connect(props, null)(Navbar);
