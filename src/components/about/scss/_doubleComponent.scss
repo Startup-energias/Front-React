@@ -1,0 +1,43 @@
+.about {
+  .double {
+    flex-direction: row;
+    position: relative;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+
+    &__subtext {
+      padding-left: 50%;
+      padding-right: 20%;
+    }
+
+    @media (max-width: 1246px) {
+      flex-direction: column;
+      align-items: center;
+      &__image {
+        display: none;
+        position: absolute;
+        visibility: hidden;
+      }
+      &__subtext {
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+    }
+    &__title {
+      text-align: right;
+      font-weight: bold;
+      font-size: 400%;
+      padding-right: 20%;
+    }
+    &__image {
+      height: auto;
+      width: 670px;
+      @media (min-width: 1246px) {
+        position: absolute;
+      }
+    }
+    &__content {
+      height: 600px;
+    }
+  }
+}
