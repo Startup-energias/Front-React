@@ -2,6 +2,11 @@
 @import '../../../assets/scss/03_utils/custom';
 
 .contact {
+  @media (min-width: 400px) {
+    h1 {
+      padding-left: 10%;
+    }
+  }
   .container {
     @media only screen and (max-width: 780px) {
       margin-right: 1em;

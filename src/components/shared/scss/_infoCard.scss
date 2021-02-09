@@ -1,27 +1,28 @@
 @import '../../../assets/scss/02_base/colors';
-
 $section-width: 280px;
 $section-height: 260px;
-$section-margin: 8px;
 .infoCard {
-  margin: 0 5px 0;
   &__image {
-    position: absolute;
-    left: 20%;
-    top: 12%;
     height: auto;
     width: 160px;
   }
+  &__background {
+    position: absolute;
+    height: auto;
+    width: 80%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
   &__container {
+    width: $section-width;
+    height: $section-height;
     cursor: pointer;
     border-style: none;
     position: relative;
-    margin: $section-margin;
-    width: $section-width;
-    height: $section-height;
-    @media (max-width: 856px) {
-      width: 100%;
-    }
+    padding-top: 3%;
   }
   &__title {
     margin-bottom: 2%;

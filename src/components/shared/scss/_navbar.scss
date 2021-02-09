@@ -1,13 +1,18 @@
 @import '../../../assets/scss/02_base/colors';
 
 nav {
+  width: 100%;
   font-size: 19px;
   .navbar-item {
     color: white;
   }
 
   .navbar-brand {
-    margin-left: 7rem;
+    margin-left: 1rem;
+    @media (min-width: 857px) {
+      margin-left: 7rem;
+    }
+
     img {
       width: 10rem;
       height: 3rem;

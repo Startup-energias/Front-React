@@ -24,11 +24,27 @@
       }
     }
     .title {
-      font-size: 32px;
+      font-size: 48px;
       font-family: montserrat-bold;
     }
     p {
-      font-size: 26px;
+      font-size: 28px;
+    }
+    @media (max-width: 826px) {
+      .title {
+        font-size: 36px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 636px) {
+      .title {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
     }
   }
   p {
@@ -38,6 +54,12 @@
     max-width: 25rem;
     @media (min-width: 1200px) {
       padding-top: 37%;
+    }
+    @media (max-width: 826px) {
+      font-size: 15px;
+    }
+    @media (max-width: 636px) {
+      font-size: 12px;
     }
   }
   @media (max-width: 612px) {
