@@ -18,7 +18,7 @@ export default [
       percentage: '100%',
       goal: 50000,
     },
-    ubication: 'La Guajira - Colombia',
+    ubication: 'La Guajira, Colombia',
     supporters: 300,
     status: true,
   },
