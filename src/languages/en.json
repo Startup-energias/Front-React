@@ -1,10 +1,13 @@
 {
-    "inicio": "Home",
-    "howworks.title":"How it works",
-    "howworks.step1":"Find the project(s) you want to support.",
-    "howworks.desc1":"Chose the projects you want to help.",
-    "howworks.step2":"Choose the way you want to help: either money or knowledge.",
-    "howworks.desc2":"The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pit.",
-    "howworks.step3":"Track and share the impact you created!",
-    "howworks.desc3":"His room, a proper human room although a little too small, lay peacefully between its four familiar."
+    "loading": "Loading...",
+    "launchModal.ready": "Be ready, we are launching soon",
+    "launchModal.info1": "You will be available soon to support the most innovative renewable projects that will bring electricity & water to communities that need it",
+    "launchModal.infoStrong": " electricity & water ",
+    "launchModal.info2": "to communities that need it",
+    "launchModal.button": "Notify me",
+    "countdown.day": "Day",
+    "countdown.days": "Days",
+    "countdown.hours": "Hours",
+    "countdown.minutes": "Minutes",
+    "countdown.seconds": "Seconds"
 }

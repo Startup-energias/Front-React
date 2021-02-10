@@ -12,7 +12,9 @@ import Footer from '../components/shared/Footer';
 import { indexItems } from '../helpers/constants/navbarItems';
 import PrivateRoute from './PrivateRoute';
 
+//Intl componnents
 import { IntlProvider } from "react-intl";
+import { FormattedMessage } from 'react-intl'
 import messages_en from "../languages/en.json";
 import messages_es from "../languages/es.json";
 
@@ -26,7 +28,7 @@ const indexRouter = () => (
   <IntlProvider locale={language} messages={messages[language]}>
     <BrowserRouter>
       <Navbar items={indexItems} />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div><FormattedMessage id="loading" /></div>}>
         <Switch>
           <Route exact path="/help" component={HelpNow} />
           <Route exact path="/projects" component={Project} />
