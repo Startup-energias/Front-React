@@ -40,6 +40,15 @@
       border: none;
       outline: none;
     }
+    .btn-primary {
+      background-color: $dark;
+      color: $primary;
+      transition: 0.5s;
+      &:hover {
+        color: $dark;
+        background-color: $primary;
+      }
+    }
   }
 
   &__details {

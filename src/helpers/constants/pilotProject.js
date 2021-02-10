@@ -19,13 +19,13 @@ const project = {
   categories: ["solar"],
   location: "Buenavista, Riohacha, La Guajira, Colombia",
   description: [
-    "Sea for Change is a humanitarian project thought and designed by a team of interdisciplinary young minds who seek to bring water to the communities that need it most.",
-    "Even in the XXI century, the department of La Guajira in Colombia is the most affected by the shortage of drinking water. Why? It is a desert area that suffers from deforestation, mining exploitation and the disappearance of rivers. However, its geographical conditions (high solar radiation, proximity to the sea and the presence of groundwater) allow the development of an environmentally friendly solution using solar energy.",
-    "We want to provide drinking water as soon as possible to the Wayuus, an indigenous community in the area that has suffered from a shortage of drinking water for more than 40 years.",
-    "We created an innovative portable machine that uses solar energy to desalinate and treat sea, groundwater or surface reservoir water. It's attractive in terms of cost, design, versatility, and of course portability. The unit has the capacity to provide drinking water to more than 30 people, equivalent to a minimum of 150 liters per day.",
-    "We have designed the machine’s first version and it is ready to be built, tested and optimized. We will use the funds raised to finance the construction and testing of our prototype.",
-    "Join Sea for Change as an investor or team member. After building our prototype and doing field tests this year (2021), we hope to scale our business in 2022. Our goal is to mass produce our desalinators in an economically, socially and environmentally sustainable manner.",
-    "We believe in the power of solidarity, technology and collaboration as engines of progress in societies. Help us and be an active entity of change! #PotableWaterForAll.",
+    "Sea for Change is a humanitarian project thought and designed by a team of interdisciplinary young minds that seek to provide water to communities that need it the most.",
+    "We created a new concept of a portable machine that utilizes solar energy to desalinize and treat sea, subterranean or superficial reservoir water. It innovates in terms of cost, design and, of course, portability. With each unit, we seek to positively impact up to 30 people by providing them with drinkable water, equivalent to a minimum of 150 litres per day.",
+    "We have the machine's first version design, and it's ready to be built,  tested, and optimized. We will destinate the collected funds in this campaign to finance the construction and testing of our prototype collaborating with the Popoya Playa Wayuu indigenous community.",
+    "Initially, we want to begin working as soon as possible with the Wayuus, an indigenous community suffering a drinkable water shortage documented for over 40 years. The lack of potable water exists due a couple of reasons including harsh climate conditions (only 100mm of precipitation per year) and the consequences of 30 years of mineral exploitation.",
+    "Sea for Change needs your support to bring our prototype to reality and field-test it in Popoya Playa community this year (2021). We are looking forward to scaling this project in 2022, making it economically, socially, and environmentally sustainable and globally accessible. ",
+    "We believe in the power of solidarity, technology, water consciousness and collaboration as drivers of progress in people and societies. ",
+    "Help us and be an active entity of change!"
   ],
   characteristics: [
     "Helps 30 people/day",
@@ -56,7 +56,7 @@ const project = {
       comment:
         "This project reminds me that we are just temporarily in this world, and whatever we do must be in favor of life, through kindness and empathy.",
       role: "Communications ",
-      image: "avatar-default.jpg",
+      image: "María Camila Prieto.jpg",
     },
     {
       name: "Pedro Felipe Rubiano Perez ",
@@ -91,9 +91,10 @@ const project = {
       comment:
         "I believe that engineering should be a driver to solve many of the problems that affect humanity today. In this occasion, I have joined this project to help the indigenous communities that live in La Guajira have access to potable water.",
       role: "Power control Engineer",
-      image: "avatar-default.jpg",
+      image: "Paula León.jpg",
     },
   ],
+  video: "https://www.youtube.com/embed/LtOJ0mdyJRE",
   maps:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31287.59846400292!2d-72.91969962945211!3d11.411189281123761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8b652d09fa863d%3A0x23f73c8eccb1c1a3!2sBuenavista%2C%20Riohacha%2C%20La%20Guajira!5e0!3m2!1ses-419!2sco!4v1611933964698!5m2!1ses-419!2sco",
 };

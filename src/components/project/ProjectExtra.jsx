@@ -1,24 +1,37 @@
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+/* eslint-disable no-unused-vars */
+import { useState } from 'react';
 import Iframe from 'react-iframe';
 import './scss/_projectExtra.scss';
 
+import SwiperCore, { Navigation, Pagination, Thumbs } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+
+// install Swiper modules
+SwiperCore.use([Navigation, Pagination, Thumbs]);
+
 const images__icons = process.env.REACT_APP_IMAGES_SRC + 'projects/page/';
 
-function ProjectExtra({ images, maps, resources, skills, imgSrc }) {
+function ProjectExtra({ images, maps, resources, skills, video, imgSrc }) {
   function RenderGallery({ list }) {
     const listImages = list.map((item, i) => {
       return (
-        <div className="project__galleryimg" key={'gallery-' + i}>
+        <SwiperSlide key={'gallery-' + i}>
           <img src={imgSrc + 'gallery/' + item} alt={'gallery-' + i} />
-        </div>
+        </SwiperSlide>
       );
     });
 
     return (
-      <Carousel autoPlay={false} showStatus={false}>
-        {listImages}
-      </Carousel>
+      <div className="project__gallery">
+        <Swiper spaceBetween={0} slidesPerView={3} navigation pagination>
+          {listImages}
+        </Swiper>
+      </div>
     );
   }
 
@@ -28,7 +41,7 @@ function ProjectExtra({ images, maps, resources, skills, imgSrc }) {
         className="mb-3"
         width="auto"
         height="400"
-        src="https://www.youtube.com/embed/_K1imkQTy7w"
+        src={video}
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -40,11 +53,16 @@ function ProjectExtra({ images, maps, resources, skills, imgSrc }) {
         <div className="column">
           <div className="is-flex">
             <img className="project__lstIcon" src={images__icons + 'skills.png'} alt="skills" />
-            <h2 className="title is-4 has-text-dark mb-2">Skills</h2>
+            <h2 className="title is-4 has-text-primary mb-2">Skills</h2>
           </div>
           <ul className="project__list">
             {skills.map((skill, i) => (
-              <li key={'skill_' + i}>{skill}</li>
+              <li key={'skill_' + i}>
+                <span className="has-text-primary">
+                  <i className="fa fa-check"></i>
+                </span>
+                {skill}
+              </li>
             ))}
           </ul>
         </div>
@@ -55,11 +73,16 @@ function ProjectExtra({ images, maps, resources, skills, imgSrc }) {
               src={images__icons + 'resources.png'}
               alt="resources"
             />
-            <h2 className="title is-4 has-text-dark mb-2">Resources</h2>
+            <h2 className="title is-4 has-text-primary mb-2">Resources</h2>
           </div>
           <ul className="project__list">
             {resources.map((resource, i) => (
-              <li key={'resource' + i}>{resource}</li>
+              <li key={'resource' + i}>
+                <span className="has-text-primary">
+                  <i className="fa fa-check"></i>
+                </span>
+                {resource}
+              </li>
             ))}
             <li className="small-fixed is-size-7 mt-3">
               If you are a supplier of any of these products, please contact us for further details{' '}
