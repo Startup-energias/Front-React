@@ -5,7 +5,6 @@ export const modalIcons = {
     linkedin: images__modal + 'linkedin.png',
     twitter: images__modal + 'twitter.png',
     facebook: images__modal + 'facebook.png',
-    instagram: images__modal + 'instagram.png',
   },
   support: [
     {

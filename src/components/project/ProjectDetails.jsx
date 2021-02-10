@@ -162,15 +162,6 @@ function ProjectDetails({
                     />
                   </FacebookShareButton>
                 </div>
-                <div className="modal__icon modal__pointer mx-2">
-                  <FacebookShareButton title={name} url={'www.inoverte.com/projects'}>
-                    <img
-                      src={modalIcons.media.instagram}
-                      alt={'modal-share-instagram'}
-                      aria-hidden="true"
-                    />
-                  </FacebookShareButton>
-                </div>
               </div>
             )}
             {!show[0] && (
