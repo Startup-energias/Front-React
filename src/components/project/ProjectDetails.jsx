@@ -13,6 +13,7 @@ function ProjectDetails({
   slogan,
   logo,
   email,
+  resources,
   imgSrc,
 }) {
   const percentage = Math.round((amount * 100) / goal);
@@ -99,9 +100,20 @@ function ProjectDetails({
                 <div className="modal__icon mx-3">
                   <img src={modalIcons.support[1].image} alt={'resources-icon'} />
                 </div>
-                <p className="is-size-6 is-flex is-flex-direction-column is-justify-content-center">
-                  Please contact us at {email} to give resources to the project
-                </p>
+                <div className="is-flex is-flex-direction-column is-justify-content-center">
+                  <p className="is-size-6 mb-2">What resources can you donate to the project?</p>
+                  <div className="is-flex is-flex-wrap-wrap">
+                    {resources.map((resource, i) => (
+                      <label className="checkbox mx-2" key={'resource_' + i}>
+                        <input type="checkbox" />
+                        {resource}
+                      </label>
+                    ))}
+                  </div>
+
+                  <p className="is-size-6 mt-5">Click and send your request to the team!</p>
+                  <button className="button btn-primary">Send email</button>
+                </div>
               </div>
             )}
             {show[3] && (
@@ -131,7 +143,7 @@ function ProjectDetails({
             )}
             {!show[0] && (
               <div className="buttons is-flex mt-4 pl-4">
-                <button className="button is-info" onClick={() => ChangeModal(-1)}>
+                <button className="button btn-primary" onClick={() => ChangeModal(-1)}>
                   Back
                 </button>
               </div>

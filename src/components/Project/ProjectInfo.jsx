@@ -22,16 +22,16 @@ function ProjectInfo({ title, categories, location, description, characteristics
             </div>
           ))}
         </div>
-        <div className="project__location is-align-self-flex-end is-flex is-align-items-center mb-2 mr-5">
+        <div className="project__location is-align-self-flex-end is-flex is-align-items-center mt-2 mb-2 mr-5">
           <img src={images__icons + 'location.png'} alt="location_icon" />
           <p className="is-size-7 is-align-self-center">{location}</p>
         </div>
       </div>
-      <h1 className="title is-4 has-text-dark mt-4">{title}</h1>
-      <div className="project__characteristics is-flex is-flex-wrap-wrap">
+      <h1 className="title has-text-dark mt-4">{title}</h1>
+      <div className="project__characteristics is-flex is-flex-direction-column">
         {characteristics?.map((characteristic, i) => (
           <div
-            className="project__characteristic is-flex is-align-items-flex-center is-flex-wrap-wrap"
+            className="project__characteristic is-flex is-align-items-flex-center is-flex-wrap-wrap my-1"
             key={characteristics + i}
           >
             <img src={icons[i]} alt={'icon_' + i} />
@@ -39,9 +39,9 @@ function ProjectInfo({ title, categories, location, description, characteristics
           </div>
         ))}
       </div>
-      <div className="project__description mt-4">
+      <div className="project__description">
         {description.map((paragraph, i) => (
-          <p className="has-text-grey" key={'p_number_' + i}>
+          <p className="has-text-grey mt-4" key={'p_number_' + i}>
             {paragraph}
           </p>
         ))}

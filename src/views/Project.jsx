@@ -29,6 +29,7 @@ function Project() {
             maps={project.maps}
             resources={project.resources}
             skills={project.skills}
+            video={project.video}
             imgSrc={images__project}
           />
         </div>
@@ -43,6 +44,7 @@ function Project() {
             slogan={project.slogan}
             logo={project.logo}
             email={project.email}
+            resources={project.resources}
             imgSrc={images__project}
           />
           <hr />
