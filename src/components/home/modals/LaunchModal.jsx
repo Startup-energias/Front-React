@@ -27,7 +27,7 @@ function LaunchModal() {
             src={process.env.REACT_APP_IMAGES_SRC + 'logo-icon.png'}
             alt="minicon"
           />
-          <p className="is-size-3 has-text-centered is-uppercase has-text-white">
+          <p className="launch__title has-text-centered is-uppercase has-text-white">
             Be ready, we are launching soon
           </p>
           <img

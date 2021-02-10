@@ -22,8 +22,8 @@ function InfoSection() {
       <div className="infoSection__container">
         <div className="infoSection__title mb-5">
           <div className="infoSection__title__text">
-            <p className="title is-size-1 mb-1">Are you passionate about renewable energy?</p>
-            <p className="is-size-4 infoSection__title__sub">We too! Join Inoverte community</p>
+            <p className="title mb-1">Are you passionate about renewable energy?</p>
+            <p className="infoSection__title__sub">We too! Join Inoverte community</p>
           </div>
         </div>
         <p className="infoSection__subtext">

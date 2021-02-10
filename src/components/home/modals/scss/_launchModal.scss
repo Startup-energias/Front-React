@@ -12,9 +12,12 @@ $images: $images_url + 'home/';
     background-size: cover;
   }
   &__logo {
-    margin: 2rem;
-    width: 15%;
+    width: 8rem;
     height: auto;
+    margin: 2rem;
+    @media (max-width: 700px) {
+      margin: 1rem;
+    }
   }
 
   &__close {
@@ -38,19 +41,39 @@ $images: $images_url + 'home/';
   }
 
   &__container {
-    margin-top: 4rem;
+    margin-top: 2rem;
+    @media (max-width: 750px) {
+      margin-top: 4rem;
+    }
   }
 
   &__icon {
     margin: 1rem;
-    width: 12%;
+    width: 15%;
+    @media (max-width: 750px) {
+      width: 20%;
+    }
     height: auto;
+  }
+
+  &__title {
+    font-size: 350%;
+    padding: 0 5%;
+    @media (max-width: 1785px) {
+      font-size: 200%;
+    }
+    @media (max-width: 750px) {
+      font-size: 120%;
+    }
   }
 
   &__name {
     margin: 0.5rem;
     width: 14rem;
     height: auto;
+    @media (max-width: 750px) {
+      width: 50%;
+    }
   }
 
   &__line {
@@ -58,11 +81,17 @@ $images: $images_url + 'home/';
     margin-top: 2px;
     margin-bottom: 2rem;
     width: 30%;
+    @media (max-width: 1785px) {
+      width: 60%;
+    }
   }
 
   &__text {
     font-weight: lighter;
     padding: 0 25%;
+    @media (max-width: 600px) {
+      padding: 0 10%;
+    }
   }
 
   &__button {
@@ -77,17 +106,23 @@ $images: $images_url + 'home/';
   }
 
   &__countdown {
+    width: 80%;
     .title {
       font-size: 400%;
     }
     @media (max-width: 638px) {
+      width: 90%;
       .title {
         font-size: 200%;
       }
     }
-    @media (max-width: 538px) {
-      .countdown {
-        flex-direction: column;
+    .countdown__item {
+      width: 15%;
+      @media (max-width: 1000px) {
+        width: 24%;
+      }
+      @media (max-width: 530px) {
+        width: 48%;
       }
     }
   }

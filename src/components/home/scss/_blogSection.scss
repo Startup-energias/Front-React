@@ -4,16 +4,24 @@
 
 .blog {
   .background {
-      // Padding
+    // Padding
     padding-top: 12em;
     padding-bottom: 12em;
     // Image style
-    background-image: url($images_url + "forestLake.jpg");
+    background-image: url($images_url + 'forestLake.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     h1 {
       font-size: 400%;
+      @media (max-width: 888px) {
+        font-size: 200%;
+      }
+    }
+    a {
+      @media (max-width: 888px) {
+        font-size: 100%;
+      }
     }
   }
 }
