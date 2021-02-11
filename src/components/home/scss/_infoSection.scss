@@ -24,11 +24,27 @@
       }
     }
     .title {
-      font-size: 32px;
+      font-size: 48px;
       font-family: montserrat-bold;
     }
     p {
-      font-size: 26px;
+      font-size: 28px;
+    }
+    @media (max-width: 826px) {
+      .title {
+        font-size: 36px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 636px) {
+      .title {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
     }
   }
   p {
@@ -39,6 +55,12 @@
     @media (min-width: 1200px) {
       padding-top: 37%;
     }
+    @media (max-width: 826px) {
+      font-size: 15px;
+    }
+    @media (max-width: 636px) {
+      font-size: 12px;
+    }
   }
   @media (max-width: 612px) {
     padding: 3em 10%;
@@ -46,12 +68,29 @@
       width: auto;
     }
   }
+
+  @mixin setColor($color) {
+    color: $color;
+    border-color: $color;
+    background-color: white;
+    &:hover {
+      background-color: $color;
+      color: white;
+    }
+  }
+  #financeBtn {
+    @include setColor(#23cee0);
+  }
+  #registerBtn {
+    @include setColor(#247dff);
+  }
   &__button {
     margin: 0.5rem 1rem;
-    background-color: white;
     border-style: solid;
     height: 2.5rem;
     width: 10rem;
+    cursor: pointer;
+    transition: 0.5s;
   }
   &__img {
     margin-left: 8%;

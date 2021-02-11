@@ -78,20 +78,20 @@ class Countdown extends Component {
     const countDown = this.state;
 
     return (
-      <div className="countdown is-flex is-justify-content-center">
-        <div className="is-flex is-flex-direction-column is-align-items-center mx-4">
+      <div className="countdown is-flex is-flex-wrap-wrap is-justify-content-center">
+        <div className="countdown__item is-flex is-flex-direction-column is-align-items-center">
           <p className="title has-text-white has-text-centered m-0">{this.addLeadingZeros(countDown.days)}</p>
           <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0">{countDown.days === 1 ? 'Day' : 'Days'}</p>
         </div>
-        <div className="is-flex is-flex-direction-column is-align-items-center mx-4">
+        <div className="countdown__item is-flex is-flex-direction-column is-align-items-center">
           <p className="title has-text-white has-text-centered m-0">{this.addLeadingZeros(countDown.hours)}</p>
           <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0">Hours</p>
         </div>
-        <div className="is-flex is-flex-direction-column is-align-items-center mx-4">
+        <div className="countdown__item is-flex is-flex-direction-column is-align-items-center">
           <p className="title has-text-white has-text-centered m-0">{this.addLeadingZeros(countDown.min)}</p>
           <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0">Minutes</p>
         </div>
-        <div className="is-flex is-flex-direction-column is-align-items-center mx-4">
+        <div className="countdown__item is-flex is-flex-direction-column is-align-items-center">
           <p className="title has-text-white has-text-centered m-0">{this.addLeadingZeros(countDown.sec)}</p>
           <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0">Seconds</p>
         </div>

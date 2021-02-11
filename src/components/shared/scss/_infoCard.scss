@@ -1,0 +1,28 @@
+@import '../../../assets/scss/02_base/colors';
+$section-width: 280px;
+$section-height: 260px;
+.infoCard {
+  &__image {
+    height: auto;
+    width: 160px;
+  }
+  &__container {
+    width: $section-width;
+    height: $section-height;
+    border-style: none;
+    position: relative;
+    padding-top: 3%;
+  }
+  &__title {
+    margin-bottom: 2%;
+    h2 {
+      height: 20%;
+    }
+  }
+
+  &__text {
+    @media (max-width: 856px) {
+      width: 250px;
+    }
+  }
+}

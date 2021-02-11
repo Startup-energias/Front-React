@@ -14,14 +14,14 @@ $energy_images: $images_url + 'projects/energy/';
   position: relative;
   margin: 1rem 2rem;
   box-shadow: -4px 14px 47px -9px rgba(25, 36, 64, 1);
-  
+
   position: relative;
   top: 0;
   transition: 0.75s;
-  &:hover{
+  &:hover {
     top: -20px;
   }
-  
+
   &__image {
     height: 15rem;
     background-position: center;
@@ -30,7 +30,7 @@ $energy_images: $images_url + 'projects/energy/';
   }
   &__categories {
     position: absolute;
-    top: 0;
+    top: -0.1rem;
     left: 1.5rem;
     display: flex;
     justify-content: flex-start;
@@ -44,8 +44,8 @@ $energy_images: $images_url + 'projects/energy/';
     .solar {
       background-image: url($energy_images + 'sun.png');
     }
-    .water {
-      background-image: url($energy_images + 'water.png');
+    .eolic {
+      background-image: url($energy_images + 'eolic.png');
     }
     .oil {
       background-image: url($energy_images + 'oil.png');

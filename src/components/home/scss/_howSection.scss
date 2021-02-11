@@ -2,59 +2,49 @@
 @import '../../../assets/scss/03_utils/custom';
 
 .how {
-  padding: 10rem 0;
-  $icon-size: 230px;
+  padding: 5rem 0;
+  $icon-size: 80px;
   .icon-container {
     width: 100%;
     .icon-image {
-      height: $icon-size;
-      width: $icon-size;
+      margin: 1rem;
+      img {
+        height: $icon-size;
+        width: auto;
+      }
+    }
+  }
+
+  .columns {
+    margin: 2rem 6rem 2rem;
+    @media (max-width: 534px) {
+      margin: 2rem;
     }
   }
 
   .text-content {
     line-height: 19px;
-  }
-
-  #how-1 .text-content {
     padding: 0 5em 0;
   }
 
-  #how-2 .text-content {
-    padding: 0 5.5em 0;
-  }
-
-  #how-3 .text-content {
-    padding: 0 5.8em 0;
-  }
-
   @media (max-width: 1409px) {
-    #how-1 .text-content,
-    #how-2 .text-content,
-    #how-3 .text-content {
+    .text-content {
       padding: 0 4.5em 0;
     }
   }
 
   @media (max-width: 1216px) {
-    #how-1 .text-content,
-    #how-2 .text-content,
-    #how-3 .text-content {
+    .text-content {
       padding: 0 2em 0;
     }
   }
 
   @media (max-width: 350px) {
-    .icon-container {
-      height: $icon-size - 50px;
-    }
     .text-title {
       line-height: 22px;
     }
 
-    #how-1 .text-content,
-    #how-2 .text-content,
-    #how-3 .text-content {
+    .text-content {
       padding: 0 0 0;
     }
   }

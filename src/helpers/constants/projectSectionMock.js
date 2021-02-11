@@ -18,13 +18,13 @@ export default [
       percentage: '100%',
       goal: 50000,
     },
-    ubication: 'La Guajira - Colombia',
+    ubication: 'La Guajira, Colombia',
     supporters: 300,
     status: true,
   },
   {
     id: 2,
-    categories: ['solar', 'water', 'oil'],
+    categories: ['solar', 'eolic', 'oil'],
     name: 'Microgrid for rural electrification.',
     description:
       'Sea for Change is a humanitarian project aiming to tackle potable water shortage in vulnerable communities through an innovative water desalination unit.',

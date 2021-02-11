@@ -2,15 +2,7 @@ import './scss/_footer.scss';
 
 function Footer() {
   const inoverte = ['Home', 'Projects', 'About us', 'Our impact'];
-  const socialMedia = [
-    'twitter',
-    'facebook',
-    'instagram',
-    'linkedin',
-    'pinterest',
-    'whatsapp',
-    'envelope',
-  ];
+  const socialMedia = ['twitter', 'facebook', 'instagram', 'linkedin', 'whatsapp', 'envelope'];
 
   let SocialMedia = ({ icons }) => {
     const list = icons.map((icon) => (
