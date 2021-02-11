@@ -19,7 +19,6 @@ $section-height: 260px;
   &__container {
     width: $section-width;
     height: $section-height;
-    cursor: pointer;
     border-style: none;
     position: relative;
     padding-top: 3%;
@@ -32,7 +31,6 @@ $section-height: 260px;
   }
 
   &__text {
-    height: 100px;
     @media (max-width: 856px) {
       width: 250px;
     }

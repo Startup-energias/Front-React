@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import BulmaModal from '../../../utils/bulmaModal';
 import Countdown from '../../shared/Countdown';
+import ReactCardFlip from 'react-card-flip';
+
 import './scss/_launchModal.scss';
 
 function LaunchModal() {
+  const [isFlipped, setFlipped] = useState(false);
+
   useEffect(() => {
     new BulmaModal('#launchModal');
   }, []);
@@ -41,7 +45,29 @@ function LaunchModal() {
             bring <strong className="has-text-white"> electricity &amp; water </strong> to
             communities that need it
           </p>
-          <button className="launch__button is-uppercase is-size-7">Notify me</button>
+          <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div>
+              <div className="is-flex is-justify-content-center">
+                <button
+                  className="launch__button is-uppercase is-size-7"
+                  onClick={() => setFlipped(true)}
+                >
+                  Notify me
+                </button>
+              </div>
+            </div>
+            <div>
+              <div className="is-flex is-justify-content-space-evenly">
+                <input
+                  className="input launch__input"
+                  type="text"
+                  placeholder="Write your email!"
+                />
+                <button className="launch__button is-uppercase is-size-7">Submit</button>
+              </div>
+            </div>
+          </ReactCardFlip>
+
           <div className="launch__countdown">
             <Countdown date={'March 30, 2021 03:24:00'} />
           </div>

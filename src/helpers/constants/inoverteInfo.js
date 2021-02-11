@@ -5,21 +5,13 @@ export const sections = [
     image: info__images + 'financing.png',
     opacity: info__images + 'financingOp.png',
     title: 'Financing',
-    content: `Learn about what is happening in
-      Colombia and the world in sustainability and innovation. With our blog, you
-      can discover the latest news and
-      discuss with other innoverters.`,
+    content: `INØVERTE helps to co-fund and co-invest in renewable projects with corporations and investors.`,
   },
   {
     image: info__images + 'handtool.png',
     opacity: info__images + 'handtoolOp.png',
     title: 'Crowd-talent',
-    content: `Help with your knowledge! In Inoverte
-      we are convinced that anyone can be
-      part of a renewable energy project. Do
-      you want to return to the ecosystem
-      what it offer you? You can be a mentor
-      or join as a member of the team.`,
+    content: `Support a project with your knowledge! We are convinced that anyone can contribute to the energy transition. Join a project as a team member or as a mentor.`,
   },
   {
     image: info__images + 'world.png',
@@ -42,7 +34,6 @@ export const sections = [
       the impact generated through our
       platform. Receive monthly updates on
       the status of your investment and the
-
       project.`,
   },
 ];
