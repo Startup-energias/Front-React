@@ -1,8 +1,7 @@
 const images__about = process.env.REACT_APP_IMAGES_SRC + 'about/';
 
 export const aboutInfo = {
-    banner: images__about + 'banner.jpg',
-    team: images__about + 'team.jpg',
+    team: images__about + 'team.png',
     members: [
         {
             name: 'Valentina',
@@ -32,21 +31,28 @@ export const aboutInfo = {
     ],
     items: [{
         right: false,
-        title: 'MISION',
+        title: 'Mision',
         color: "#247dff",
-        text: "Impulsar el desarrollo tecnológico sostenible con el objetivo de brindar acceso a los recursos básicos de electricidad y agua potable. Conectamos proyectos sostenibles con financiación y talento humano para que puedan ser implementados en las comunidades que lo necesitan a través de la visibilización y difusión que fomenta nuestra plataforma",
+        text: "To drive renewable innovation by connecting entrepreneurs, off-grid communities, and investors worldwide.",
         image: images__about + 'mision.jpg'
     }, {
         right: true,
-        title: 'VISION',
+        title: 'Vision',
         color: "#23cee0",
-        text: "Impulsar el desarrollo tecnológico sostenible con el objetivo de brindar acceso a los recursos básicos de electricidad y agua potable. Conectamos proyectos sostenibles con financiación y talento humano para que puedan ser implementados en las comunidades que lo necesitan a través de la visibilización y difusión que fomenta nuestra plataforma Impulsar el desarrollo tecnológico sostenible con el objetivo de brindar acceso a los recursos básicos de electricidad y agua potable. Conectamos proyectos sostenibles con financiación y talento humano para que puedan ser implementados en las comunidades que lo necesitan a través de la visibilización y difusión que fomenta nuestra plataforma ",
+        text: "We envision a world where sustainable technologies drive our society. We introduce a digital platform to Latin America that fits this vision. At Inverte, we promote sustainability, as we connect renewable innovation and financing to benefit off-grid communities.",
         image: images__about + 'vision.jpg'
     }, {
         right: false,
-        title: 'PATH',
+        title: 'Path',
         color: "#1a2340",
-        text: "Impulsar el desarrollo tecnológico sostenible con el objetivo de brindar acceso a los recursos básicos de electricidad y agua potable. Conectamos proyectos sostenibles con financiación y talento humano para que puedan ser implementados en las comunidades que lo necesitan a través de la visibilización y difusión que fomenta nuestra plataforma",
+        text: "Invoverte is a Colombian initiative supported by START Global that is taking off in the Swiss entrepreneurship ecosystem.",
+    },
+    {
+        right: true,
+        title: 'Values',
+        color: "#a3d9ea",
+        text: "We are governed by the Sustainable Development Goals SDGs from the United Nations UN 6. Clean water and 7. Affordable and clean energy.",
+        image: images__about + 'drivers.png'
     },
     ]
 }
