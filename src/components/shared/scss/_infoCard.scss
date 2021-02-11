@@ -6,16 +6,6 @@ $section-height: 260px;
     height: auto;
     width: 160px;
   }
-  &__background {
-    position: absolute;
-    height: auto;
-    width: 80%;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
   &__container {
     width: $section-width;
     height: $section-height;

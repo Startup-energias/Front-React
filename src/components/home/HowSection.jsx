@@ -4,26 +4,26 @@ import { steps } from '../../helpers/constants/howSteps.js';
 function HowSection() {
   let renderSteps = () => {
     return steps.map((item) => (
-      <div className="column is-one-third-widescreen" key={item.title} id={'how-' + item.id}>
+      <div className="column is-one-third-widescreen" key={item.title}>
         <div className="icon-container is-flex is-justify-content-center">
           <div className="icon-image is-flex is-align-items-center is-justify-content-center">
             <img src={item.image} alt={item.title} />
           </div>
         </div>
 
-        <h2 className="text-title is-size-4 has-text-dark mt-4 mb-2">{item.title}</h2>
+        <h2 className="text-title is-size-4 has-text-white mt-4 mb-2">{item.title}</h2>
         <div className="container text-content">
-          <p className="is-size-6 has-text-dark">{item.content}</p>
+          <p className="is-size-6 has-text-white">{item.content}</p>
         </div>
       </div>
     ));
   };
 
   return (
-    <section className="section how has-background-info" id="How it works">
+    <section className="section how has-background-dark" id="How it works">
       <div className="container">
-        <h1 className=" mb-1 has-text-white">How it works</h1>
-        <div className="columns has-text-centered is-multiline is-8 mx-6 mb-2">{renderSteps()}</div>
+        <h1 className=" mb-6 has-text-white">How it works</h1>
+        <div className="columns has-text-centered is-multiline is-8">{renderSteps()}</div>
       </div>
     </section>
   );

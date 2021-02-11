@@ -29,7 +29,6 @@ function InfoCard({ section }) {
             onMouseEnter={() => setFlipped(true)}
             onMouseLeave={() => setFlipped(false)}
           >
-            <img className="infoCard__background" src={section.opacity} alt="infoCard__icon" />
             <div className="infoCard__text px-4">
               <p className="has-text-left is-size-6">{section.content}</p>
             </div>

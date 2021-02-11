@@ -1,16 +1,30 @@
 import { useEffect } from 'react';
 import BulmaModal from '../../utils/bulmaModal';
 import LaunchModal from './modals/LaunchModal';
+import NotifyModal from './modals/NotifyModal';
 import RegisterModal from './modals/RegisterModal';
 import './scss/_infoSection.scss';
 
 const images = process.env.REACT_APP_IMAGES_SRC + 'home/';
+const launchId = 'launchModal';
 const registerId = 'registerModal';
+const registerBtn = 'registerBtn';
+const notifyId = 'notifyModal';
+const notifyBtn = 'notifyBtn';
 
 function InfoSection() {
   useEffect(() => {
-    var btn = document.querySelector('#registerBtn');
-    var mdl = new BulmaModal('#' + registerId);
+    new BulmaModal('#' + launchId);
+
+    var btnRegister = document.querySelector('#' + registerBtn);
+    var mdlRegister = new BulmaModal('#' + registerId);
+
+    btnRegister.addEventListener('click', function () {
+      mdlRegister.show();
+    });
+
+    var btn = document.querySelector('#' + notifyBtn);
+    var mdl = new BulmaModal('#' + notifyId);
 
     btn.addEventListener('click', function () {
       mdl.show();
@@ -30,7 +44,7 @@ function InfoSection() {
           We connect renewable energy projects and financing to benefit off-grid communities
         </p>
         <div className="buttons mt-3">
-          <button id="registerBtn" className="infoSection__button has-text-centered">
+          <button id={registerBtn} className="infoSection__button has-text-centered">
             Boost your renewable project
           </button>
           <a href="#Projects">
@@ -45,8 +59,9 @@ function InfoSection() {
         src={images + 'people.png'}
         alt="people collaborating to get clean energies"
       />
-      <LaunchModal />
+      <LaunchModal idModal={launchId} notifyBtn={notifyBtn} />
       <RegisterModal idModal={registerId} />
+      <NotifyModal idModal={notifyId} />
     </div>
   );
 }
