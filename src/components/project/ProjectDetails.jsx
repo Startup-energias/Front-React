@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react';
 import BulmaModal from '../../utils/bulmaModal';
 import './scss/_projectDetails.scss';
 import { modalIcons } from '../../helpers/constants/shareContent';
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from 'react-share';
 
 function ProjectDetails({
+  name,
   goal,
   amount,
   organization,
@@ -18,6 +20,7 @@ function ProjectDetails({
 }) {
   const percentage = Math.round((amount * 100) / goal);
   const titles = ['Support now', 'Pay now', 'Resources', 'Skills', 'Share'];
+
   let [title, setTitle] = useState(titles[0]);
   let [show, setShow] = useState([true, false, false, false, false]);
 
@@ -50,7 +53,7 @@ function ProjectDetails({
           <span className="is-size-2 has-text-dark">{percentage}%</span>
         </i>
       </div>
-      <p className=" is-size-3 has-text-centered">${goal} Raised</p>
+      <p className=" is-size-3 has-text-centered">${amount} Raised</p>
       <p className=" is-size-5 has-text-centered has-text-black">of ${goal}</p>
       <p className=" is-size-2 has-text-centered is-italic">Starting soon!</p>
       <button
@@ -109,6 +112,10 @@ function ProjectDetails({
                         {resource}
                       </label>
                     ))}
+                    <label className="checkbox mx-2">
+                      <input type="checkbox" />
+                      Other
+                    </label>
                   </div>
 
                   <p className="is-size-6 mt-5">Click and send your request to the team!</p>
@@ -128,17 +135,33 @@ function ProjectDetails({
             )}
             {show[4] && (
               <div className="is-flex is-justify-content-center">
-                {modalIcons.media.map((icon, i) => (
-                  <div className="modal__icon modal__pointer mx-2" key={'modal-icon' + i}>
+                <div className="modal__icon modal__pointer mx-2">
+                  <LinkedinShareButton title={name} url={'www.inoverte.com/projects'}>
                     <img
-                      src={icon}
-                      alt={'modal-share' + i}
-                      onClick={() => ChangeModal(i)}
-                      onKeyDown={() => ChangeModal(-1)}
+                      src={modalIcons.media.linkedin}
+                      alt={'modal-share-linkedin'}
                       aria-hidden="true"
                     />
-                  </div>
-                ))}
+                  </LinkedinShareButton>
+                </div>
+                <div className="modal__icon modal__pointer mx-2">
+                  <TwitterShareButton title={name} url={'www.inoverte.com/projects'}>
+                    <img
+                      src={modalIcons.media.twitter}
+                      alt={'modal-share-twitter'}
+                      aria-hidden="true"
+                    />
+                  </TwitterShareButton>
+                </div>
+                <div className="modal__icon modal__pointer mx-2">
+                  <FacebookShareButton title={name} url={'www.inoverte.com/projects'}>
+                    <img
+                      src={modalIcons.media.facebook}
+                      alt={'modal-share-facebook'}
+                      aria-hidden="true"
+                    />
+                  </FacebookShareButton>
+                </div>
               </div>
             )}
             {!show[0] && (

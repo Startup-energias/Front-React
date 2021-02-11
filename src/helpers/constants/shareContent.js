@@ -1,12 +1,11 @@
 const images__modal = process.env.REACT_APP_IMAGES_SRC + 'projects/page/modal/';
 
 export const modalIcons = {
-  media: [
-    images__modal + 'linkedin.png',
-    images__modal + 'twitter.png',
-    images__modal + 'facebook.png',
-    images__modal + 'instagram.png',
-  ],
+  media: {
+    linkedin: images__modal + 'linkedin.png',
+    twitter: images__modal + 'twitter.png',
+    facebook: images__modal + 'facebook.png',
+  },
   support: [
     {
       image: images__modal + 'money.png',
