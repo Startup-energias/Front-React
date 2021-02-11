@@ -1,0 +1,22 @@
+.about {
+  .team {
+    margin-top: 7rem;
+    &__image {
+      position: relative;
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+      }
+    }
+    &__title {
+      bottom: 10%;
+      right: 10%;
+      position: absolute;
+      font-size: 600%;
+      @media (max-width: 600px) {
+        font-size: 300%;
+      }
+    }
+  }
+}

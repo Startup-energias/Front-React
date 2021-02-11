@@ -1,8 +1,7 @@
 const images__about = process.env.REACT_APP_IMAGES_SRC + 'about/';
 
 export const aboutInfo = {
-    banner: images__about + 'banner.jpg',
-    team: images__about + 'team.jpg',
+    team: images__about + 'team.png',
     members: [
         {
             name: 'Valentina',

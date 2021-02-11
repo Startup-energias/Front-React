@@ -2,6 +2,7 @@ import './scss/_about.scss';
 import { aboutInfo } from '../helpers/constants/aboutInfo';
 import AboutComponent from '../components/about/AboutComponent';
 import DoubleComponent from '../components/about/DoubleComponent';
+//import TeamComponent from '../components/about/TeamComponent';
 
 function About() {
   return (
@@ -11,11 +12,7 @@ function About() {
           {i === 3 ? <DoubleComponent {...item} /> : <AboutComponent {...item} />}
         </div>
       ))}
-      {/*<div className="team is-flex is-flex-direction-column">
-        <div className="team__image">
-          <img src={aboutInfo.team} alt="team img" />
-        </div>
-      </div>*/}
+      {/*<TeamComponent />*/}
     </div>
   );
 }
