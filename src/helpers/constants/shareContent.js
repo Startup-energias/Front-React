@@ -9,16 +9,20 @@ export const modalIcons = {
   support: [
     {
       image: images__modal + 'money.png',
+      title: 'Money',
       link: "/payment"
     },
     {
-      image: images__modal + 'resources.png',
+      image: images__modal + 'skills.png',
+      title: 'Skills'
     },
     {
-      image: images__modal + 'skills.png',
+      image: images__modal + 'resources.png',
+      title: 'Resources'
     },
     {
       image: images__modal + 'share.png',
+      title: 'Share'
     }
   ]
 };

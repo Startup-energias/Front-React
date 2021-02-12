@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import BulmaModal from '../../utils/bulmaModal';
 import './scss/_projectDetails.scss';
-import { modalIcons } from '../../helpers/constants/shareContent';
-import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from 'react-share';
+import SupportModal from './SupportModal';
 
 function ProjectDetails({
   name,
@@ -19,32 +18,17 @@ function ProjectDetails({
   imgSrc,
 }) {
   const percentage = Math.round((amount * 100) / goal);
-  const titles = ['Support now', 'Pay now', 'Resources', 'Skills', 'Share'];
-
-  let [title, setTitle] = useState(titles[0]);
-  let [show, setShow] = useState([true, false, false, false, false]);
+  const supportBtn = 'supportBtn';
+  const supportId = 'supportModal';
 
   useEffect(() => {
-    var btn = document.querySelector('#supportBtn');
-    var mdl = new BulmaModal('#supportModal');
+    var btn = document.querySelector('#' + supportBtn);
+    var mdl = new BulmaModal('#' + supportId);
 
     btn.addEventListener('click', function () {
       mdl.show();
     });
   }, []);
-
-  function ChangeModal(arrayId) {
-    if (arrayId != -1 && modalIcons.support[arrayId].link) {
-      window.location = modalIcons.support[arrayId].link;
-    } else {
-      arrayId += 1;
-      let temp = [false, false, false, false, false];
-      temp[arrayId] = true;
-
-      setTitle(titles[arrayId]);
-      setShow(temp);
-    }
-  }
 
   return (
     <div className="is-flex is-flex-direction-column has-text-dark">
@@ -57,124 +41,12 @@ function ProjectDetails({
       <p className=" is-size-5 has-text-centered has-text-black">of ${goal}</p>
       <p className=" is-size-2 has-text-centered is-italic">Starting soon!</p>
       <button
-        id="supportBtn"
+        id={supportBtn}
         className="project__button button is-align-self-center is-flex is-justify-content-center is-align-items-center is-size-4 title has-text-dark has-background-light"
       >
         Support now
       </button>
-
-      <div className="modal" id="supportModal">
-        <div
-          className="modal-background"
-          onClick={() => ChangeModal(-1)}
-          onKeyDown={() => ChangeModal(-1)}
-          aria-hidden="true"
-        ></div>
-        <div className="modal-card">
-          <section className="modal-card-body has-background-light">
-            <div className="is-flex mb-6">
-              <p className="modal-card-title is-flex-grow-1 mb-0 is-align-items-center title is-2 has-text-dark has-text-centered">
-                {title}
-              </p>
-              <button
-                className="modal__close"
-                aria-label="close"
-                data-bulma-modal="close"
-                onClick={() => ChangeModal(-1)}
-              ></button>
-            </div>
-            {show[0] && (
-              <div className="is-flex is-justify-content-center">
-                {modalIcons.support.map((icon, i) => (
-                  <div className="modal__icon modal__pointer mx-2" key={'modal-icon' + i}>
-                    <img
-                      src={icon.image}
-                      alt={'modal-support' + i}
-                      onClick={() => ChangeModal(i)}
-                      onKeyDown={() => ChangeModal(-1)}
-                      aria-hidden="true"
-                    />
-                  </div>
-                ))}
-              </div>
-            )}
-            {show[2] && (
-              <div className="is-flex is-justify-content-center mx-5">
-                <div className="modal__icon mx-3">
-                  <img src={modalIcons.support[1].image} alt={'resources-icon'} />
-                </div>
-                <div className="is-flex is-flex-direction-column is-justify-content-center">
-                  <p className="is-size-6 mb-2">What resources can you donate to the project?</p>
-                  <div className="is-flex is-flex-wrap-wrap">
-                    {resources.map((resource, i) => (
-                      <label className="checkbox mx-2" key={'resource_' + i}>
-                        <input type="checkbox" />
-                        {resource}
-                      </label>
-                    ))}
-                    <label className="checkbox mx-2">
-                      <input type="checkbox" />
-                      Other
-                    </label>
-                  </div>
-
-                  <p className="is-size-6 mt-5">Click and send your request to the team!</p>
-                  <button className="button btn-primary">Send email</button>
-                </div>
-              </div>
-            )}
-            {show[3] && (
-              <div className="is-flex is-justify-content-center mx-5">
-                <div className="modal__icon mx-3">
-                  <img src={modalIcons.support[2].image} alt={'skills-icon'} />
-                </div>
-                <p className="is-size-6 is-flex is-flex-direction-column is-justify-content-center">
-                  Fill the form and share your skills with the team! Contact us at {email}
-                </p>
-              </div>
-            )}
-            {show[4] && (
-              <div className="is-flex is-justify-content-center">
-                <div className="modal__icon modal__pointer mx-2">
-                  <LinkedinShareButton title={name} url={'www.inoverte.com/projects'}>
-                    <img
-                      src={modalIcons.media.linkedin}
-                      alt={'modal-share-linkedin'}
-                      aria-hidden="true"
-                    />
-                  </LinkedinShareButton>
-                </div>
-                <div className="modal__icon modal__pointer mx-2">
-                  <TwitterShareButton title={name} url={'www.inoverte.com/projects'}>
-                    <img
-                      src={modalIcons.media.twitter}
-                      alt={'modal-share-twitter'}
-                      aria-hidden="true"
-                    />
-                  </TwitterShareButton>
-                </div>
-                <div className="modal__icon modal__pointer mx-2">
-                  <FacebookShareButton title={name} url={'www.inoverte.com/projects'}>
-                    <img
-                      src={modalIcons.media.facebook}
-                      alt={'modal-share-facebook'}
-                      aria-hidden="true"
-                    />
-                  </FacebookShareButton>
-                </div>
-              </div>
-            )}
-            {!show[0] && (
-              <div className="buttons is-flex mt-4 pl-4">
-                <button className="button btn-primary" onClick={() => ChangeModal(-1)}>
-                  Back
-                </button>
-              </div>
-            )}
-          </section>
-        </div>
-      </div>
-
+      <SupportModal modalId={supportId} name={name} email={email} resources={resources} />
       <hr />
       <div className="project__details is-align-items-self-start m-4 px-2">
         <h1 className="title is-size-4 has-text-dark">Details</h1>
