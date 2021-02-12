@@ -33,28 +33,24 @@
 }
 
 .item {
-  margin-top: 8rem;
+  margin-top: 3rem;
 
   @media (min-width: 1082px) {
     flex-direction: row;
   }
 
   &__content {
-    width: 100%;
     padding-bottom: 5%;
+    width: 60%;
+    .item__subtext {
+      height: 78%;
+    }
   }
 
   &__image {
     height: auto;
     width: 600px;
     object-fit: cover;
-  }
-
-  &__reduced {
-    width: 60%;
-    .item__subtext {
-      height: 78%;
-    }
   }
 
   &__text {
