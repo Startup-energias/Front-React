@@ -11,17 +11,27 @@ import QontoStepIcon from '../utils/stepUtils/QontoStepIcon';
 function Payment() {
   //Payment data
   let [amount, setAmount] = useState(0);
-  let [amountChoice, setAmountChoice] = useState(0);
+  let [amountChoice, setAmountChoice] = useState(-1);
   let [other, setOther] = useState(false);
 
   function changeAmount(cant, i) {
     setAmountChoice(i);
+    console.log('changing amount');
     if (cant !== -1) {
       setOther(false);
       setAmount(cant);
     } else {
       setOther(true);
     }
+  }
+
+  function otherChange(e) {
+    console.log(e);
+    let value = parseInt(e.target.value);
+    if (!Number(value)) {
+      return;
+    }
+    setAmount(value);
   }
 
   //Step controlling
@@ -78,9 +88,10 @@ function Payment() {
               ) : other ? (
                 <input
                   className="input is-info"
+                  min="0"
                   type="number"
-                  placeholder="1"
-                  onChange={(e) => setAmount(e.target.value)}
+                  placeholder={1}
+                  onChange={otherChange}
                 />
               ) : (
                 <p className="has-text-centered has-text-dark">{denomination.type}</p>

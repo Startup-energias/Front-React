@@ -71,8 +71,14 @@ export const payContent = {
     },
   ],
   time: [
-    images__time + 'montly.png',
-    images__time + 'once.png'
+    {
+      freq: 'Just once',
+      image: images__time + 'once.png',
+    },
+    {
+      freq: 'Montly',
+      image: images__time + 'montly.png',
+    }
   ]
 
 }
