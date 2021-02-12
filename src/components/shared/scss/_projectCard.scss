@@ -44,8 +44,8 @@ $energy_images: $images_url + 'projects/energy/';
     .solar {
       background-image: url($energy_images + 'sun.png');
     }
-    .water {
-      background-image: url($energy_images + 'water.png');
+    .eolic {
+      background-image: url($energy_images + 'eolic.png');
     }
     .oil {
       background-image: url($energy_images + 'oil.png');

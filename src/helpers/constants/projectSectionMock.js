@@ -24,7 +24,7 @@ export default [
   },
   {
     id: 2,
-    categories: ['solar', 'water', 'oil'],
+    categories: ['solar', 'eolic', 'oil'],
     name: 'Microgrid for rural electrification.',
     description:
       'Sea for Change is a humanitarian project aiming to tackle potable water shortage in vulnerable communities through an innovative water desalination unit.',

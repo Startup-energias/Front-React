@@ -94,10 +94,6 @@ $images: $images_url + 'home/';
     }
   }
 
-  .react-card-flip {
-    width: 50%;
-  }
-
   &__button {
     margin: 2.5rem 0;
     width: 10rem;
@@ -112,13 +108,6 @@ $images: $images_url + 'home/';
       background-color: $primary;
       color: $dark;
     }
-  }
-
-  &__input {
-    margin: 2.5rem 0;
-    width: auto;
-    height: auto;
-    margin-right: 0.5rem;
   }
 
   &__countdown {
