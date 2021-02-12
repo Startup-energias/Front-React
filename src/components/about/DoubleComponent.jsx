@@ -7,20 +7,8 @@ function DoubleComponent({ title, color, text, image }) {
       <div
         className={`double__content is-flex is-flex-direction-column ${image && 'double__reduced'}`}
       >
-        <p
-          className="double__title is-flex-grow-0 is-uppercase"
-          style={{
-            color: `${color}`,
-          }}
-        >
-          Our
-        </p>
-        <div
-          className="is-flex-grow-1"
-          style={{
-            backgroundColor: `${color}`,
-          }}
-        >
+        <p className={'double__title is-flex-grow-0 is-uppercase has-text-' + color}>Our</p>
+        <div className={'is-flex-grow-1 has-background-' + color}>
           <p className="double__title has-text-white is-uppercase">{title}</p>
           <p className="double__subtext is-size-4 has-text-white">{text}</p>
         </div>
