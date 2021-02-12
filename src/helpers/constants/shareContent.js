@@ -1,4 +1,8 @@
 const images__modal = process.env.REACT_APP_IMAGES_SRC + 'projects/page/modal/';
+const images__payment = process.env.REACT_APP_IMAGES_SRC + 'projects/page/payment/';
+const images__medals = images__payment + 'medals/';
+const images__denominations = images__payment + 'denominations/';
+const images__time = images__payment + 'time/';
 
 export const modalIcons = {
   media: {
@@ -28,21 +32,47 @@ export const modalIcons = {
 };
 
 export const payContent = {
-  sections: [
+  info: [
     {
       title: 'Make the Transaction',
       content: 'Select the payment method and follow the steps.',
-      image: images__modal + 'card.png'
+      image: images__payment + 'card.png'
     },
     {
       title: 'Access project information',
       content: 'Track how your money is being invested through monthly newsletters issued on the board of our plataform',
-      image: images__modal + 'info.png'
+      image: images__payment + 'info.png'
     },
     {
       title: 'Receive your reward',
       content: 'Depending on the amount you donated,receive a donation certificate, a creaft made by the impacted community, or a guided tour of the completed project.',
-      image: images__modal + 'box.png'
+      image: images__payment + 'box.png'
     }
+  ],
+  medals: [
+    images__medals + 'bronze.png'
+  ],
+  denominations: [
+    {
+      cant: 10,
+      image: images__denominations + 'money10.png'
+    },
+    {
+      cant: 30,
+      image: images__denominations + 'money30.png'
+    },
+    {
+      cant: 50,
+      image: images__denominations + 'money50.png'
+    },
+    {
+      type: 'Other',
+      image: images__denominations + 'moneyOther.png'
+    },
+  ],
+  time: [
+    images__time + 'montly.png',
+    images__time + 'once.png'
   ]
+
 }

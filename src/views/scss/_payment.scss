@@ -1,33 +1,106 @@
+@import '../../assets/scss/02_base/colors';
+@import '../../assets/scss/03_utils/variables';
+
 .payment {
   margin-top: 6rem;
-  &__container {
-    @media (min-width: 891px) {
-      padding-left: 17%;
+  //General
+  &__progress {
+    @media (min-width: 840px) {
+      padding: 0 11rem;
     }
   }
-  &__icon {
-    img {
-      height: auto;
-      width: 10rem;
+  &__button {
+    font-size: 20px;
+    border: 4px solid $dark;
+    width: 10rem;
+    transition: 0.5s;
+    &:hover {
+      background-color: $dark;
+      color: $primary;
+      border: 1px solid $primary;
+    }
+    &:active,
+    &:focus,
+    &:focus:active {
+      border: 4px solid $dark;
+      box-shadow: none !important;
     }
   }
-  &__text {
-    p {
-      width: 30rem;
-      padding-left: 7%;
+
+  //Info step
+  .info {
+    &__container {
+      @media (min-width: 891px) {
+        padding-left: 17%;
+      }
     }
-  }
-  @media (max-width: 890px) {
-    &__left,
-    &__right {
-      flex-direction: column;
-      align-items: center;
+    &__icon {
+      img {
+        height: auto;
+        width: 10rem;
+      }
     }
     &__text {
-      p,
-      h2 {
-        width: auto;
-        text-align: center;
+      p {
+        width: 30rem;
+        padding-left: 7%;
+      }
+    }
+    @media (max-width: 890px) {
+      &__left,
+      &__right {
+        flex-direction: column;
+        align-items: center;
+      }
+      &__text {
+        p,
+        h2 {
+          width: auto;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  //Pay options
+  .pay {
+    margin: 5rem 0;
+    &__option {
+      margin: 5rem 2rem 0;
+      button {
+        background-color: transparent;
+        width: 6rem;
+        height: 6rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        &:active,
+        &:focus,
+        &:focus:active {
+          border: 4px solid $dark;
+          box-shadow: none !important;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      p {
+        margin-top: 3rem;
+        font-weight: bold;
+      }
+      input {
+        margin-top: 2.5rem;
+        width: 5rem;
+      }
+    }
+    .selected {
+      button {
+        border: 4px solid $dark;
+      }
+      p {
+        margin-top: 2rem;
+        font-size: 30px;
       }
     }
   }
