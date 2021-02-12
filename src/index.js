@@ -7,7 +7,7 @@ import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
 import { Auth } from 'aws-amplify';
-require('dotenv').config();
+require('dotenv').config({ path: '.env' })
 
 const App = () => {
   return (

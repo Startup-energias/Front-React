@@ -6,7 +6,8 @@ import ModalHead from '../../shared/modal/ModalHead';
 import ModalFooter from '../../shared/modal/ModalFooter';
 
 function NotifyModal({ idModal }) {
-  const emailsUrl = process.env.INOVERTE_API + 'emails/';
+  const api = process.env.INOVERTE_API || 'https://inoverte-api.herokuapp.com/';
+  const emailsUrl = api + 'emails/';
   let [submited, setSubmited] = useState(false);
   let [saved, setSaved] = useState(false);
   let [email, setEmail] = useState('');
