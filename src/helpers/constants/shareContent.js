@@ -32,6 +32,7 @@ export const modalIcons = {
 };
 
 export const payContent = {
+  end: images__payment + 'people.png',
   info: [
     {
       title: 'Make the Transaction',
@@ -50,7 +51,10 @@ export const payContent = {
     }
   ],
   medals: [
-    images__medals + 'bronze.png'
+    {
+      value: 'bronze',
+      image: images__medals + 'bronze.png'
+    }
   ],
   denominations: [
     {

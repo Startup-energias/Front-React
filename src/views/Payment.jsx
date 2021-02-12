@@ -10,28 +10,34 @@ import QontoStepIcon from '../utils/stepUtils/QontoStepIcon';
 
 function Payment() {
   //Payment data
-  let [amount, setAmount] = useState(0);
-  let [amountChoice, setAmountChoice] = useState(-1);
+  let [amount, setAmount] = useState(10);
+  let [amountChoice, setAmountChoice] = useState(0);
+  let [timeChoice, setTimeChoice] = useState(0);
   let [other, setOther] = useState(false);
+  let [valid, setValid] = useState(true);
 
   function changeAmount(cant, i) {
     setAmountChoice(i);
     console.log('changing amount');
     if (cant !== -1) {
       setOther(false);
+      setValid(true);
       setAmount(cant);
     } else {
+      setValid(false);
+      setAmount(0);
       setOther(true);
     }
   }
 
-  function otherChange(e) {
-    console.log(e);
-    let value = parseInt(e.target.value);
-    if (!Number(value)) {
-      return;
+  function otherChange(amount) {
+    let value = parseInt(amount);
+    if (Number(value)) {
+      setAmount(value);
+      setValid(true);
+    } else {
+      setValid(false);
     }
-    setAmount(value);
   }
 
   //Step controlling
@@ -90,8 +96,8 @@ function Payment() {
                   className="input is-info"
                   min="0"
                   type="number"
-                  placeholder={1}
-                  onChange={otherChange}
+                  value={amount}
+                  onChange={(e) => otherChange(e.target.value)}
                 />
               ) : (
                 <p className="has-text-centered has-text-dark">{denomination.type}</p>
@@ -103,10 +109,75 @@ function Payment() {
     );
   };
 
+  let TimeStep = () => {
+    return (
+      <div className="pay is-flex is-flex-direction-column">
+        <h1 className="is-size-2 has-text-dark has-text-centered">
+          How often do you want to support?
+        </h1>
+        <div className="is-flex is-justify-content-center is-flex-wrap-wrap">
+          {payContent.time.map((denomination, i) => (
+            <div
+              className={
+                'pay__option is-flex is-flex-direction-column is-align-items-center' +
+                (timeChoice === i ? ' selected' : '')
+              }
+              key={'tim_' + i}
+            >
+              <button className="button" onClick={() => setTimeChoice(i)}>
+                <img src={denomination.image} alt={'den_' + i} />
+              </button>
+              <p className="has-text-centered has-text-dark">{denomination.freq}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  let MedalStep = () => {
+    return (
+      <div className="category is-flex is-flex-direction-column">
+        <h1 className="is-size-2 has-text-dark has-text-centered has-tex-dark">
+          Supporter Category
+        </h1>
+        <div className="category__items is-flex is-justify-content-center">
+          <img src={payContent.medals[0].image} alt="medal_img" />
+          <div className="is-flex is-flex-direction-column is-justify-content-center">
+            <p className="is-size-5 mb-2 has-tex-dark">Congratulations!</p>
+            <p className="is-size-5 mb-2 has-tex-dark">
+              Your contribution belongs to the{' '}
+              <strong>{payContent.medals[0].value} category</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  let EndStep = () => {
+    return (
+      <div className="end is-flex is-flex-direction-column">
+        <div className="end__items is-flex is-justify-content-center">
+          <div className="is-flex is-flex-direction-column is-justify-content-center">
+            <h1 className="title is-size-1 has-tex-dark mb-2">Thank you!</h1>
+            <p className="is-size-5 has-tex-dark mb-2">
+              With your help we are able to bring electricity and water to communities in need
+            </p>
+          </div>
+          <img src={payContent.end} alt="end_img" />
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="payment is-flex is-flex-direction-column">
       {activeStep === 0 && <InfoStep />}
       {activeStep === 1 && <MoneyStep />}
+      {activeStep === 2 && <TimeStep />}
+      {activeStep === 3 && <MedalStep />}
+      {activeStep === 4 && <EndStep />}
 
       {activeStep !== 0 && (
         <div className="payment__progress">
@@ -127,9 +198,15 @@ function Payment() {
             Back
           </button>
         )}
-        <button className="button payment__button" onClick={() => handleNext()}>
-          Continue
-        </button>
+        {valid ? (
+          <button className="button payment__button" onClick={() => handleNext()}>
+            Continue
+          </button>
+        ) : (
+          <button className="button payment__button" onClick={() => handleNext()} disabled>
+            Continue
+          </button>
+        )}
       </div>
     </div>
   );
