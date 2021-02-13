@@ -54,18 +54,22 @@ function Payment() {
 
   //Steps
   let InfoStep = () => {
-    const sections = payContent.info.map((infoSec, i) => (
-      <div className="info__container is-flex py-6" key={'infoSec__' + i}>
-        <div className="info__icon mx-5">
-          <img src={infoSec.image} alt={'payment-icon'} />
-        </div>
-        <div className="info__text is-flex is-flex-direction-column is-justify-content-center">
-          <h2 className="title is-3 has-text-dark">{infoSec.title}</h2>
-          <p className="is-size-6 has-text-dark">{infoSec.content}</p>
-        </div>
+    return (
+      <div className="info is-flex is-flex-direction-column is-align-items-center">
+        {payContent.info.map((infoSec, i) => (
+          <div
+            className={
+              'row is-flex is-flex-direction-column is-justify-content-center' +
+              (i % 2 == 1 ? ' right' : ' left')
+            }
+            key={'infoSec__' + i}
+          >
+            <h2 className="has-text-dark">{infoSec.title}</h2>
+            <p className=" has-text-dark">{infoSec.content}</p>
+          </div>
+        ))}
       </div>
-    ));
-    return <div className="info">{sections}</div>;
+    );
   };
 
   let MoneyStep = () => {
@@ -138,14 +142,14 @@ function Payment() {
   let MedalStep = () => {
     return (
       <div className="category is-flex is-flex-direction-column">
-        <h1 className="is-size-2 has-text-dark has-text-centered has-tex-dark">
+        <h1 className="is-size-2 has-text-dark has-text-centered has-text-dark">
           Supporter Category
         </h1>
         <div className="category__items is-flex is-justify-content-center">
           <img src={payContent.medals[0].image} alt="medal_img" />
           <div className="is-flex is-flex-direction-column is-justify-content-center">
-            <p className="is-size-5 mb-2 has-tex-dark">Congratulations!</p>
-            <p className="is-size-5 mb-2 has-tex-dark">
+            <p className="is-size-5 mb-2 has-text-dark">Congratulations!</p>
+            <p className="is-size-5 mb-2 has-text-dark">
               Your contribution belongs to the{' '}
               <strong>{payContent.medals[0].value} category</strong>
             </p>
@@ -157,22 +161,20 @@ function Payment() {
 
   let EndStep = () => {
     return (
-      <div className="end is-flex is-flex-direction-column">
-        <div className="end__items is-flex is-justify-content-center">
-          <div className="is-flex is-flex-direction-column is-justify-content-center">
-            <h1 className="title is-size-1 has-tex-dark mb-2">Thank you!</h1>
-            <p className="is-size-5 has-tex-dark mb-2">
-              With your help we are able to bring electricity and water to communities in need
-            </p>
-          </div>
-          <img src={payContent.end} alt="end_img" />
+      <div className="end">
+        <div className="is-flex is-flex-direction-column is-justify-content-center">
+          <h1 className="title has-text-dark is-capitalized mb-2">Thank you!</h1>
+          <p className="is-size-4 has-text-dark mb-2">
+            With your help we are able to bring electricity and water to communities in need
+          </p>
         </div>
+        <img src={payContent.end} alt="end_img" />
       </div>
     );
   };
 
   return (
-    <div className="payment is-flex is-flex-direction-column">
+    <div className="payment is-flex is-flex-direction-column is-align-items-center">
       {activeStep === 0 && <InfoStep />}
       {activeStep === 1 && <MoneyStep />}
       {activeStep === 2 && <TimeStep />}
@@ -192,21 +194,23 @@ function Payment() {
           </Stepper>
         </div>
       )}
-      <div className="buttons is-flex is-justify-content-center py-6">
+      <div className="buttons is-centered py-6">
         {activeStep !== 0 && (
           <button className="button payment__button " onClick={() => handleBack()}>
             Back
           </button>
         )}
-        {valid ? (
-          <button className="button payment__button" onClick={() => handleNext()}>
-            Continue
-          </button>
-        ) : (
-          <button className="button payment__button" onClick={() => handleNext()} disabled>
-            Continue
-          </button>
-        )}
+        {activeStep !== 4 &&
+          (valid ? (
+            <button className="button payment__button" onClick={() => handleNext()}>
+              Continue
+            </button>
+          ) : (
+            <button className="button payment__button" onClick={() => handleNext()} disabled>
+              Continue
+            </button>
+          ))}
+        {activeStep === 4 && <button className="button payment__button ">End</button>}
       </div>
     </div>
   );

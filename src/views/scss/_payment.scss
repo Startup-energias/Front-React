@@ -29,35 +29,52 @@
 
   //Info step
   .info {
-    &__container {
-      @media (min-width: 891px) {
-        padding-left: 17%;
-      }
+    background-image: url($images_url + 'projects/page/payment/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    .row {
+      margin: 3rem 0;
     }
-    &__icon {
-      img {
-        height: auto;
-        width: 10rem;
-      }
+    h2 {
+      font-weight: bold;
+      font-size: 34px;
+      margin-bottom: 1.3rem;
     }
-    &__text {
+    p {
+      padding-left: 2.5rem;
+      font-size: 16px;
+    }
+    .right {
+      padding-right: 10rem;
+      padding-left: 0;
+    }
+    .left {
+      padding-left: 10rem;
+      padding-right: 0;
+    }
+    @media (max-width: 700px) {
+      width: 20rem;
+      padding-top: 3rem;
+      background-size: contain;
+      .row {
+        margin: 1.6rem 0;
+      }
+      h2 {
+        font-size: 17px;
+        margin-bottom: 0.2rem;
+      }
       p {
-        width: 30rem;
-        padding-left: 7%;
+        padding-left: 1rem;
+        font-size: 10px;
       }
-    }
-    @media (max-width: 890px) {
-      &__left,
-      &__right {
-        flex-direction: column;
-        align-items: center;
+      .right {
+        padding-right: 5rem;
       }
-      &__text {
-        p,
-        h2 {
-          width: auto;
-          text-align: center;
-        }
+      .left {
+        padding-left: 5rem;
       }
     }
   }
@@ -160,10 +177,48 @@
 
   // End
   .end {
+    padding: 0 20%;
+    @media (max-width: 1416px) {
+      padding: 0 10%;
+    }
+    display: flex;
+    justify-content: center;
+    h1 {
+      font-size: 360%;
+      padding-right: 50%;
+      margin-bottom: 1rem;
+      @media (max-width: 1061px) {
+        padding-right: 10%;
+      }
+    }
+    p {
+      padding-left: 10%;
+    }
     img {
       margin: 3rem;
       width: 25rem;
       height: auto;
+      @media (max-width: 966px) {
+        width: 15rem;
+      }
+    }
+    @media (max-width: 766px) {
+      flex-direction: column;
+      align-items: center;
+      div {
+        order: 2;
+        text-align: center;
+      }
+      img {
+        order: 1;
+        width: 90%;
+      }
+      h1 {
+        padding-right: 0;
+      }
+      p {
+        padding-left: 0;
+      }
     }
   }
 }

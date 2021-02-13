@@ -57,7 +57,7 @@ function SupportModal({ modalId, email, name, resources }) {
                 </div>
               )}
               {show[2] && (
-                <div className="is-flex is-justify-content-center mx-5">
+                <div className="skills is-flex is-justify-content-center mx-5">
                   <div className="modals__bigicon mx-3">
                     <img src={modalIcons.support[1].image} alt={'skills-icon'} />
                   </div>
@@ -67,17 +67,17 @@ function SupportModal({ modalId, email, name, resources }) {
                 </div>
               )}
               {show[3] && (
-                <div className="is-flex is-justify-content-center mx-5">
+                <div className="resources is-flex is-justify-content-center mx-5">
                   <div className="modals__bigicon mx-3">
                     <img src={modalIcons.support[2].image} alt={'resources-icon'} />
                   </div>
-                  <div className="is-flex is-flex-direction-column is-justify-content-center">
+                  <div className="is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
                     <p className="is-size-6 mb-2">What resources can you donate to the project?</p>
                     <div className="is-flex is-flex-wrap-wrap">
                       {resources.map((resource, i) => (
                         <label className="checkbox mx-2" key={'resource_' + i}>
                           <input type="checkbox" />
-                          {resource}
+                          {' ' + resource}
                         </label>
                       ))}
                       <label className="checkbox mx-2">
@@ -86,8 +86,8 @@ function SupportModal({ modalId, email, name, resources }) {
                       </label>
                     </div>
 
-                    <p className="is-size-6 mt-5">Click and send your request to the team!</p>
-                    <button className="button btn-primary">Send email</button>
+                    <p className="is-size-6">Click and send your request to the team!</p>
+                    <button className="button modals__button">Send email</button>
                   </div>
                 </div>
               )}
