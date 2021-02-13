@@ -3,7 +3,7 @@ import BulmaModal from '../../utils/bulmaModal';
 import LaunchModal from './modals/LaunchModal';
 import NotifyModal from './modals/NotifyModal';
 import RegisterModal from './modals/RegisterModal';
-import './scss/_infoSection.scss';
+import './scss/_bannerSection.scss';
 
 const images = process.env.REACT_APP_IMAGES_SRC + 'home/';
 const launchId = 'launchModal';
@@ -32,9 +32,12 @@ function InfoSection() {
   }, []);
 
   return (
-    <div className="infoSection is-flex is-flex-wrap-wrap is-align-items-center" id="Home">
+    <div
+      className="infoSection is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center"
+      id="Home"
+    >
       <div className="infoSection__container">
-        <div className="infoSection__title mb-5">
+        <div className="infoSection__title mb-6">
           <div className="infoSection__title__text">
             <p className="title mb-1">Are you passionate about renewable energy?</p>
             <p className="infoSection__title__sub">We too! Join Inoverte community</p>
@@ -56,7 +59,7 @@ function InfoSection() {
       </div>
       <img
         className="infoSection__img mt-4"
-        src={images + 'people.png'}
+        src={images + 'banner.png'}
         alt="people collaborating to get clean energies"
       />
       <LaunchModal idModal={launchId} notifyBtn={notifyBtn} />
