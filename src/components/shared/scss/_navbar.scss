@@ -12,6 +12,9 @@ nav {
     @media (min-width: 857px) {
       margin-left: 7rem;
     }
+    @media (min-width: 1050px) {
+      margin-right: 14rem;
+    }
 
     img {
       width: 10rem;
@@ -27,6 +30,10 @@ nav {
   .dropdown-menu {
     width: 2rem;
   }
+  .navbar-middle {
+    margin-left: 13rem;
+  }
+
   .navbar-divider {
     border: 1px solid $dark;
     background-color: $dark;
