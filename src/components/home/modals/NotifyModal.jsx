@@ -66,7 +66,7 @@ function NotifyModal({ idModal }) {
                       className="input is-info"
                       type="text"
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Your email"
+                      placeholder="test@correo.com"
                     />
                     <button className="button modals__button" onClick={() => handleSubmit()}>
                       Send
