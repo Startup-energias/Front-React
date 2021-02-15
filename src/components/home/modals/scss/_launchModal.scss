@@ -88,14 +88,14 @@ $images: $images_url + 'home/';
 
   &__text {
     font-weight: lighter;
-    padding: 0 25%;
+    padding: 0 20%;
     @media (max-width: 600px) {
       padding: 0 10%;
     }
   }
 
   &__button {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
     width: 10rem;
     height: 2.5rem;
     background-color: $dark;

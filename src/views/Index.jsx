@@ -4,7 +4,7 @@ import ProjectsSection from '../components/home/ProjectsSection';
 import FeaturesSection from '../components/home/FeaturesSection';
 import SupportersSection from '../components/home/SupportersSection';
 import BlogSection from '../components/home/BlogSection';
-import ContactSection from '../components/home/ContactSection';
+import TouchSection from '../components/home/TouchSection.jsx';
 import './scss/index.scss';
 
 function Index() {
@@ -16,7 +16,7 @@ function Index() {
       <FeaturesSection />
       <SupportersSection />
       <BlogSection />
-      <ContactSection />
+      <TouchSection />
     </div>
   );
 }

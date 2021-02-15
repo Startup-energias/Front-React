@@ -12,7 +12,7 @@ const registerBtn = 'registerBtn';
 const notifyId = 'notifyModal';
 const notifyBtn = 'notifyBtn';
 
-function InfoSection() {
+function bannerSection() {
   useEffect(() => {
     new BulmaModal('#' + launchId);
 
@@ -33,32 +33,32 @@ function InfoSection() {
 
   return (
     <div
-      className="infoSection is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center"
+      className="banner is-flex is-flex-wrap-wrap is-align-items-center is-justify-content-center"
       id="Home"
     >
-      <div className="infoSection__container">
-        <div className="infoSection__title mb-6">
-          <div className="infoSection__title__text">
-            <p className="title mb-1">Are you passionate about renewable energy?</p>
-            <p className="infoSection__title__sub">We too! Join Inoverte community</p>
+      <div className="banner__container">
+        <div className="banner__title mb-3">
+          <div className="banner__title__text">
+            <p className="title mb-1">Are you passionate about renewable solutions?</p>
+            <p className="banner__title__sub">We too! Join Inoverte community</p>
           </div>
         </div>
-        <p className="infoSection__subtext">
+        <p className="banner__subtext">
           We connect renewable energy projects and financing to benefit off-grid communities
         </p>
         <div className="buttons mt-3">
-          <button id={registerBtn} className="infoSection__button has-text-centered">
+          <button id={registerBtn} className="banner__button has-text-centered">
             Boost your renewable project
           </button>
           <a href="#Projects">
-            <button id="financeBtn" className="infoSection__button has-text-centered">
+            <button id="financeBtn" className="banner__button has-text-centered">
               Finance a renawable project
             </button>
           </a>
         </div>
       </div>
       <img
-        className="infoSection__img mt-4"
+        className="banner__img mt-4"
         src={images + 'banner.png'}
         alt="people collaborating to get clean energies"
       />
@@ -69,4 +69,4 @@ function InfoSection() {
   );
 }
 
-export default InfoSection;
+export default bannerSection;

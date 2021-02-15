@@ -30,7 +30,7 @@ function LaunchModal({ idModal, notifyBtn }) {
             alt="logoname"
           />
           <hr className="launch__line" />
-          <p className="launch__text is-size-7 has-text-centered has-text-white">
+          <p className="launch__text is-size-6 has-text-centered has-text-white">
             You will be available soon to support the most innovative renewable projects that will
             bring <strong className="has-text-white"> electricity &amp; water </strong> to
             communities that need it

@@ -4,7 +4,7 @@ export const sections = [
   {
     image: info__images + 'financing.png',
     title: 'Financing',
-    content: `INØVERTE helps to co-fund and co-invest in renewable projects with corporations and investors.`,
+    content: `Inoverte helps to co-fund and co-invest in renewable projects with corporations and investors.`,
   },
   {
     image: info__images + 'handtool.png',
