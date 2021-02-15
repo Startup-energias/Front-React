@@ -32,42 +32,34 @@ export const aboutInfo = {
         color: 'primary',
         team: [
             {
-                name: 'Valentina',
-                role: 'CEO',
+                name: 'Valentina Ballen',
+                role: 'CEO & Founder',
                 email: 'valentina@inoverte.com',
                 image: images__team + 'valentina.jpg'
             },
             {
-                name: 'Mariana',
+                name: 'Mariana Holguin',
                 role: 'VP Operations',
                 email: 'mariana@inoverte.com'
             },
             {
-                name: 'Nicolas',
+                name: 'Nicolás Abondano',
                 role: 'CTO',
                 email: 'nicolas@inoverte.com'
             },
             {
-                name: 'Christian',
+                name: 'Christian Bravo',
                 role: 'VP Engineering',
                 email: 'christian@inoverte.com'
             },
             {
-                name: 'Gustavo',
+                name: 'Gustavo Lozano',
                 role: 'CMO',
                 email: 'gustavo@inoverte.com',
                 image: images__team + 'gustavo.JPG'
             },
         ],
         advisors: [
-            {
-                name: 'Advisor1',
-                role: 'Advisor'
-            },
-            {
-                name: 'Advisor2',
-                role: 'Advisor'
-            }
         ]
     },
     ]
