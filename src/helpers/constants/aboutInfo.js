@@ -44,21 +44,24 @@ export const aboutInfo = {
                 role: 'VP Operations',
                 email: 'mariana@inoverte.com',
                 instagram: 'https://www.instagram.com/mariana_holguinpe/',
-                linkedin: 'https://www.linkedin.com/in/mariana-holguin-771aa017b'
+                linkedin: 'https://www.linkedin.com/in/mariana-holguin-771aa017b',
+                image: images__team + 'mariana.jpg'
             },
             {
                 name: 'Nicolás Abondano',
                 role: 'CTO',
                 email: 'nicolas@inoverte.com',
                 instagram: 'https://www.instagram.com/nabondano/',
-                linkedin: 'https://www.linkedin.com/in/nicolasabo/'
+                linkedin: 'https://www.linkedin.com/in/nicolasabo/',
+                image: images__team + 'nicolas.jpeg'
             },
             {
                 name: 'Christian Bravo',
                 role: 'VP Engineering',
                 email: 'christian@inoverte.com',
                 instagram: 'https://www.instagram.com/christianmbp_12/',
-                linkedin: 'https://www.linkedin.com/in/christian-mauricio-bravo-9242a315a/'
+                linkedin: 'https://www.linkedin.com/in/christian-mauricio-bravo-9242a315a/',
+                image: images__team + 'christian.jpeg'
             },
             {
                 name: 'Gustavo Lozano',
