@@ -20,8 +20,8 @@ function TouchSection() {
   return (
     <section className="touch is-flex is-flex-direction-column is-align-items-center">
       <h1 className="title is-1">Get in touch</h1>
-      <div className="is-flex is-flex-wrap is-justify-content-center">
-        <div className="touch__content is-flex is-flex-direction-column pt-2">
+      <div className="touch__container is-flex is-flex-wrap">
+        <div className="touch__content is-flex is-flex-direction-column">
           <p className="is-size-6 mb-6">
             We would love to hear from you! Please leave us your message and we will get back to you
             soon
@@ -48,7 +48,7 @@ function TouchSection() {
           </ul>
         </div>
         <div className="touch__input box is-flex is-flex-direction-column">
-          <h2 className="title is-2 my-5 is-capitalized">Say something</h2>
+          <h2 className="title is-3 my-5 is-capitalized">Say something</h2>
           <form onSubmit={sendEmail}>
             <div className="control has-icons-left has-icons-right">
               <input
