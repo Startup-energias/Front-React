@@ -6,7 +6,12 @@ function TouchSection() {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_t2mpj2n', 'template_u4bte1v', e.target, 'user_phttUDRbWn6AWK2qIVkWB')
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE,
+        process.env.REACT_APP_TOUCH_TEMPLATE,
+        e.target,
+        process.env.REACT_APP_EMAILJS_USER,
+      )
       .then((res) => {
         console.log('Email successfully sent!');
         console.log(res);
@@ -27,23 +32,27 @@ function TouchSection() {
             soon
           </p>
           <ul>
-            <li className="has-text-primary is-flex">
-              <span className="touch__icon touch__bigger">
-                <i className=" fa fa-whatsapp"></i>
-              </span>
-              <span className="text has-text-dark">3144773523</span>
+            <li>
+              <a className="is-flex" href="tel:+573144773523">
+                <span className="touch__icon touch__bigger">
+                  <i className=" fa fa-whatsapp"></i>
+                </span>
+                <span className="text">+57 314 4773523</span>
+              </a>
             </li>
-            <li className="has-text-primary is-flex">
-              <span className="touch__icon touch__circle">
-                <i className=" fa fa-envelope "></i>
-              </span>
-              <span className="text has-text-dark">valentina.ballen@inoverte.com</span>
+            <li>
+              <a className="is-flex" href="mailto:valentina.ballen@inoverte.com">
+                <span className="touch__icon touch__circle">
+                  <i className=" fa fa-envelope "></i>
+                </span>
+                <span className="text">valentina.ballen@inoverte.com</span>
+              </a>
             </li>
-            <li className="has-text-primary is-flex">
+            <li className="is-flex">
               <span className="touch__icon touch__circle">
                 <i className=" fa fa-map-marker "></i>
               </span>
-              <span className="text has-text-dark">Bogotá, Colombia</span>
+              <span className="text">Bogotá, Colombia</span>
             </li>
           </ul>
         </div>

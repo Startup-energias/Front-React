@@ -31,7 +31,7 @@ function Footer() {
   };
 
   return (
-    <footer className="footer p-6 has-background-white">
+    <footer className="footer px-6 pb-6 pt-2 has-background-white">
       <div className="container">
         <div className="is-flex is-flex-direction-column is-justify-content-center">
           <SocialMedia icons={socialMedia} />

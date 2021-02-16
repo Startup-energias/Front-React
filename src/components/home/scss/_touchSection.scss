@@ -15,10 +15,11 @@
     width: 100%;
     position: relative;
     padding-top: 2rem;
-    padding-bottom: 5rem;
+    padding-bottom: 0;
+    justify-content: center;
   }
   &__content {
-    width: 40%;
+    width: 60%;
     padding-left: 4rem;
   }
   li {
@@ -26,8 +27,24 @@
     .text {
       padding-top: 4px;
     }
+    a {
+      transition: 0.5s;
+      .text {
+        color: $dark;
+      }
+      &:hover {
+        .text,
+        .touch__icon {
+          color: $warning;
+        }
+        .touch__circle {
+          border: 2px solid $warning;
+        }
+      }
+    }
   }
   &__icon {
+    color: $primary;
     text-align: center;
     width: 2rem;
     height: 2rem;
@@ -45,12 +62,10 @@
 
   &__input {
     @media (min-width: 874px) {
-      position: absolute;
+      margin-left: 3rem;
     }
     width: 40%;
-    left: 55%;
-    top: 8%;
-    padding: 0 4rem;
+    padding: 2rem 4rem;
     @media (max-width: 1225px) {
       padding: 0 2rem;
     }
@@ -87,6 +102,15 @@
     &__content {
       width: 90%;
       position: static;
+    }
+  }
+  @media (max-width: 536px) {
+    &__content {
+      width: 100%;
+    }
+    h1,
+    &__content {
+      padding: 0 4px;
     }
   }
 }
