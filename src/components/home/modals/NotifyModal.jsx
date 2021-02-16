@@ -1,27 +1,27 @@
-/* eslint-disable no-unused-vars */
 import { useState } from 'react';
-import './scss/_notifyModal.scss';
-import '../../shared/scss/_standardModal.scss';
+import emailjs, { init } from 'emailjs-com';
 import ModalHead from '../../shared/modal/ModalHead';
 import ModalFooter from '../../shared/modal/ModalFooter';
+import './scss/_notifyModal.scss';
+import '../../shared/scss/_standardModal.scss';
 
 function NotifyModal({ idModal }) {
-  const api = process.env.INOVERTE_API || 'https://inoverte-api.herokuapp.com/';
+  const api = process.env.REACT_APP_INOVERTE_API;
   const emailsUrl = api + 'emails/';
   let [submited, setSubmited] = useState(false);
   let [saved, setSaved] = useState(false);
   let [email, setEmail] = useState('');
 
+  init(process.env.REACT_APP_EMAILJS_USER);
+
   function handleSubmit() {
     if (navigator.onLine && email !== '') {
       setSubmited(true);
-      console.log('wtf');
       postEmail();
     }
   }
 
   const postEmail = async () => {
-    console.log(emailsUrl);
     const resp = await fetch(emailsUrl, {
       method: 'POST',
       headers: {
@@ -32,10 +32,24 @@ function NotifyModal({ idModal }) {
         address: email,
       }),
     });
-    const data = await resp.json();
-    console.log(data);
+    await resp.json();
+    sendEmail();
     setSaved(true);
   };
+
+  function sendEmail() {
+    emailjs
+      .send(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_NOTIFY_TEMPLATE, {
+        mail: email,
+      })
+      .then((res) => {
+        console.log('Email successfully sent!');
+        console.log(res);
+      })
+      .catch((err) =>
+        console.error('Oh well, you failed. Here some thoughts on the error that occured:', err),
+      );
+  }
 
   return (
     <div className="modal notify" id={idModal}>
@@ -64,7 +78,7 @@ function NotifyModal({ idModal }) {
                   <div>
                     <input
                       className="input is-info"
-                      type="text"
+                      type="email"
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="test@correo.com"
                     />
