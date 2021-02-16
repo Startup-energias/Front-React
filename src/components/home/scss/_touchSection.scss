@@ -2,18 +2,24 @@
 
 .touch {
   @media (min-width: 960px) {
-    padding: 0 12%;
+    padding: 6rem 12% 0;
   }
   .title {
     color: $dark;
   }
   h1 {
     width: 100%;
+    padding-left: 4rem;
   }
-  &__content,
-  &__input {
-    width: 50%;
-    margin: 0 1rem;
+  &__container {
+    width: 100%;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+  &__content {
+    width: 40%;
+    padding-left: 4rem;
   }
   li {
     margin-bottom: 2rem;
@@ -38,7 +44,16 @@
   }
 
   &__input {
+    @media (min-width: 874px) {
+      position: absolute;
+    }
+    width: 40%;
+    left: 55%;
+    top: 8%;
     padding: 0 4rem;
+    @media (max-width: 1225px) {
+      padding: 0 2rem;
+    }
     .control {
       margin-bottom: 1rem;
     }
@@ -49,15 +64,29 @@
   &__button {
     margin-bottom: 1rem;
     .button {
-      font-size: 20px;
+      font-size: 18px;
       border: 4px solid $dark;
-      width: 10rem;
+      padding: 1px;
+      width: 8rem;
       transition: 0.5s;
       &:hover {
         background-color: $dark;
         color: $primary;
         border: 1px solid $primary;
       }
+    }
+  }
+  @media (max-width: 1012px) {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 1rem;
+    }
+    &__input,
+    &__content {
+      width: 90%;
+      position: static;
     }
   }
 }

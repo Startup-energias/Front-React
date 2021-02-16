@@ -32,7 +32,12 @@ function RegisterModal({ idModal }) {
                     your project as an official inverter member.
                   </li>
                 </ul>
-                <button className="button modals__button">Register</button>
+                <a
+                  className="button modals__button"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScH8Zwvd6nRKG0FcvQ38yfe9DHk3IKBnUwt_ZBAwOOtANkm5g/viewform?usp=sf_link"
+                >
+                  Register
+                </a>
               </div>
             </div>
             <ModalFooter />
