@@ -4,6 +4,7 @@ import { lazy, Suspense } from 'react';
 const Index = lazy(() => import('../views/Index'));
 const HelpNow = lazy(() => import('../views/HelpNow'));
 const Payment = lazy(() => import('../views/Payment'));
+const Volunteer = lazy(() => import('../views/Volunteer'));
 const Project = lazy(() => import('../views/Project'));
 import Profile from '../views/Profile';
 const About = lazy(() => import('../views/About'));
@@ -21,6 +22,7 @@ const indexRouter = () => (
         <Route exact path="/projects" component={Project} />
         <PrivateRoute exact path="/profile" component={Profile} />
         <Route exact path="/payment" component={Payment} />
+        <Route exact path="/volunteer" component={Volunteer} />
         <Route exact path="/about" component={About} />
         <Route path="/" component={Index} />
       </Switch>

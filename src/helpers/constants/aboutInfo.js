@@ -32,30 +32,40 @@ export const aboutInfo = {
         color: 'primary',
         team: [
             {
-                name: 'Valentina Ballen',
+                name: 'Valentina Ballén',
                 role: 'CEO & Founder',
                 email: 'valentina@inoverte.com',
+                instagram: 'https://www.instagram.com/valentinaballen7/',
+                linkedin: 'https://www.linkedin.com/in/valentina-ball%C3%A9n-castillo/',
                 image: images__team + 'valentina.jpg'
             },
             {
                 name: 'Mariana Holguin',
                 role: 'VP Operations',
-                email: 'mariana@inoverte.com'
+                email: 'mariana@inoverte.com',
+                instagram: 'https://www.instagram.com/mariana_holguinpe/',
+                linkedin: 'https://www.linkedin.com/in/mariana-holguin-771aa017b'
             },
             {
                 name: 'Nicolás Abondano',
                 role: 'CTO',
-                email: 'nicolas@inoverte.com'
+                email: 'nicolas@inoverte.com',
+                instagram: 'https://www.instagram.com/nabondano/',
+                linkedin: 'https://www.linkedin.com/in/nicolasabo/'
             },
             {
                 name: 'Christian Bravo',
                 role: 'VP Engineering',
-                email: 'christian@inoverte.com'
+                email: 'christian@inoverte.com',
+                instagram: 'https://www.instagram.com/christianmbp_12/',
+                linkedin: 'https://www.linkedin.com/in/christian-mauricio-bravo-9242a315a/'
             },
             {
                 name: 'Gustavo Lozano',
                 role: 'CMO',
                 email: 'gustavo@inoverte.com',
+                instagram: 'https://www.instagram.com/galca97/',
+                linkedin: 'https://www.linkedin.com/in/gustavo-lozano-cardenas-05559a125/',
                 image: images__team + 'gustavo.JPG'
             },
         ],

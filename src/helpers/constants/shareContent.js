@@ -18,7 +18,8 @@ export const modalIcons = {
     },
     {
       image: images__modal + 'skills.png',
-      title: 'Skills'
+      title: 'Skills',
+      link: '/volunteer'
     },
     {
       image: images__modal + 'resources.png',
@@ -85,4 +86,21 @@ export const payContent = {
     }
   ]
 
+}
+
+export const volunteerContent = {
+  info: [
+    {
+      title: 'Tell us about yourself',
+      content: 'Fill out the form to find out your profile and aspirations'
+    },
+    {
+      title: 'We connect you with the team',
+      content: 'Meet the people behind your favorite project along with the details and requirements to be part of the project'
+    },
+    {
+      title: 'You are already a member of the team, start making an impact!',
+      content: 'Once linked to the project, it begins to work. Your team will define the steps to follow'
+    }
+  ]
 }
