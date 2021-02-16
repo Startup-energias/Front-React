@@ -14,8 +14,10 @@
     margin-top: 3rem;
     margin-bottom: 1rem;
   }
+  $card_height: 330px;
+  $social_height: 40px;
   &__member {
-    height: 360px;
+    height: $card_height;
     width: 200px;
     margin: 20px;
     h1,
@@ -27,9 +29,9 @@
   &__image {
     overflow: hidden;
     position: relative;
-    height: 300px;
+    height: ($card_height - $social_height);
     img {
-      height: 300px;
+      height: 100%;
       width: 100%;
       object-fit: cover;
       object-position: bottom;
@@ -38,8 +40,8 @@
     .social {
       position: absolute;
       width: 100%;
-      height: 40px;
-      bottom: -40px;
+      height: $social_height;
+      bottom: -$social_height;
       transition: 0.5s;
       a {
         color: $dark;
