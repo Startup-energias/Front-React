@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import './scss/_aboutTeam.scss';
-function TeamComponent({ title, color, team, advisors }) {
+function TeamComponent({ title, color, team }) {
   return (
     <div className={'team'}>
       <div className={'team__text is-flex is-flex-direction-column'}>
@@ -24,18 +24,18 @@ function TeamComponent({ title, color, team, advisors }) {
                 }
                 alt={member.name + '-image'}
               />
-              <div className="social has-background-primary has-text-dark is-flex is-align-items-center is-justify-content-center">
-                <span className="mx-2">
+              <div className="social has-background-primary is-flex is-align-items-center is-justify-content-center">
+                <a href={member.instagram} className="mx-2" target="Starfall">
                   <i className="fa fa-instagram"></i>
-                </span>
-                <span className="mx-2">
+                </a>
+                <a href={member.linkedin} className="mx-2" target="Starfall">
                   <i className="fa fa-linkedin"></i>
-                </span>
+                </a>
               </div>
             </div>
 
-            <h2 className="has-text-centered has-text-primary is-size-4">{member.name}</h2>
-            <h3 className="has-text-centered has-text-primary is-size-5">{member.role}</h3>
+            <h2 className="has-text-centered has-text-primary is-size-5">{member.name}</h2>
+            <h3 className="has-text-centered has-text-primary is-size-7">{member.role}</h3>
             {/*<h4 className="has-text-centered has-text-primary is-size-6">{member.email}</h4>*/}
           </div>
         ))}

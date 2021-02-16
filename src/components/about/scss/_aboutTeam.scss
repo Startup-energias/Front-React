@@ -1,3 +1,5 @@
+@import '../../../assets/scss/02_base/colors';
+
 .team {
   margin-top: 3rem;
   &__text {
@@ -13,8 +15,8 @@
     margin-bottom: 1rem;
   }
   &__member {
-    height: 400px;
-    width: 240px;
+    height: 360px;
+    width: 200px;
     margin: 20px;
     h1,
     h2,
@@ -25,9 +27,9 @@
   &__image {
     overflow: hidden;
     position: relative;
-    height: 330px;
+    height: 300px;
     img {
-      height: 330px;
+      height: 300px;
       width: 100%;
       object-fit: cover;
       object-position: bottom;
@@ -39,6 +41,12 @@
       height: 40px;
       bottom: -40px;
       transition: 0.5s;
+      a {
+        color: $dark;
+        &:hover {
+          color: $warning;
+        }
+      }
     }
     &:hover {
       img {
