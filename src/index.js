@@ -27,6 +27,6 @@ Auth.currentAuthenticatedUser()
     console.log(user);
     store.dispatch(setAuth(true));
   })
-  .catch(() => store.dispatch(setAuth(true)));
+  .catch(() => store.dispatch(setAuth(false)));
 
 ReactDOM.render(<App />, document.getElementById('root'));
