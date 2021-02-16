@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import './scss/_about.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { aboutInfo } from '../helpers/constants/aboutInfo';
 import AboutComponent from '../components/about/AboutComponent';
 import DoubleComponent from '../components/about/DoubleComponent';
