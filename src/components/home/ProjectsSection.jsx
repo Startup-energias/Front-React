@@ -19,7 +19,6 @@ function ProjectsSection() {
       .then(
         (result) => {
           setProjects(result);
-          console.log(projects);
         },
         (error) => {
           console.log('ERROR: ' + error);
