@@ -2,6 +2,12 @@
 @import '../../../assets/scss/03_utils/variables';
 $energy_images: $images_url + 'projects/energy/';
 
+.enabled {
+  &:hover {
+    top: -20px;
+  }
+}
+
 .projectCard {
   overflow: hidden;
   width: 20rem;
@@ -18,9 +24,6 @@ $energy_images: $images_url + 'projects/energy/';
   position: relative;
   top: 0;
   transition: 0.75s;
-  &:hover {
-    top: -20px;
-  }
 
   &__image {
     height: 15rem;

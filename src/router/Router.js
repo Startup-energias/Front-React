@@ -19,7 +19,7 @@ const indexRouter = () => (
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
         <Route exact path="/help" component={HelpNow} />
-        <Route exact path="/projects" component={Project} />
+        <Route path="/projects/:id" component={Project} />
         <PrivateRoute exact path="/profile" component={Profile} />
         <Route exact path="/payment" component={Payment} />
         <Route exact path="/volunteer" component={Volunteer} />
