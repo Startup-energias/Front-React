@@ -18,7 +18,7 @@ function ProjectsSection() {
       .then((res) => res.json())
       .then(
         (result) => {
-          setProjects(result);
+          setProjects(result.docs);
         },
         (error) => {
           console.log('ERROR: ' + error);
