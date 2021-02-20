@@ -1,0 +1,37 @@
+@import '../../../assets/scss/02_base/colors';
+
+.projects {
+  h1 {
+    font-size: 50px;
+    margin-bottom: 2rem !important;
+    @media (max-width: 500px) {
+      font-size: 30px;
+      margin-bottom: 1rem !important;
+    }
+  }
+  &__cards {
+    position: relative;
+    .arrow,
+    .arrow-blocked {
+      width: 30px;
+      transition: 0.25s;
+      @media (max-width: 810px) {
+        position: absolute;
+        visibility: hidden;
+      }
+    }
+    .arrow-blocked {
+      stroke: darkgrey;
+      fill: darkgrey;
+    }
+    .arrow {
+      stroke: $dark;
+      fill: $dark;
+      cursor: pointer;
+      &:hover {
+        fill: $success;
+        stroke: $success;
+      }
+    }
+  }
+}

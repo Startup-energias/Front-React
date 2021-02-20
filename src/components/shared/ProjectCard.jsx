@@ -19,7 +19,6 @@ function ProjectCard({
   const projects__un = process.env.REACT_APP_IMAGES_SRC + 'projects/universities/';
   const percentage = parseInt(amount / goal);
 
-  console.log(universities);
   const cardImg = (
     <div
       className="projectCard__image"
