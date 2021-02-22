@@ -15,9 +15,9 @@
     .arrow-blocked {
       width: 30px;
       transition: 0.25s;
-      @media (max-width: 810px) {
-        position: absolute;
+      @media (max-width: 811px) {
         visibility: hidden;
+        position: absolute;
       }
     }
     .arrow-blocked {
