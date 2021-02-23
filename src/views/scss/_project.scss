@@ -2,14 +2,13 @@
 
 .project {
   margin-top: 10px;
-  .banner {
-    img {
-      width: 100%;
-      height: auto;
-      max-height: 715px;
-      object-fit: cover;
-      object-position: center;
-    }
+  &__banner {
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    max-height: 715px;
+    object-fit: cover;
+    object-position: bottom;
   }
   .columns {
     @media (min-width: 1112px) {

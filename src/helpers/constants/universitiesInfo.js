@@ -12,7 +12,7 @@ export const universities = [
     {
         abrv: 'U. EAN',
         name: 'Universidad EAN',
-        img: 'ean.png'
+        img: 'ean.jpg'
     }
 ]
 
