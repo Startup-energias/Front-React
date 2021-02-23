@@ -37,9 +37,12 @@ function Project() {
     <div className="project is-flex is-flex-direction-column">
       {project ? (
         <div>
-          <div className="banner">
-            <img loading="lazy" src={images__project + project.banner} alt="banner" />
-          </div>
+          <img
+            className="project__banner"
+            loading="lazy"
+            src={images__project + project.banner}
+            alt="banner"
+          />
           <div className="columns is-multiline is-centered is-6 mb-5">
             <div className="project__main column is-12-mobile is-12-tablet is-8-desktop is-8-widescreen is-8-fullhd">
               <ProjectInfo
