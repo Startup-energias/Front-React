@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import BulmaModal from '../../utils/bulmaModal';
 import './scss/_projectDetails.scss';
 import SupportModal from './SupportModal';
+import { universities } from '../../helpers/constants/universitiesInfo';
 
 function ProjectDetails({
   name,
@@ -55,16 +56,20 @@ function ProjectDetails({
         <h2 className="subtitle is-size-5 has-text-dark mb-2">Supporters</h2>
         <p className="is-size-6 has-text-weight-bold mb-2">{supporters}</p>
         <h2 className="subtitle is-size-5 has-text-dark mb-2">University</h2>
-        <p className="is-size-6 has-text-weight-bold mb-2">{university}</p>
+        <p className="is-size-6 has-text-weight-bold mb-2">{universities[university].name}</p>
       </div>
       <hr />
       <div className="project__details is-align-items-self-start is-flex is-flex-direction-column m-4 px-2">
         <h1 className="title is-size-4 has-text-dark">Company</h1>
         <h2 className="subtitle is-size-5 has-text-dark mb-2">Name</h2>
         <p className="is-size-6 has-text-weight-bold mb-2">{company}</p>
-        <h2 className="subtitle is-size-5 has-text-dark mb-2">Slogan</h2>
-        <p className="is-size-6 has-text-weight-bold mb-2">{slogan}</p>
-        <img className="is-align-self-center" src={imgSrc + logo} alt="company_logo" />
+        {slogan && (
+          <React.Fragment>
+            <h2 className="subtitle is-size-5 has-text-dark mb-2">Slogan</h2>
+            <p className="is-size-6 has-text-weight-bold mb-2">{slogan}</p>
+          </React.Fragment>
+        )}
+        {logo && <img className="is-align-self-center" src={imgSrc + logo} alt="company_logo" />}
       </div>
     </div>
   );

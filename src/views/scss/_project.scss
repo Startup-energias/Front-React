@@ -2,6 +2,15 @@
 
 .project {
   margin-top: 10px;
+  .banner {
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 715px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
   .columns {
     @media (min-width: 1112px) {
       $margin-sides: 10em;
@@ -15,7 +24,7 @@
     }
   }
   &__main {
-    padding-top: 10px;
+    padding-top: 4px;
     padding-right: 5%;
     padding-left: 0%;
   }

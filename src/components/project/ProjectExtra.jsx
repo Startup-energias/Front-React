@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import React from 'react';
 import Iframe from 'react-iframe';
 import './scss/_projectExtra.scss';
 
@@ -37,71 +37,90 @@ function ProjectExtra({ images, maps, resources, skills, video, imgSrc }) {
 
   return (
     <div className="is-flex is-flex-direction-column is-justify-content-center mt-4">
-      <Iframe
-        className="mb-3"
-        width="auto"
-        height="400"
-        src={video}
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></Iframe>
-      <h1 className="title is-3 has-text-dark">Gallery</h1>
-      <RenderGallery list={images} />
-      <h1 className="title is-2 has-text-dark mt-4">Skills &amp; Resources needed</h1>
+      {video && (
+        <Iframe
+          className="mb-3"
+          width="auto"
+          height="400"
+          src={video}
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></Iframe>
+      )}
+      {images.length >= 3 ? (
+        <React.Fragment>
+          <h1 className="title is-3 has-text-dark">Gallery</h1>
+          <RenderGallery list={images} />
+        </React.Fragment>
+      ) : (
+        <React.Fragment></React.Fragment>
+      )}
+      {skills.length > 0 && resources.length > 0 && (
+        <h1 className="title is-2 has-text-dark mt-4">Skills &amp; Resources needed</h1>
+      )}
       <div className="columns is-6 is-multiline m-0">
-        <div className="column">
-          <div className="is-flex">
-            <img className="project__lstIcon" src={images__icons + 'skills.png'} alt="skills" />
-            <h2 className="title is-4 has-text-primary mb-2">Skills</h2>
+        {skills.length > 0 && (
+          <div className="column">
+            <div className="is-flex">
+              <img className="project__lstIcon" src={images__icons + 'skills.png'} alt="skills" />
+              <h2 className="title is-4 has-text-primary mb-2">Skills</h2>
+            </div>
+            <ul className="project__list">
+              {skills.map((skill, i) => (
+                <li key={'skill_' + i}>
+                  <span className="has-text-primary">
+                    <i className="fa fa-check"></i>
+                  </span>
+                  {skill}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="project__list">
-            {skills.map((skill, i) => (
-              <li key={'skill_' + i}>
-                <span className="has-text-primary">
-                  <i className="fa fa-check"></i>
-                </span>
-                {skill}
+        )}
+        {resources.length > 0 && (
+          <div className="column is-half">
+            <div className="is-flex">
+              <img
+                className="project__lstIcon"
+                src={images__icons + 'resources.png'}
+                alt="resources"
+              />
+              <h2 className="title is-4 has-text-primary mb-2">Resources</h2>
+            </div>
+            <ul className="project__list">
+              {resources.map((resource, i) => (
+                <li key={'resource' + i}>
+                  <span className="has-text-primary">
+                    <i className="fa fa-check"></i>
+                  </span>
+                  {resource}
+                </li>
+              ))}
+              <li className="small-fixed is-size-7 mt-3">
+                If you are a supplier of any of these products, please contact us for further
+                details{' '}
               </li>
-            ))}
-          </ul>
-        </div>
-        <div className="column is-half">
-          <div className="is-flex">
-            <img
-              className="project__lstIcon"
-              src={images__icons + 'resources.png'}
-              alt="resources"
-            />
-            <h2 className="title is-4 has-text-primary mb-2">Resources</h2>
+            </ul>
           </div>
-          <ul className="project__list">
-            {resources.map((resource, i) => (
-              <li key={'resource' + i}>
-                <span className="has-text-primary">
-                  <i className="fa fa-check"></i>
-                </span>
-                {resource}
-              </li>
-            ))}
-            <li className="small-fixed is-size-7 mt-3">
-              If you are a supplier of any of these products, please contact us for further details{' '}
-            </li>
-          </ul>
-        </div>
+        )}
       </div>
-      <h1 className="title is-2 has-text-dark mt-4">Project location</h1>
-      <Iframe
-        className="responsive-iframe"
-        src={maps}
-        width="auto"
-        height="300"
-        frameborder="0"
-        style="border:0;"
-        allowfullscreen=""
-        aria-hidden="false"
-        tabindex="0"
-      ></Iframe>
+      {maps && (
+        <React.Fragment>
+          <h1 className="title is-2 has-text-dark mt-4">Project location</h1>
+          <Iframe
+            className="responsive-iframe"
+            src={maps}
+            width="auto"
+            height="300"
+            frameborder="0"
+            style="border:0;"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></Iframe>
+        </React.Fragment>
+      )}
     </div>
   );
 }

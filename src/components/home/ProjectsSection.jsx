@@ -27,14 +27,20 @@ function ProjectsSection() {
     getProjects(1);
   }, []);
 
+  /*New project
+  
+  */
+
   const getSlices = (total, group, array) => {
     let slices = [Math.ceil(total / group)];
+    let cont = 0;
     for (let i = 0; i < total; i += group) {
       if (i + group - 1 < total) {
-        slices[i] = array.slice(i, i + group);
+        slices[cont] = array.slice(i, i + group);
       } else {
-        slices[i] = array.slice(i, total);
+        slices[cont] = array.slice(i, total);
       }
+      cont++;
     }
     return slices;
   };

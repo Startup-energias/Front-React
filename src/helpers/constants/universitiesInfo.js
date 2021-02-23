@@ -8,6 +8,11 @@ export const universities = [
         abrv: 'U. Javeriana',
         name: 'Universidad Javeriana',
         img: 'javeriana.png'
+    },
+    {
+        abrv: 'U. EAN',
+        name: 'Universidad EAN',
+        img: 'ean.png'
     }
 ]
 

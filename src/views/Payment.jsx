@@ -18,7 +18,6 @@ function Payment() {
 
   function changeAmount(cant, i) {
     setAmountChoice(i);
-    console.log('changing amount');
     if (cant !== -1) {
       setOther(false);
       setValid(true);
