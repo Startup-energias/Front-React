@@ -69,7 +69,7 @@ export const aboutInfo = {
                 email: 'gustavo@inoverte.com',
                 instagram: 'https://www.instagram.com/galca97/',
                 linkedin: 'https://www.linkedin.com/in/gustavo-lozano-cardenas-05559a125/',
-                image: images__team + 'gustavo.JPG'
+                image: images__team + 'gustavo.jpg'
             },
         ],
         advisors: [
