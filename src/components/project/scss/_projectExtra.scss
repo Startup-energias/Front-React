@@ -3,6 +3,7 @@
   &__gallery {
     width: 100%;
     height: auto;
+
     .swiper-button-next,
     .swiper-button-prev {
       color: $dark;
@@ -10,6 +11,36 @@
     .swiper-pagination-bullet-active {
       background-color: $dark;
     }
+
+    $margin-arrow1: 37px;
+    $margin-arrow2: $margin-arrow1 + 1px;
+    .swiper-container {
+      padding-left: $margin-arrow1;
+      padding-bottom: 4%;
+    }
+    .swiper-container::before {
+      content: '';
+      display: block;
+      background: #fff;
+      left: 0;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: $margin-arrow2;
+      z-index: 9;
+    }
+    .swiper-container::after {
+      content: '';
+      display: block;
+      background: #fff;
+      right: 0;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: $margin-arrow2;
+      z-index: 9;
+    }
+
     img {
       height: 300px;
       width: 100%;
@@ -19,7 +50,7 @@
         height: 200px;
       }
       @media (max-width: 400px) {
-        height: 100px;
+        height: 130px;
       }
     }
   }

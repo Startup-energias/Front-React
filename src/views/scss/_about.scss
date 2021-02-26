@@ -1,12 +1,27 @@
 .about {
-  .team {
-    margin-top: 5rem;
-    &__image {
-      img {
-        width: 100%;
-        object-fit: cover;
-        object-position: center bottom;
-      }
+  padding-top: 5rem;
+  &__selector {
+    width: 100%;
+    margin: 0;
+  }
+  &__option {
+    width: 20%;
+    margin: 0;
+    height: 3rem;
+    font-weight: bold;
+    font-size: 20px;
+    vertical-align: middle;
+    @media (max-width: 644px) {
+      font-size: 20px;
+    }
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+    &:active,
+    &:focus,
+    &:focus:active {
+      border: none;
+      box-shadow: none !important;
     }
   }
 }

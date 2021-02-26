@@ -1,1 +1,1 @@
-export const indexItems = ['Projects', 'About us', 'Our impact'];
+export const indexItems = ['Projects', 'About us'];

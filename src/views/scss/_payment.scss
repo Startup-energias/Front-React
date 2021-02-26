@@ -1,33 +1,225 @@
+@import '../../assets/scss/02_base/colors';
+@import '../../assets/scss/03_utils/variables';
+
 .payment {
   margin-top: 6rem;
-  &__container {
-    @media (min-width: 891px) {
-      padding-left: 17%;
+  //General
+  &__progress {
+    width: 70%;
+    padding: 0;
+    @media (max-width: 840px) {
+      width: 100%;
     }
   }
-  &__icon {
-    img {
-      height: auto;
-      width: 10rem;
+  &__button {
+    font-size: 20px;
+    border: 4px solid $dark;
+    width: 10rem;
+    transition: 0.5s;
+    &:hover {
+      background-color: $dark;
+      color: $primary;
+      border: 1px solid $primary;
+    }
+    &:active,
+    &:focus,
+    &:focus:active {
+      border: 4px solid $dark;
+      box-shadow: none !important;
     }
   }
-  &__text {
+
+  //Info step
+  .info {
+    background-image: url($images_url + 'projects/page/payment/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    .row {
+      margin: 3rem 0;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 34px;
+      margin-bottom: 1.3rem;
+    }
     p {
-      width: 30rem;
-      padding-left: 7%;
+      padding-left: 2.5rem;
+      font-size: 16px;
+    }
+    .right {
+      padding-right: 10rem;
+      padding-left: 0;
+    }
+    .left {
+      padding-left: 10rem;
+      padding-right: 0;
+    }
+    @media (max-width: 700px) {
+      width: 20rem;
+      padding-top: 3rem;
+      background-size: contain;
+      .row {
+        margin: 1.6rem 0;
+      }
+      h2 {
+        font-size: 17px;
+        margin-bottom: 0.2rem;
+      }
+      p {
+        padding-left: 1rem;
+        font-size: 10px;
+      }
+      .right {
+        padding-right: 5rem;
+      }
+      .left {
+        padding-left: 5rem;
+      }
     }
   }
-  @media (max-width: 890px) {
-    &__left,
-    &__right {
+
+  //Pay options
+  .pay {
+    margin: 5rem 0;
+    &__option {
+      margin: 5rem 2rem 0;
+      button {
+        background-color: transparent;
+        width: 6rem;
+        height: 6rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        &:active,
+        &:focus,
+        &:focus:active {
+          border: 4px solid $dark;
+          box-shadow: none !important;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      p {
+        margin-top: 3rem;
+        font-weight: bold;
+      }
+      input {
+        margin-top: 2.5rem;
+        width: 5rem;
+      }
+    }
+    @media (max-width: 641px) {
+      margin: 2rem 0;
+      &__option {
+        margin: 2rem 1rem 0;
+        p {
+          margin-top: 1rem;
+          font-weight: bold;
+        }
+        input {
+          margin-top: 1rem;
+          width: 5rem;
+        }
+        button {
+          width: 4.5rem;
+          height: 4.5rem;
+        }
+      }
+    }
+    .selected {
+      button {
+        border: 4px solid $dark;
+      }
+      p {
+        margin-top: 2rem;
+        font-size: 30px;
+      }
+    }
+  }
+  // Medal
+  .category {
+    &__items {
+      img {
+        margin: 3rem;
+        width: 15rem;
+        height: auto;
+      }
+      padding-left: 20%;
+      padding-right: 30%;
+      @media (max-width: 1494px) {
+        padding: 0 20%;
+      }
+      @media (max-width: 910px) {
+        padding: 0 5%;
+      }
+      @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30%;
+        img {
+          width: 10rem;
+        }
+        p {
+          text-align: center;
+        }
+      }
+      @media (max-width: 654px) {
+        padding: 0 20%;
+      }
+      @media (max-width: 437px) {
+        padding: 0 5%;
+      }
+    }
+  }
+
+  // End
+  .end {
+    padding: 0 20%;
+    @media (max-width: 1416px) {
+      padding: 0 10%;
+    }
+    display: flex;
+    justify-content: center;
+    h1 {
+      font-size: 360%;
+      padding-right: 50%;
+      margin-bottom: 1rem;
+      @media (max-width: 1061px) {
+        padding-right: 10%;
+      }
+    }
+    p {
+      padding-left: 10%;
+    }
+    img {
+      margin: 3rem;
+      width: 25rem;
+      height: auto;
+      @media (max-width: 966px) {
+        width: 15rem;
+      }
+    }
+    @media (max-width: 766px) {
       flex-direction: column;
       align-items: center;
-    }
-    &__text {
-      p,
-      h2 {
-        width: auto;
+      div {
+        order: 2;
         text-align: center;
+      }
+      img {
+        order: 1;
+        width: 90%;
+      }
+      h1 {
+        padding-right: 0;
+      }
+      p {
+        padding-left: 0;
       }
     }
   }

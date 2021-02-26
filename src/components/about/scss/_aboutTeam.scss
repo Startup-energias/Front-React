@@ -1,0 +1,61 @@
+@import '../../../assets/scss/02_base/colors';
+
+.team {
+  margin-top: 3rem;
+  &__text {
+    height: 16rem;
+  }
+  &__title {
+    padding-left: 12%;
+    font-weight: bold;
+    font-size: 400%;
+  }
+  &__members {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  $card_height: 380px;
+  $social_height: 40px;
+  &__member {
+    height: $card_height;
+    width: 200px;
+    margin: 20px;
+    h1,
+    h2,
+    h3 {
+      margin-top: 0.2rem;
+    }
+  }
+  &__image {
+    overflow: hidden;
+    position: relative;
+    height: ($card_height - $social_height);
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+    .social {
+      position: absolute;
+      width: 100%;
+      height: $social_height;
+      bottom: -$social_height;
+      transition: 0.5s;
+      a {
+        color: $dark;
+        &:hover {
+          color: $warning;
+        }
+      }
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+      .social {
+        bottom: 0;
+      }
+    }
+  }
+}

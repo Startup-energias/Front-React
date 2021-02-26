@@ -1,8 +1,8 @@
 @import '../../../assets/scss/02_base/colors';
-.infoSection {
+.banner {
   margin-top: 4.3rem;
   position: relative;
-  padding: 4rem 3rem 8rem 3rem;
+  padding: 5.5rem 3rem 8rem 3rem;
   @media (min-width: 1200px) {
     justify-content: center;
   }
@@ -18,9 +18,6 @@
         width: auto;
         position: absolute;
         left: -5%;
-      }
-      &__sub {
-        padding-left: 3%;
       }
     }
     .title {
@@ -53,7 +50,7 @@
   &__subtext {
     max-width: 25rem;
     @media (min-width: 1200px) {
-      padding-top: 37%;
+      padding-top: 33%;
     }
     @media (max-width: 826px) {
       font-size: 15px;
@@ -85,19 +82,25 @@
     @include setColor(#247dff);
   }
   &__button {
+    font-size: 16px;
     margin: 0.5rem 1rem;
     border-style: solid;
-    height: 2.5rem;
-    width: 10rem;
+    height: 3.5rem;
+    width: 14rem;
     cursor: pointer;
     transition: 0.5s;
+    @media (max-width: 613px) {
+      font-size: 12px;
+      height: 2.5rem;
+      width: auto;
+    }
   }
   &__img {
-    margin-left: 8%;
+    margin-left: 5%;
     width: 29rem;
     height: auto;
     order: 1;
-    @media (max-width: 1191px) {
+    @media (max-width: 1200px) {
       order: 0;
       margin: 0 2rem 0 0;
     }

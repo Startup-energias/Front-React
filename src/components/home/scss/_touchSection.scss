@@ -1,0 +1,116 @@
+@import '../../../assets/scss/02_base/colors';
+
+.touch {
+  @media (min-width: 960px) {
+    padding: 6rem 12% 0;
+  }
+  .title {
+    color: $dark;
+  }
+  h1 {
+    width: 100%;
+    padding-left: 4rem;
+  }
+  &__container {
+    width: 100%;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 0;
+    justify-content: center;
+  }
+  &__content {
+    width: 60%;
+    padding-left: 4rem;
+  }
+  li {
+    margin-bottom: 2rem;
+    .text {
+      padding-top: 4px;
+    }
+    a {
+      transition: 0.5s;
+      .text {
+        color: $dark;
+      }
+      &:hover {
+        .text,
+        .touch__icon {
+          color: $warning;
+        }
+        .touch__circle {
+          border: 2px solid $warning;
+        }
+      }
+    }
+  }
+  &__icon {
+    color: $primary;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+  &__bigger {
+    font-size: 26px;
+  }
+  &__circle {
+    padding-top: 1px;
+    font-size: 16px;
+    border-radius: 50%;
+    border: 2px solid $primary;
+  }
+
+  &__input {
+    @media (min-width: 874px) {
+      margin-left: 3rem;
+    }
+    width: 40%;
+    padding: 2rem 4rem;
+    @media (max-width: 1225px) {
+      padding: 0 2rem;
+    }
+    .control {
+      margin-bottom: 1rem;
+    }
+    textarea {
+      margin-bottom: 1rem;
+    }
+  }
+  &__button {
+    margin-bottom: 1rem;
+    .button {
+      font-size: 18px;
+      border: 4px solid $dark;
+      padding: 1px;
+      width: 8rem;
+      transition: 0.5s;
+      &:hover {
+        background-color: $dark;
+        color: $primary;
+        border: 1px solid $primary;
+      }
+    }
+  }
+  @media (max-width: 1012px) {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 1rem;
+    }
+    &__input,
+    &__content {
+      width: 90%;
+      position: static;
+    }
+  }
+  @media (max-width: 536px) {
+    &__content {
+      width: 100%;
+    }
+    h1,
+    &__content {
+      padding: 0 4px;
+    }
+  }
+}

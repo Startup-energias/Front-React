@@ -1,45 +1,106 @@
 const images__modal = process.env.REACT_APP_IMAGES_SRC + 'projects/page/modal/';
+const images__payment = process.env.REACT_APP_IMAGES_SRC + 'projects/page/payment/';
+const images__medals = images__payment + 'medals/';
+const images__denominations = images__payment + 'denominations/';
+const images__time = images__payment + 'time/';
 
 export const modalIcons = {
-  media: [
-    images__modal + 'linkedin.png',
-    images__modal + 'twitter.png',
-    images__modal + 'facebook.png',
-    images__modal + 'instagram.png',
-  ],
+  media: {
+    linkedin: images__modal + 'linkedin.png',
+    twitter: images__modal + 'twitter.png',
+    facebook: images__modal + 'facebook.png',
+  },
   support: [
     {
       image: images__modal + 'money.png',
+      title: 'Money',
       link: "/payment"
     },
     {
-      image: images__modal + 'resources.png',
+      image: images__modal + 'skills.png',
+      title: 'Skills',
+      link: '/volunteer'
     },
     {
-      image: images__modal + 'skills.png',
+      image: images__modal + 'resources.png',
+      title: 'Resources'
     },
     {
       image: images__modal + 'share.png',
+      title: 'Share'
     }
   ]
 };
 
 export const payContent = {
-  sections: [
+  end: images__payment + 'people.png',
+  info: [
     {
       title: 'Make the Transaction',
       content: 'Select the payment method and follow the steps.',
-      image: images__modal + 'card.png'
+      image: images__payment + 'card.png'
     },
     {
       title: 'Access project information',
       content: 'Track how your money is being invested through monthly newsletters issued on the board of our plataform',
-      image: images__modal + 'info.png'
+      image: images__payment + 'info.png'
     },
     {
       title: 'Receive your reward',
       content: 'Depending on the amount you donated,receive a donation certificate, a creaft made by the impacted community, or a guided tour of the completed project.',
-      image: images__modal + 'box.png'
+      image: images__payment + 'box.png'
+    }
+  ],
+  medals: [
+    {
+      value: 'bronze',
+      image: images__medals + 'bronze.png'
+    }
+  ],
+  denominations: [
+    {
+      cant: 10,
+      image: images__denominations + 'money10.png'
+    },
+    {
+      cant: 30,
+      image: images__denominations + 'money30.png'
+    },
+    {
+      cant: 50,
+      image: images__denominations + 'money50.png'
+    },
+    {
+      type: 'Other',
+      image: images__denominations + 'moneyOther.png'
+    },
+  ],
+  time: [
+    {
+      freq: 'Just once',
+      image: images__time + 'once.png',
+    },
+    {
+      freq: 'Montly',
+      image: images__time + 'montly.png',
+    }
+  ]
+
+}
+
+export const volunteerContent = {
+  info: [
+    {
+      title: 'Tell us about yourself',
+      content: 'Fill out the form to find out your profile and aspirations'
+    },
+    {
+      title: 'We connect you with the team',
+      content: 'Meet the people behind your favorite project along with the details and requirements to be part of the project'
+    },
+    {
+      title: 'You are already a member of the team, start making an impact!',
+      content: 'Once linked to the project, it begins to work. Your team will define the steps to follow'
     }
   ]
 }

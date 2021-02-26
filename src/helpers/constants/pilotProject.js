@@ -3,10 +3,10 @@ const project = {
   banner: "banner.jpg",
   images: [
     "img2.jpg",
-    "img3.jpg",
-    "img4.jpg",
     "sal1.png",
+    "img3.jpg",
     "sal2.png",
+    "img4.jpg",
     "sal3.png",
     "sal4.png",
     "sal5.png",

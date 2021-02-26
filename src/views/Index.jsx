@@ -1,22 +1,22 @@
-import InfoSection from '../components/home/InfoSection';
+import BannerSection from '../components/home/BannerSection';
 import HowSection from '../components/home/HowSection';
 import ProjectsSection from '../components/home/ProjectsSection';
-import InoverteInfo from '../components/home/InoverteInfo';
+import FeaturesSection from '../components/home/FeaturesSection';
 import SupportersSection from '../components/home/SupportersSection';
 import BlogSection from '../components/home/BlogSection';
-import ContactSection from '../components/home/ContactSection';
+import TouchSection from '../components/home/TouchSection.jsx';
 import './scss/index.scss';
 
 function Index() {
   return (
     <div className="index has-background-white">
-      <InfoSection />
+      <BannerSection />
       <HowSection />
       <ProjectsSection />
-      <InoverteInfo />
+      <FeaturesSection />
       <SupportersSection />
       <BlogSection />
-      <ContactSection />
+      <TouchSection />
     </div>
   );
 }

@@ -22,7 +22,7 @@ function ProjectInfo({ title, categories, location, description, characteristics
             </div>
           ))}
         </div>
-        <div className="project__location is-align-self-flex-end is-flex is-align-items-center mt-2 mb-2 mr-5">
+        <div className="project__location is-flex is-align-items-center mt-2 mb-2 mr-5">
           <img src={images__icons + 'location.png'} alt="location_icon" />
           <p className="is-size-7 is-align-self-center">{location}</p>
         </div>
