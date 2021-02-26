@@ -66,6 +66,7 @@ function Project() {
                 name={project.title}
                 goal={project.goal}
                 amount={project.amount}
+                currency={project.currency}
                 organization={project.organization}
                 supporters={project.supporters}
                 university={project.university}

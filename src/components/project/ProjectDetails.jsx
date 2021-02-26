@@ -3,11 +3,13 @@ import BulmaModal from '../../utils/bulmaModal';
 import './scss/_projectDetails.scss';
 import SupportModal from './SupportModal';
 import { universities } from '../../helpers/constants/universitiesInfo';
+import { FormattedNumber } from 'react-intl';
 
 function ProjectDetails({
   name,
   goal,
   amount,
+  currency,
   organization,
   supporters,
   university,
@@ -38,8 +40,19 @@ function ProjectDetails({
           <span className="is-size-2 has-text-dark">{percentage}%</span>
         </i>
       </div>
-      <p className=" is-size-3 has-text-centered">${amount} Raised</p>
-      <p className=" is-size-5 has-text-centered has-text-black">of ${goal}</p>
+      <p className=" is-size-3 has-text-centered">
+        <FormattedNumber
+          value={amount}
+          style="currency"
+          currency={currency}
+          compactDisplay="long"
+        />{' '}
+        Raised
+      </p>
+      <p className=" is-size-5 has-text-centered has-text-black">
+        of{' '}
+        <FormattedNumber value={goal} style="currency" currency={currency} compactDisplay="long" />
+      </p>
       <p className=" is-size-2 has-text-centered is-italic">Starting soon!</p>
       <button
         id={supportBtn}
