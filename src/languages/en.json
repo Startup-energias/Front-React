@@ -1,7 +1,7 @@
 {
     "loading": "Loading...",
     "launchModal.ready": "Be ready, we are launching soon",
-    "launchModal.info1": "You will be available soon to support the most innovative renewable projects that will bring electricity & water to communities that need it",
+    "launchModal.info1": "You will be available soon to support the most innovative renewable projects that will bring",
     "launchModal.infoStrong": " electricity & water ",
     "launchModal.info2": "to communities that need it",
     "launchModal.button": "Notify me",
@@ -9,5 +9,9 @@
     "countdown.days": "Days",
     "countdown.hours": "Hours",
     "countdown.minutes": "Minutes",
-    "countdown.seconds": "Seconds"
+    "countdown.seconds": "Seconds",
+    "notifyModal.title": "Notice me",
+    "notifyModal.info": "Add your email and we will notify you on our launch day. Stay tuned for new updates!",
+    "notifyModal.submited": "Submited",
+    "notifyModal.button":"send"
 }

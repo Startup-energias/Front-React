@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import { FormattedMessage, FormattedPlural } from 'react-intl';
+const intlPrefix = 'countdown.';
 class Countdown extends Component {
   constructor(props) {
     super(props);
@@ -81,19 +82,22 @@ class Countdown extends Component {
       <div className="countdown is-flex is-flex-wrap-wrap is-justify-content-center">
         <div className="countdown__item is-flex is-flex-direction-column is-align-items-center">
           <p className="title has-text-white has-text-centered m-0">{this.addLeadingZeros(countDown.days)}</p>
-          <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0">{countDown.days === 1 ? 'Day' : 'Days'}</p>
+          <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0"><FormattedPlural value={countDown.days} one={<FormattedMessage id={intlPrefix + 'day'} />} other={<FormattedMessage id={intlPrefix + 'days'} />} /></p>
         </div>
         <div className="countdown__item is-flex is-flex-direction-column is-align-items-center">
           <p className="title has-text-white has-text-centered m-0">{this.addLeadingZeros(countDown.hours)}</p>
-          <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0">Hours</p>
+          <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0"><FormattedMessage id={intlPrefix + 'hours'} />
+          </p>
         </div>
         <div className="countdown__item is-flex is-flex-direction-column is-align-items-center">
           <p className="title has-text-white has-text-centered m-0">{this.addLeadingZeros(countDown.min)}</p>
-          <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0">Minutes</p>
+          <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0"><FormattedMessage id={intlPrefix + 'minutes'} />
+          </p>
         </div>
         <div className="countdown__item is-flex is-flex-direction-column is-align-items-center">
           <p className="title has-text-white has-text-centered m-0">{this.addLeadingZeros(countDown.sec)}</p>
-          <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0">Seconds</p>
+          <p className="is-size-6 has-text-white has-text-centered is-uppercase m-0"><FormattedMessage id={intlPrefix + 'seconds'} />
+          </p>
         </div>
       </div>
     );

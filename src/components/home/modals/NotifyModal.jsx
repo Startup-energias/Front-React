@@ -4,6 +4,8 @@ import ModalHead from '../../shared/modal/ModalHead';
 import ModalFooter from '../../shared/modal/ModalFooter';
 import './scss/_notifyModal.scss';
 import '../../shared/scss/_standardModal.scss';
+import { FormattedMessage } from 'react-intl';
+const intlPrefix = 'notifyModal.';
 
 function NotifyModal({ idModal }) {
   const api = process.env.REACT_APP_INOVERTE_API;
@@ -63,16 +65,21 @@ function NotifyModal({ idModal }) {
                 <img src={process.env.REACT_APP_IMAGES_SRC + 'home/notify.png'} alt="notify" />
               </div>
               <div className="modals__form is-flex is-flex-direction-column is-align-items-center">
-                <h1 className="title has-text-dark has-text-centered is-capitalized">Notice me</h1>
+                <h1 className="title has-text-dark has-text-centered is-capitalized">
+                  <FormattedMessage id={intlPrefix + 'title'} />
+                </h1>
                 <p className="has-text-dark">
-                  Add your email and we will notify you on our launch day. Don&apos;t worry we
-                  won&apos;t contact you after that.
+                  <FormattedMessage id={intlPrefix + 'info'} />
                 </p>
                 {submited ? (
                   saved ? (
-                    <div className="has-text-dark">Submited</div>
+                    <div className="has-text-dark">
+                      <FormattedMessage id={intlPrefix + 'submited'} />
+                    </div>
                   ) : (
-                    <div className="has-text-dark">Loading...</div>
+                    <div className="has-text-dark">
+                      <FormattedMessage id={'loading'} />
+                    </div>
                   )
                 ) : (
                   <div>
@@ -80,10 +87,10 @@ function NotifyModal({ idModal }) {
                       className="input is-info"
                       type="email"
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="test@correo.com"
+                      placeholder="test@mail.com"
                     />
                     <button className="button modals__button" onClick={() => handleSubmit()}>
-                      Send
+                      <FormattedMessage id={intlPrefix + 'button'} />
                     </button>
                   </div>
                 )}

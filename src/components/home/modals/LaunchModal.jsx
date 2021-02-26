@@ -1,5 +1,6 @@
+import { FormattedMessage } from 'react-intl';
+const intlPrefix = 'launchModal.';
 import Countdown from '../../shared/Countdown';
-
 import './scss/_launchModal.scss';
 
 function LaunchModal({ idModal, notifyBtn }) {
@@ -22,7 +23,7 @@ function LaunchModal({ idModal, notifyBtn }) {
             alt="minicon"
           />
           <p className="launch__title has-text-centered is-uppercase has-text-white">
-            Be ready, we are launching soon
+            <FormattedMessage id={intlPrefix + 'ready'} />
           </p>
           <img
             className="launch__name mt-6"
@@ -31,9 +32,11 @@ function LaunchModal({ idModal, notifyBtn }) {
           />
           <hr className="launch__line" />
           <p className="launch__text is-size-6 has-text-centered has-text-white">
-            You will be available soon to support the most innovative renewable projects that will
-            bring <strong className="has-text-white"> electricity &amp; water </strong> to
-            communities that need it
+            <FormattedMessage id={intlPrefix + 'info1'} />
+            <strong className="has-text-white">
+              <FormattedMessage id={intlPrefix + 'infoStrong'} />
+            </strong>
+            <FormattedMessage id={intlPrefix + 'info2'} />
           </p>
           <div className="is-flex is-justify-content-center">
             <button
@@ -42,7 +45,7 @@ function LaunchModal({ idModal, notifyBtn }) {
               data-bulma-modal="close"
               className="launch__button is-uppercase is-size-7"
             >
-              Notify me
+              <FormattedMessage id={intlPrefix + 'button'} />
             </button>
           </div>
 
