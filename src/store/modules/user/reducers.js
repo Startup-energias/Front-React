@@ -9,6 +9,8 @@ const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case types.setAuth:
       return { ...state, auth: action.payload };
+    case types.setUserInfo:
+      return { ...state, userInfo: action.payload };
     default:
       return state;
   }

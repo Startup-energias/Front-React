@@ -28,7 +28,7 @@ function ProjectsSection() {
   }, []);
 
   /*New project
-  
+
   */
 
   const getSlices = (total, group, array) => {
@@ -74,7 +74,7 @@ function ProjectsSection() {
           }
         },
         (error) => {
-          console.err('Fetch error: ' + error);
+          console.error('Fetch error: ' + error);
         },
       );
   };

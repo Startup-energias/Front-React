@@ -23,8 +23,12 @@ const App = () => {
 };
 
 Auth.currentAuthenticatedUser()
-  .then((user) => {
-    console.log(user);
+  .then(async () => {
+    const {
+      accessToken: { jwtToken },
+    } = await Auth.currentSession();
+    console.log(jwtToken);
+    localStorage.setItem('accessToken', jwtToken);
     store.dispatch(setAuth(true));
   })
   .catch(() => store.dispatch(setAuth(false)));
