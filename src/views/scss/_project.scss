@@ -3,6 +3,9 @@
 .project {
   margin-top: 10px;
   &__banner {
+    @media (min-width: 1496px) {
+      min-height: 715px;
+    }
     margin: 0px;
     width: 100%;
     height: auto;
