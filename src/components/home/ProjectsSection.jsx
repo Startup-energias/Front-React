@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProjectCard from '../../components/shared/ProjectCard';
 import { ReactComponent as SvgNext } from '../../assets/svg/right-chevron.svg';
 import { ReactComponent as SvgPrev } from '../../assets/svg/left-chevron.svg';

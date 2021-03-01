@@ -49,7 +49,7 @@ function Navbar({ items, auth }) {
               {auth ? (
                 <button
                   onClick={() => {
-                    console.log('session closes');
+                    Auth.signOut();
                   }}
                   className="button is-white has-text-weight-bold"
                 >
