@@ -33,7 +33,11 @@ function Project() {
           <img
             className="project__banner"
             loading="lazy"
-            src={images__project + project.banner}
+            src={
+              project.banner
+                ? images__project + project.banner
+                : process.env.REACT_APP_IMAGES_SRC + 'util/placeholder.png'
+            }
             alt="banner"
           />
           <div className="columns is-multiline is-centered is-6 mb-5">
