@@ -36,7 +36,7 @@ function Project() {
             src={
               project.banner
                 ? images__project + project.banner
-                : process.env.REACT_APP_IMAGES_SRC + 'util/placeholder.png'
+                : process.env.REACT_APP_IMAGES_SRC + 'util/bigplaceholder.jpg'
             }
             alt="banner"
           />
