@@ -9,7 +9,9 @@ class UserApi {
     return mainInterceptor().get(this.path);
   }
 
-  updateUser() {}
+  updateUser(userProfile) {
+    return mainInterceptor().put(this.path, { ...userProfile });
+  }
 }
 
 export default new UserApi('/user');
