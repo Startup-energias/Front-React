@@ -6,11 +6,15 @@ import './assets/scss/base.scss';
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
-import { Auth } from 'aws-amplify';
+import { cognitoAuth } from './utils/auth/amplifyAuth';
 import { Provider } from 'react-redux';
 import store from './store/store';
-import { setAuth } from './store/modules/user/actions';
+import 'noty/lib/noty.css';
+import 'noty/lib/themes/nest.css';
+
 require('dotenv').config();
+
+cognitoAuth();
 
 const App = () => {
   return (
@@ -21,16 +25,5 @@ const App = () => {
     </React.StrictMode>
   );
 };
-
-Auth.currentAuthenticatedUser()
-  .then(async () => {
-    const {
-      accessToken: { jwtToken },
-    } = await Auth.currentSession();
-    console.log(jwtToken);
-    localStorage.setItem('accessToken', jwtToken);
-    store.dispatch(setAuth(true));
-  })
-  .catch(() => store.dispatch(setAuth(false)));
 
 ReactDOM.render(<App />, document.getElementById('root'));
