@@ -18,12 +18,15 @@ function ProjectCard({
     process.env.REACT_APP_IMAGES_SRC + 'projects/projects__images/project__' + _id + '/';
   const projects__un = process.env.REACT_APP_IMAGES_SRC + 'projects/universities/';
   const percentage = parseInt(amount / goal);
+  const projects__card = card
+    ? projects__img + card
+    : process.env.REACT_APP_IMAGES_SRC + 'util/placeholder.png';
 
   const cardImg = (
     <div
       className="projectCard__image"
       style={{
-        backgroundImage: `url(${projects__img + card})`,
+        backgroundImage: `url(${projects__card})`,
       }}
     >
       <div className="projectCard__categories">

@@ -5,32 +5,25 @@ import ProjectInfo from '../components/project/ProjectInfo';
 import ProjectExtra from '../components/project/ProjectExtra';
 import ProjectDetails from '../components/project/ProjectDetails';
 import ProjectTeam from '../components/project/ProjectTeam';
+import projectApi from '../api/projectApi';
 //styles
 import './scss/_project.scss';
 
 function Project() {
   let { id } = useParams();
-  const projectsUrl = process.env.REACT_APP_INOVERTE_API + 'projects/' + id;
   const images__project =
     process.env.REACT_APP_IMAGES_SRC + 'projects/projects__images/project__' + id + '/';
 
   let [project, setProject] = useState(null);
   useEffect(() => {
-    fetch(projectsUrl, {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
+    projectApi.getProject(id).then(
+      (res) => {
+        setProject(res.data);
       },
-    })
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setProject(result);
-        },
-        (error) => {
-          console.err('ERROR: ' + error);
-        },
-      );
+      (error) => {
+        console.error('ERROR: ' + error);
+      },
+    );
   }, []);
 
   return (
@@ -40,7 +33,11 @@ function Project() {
           <img
             className="project__banner"
             loading="lazy"
-            src={images__project + project.banner}
+            src={
+              project.banner
+                ? images__project + project.banner
+                : process.env.REACT_APP_IMAGES_SRC + 'util/bigplaceholder.jpg'
+            }
             alt="banner"
           />
           <div className="columns is-multiline is-centered is-6 mb-5">
