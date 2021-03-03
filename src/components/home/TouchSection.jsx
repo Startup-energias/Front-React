@@ -41,11 +41,11 @@ function TouchSection() {
               </a>
             </li>
             <li>
-              <a className="is-flex" href="mailto:valentina.ballen@inoverte.com">
+              <a className="is-flex" href="mailto:support@inoverte.com">
                 <span className="touch__icon touch__circle">
                   <i className=" fa fa-envelope "></i>
                 </span>
-                <span className="text">valentina.ballen@inoverte.com</span>
+                <span className="text">support@inoverte.com</span>
               </a>
             </li>
             <li className="is-flex">
