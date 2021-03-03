@@ -1,14 +1,13 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProjectCard from '../../components/shared/ProjectCard';
 import { ReactComponent as SvgNext } from '../../assets/svg/right-chevron.svg';
 import { ReactComponent as SvgPrev } from '../../assets/svg/left-chevron.svg';
 import './scss/_projectsSection.scss';
+import projectApi from '../../api/projectApi';
 //Pagination
 import Pagination from '@material-ui/lab/Pagination';
 
 function ProjectsSection() {
-  const projectsUrl = process.env.REACT_APP_INOVERTE_API + 'projects';
   //Slice
   const limit = 9;
   const small = 823;
@@ -28,7 +27,7 @@ function ProjectsSection() {
   }, []);
 
   /*New project
-  
+
   */
 
   const getSlices = (total, group, array) => {
@@ -46,37 +45,31 @@ function ProjectsSection() {
   };
 
   const getProjects = async () => {
-    fetch(projectsUrl + '?limit=' + limit, {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
+    projectApi.getProjects(limit).then(
+      (res) => {
+        let result = res.data;
+        setPage(1);
+
+        bigSlices = getSlices(result.totalDocs, group, result.docs);
+        smallSlices = getSlices(result.totalDocs, smallGroup, result.docs);
+        setBigSlices(bigSlices);
+        setSmallSlices(smallSlices);
+
+        setTotal(result.totalDocs);
+        if (window.innerWidth >= small) {
+          setBig(true);
+          setProjects(bigSlices[0]);
+          setTotalSlices(Math.ceil(result.totalDocs / group));
+        } else {
+          setBig(false);
+          setProjects(smallSlices[0]);
+          setTotalSlices(Math.ceil(result.totalDocs / smallGroup));
+        }
       },
-    })
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setPage(1);
-
-          bigSlices = getSlices(result.totalDocs, group, result.docs);
-          smallSlices = getSlices(result.totalDocs, smallGroup, result.docs);
-          setBigSlices(bigSlices);
-          setSmallSlices(smallSlices);
-
-          setTotal(result.totalDocs);
-          if (window.innerWidth >= small) {
-            setBig(true);
-            setProjects(bigSlices[0]);
-            setTotalSlices(Math.ceil(result.totalDocs / group));
-          } else {
-            setBig(false);
-            setProjects(smallSlices[0]);
-            setTotalSlices(Math.ceil(result.totalDocs / smallGroup));
-          }
-        },
-        (error) => {
-          console.err('Fetch error: ' + error);
-        },
-      );
+      (error) => {
+        console.error('Fetch error: ' + error);
+      },
+    );
   };
 
   function handleResize() {

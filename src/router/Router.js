@@ -14,26 +14,32 @@ import { indexItems } from '../helpers/constants/navbarItems';
 import PrivateRoute from './PrivateRoute';
 
 //Intl componnents
-import { FormattedMessage, IntlProvider } from "react-intl";
-import messages_en from "../languages/en.json";
-import messages_es from "../languages/es.json";
+import { FormattedMessage, IntlProvider } from 'react-intl';
+import messages_en from '../languages/en.json';
+import messages_es from '../languages/es.json';
 
 const messages = {
   es: messages_es,
   en: messages_en,
 };
 //const language = navigator.language.split(/[-_]/)[0];
-const language = 'en'
+const language = 'en';
 
 const indexRouter = () => (
   <IntlProvider locale={language} messages={messages[language]}>
     <BrowserRouter>
       <Navbar items={indexItems} />
-      <Suspense fallback={<div><FormattedMessage id="loading" /></div>}>
+      <Suspense
+        fallback={
+          <div>
+            <FormattedMessage id="loading" />
+          </div>
+        }
+      >
         <Switch>
           <Route exact path="/help" component={HelpNow} />
           <Route path="/projects/:id" component={Project} />
-          <PrivateRoute exact path="/profile" component={Profile} />
+          <PrivateRoute path="/profile" component={Profile} />
           <Route exact path="/payment" component={Payment} />
           <Route exact path="/volunteer" component={Volunteer} />
           <Route exact path="/about" component={About} />

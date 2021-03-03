@@ -21,6 +21,7 @@
     "emailjs-com": "^2.6.4",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.14.1",
+    "noty": "^3.2.0-beta-deprecated",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-card-flip": "^1.0.11",
@@ -36,6 +37,7 @@
     "react-share": "^4.3.1",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
     "swiper": "^6.4.10",
     "web-vitals": "^0.2.4"
   },
