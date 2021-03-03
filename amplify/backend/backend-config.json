@@ -1,6 +1,6 @@
 {
   "auth": {
-    "frontreact7d685ff0": {
+    "frontreact827fda77": {
       "service": "Cognito",
       "serviceType": "imported",
       "providerPlugin": "awscloudformation",
