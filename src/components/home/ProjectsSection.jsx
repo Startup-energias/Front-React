@@ -68,7 +68,7 @@ function ProjectsSection() {
           }
         },
         (error) => {
-          console.err('Fetch error: ' + error);
+          console.error('Fetch error: ' + error);
         },
       );
   };
