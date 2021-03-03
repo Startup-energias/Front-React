@@ -1,17 +1,26 @@
+import React from 'react';
+import { socialMedia } from '../../helpers/constants/socialMedia';
 import './scss/_footer.scss';
 
 function Footer() {
   const inoverte = ['Home', 'Projects', 'About us', 'Our impact'];
-  const socialMedia = ['twitter', 'facebook', 'instagram', 'linkedin', 'whatsapp', 'envelope'];
-
-  let SocialMedia = ({ icons }) => {
-    const list = icons.map((icon) => (
-      <div
-        className="icon-container mx-1 is-flex is-justify-content-center is-align-items-center"
-        key={'footer-' + icon}
-      >
-        <i className={'fa fa-' + icon + ' fa-lg'}></i>
-      </div>
+  let SocialMedia = () => {
+    const list = socialMedia.map((actual) => (
+      <React.Fragment key={'footer-' + actual.icon}>
+        {actual.link ? (
+          <a
+            className="icon-container mx-1 is-flex is-justify-content-center is-align-items-center"
+            href={actual.link}
+            target="Starfall"
+          >
+            <i className={'fa fa-' + actual.icon + ' fa-lg'}></i>
+          </a>
+        ) : (
+          <div className="icon-disabled mx-1 is-flex is-justify-content-center is-align-items-center">
+            <i className={'fa fa-' + actual.icon + ' fa-lg'}></i>
+          </div>
+        )}
+      </React.Fragment>
     ));
     return <div className="icons-container">{list}</div>;
   };
@@ -34,7 +43,7 @@ function Footer() {
     <footer className="footer px-6 pb-6 pt-2 has-background-white">
       <div className="container">
         <div className="is-flex is-flex-direction-column is-justify-content-center">
-          <SocialMedia icons={socialMedia} />
+          <SocialMedia />
           <div className="my-3"></div>
           <Links links={inoverte} />
         </div>
