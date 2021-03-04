@@ -37,6 +37,9 @@ function Navbar({ items, auth }) {
         <a href={`/about`} className="navbar-item mx-6 has-text-dark">
           {items[1]}
         </a>
+        <a id="SupportNow" href={`#SupportNow`} className="navbar-item mx-6 has-text-dark">
+          {items[2]}
+        </a>
         {/*items.map((e) => (
             <a key={e} href={`/${e}`} className="navbar-item mx-6 has-text-dark">
               {e}
