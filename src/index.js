@@ -11,10 +11,13 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import 'noty/lib/noty.css';
 import 'noty/lib/themes/nest.css';
+import { initialize } from './utils/tagManager/dataLayer';
 
 require('dotenv').config();
 
 cognitoAuth();
+
+initialize();
 
 const App = () => {
   return (
@@ -25,5 +28,4 @@ const App = () => {
     </React.StrictMode>
   );
 };
-
 ReactDOM.render(<App />, document.getElementById('root'));
