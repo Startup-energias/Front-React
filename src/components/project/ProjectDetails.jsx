@@ -6,6 +6,7 @@ import { universities } from '../../helpers/constants/universitiesInfo';
 import { FormattedNumber } from 'react-intl';
 
 function ProjectDetails({
+  id,
   name,
   goal,
   amount,
@@ -60,7 +61,7 @@ function ProjectDetails({
       >
         Support now
       </button>
-      <SupportModal modalId={supportId} name={name} email={email} resources={resources} />
+      <SupportModal id={id} modalId={supportId} name={name} email={email} resources={resources} />
       <hr />
       <div className="project__details is-align-items-self-start m-4 px-2">
         <h1 className="title is-size-4 has-text-dark">Details</h1>

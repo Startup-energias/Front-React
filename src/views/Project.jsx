@@ -60,6 +60,7 @@ function Project() {
             </div>
             <div className="project__side column has-background-light ">
               <ProjectDetails
+                id={id}
                 name={project.title}
                 goal={project.goal}
                 amount={project.amount}
