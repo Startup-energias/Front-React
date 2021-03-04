@@ -46,6 +46,7 @@ function SupportModal({ id, modalId, email, name, resources }) {
                       key={'supp-icon' + i}
                     >
                       <img
+                        id={'support__' + icon.title}
                         className="modals__pointer"
                         src={icon.image}
                         alt={'supp-img-' + i}
