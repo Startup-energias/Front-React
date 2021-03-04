@@ -14,12 +14,12 @@ export const modalIcons = {
     {
       image: images__modal + 'money.png',
       title: 'Money',
-      link: "/payment"
+      link: "/payment/"
     },
     {
       image: images__modal + 'skills.png',
       title: 'Skills',
-      link: '/volunteer'
+      link: '/volunteer/'
     },
     {
       image: images__modal + 'resources.png',

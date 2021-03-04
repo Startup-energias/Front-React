@@ -1,7 +1,6 @@
 export const socialMedia = [{
-    icon: 'twitter'
-}, {
-    icon: 'facebook'
+    icon: 'facebook',
+    link: 'https://www.facebook.com/INOVERTE-352040535767122'
 }, {
     icon: 'instagram',
     link: 'https://www.instagram.com/inoverte/'

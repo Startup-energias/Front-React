@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { payContent } from '../helpers/constants/shareContent';
 import './scss/_payment.scss';
 import Stepper from '@material-ui/core/Stepper';
@@ -172,13 +172,40 @@ function Payment() {
     );
   };
 
+  let PaymentStep = () => {
+    return (
+      <div className="end">
+        <div className="is-flex is-flex-direction-column is-justify-content-center">
+          <h1 className="title has-text-dark is-capitalized mb-2">In near future...</h1>
+          <p className="is-size-4 has-text-dark mb-2">
+            This function is not yet available. We will inform you when it is ready!
+          </p>
+        </div>
+        <img src={payContent.end} alt="end_img" />
+      </div>
+    );
+  };
+
+  let ActualStep = () => {
+    switch (activeStep) {
+      case 1:
+        return <MoneyStep />;
+      case 2:
+        return <TimeStep />;
+      case 3:
+        return <MedalStep />;
+      case 4:
+        return <EndStep />;
+      case 5:
+        return <PaymentStep />;
+      default:
+        return <InfoStep />;
+    }
+  };
+
   return (
     <div className="payment is-flex is-flex-direction-column is-align-items-center">
-      {activeStep === 0 && <InfoStep />}
-      {activeStep === 1 && <MoneyStep />}
-      {activeStep === 2 && <TimeStep />}
-      {activeStep === 3 && <MedalStep />}
-      {activeStep === 4 && <EndStep />}
+      <ActualStep />
 
       {activeStep !== 0 && (
         <div className="payment__progress">
@@ -199,7 +226,7 @@ function Payment() {
             Back
           </button>
         )}
-        {activeStep !== 4 &&
+        {activeStep <= 3 &&
           (valid ? (
             <button className="button payment__button" onClick={() => handleNext()}>
               Continue
@@ -209,7 +236,11 @@ function Payment() {
               Continue
             </button>
           ))}
-        {activeStep === 4 && <button className="button payment__button ">End</button>}
+        {activeStep === 4 && (
+          <button id="end__button" className="button payment__button " onClick={() => handleNext()}>
+            End
+          </button>
+        )}
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import ModalFooter from '../shared/modal/ModalFooter';
 import '../shared/scss/_standardModal.scss';
 import './scss/_supportModal.scss';
 
-function SupportModal({ modalId, email, name, resources }) {
+function SupportModal({ id, modalId, email, name, resources }) {
   const titles = ['Support Now', 'Pay now', 'Skills', 'Resources', 'Share'];
 
   let [title, setTitle] = useState(titles[0]);
@@ -15,7 +15,7 @@ function SupportModal({ modalId, email, name, resources }) {
 
   function ChangeModal(arrayId) {
     if (arrayId != -1 && modalIcons.support[arrayId].link) {
-      window.location = modalIcons.support[arrayId].link;
+      window.location = modalIcons.support[arrayId].link + id;
     } else {
       arrayId += 1;
       let temp = [false, false, false, false, false];
@@ -46,6 +46,7 @@ function SupportModal({ modalId, email, name, resources }) {
                       key={'supp-icon' + i}
                     >
                       <img
+                        id={'support__' + icon.title}
                         className="modals__pointer"
                         src={icon.image}
                         alt={'supp-img-' + i}
