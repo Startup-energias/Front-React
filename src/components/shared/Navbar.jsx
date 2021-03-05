@@ -31,13 +31,13 @@ function Navbar({ items, auth }) {
         </button>
       </div>
       <div id="navbarBasicExample" className={`${navToggle && 'is-active'} navbar-menu`}>
-        <a href={`/#${items[0]}`} className="navbar-item mx-6 has-text-dark">
-          {items[0]}
+        <a id="SupportNow" href={`/#Projects`} className="mx-6">
+          <button className="button navbar-btn">{items[0]}</button>
         </a>
-        <a href={`/about`} className="navbar-item mx-6 has-text-dark">
+        {/*<a href={`/projects`} className="navbar-item mx-6 has-text-dark">
           {items[1]}
-        </a>
-        <a id="SupportNow" href={`#SupportNow`} className="navbar-item mx-6 has-text-dark">
+        </a>*/}
+        <a href={`/about`} className="navbar-item mx-6 has-text-dark">
           {items[2]}
         </a>
         {/*items.map((e) => (
