@@ -46,7 +46,7 @@ function bannerSection() {
         <p className="banner__subtext">
           We connect renewable energy projects and financing to benefit off-grid communities
         </p>
-        <div className="buttons mt-3">
+        <div className="buttons mt-5">
           <button id={registerBtn} className="banner__button has-text-centered">
             Boost your renewable project
           </button>
