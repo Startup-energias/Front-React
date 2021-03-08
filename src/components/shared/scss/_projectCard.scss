@@ -11,7 +11,7 @@ $energy_images: $images_url + 'projects/energy/';
 .projectCard {
   overflow: hidden;
   width: 20rem;
-  height: 36rem;
+  height: 41rem;
   p,
   i {
     color: $dark;
@@ -57,7 +57,7 @@ $energy_images: $images_url + 'projects/energy/';
   &__body {
     position: relative;
     padding-bottom: 2rem;
-    min-height: 21rem;
+    min-height: 25rem;
     &--unavailable {
       position: absolute;
       top: 0;
@@ -71,6 +71,7 @@ $energy_images: $images_url + 'projects/energy/';
       font-size: 30px;
       p {
         color: #babfc6;
+        margin-bottom: 7rem;
       }
     }
   }
@@ -85,50 +86,55 @@ $energy_images: $images_url + 'projects/energy/';
       font-size: 10px;
       padding-right: 1.5rem;
     }
-
     div {
       .title {
         font-size: 20px;
       }
-      font-size: 10px;
+      font-size: 11px;
     }
   }
-  &__badges {
-    height: 4.8rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .badge {
-      width: 3.5rem;
-      height: 100%;
-      margin: 0 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 10px;
-      img {
-        width: 3rem;
-        height: 3rem;
-        object-fit: cover;
-      }
-      &__text--little {
-        font-size: 6px;
-      }
-      &__circle {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        border: 2.5px solid $dark;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+  &__features {
+    padding: 0 2rem;
+    .fa {
+      margin-right: 12px;
     }
-    .divisor {
-      background-color: $dark;
-      height: 100%;
-      width: 2px;
+    p {
+      font-size: 13px;
+      margin-bottom: 0.2rem;
     }
+  }
+  &__progress {
+    margin-top: 5%;
+    p {
+      margin-left: 5%;
+    }
+    progress {
+      width: 90%;
+    }
+  }
+
+  &__button {
+    margin-top: 0.4rem;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: darken($primary, 30);
+    color: white;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    &:hover {
+      background-color: white;
+      color: darken($primary, 30);
+    }
+  }
+  &__button--unavailable {
+    margin-top: 0.4rem;
+    width: 10rem;
+    height: 2.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
   }
   &__link {
     width: 100%;

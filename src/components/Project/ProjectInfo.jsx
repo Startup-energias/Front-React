@@ -2,7 +2,15 @@ import './scss/_projectInfo.scss';
 
 const images__icons = process.env.REACT_APP_IMAGES_SRC + 'icons/';
 
-function ProjectInfo({ title, categories, location, description, characteristics }) {
+function ProjectInfo({
+  banner,
+  title,
+  categories,
+  location,
+  description,
+  characteristics,
+  imgSrc,
+}) {
   const icons = [
     images__icons + 'water.png',
     images__icons + 'people.png',
@@ -10,8 +18,16 @@ function ProjectInfo({ title, categories, location, description, characteristics
   ];
 
   return (
-    <div className="is-flex is-flex-direction-column is-justify-content-center">
-      <div className="is-flex is-align-items-center is-flex-wrap-wrap is-justify-content-space-between">
+    <div className="mb-0 is-flex is-flex-direction-column is-justify-content-center">
+      <img
+        className="project__banner"
+        loading="lazy"
+        src={
+          banner ? imgSrc + banner : process.env.REACT_APP_IMAGES_SRC + 'util/bigplaceholder.jpg'
+        }
+        alt="banner"
+      />
+      <div className="mt-0 is-flex is-align-items-center is-flex-wrap-wrap is-justify-content-space-between">
         <div className="project__categories">
           {categories?.map((category, i) => (
             <div className="project__category is-flex is-align-items-flex-end" key={category + i}>

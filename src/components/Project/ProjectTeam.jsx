@@ -3,7 +3,7 @@ import './scss/_projectTeam.scss';
 function ProjectTeam({ team, imgSrc }) {
   return (
     <div className="project__team is-flex is-flex-direction-column">
-      <h1 className="member is-size-4 title has-text-dark m-4">Key contacts</h1>
+      <h1 className="member is-size-4 title has-text-dark m-4">Know our team!</h1>
       {team?.map((member, i) => (
         <div
           className="member__container is-flex is-flex-direction-column is-align-items-flex-center"

@@ -2,7 +2,7 @@
 .banner {
   margin-top: 4.3rem;
   position: relative;
-  padding: 5.5rem 3rem 8rem 3rem;
+  padding: 10rem 3rem 8.7rem 3rem;
   @media (min-width: 1200px) {
     justify-content: center;
   }
@@ -72,10 +72,10 @@
     }
   }
   #financeBtn {
-    @include setColor(#23cee0);
+    @include setColor($info);
   }
   #registerBtn {
-    @include setColor(#247dff);
+    @include setColor($warning);
   }
   &__button {
     font-size: 16px;

@@ -1,21 +1,17 @@
 @import '../../assets/scss/02_base/colors';
 
 .project {
-  margin-top: 10px;
+  margin-top: 6rem;
   &__banner {
-    @media (min-width: 1496px) {
-      min-height: 715px;
-    }
-    margin: 0px;
+    margin: 0;
     width: 100%;
     height: auto;
-    max-height: 715px;
     object-fit: cover;
-    object-position: bottom;
+    object-position: center;
   }
   .columns {
     @media (min-width: 1112px) {
-      $margin-sides: 10em;
+      $margin-sides: 8em;
       margin-right: $margin-sides;
       margin-left: $margin-sides;
     }
@@ -27,7 +23,7 @@
   }
   &__main {
     padding-top: 4px;
-    padding-right: 5%;
+    padding-right: 1rem;
     padding-left: 0%;
   }
   &__side {

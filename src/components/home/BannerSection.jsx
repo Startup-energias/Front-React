@@ -48,11 +48,11 @@ function bannerSection() {
         </p>
         <div className="buttons mt-5">
           <button id={registerBtn} className="banner__button has-text-centered">
-            Boost your renewable project
+            Rise funds for your renewable project
           </button>
           <a href="#Projects">
             <button id="financeBtn" className="banner__button has-text-centered">
-              Finance a renawable project
+              Invest in a renawable project
             </button>
           </a>
         </div>

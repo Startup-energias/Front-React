@@ -47,7 +47,7 @@ function ProjectsSection() {
   const getProjects = async () => {
     projectApi.getProjects(limit).then(
       (res) => {
-        let result = res.data;
+        let result = res.data.data;
         setPage(1);
 
         bigSlices = getSlices(result.totalDocs, group, result.docs);

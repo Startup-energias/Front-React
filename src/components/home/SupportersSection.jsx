@@ -12,7 +12,7 @@ const logos = [
 
 function SupportersSection() {
   return (
-    <section className="supporters has-background-white py-6">
+    <section className="supporters has-background-white py-6" id="Supporters">
       <div className="container mb-6">
         <h1 className="title is-1 has-text-centered has-text-dark"> Supporters</h1>
         <div className="columns is-multiline is-centered px-6">

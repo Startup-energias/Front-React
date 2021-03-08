@@ -16,20 +16,57 @@
   &__button {
     margin: 10px 20px 0;
     border-style: solid;
-    border: 3px solid grey;
+    border: 3px solid $warning;
+    color: $warning;
     height: 50px;
     width: 200px;
+    transition: 0.5s;
+    &:hover {
+      border: 3px white;
+      color: white;
+      background-color: $warning;
+    }
   }
-
+  &__badges {
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .badge {
+      width: 100%;
+      height: 6rem;
+      margin: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 16px;
+      img {
+        width: 3rem;
+        height: 3rem;
+        object-fit: cover;
+      }
+      &__text--little {
+        font-size: 12px;
+      }
+      &__circle {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 2.5px solid $dark;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .divisor {
+      background-color: $dark;
+      height: 100%;
+      width: 2px;
+    }
+  }
   &__details {
     h2 {
       padding-left: 10%;
-    }
-    p {
-      padding-left: 20%;
-    }
-    img {
-      max-width: 100px;
     }
   }
   &__pay {

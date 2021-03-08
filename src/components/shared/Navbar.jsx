@@ -31,11 +31,14 @@ function Navbar({ items, auth }) {
         </button>
       </div>
       <div id="navbarBasicExample" className={`${navToggle && 'is-active'} navbar-menu`}>
-        <a href={`/projects`} className="navbar-item mx-6 has-text-dark">
+        <a href={`/#Projects`} className="navbar-item mx-6 has-text-dark">
           {items[0]}
         </a>
         <a href={`/about`} className="navbar-item mx-6 has-text-dark">
           {items[1]}
+        </a>
+        <a href={`/#Supporters`} className="navbar-item mx-6 has-text-dark">
+          {items[2]}
         </a>
         {/*items.map((e) => (
             <a key={e} href={`/${e}`} className="navbar-item mx-6 has-text-dark">
@@ -44,7 +47,7 @@ function Navbar({ items, auth }) {
           ))*/}
         <div className="navbar-end pr-4">
           <a id="SupportNow" href={`/#Projects`} className="mx-6">
-            <button className="button navbar-btn">{items[2]}</button>
+            <button className="button navbar-btn">{items[3]}</button>
           </a>
           <div className="navbar-divider" />
           <div className="navbar-item navbar__registration">

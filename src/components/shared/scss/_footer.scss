@@ -4,6 +4,9 @@
 .footer {
   a {
     color: darken(white, 10%);
+    &:hover {
+      color: $primary;
+    }
   }
   .icon-container {
     color: darken(white, 50%);
