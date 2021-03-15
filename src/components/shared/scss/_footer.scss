@@ -2,9 +2,6 @@
 @import '../../../assets/scss/03_utils/custom';
 
 .footer {
-  .top{
-    height: 50px;
-  }
   @media (min-width: 1013px) {
     .top{
       height: 100px;
