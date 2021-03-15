@@ -13,7 +13,6 @@
   }
   &__container {
     width: 100%;
-    position: relative;
     padding-top: 2rem;
     padding-bottom: 0;
     justify-content: center;
@@ -61,19 +60,31 @@
   }
 
   &__input {
+    position: relative;
     @media (min-width: 874px) {
       margin-left: 3rem;
     }
     width: 40%;
-    padding: 2rem 4rem;
-    @media (max-width: 1225px) {
-      padding: 0 2rem;
+      .control {
+        margin-bottom: 1rem;
+      }
+      textarea {
+        margin-bottom: 1rem;
+      }
+    .box{
+      width: 100%;
     }
-    .control {
-      margin-bottom: 1rem;
-    }
-    textarea {
-      margin-bottom: 1rem;
+  }
+  
+    @media (min-width: 1013px) {
+      &__input {
+        .box{
+            top: -10;
+            position: absolute;
+        }
+      }
+      .bottom{
+      height: 80px;
     }
   }
   &__button {

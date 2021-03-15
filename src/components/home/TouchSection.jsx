@@ -56,45 +56,48 @@ function TouchSection() {
             </li>
           </ul>
         </div>
-        <div className="touch__input box is-flex is-flex-direction-column">
-          <h2 className="title is-3 my-5 is-capitalized">Say something</h2>
-          <form onSubmit={sendEmail}>
-            <div className="control has-icons-left has-icons-right">
-              <input
-                className="input is-warning"
-                type="text"
-                name="name"
-                placeholder="Your name"
+        <div className="touch__input is-flex is-flex-direction-column">
+          <div className="box">
+            <h2 className="title is-3 my-5 is-capitalized">Say something</h2>
+            <form onSubmit={sendEmail}>
+              <div className="control has-icons-left has-icons-right">
+                <input
+                  className="input is-warning"
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-user-o"></i>
+                </span>
+              </div>
+              <div className="control has-icons-left has-icons-right">
+                <input
+                  className="input is-warning"
+                  type="email"
+                  name="email"
+                  placeholder="Your mail"
+                  required
+                />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-envelope-o"></i>
+                </span>
+              </div>
+              <textarea
+                className="textarea is-warning"
+                placeholder="Message"
+                name="message"
                 required
-              />
-              <span className="icon is-small is-left">
-                <i className="fa fa-user-o"></i>
-              </span>
-            </div>
-            <div className="control has-icons-left has-icons-right">
-              <input
-                className="input is-warning"
-                type="email"
-                name="email"
-                placeholder="Your mail"
-                required
-              />
-              <span className="icon is-small is-left">
-                <i className="fa fa-envelope-o"></i>
-              </span>
-            </div>
-            <textarea
-              className="textarea is-warning"
-              placeholder="Message"
-              name="message"
-              required
-            ></textarea>
-            <div className="touch__button is-flex is-justify-content-center">
-              <input type="submit" className="button" value="Send"></input>
-            </div>
-          </form>
+              ></textarea>
+              <div className="touch__button is-flex is-justify-content-center">
+                <input type="submit" className="button" value="Send"></input>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
+      <div className="bottom"></div>
     </section>
   );
 }

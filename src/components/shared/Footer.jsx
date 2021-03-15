@@ -32,7 +32,7 @@ function Footer() {
       </a>
     ));
     return (
-      <div className="text-container is-flex is-justify-content-center is-align-items-center has-text-dark">
+      <div className="text-container is-flex is-justify-content-center is-align-items-center has-text-light">
         <span className="mx-3">@COPYRIGHT 2021</span>
         {list}
       </div>
@@ -40,7 +40,8 @@ function Footer() {
   };
 
   return (
-    <footer className="footer px-6 pb-6 pt-2 has-background-white">
+    <footer className="footer px-6 pb-6 pt-2 has-background-dark">
+      <div className="top"></div>
       <div className="container">
         <div className="is-flex is-flex-direction-column is-justify-content-center">
           <SocialMedia />

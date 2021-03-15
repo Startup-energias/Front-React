@@ -2,14 +2,22 @@
 @import '../../../assets/scss/03_utils/custom';
 
 .footer {
+  .top{
+    height: 50px;
+  }
+  @media (min-width: 1013px) {
+    .top{
+      height: 100px;
+    }
+  }
   a {
-    color: $dark;
+    color: darken(white, 10%);
     &:hover {
       color: $primary;
     }
   }
   .icon-container {
-    color: darken(white, 50%);
+    color: darken(white, 70%);
     background-color: darken(white, 10%);
     border-radius: 50%;
     height: 50px;
