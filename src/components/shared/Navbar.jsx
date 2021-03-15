@@ -47,7 +47,9 @@ function Navbar({ items, auth }) {
           ))*/}
         <div className="navbar-end pr-4">
           <a id="SupportNow" href={`/#Projects`} className="mx-6">
-            <button className="button navbar-btn">{items[3]}</button>
+            <button id="SupportNow" className="button navbar-btn">
+              {items[3]}
+            </button>
           </a>
           <div className="navbar-divider" />
           <div className="navbar-item navbar__registration">

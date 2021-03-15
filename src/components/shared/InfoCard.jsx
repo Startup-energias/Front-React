@@ -14,7 +14,7 @@ function InfoCard({ section }) {
         </div>
       </div>
       <a className="buttons is-centered" href="/#">
-        <button className="button">{section.link}</button>
+        <button className="ml-3 button">{section.link}</button>
       </a>
     </div>
   );

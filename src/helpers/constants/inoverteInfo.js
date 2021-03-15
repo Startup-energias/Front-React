@@ -24,7 +24,7 @@ export const sections = [
   {
     image: statics_img,
     title: 'Tracking tools',
-    content: 'In Inoverte we go further than only finding funds.Receive monthly updates on the status of your investment and the project',
+    content: 'Receive monthly updates on the status of your investment and the project',
     link: 'Track'
   },
 ];

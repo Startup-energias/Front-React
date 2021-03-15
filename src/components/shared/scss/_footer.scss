@@ -3,7 +3,7 @@
 
 .footer {
   a {
-    color: darken(white, 10%);
+    color: $dark;
     &:hover {
       color: $primary;
     }

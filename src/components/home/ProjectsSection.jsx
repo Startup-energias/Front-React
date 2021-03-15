@@ -97,7 +97,7 @@ function ProjectsSection() {
   };
 
   const handleArrow = (num) => {
-    if ((page < totalSlices && num === 1) || (page > 0 && num === -1)) {
+    if ((page < totalSlices && num === 1) || (page > 1 && num === -1)) {
       setPage(page + num);
       let slicesArray = isBig ? bigSlices : smallSlices;
       setProjects(slicesArray[page + num - 1]);
