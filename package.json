@@ -27,6 +27,7 @@
     "react-card-flip": "^1.0.11",
     "react-cool-img": "^1.2.9",
     "react-dom": "^17.0.1",
+    "react-gtm-module": "^2.0.11",
     "react-iframe": "^1.8.0",
     "react-intl": "^5.13.1",
     "react-lines-ellipsis": "^0.14.1",

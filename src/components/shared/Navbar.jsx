@@ -32,10 +32,7 @@ function Navbar({ items, auth, image }) {
         </button>
       </div>
       <div id="navbarBasicExample" className={`${navToggle && 'is-active'} navbar-menu`}>
-        <a
-          href={`/#${items[0]}`}
-          className="navbar-item mx-6 has-text-dark is-flex is-justify-content-center is-align-items-center"
-        >
+        <a href={`/projects`} className="navbar-item mx-6 has-text-dark">
           {items[0]}
         </a>
         <a
@@ -45,6 +42,9 @@ function Navbar({ items, auth, image }) {
           {items[1]}
         </a>
         <div className="navbar-end pr-4">
+          <a id="SupportNow" href={`/#Projects`} className="mx-6">
+            <button className="button navbar-btn">{items[2]}</button>
+          </a>
           <div className="navbar-divider" />
           <div className="navbar-item navbar__registration is-flex is-justify-content-center is-align-items-stretch">
             {auth ? (
