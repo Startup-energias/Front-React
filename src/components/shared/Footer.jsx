@@ -40,9 +40,8 @@ function Footer() {
   };
 
   return (
-    <footer className="footer px-6 pb-6 pt-2 has-background-dark">
-      <div className="top"></div>
-      <div className="container">
+    <footer className="footer px-6 py-6 has-background-dark">
+      <div className="container is-flex is-align-items-center is-justify-content-center">
         <div className="is-flex is-flex-direction-column is-justify-content-center">
           <SocialMedia />
           <div className="my-3"></div>
