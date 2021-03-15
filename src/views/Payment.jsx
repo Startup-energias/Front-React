@@ -220,7 +220,7 @@ function Payment() {
           </Stepper>
         </div>
       )}
-      <div className="buttons is-centered py-6">
+      <div className="buttons is-centered pt-2 pb-6">
         {activeStep !== 0 && (
           <button className="button payment__button " onClick={() => handleBack()}>
             Back
