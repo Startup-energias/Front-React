@@ -59,8 +59,23 @@ nav {
   }
 
   .navbar__registration {
-    button {
+    .button--login {
       font-size: 13px;
+    }
+  }
+
+  .profileImage {
+    img {
+      border-radius: 50%;
+      overflow: hidden;
+      height: 3rem;
+      width: 3rem;
+      max-height: none;
+    }
+  }
+  .has-dropdown {
+    &:hover {
+      background-color: transparent;
     }
   }
 }
