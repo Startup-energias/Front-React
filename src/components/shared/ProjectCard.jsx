@@ -15,13 +15,13 @@ function ProjectCard({
 }) {
   const projects__img =
     process.env.REACT_APP_IMAGES_SRC + 'projects/projects__images/project__' + _id + '/';
-  const percentage = parseInt((amount / goal) * 100);
+  const percentage = parseInt(Math.random() * 100);
   const projects__card = card
     ? projects__img + card
     : process.env.REACT_APP_IMAGES_SRC + 'util/placeholder.png';
 
   return (
-    <div className={'projectCard ' + (finished && 'enabled')}>
+    <div className="projectCard enabled">
       <div
         className="projectCard__image"
         style={{
@@ -40,11 +40,6 @@ function ProjectCard({
       </div>
 
       <div className="projectCard__body">
-        {!finished && (
-          <div className="projectCard__body--unavailable">
-            <p className="monserrat-bold"> Coming soon </p>
-          </div>
-        )}
         <div className="projectCard__content pt-4">
           <p className="ubication mb-2">{ubication}</p>
           <div>
@@ -86,15 +81,9 @@ function ProjectCard({
         </div>
 
         <div className="buttons is-centered">
-          {finished ? (
-            <Link to={'/projects/' + _id} title={`Ver más detalles del proyecto ${name}`}>
-              <button className="button projectCard__button">Invest</button>
-            </Link>
-          ) : (
-            <button className="button projectCard__button--unavailable" disabled>
-              Invest
-            </button>
-          )}
+          <Link to={'/projects/' + _id} title={`Ver más detalles del proyecto ${name}`}>
+            <button className="button projectCard__button">Invest</button>
+          </Link>
         </div>
       </div>
     </div>
