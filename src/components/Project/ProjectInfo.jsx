@@ -49,31 +49,6 @@ function ProjectInfo({
           <p className="is-size-7 is-align-self-center">{location}</p>
         </div>
       </div>
-      <h1 className="title is-size-2 mt-4 has-text-dark">Detailed information</h1>
-      <div className="box">
-        <img src={spend} alt="completition" />
-      </div>
-      <div className="columns my-5">
-        <div className="column is-4">
-          <div className="box">
-            <img src={raw} alt="box" />
-          </div>
-        </div>
-        <div className="column is-4">
-          <div className="box">
-            <img src={installation} alt="box" />
-          </div>
-        </div>
-        <div className="column is-4">
-          <div className="box">
-            <img src={personnel} alt="box" />
-          </div>
-        </div>
-      </div>
-      <div className="box">
-        <img src={completition} alt="completition" />
-      </div>
-
       <h1 className="title has-text-dark mt-4">{title}</h1>
       <div className="project__characteristics is-flex is-flex-direction-column">
         {characteristics?.map((characteristic, i) => (
