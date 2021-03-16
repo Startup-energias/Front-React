@@ -15,7 +15,7 @@ function ProjectCard({
 }) {
   const projects__img =
     process.env.REACT_APP_IMAGES_SRC + 'projects/projects__images/project__' + _id + '/';
-  const percentage = parseInt(Math.random() * 100);
+  const percentage = parseInt((amount / goal) * 100);
   const projects__card = card
     ? projects__img + card
     : process.env.REACT_APP_IMAGES_SRC + 'util/placeholder.png';
@@ -73,7 +73,7 @@ function ProjectCard({
             </p>
           </div>
           <div className="projectCard__progress">
-            <p>{percentage}% funded</p>
+            <p>Starting soon!</p>
             <progress className="progress is-dark" value={percentage} max="100">
               {percentage}
             </progress>
