@@ -32,13 +32,22 @@ function Navbar({ items, auth, image }) {
         </button>
       </div>
       <div id="navbarBasicExample" className={`${navToggle && 'is-active'} navbar-menu`}>
-        <a href={`/#Projects`} className="navbar-item mx-6 has-text-dark">
+        <a
+          href={`/#Projects`}
+          className="navbar-item navbar-section is-flex is-justify-content-center has-text-dark"
+        >
           {items[0]}
         </a>
-        <a href={`/about`} className="navbar-item mx-6 has-text-dark">
+        <a
+          href={`/about`}
+          className="navbar-item navbar-section is-flex is-justify-content-center has-text-dark"
+        >
           {items[1]}
         </a>
-        <a href={`/#Supporters`} className="navbar-item mx-6 has-text-dark">
+        <a
+          href={`/#Supporters`}
+          className="navbar-item navbar-section is-flex is-justify-content-center has-text-dark"
+        >
           {items[2]}
         </a>
         {/*items.map((e) => (
@@ -47,13 +56,15 @@ function Navbar({ items, auth, image }) {
             </a>
           ))*/}
         <div className="navbar-end pr-4">
-          <a id="SupportNow" href={`/#Projects`} className="mx-6">
-            <button id="SupportNow" className="button navbar-btn">
-              {items[3]}
-            </button>
-          </a>
+          <div className="navbar-item is-flex is-justify-content-center">
+            <a id="SupportNow" href={`/#Projects`} className="mx-6">
+              <button id="SupportNow" className="button navbar-btn">
+                {items[3]}
+              </button>
+            </a>
+          </div>
           <div className="navbar-divider" />
-          <div className="navbar-item navbar__registration is-flex is-justify-content-center is-align-items-stretch">
+          <div className="navbar-item navbar__registration is-flex is-justify-content-center">
             {auth ? (
               <div className="navbar-item has-dropdown is-hoverable">
                 <div className="navbar-link profileImage py-0">
