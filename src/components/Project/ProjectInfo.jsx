@@ -1,3 +1,9 @@
+import completition from 'assets/img/videoOnly/completition.png';
+import spend from 'assets/img/videoOnly/spend.png';
+import raw from 'assets/img/videoOnly/raw.png';
+import personnel from 'assets/img/videoOnly/Personnel.png';
+import installation from 'assets/img/videoOnly/Installation.png';
+
 import './scss/_projectInfo.scss';
 
 const images__icons = process.env.REACT_APP_IMAGES_SRC + 'icons/';
@@ -18,7 +24,7 @@ function ProjectInfo({
   ];
 
   return (
-    <div className="mb-0 is-flex is-flex-direction-column is-justify-content-center">
+    <div className="projectInfo mb-0 is-flex is-flex-direction-column is-justify-content-center">
       <img
         className="project__banner"
         loading="lazy"

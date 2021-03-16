@@ -35,10 +35,7 @@ function Navbar({ items, auth, image }) {
         <a href={`/#Projects`} className="navbar-item mx-6 has-text-dark">
           {items[0]}
         </a>
-        <a
-          href={`/about`}
-          className="navbar-item mx-6 has-text-dark is-flex is-justify-content-center is-align-items-center"
-        >
+        <a href={`/about`} className="navbar-item mx-6 has-text-dark">
           {items[1]}
         </a>
         <a href={`/#Supporters`} className="navbar-item mx-6 has-text-dark">

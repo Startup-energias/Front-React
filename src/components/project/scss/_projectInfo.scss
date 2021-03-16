@@ -52,4 +52,9 @@ $images_icons: $images_url + 'projects/energy/';
       }
     }
   }
+  .projectInfo .columns{
+    $margin-sides: 0;
+    margin-right: $margin-sides;
+    margin-left: $margin-sides;
+  }
 }

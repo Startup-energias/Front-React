@@ -78,7 +78,7 @@ function ProjectCard({
             </p>
           </div>
           <div className="projectCard__progress">
-            <p>{percentage}% funded</p>
+            <p>Starting soon!</p>
             <progress className="progress is-dark" value={percentage} max="100">
               {percentage}
             </progress>
