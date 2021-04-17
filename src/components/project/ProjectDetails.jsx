@@ -10,6 +10,7 @@ import clock_img from 'assets/img/project/clock.png';
 function ProjectDetails({
   id,
   name,
+  link,
   goal,
   amount,
   currency,
@@ -58,7 +59,14 @@ function ProjectDetails({
       >
         Invest now
       </button>
-      <SupportModal id={id} modalId={supportId} name={name} email={email} resources={resources} />
+      <SupportModal
+        id={id}
+        modalId={supportId}
+        name={name}
+        link={link}
+        email={email}
+        resources={resources}
+      />
       <hr />
       <div className="project__details is-align-items-self-start m-4 px-2">
         <h1 className="title is-size-4 has-text-dark">Details</h1>

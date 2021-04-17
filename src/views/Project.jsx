@@ -54,6 +54,7 @@ function Project() {
               <ProjectDetails
                 id={id}
                 name={project.title}
+                link={project.link}
                 goal={project.goal}
                 amount={project.amount}
                 currency={project.currency}

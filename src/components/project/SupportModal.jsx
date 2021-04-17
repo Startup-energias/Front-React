@@ -7,7 +7,7 @@ import ModalFooter from '../shared/modal/ModalFooter';
 import '../shared/scss/_standardModal.scss';
 import './scss/_supportModal.scss';
 
-function SupportModal({ id, modalId, email, name, resources }) {
+function SupportModal({ id, modalId, email, name, link, resources }) {
   const titles = ['Support Now', 'Pay now', 'Skills', 'Resources', 'Share'];
 
   let [title, setTitle] = useState(titles[0]);
@@ -15,7 +15,11 @@ function SupportModal({ id, modalId, email, name, resources }) {
 
   function ChangeModal(arrayId) {
     if (arrayId != -1 && modalIcons.support[arrayId].link) {
-      window.location = modalIcons.support[arrayId].link + id;
+      if (link) {
+        window.location = link;
+      } else {
+        window.location = modalIcons.support[arrayId].link + id;
+      }
     } else {
       arrayId += 1;
       let temp = [false, false, false, false, false];
