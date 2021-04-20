@@ -50,7 +50,7 @@ function LaunchModal({ idModal, notifyBtn }) {
           </div>
 
           <div className="launch__countdown">
-            <Countdown date={'April 30, 2021 03:24:00'} />
+            <Countdown date={'May 30, 2021 00:00:00'} />
           </div>
         </div>
       </div>
