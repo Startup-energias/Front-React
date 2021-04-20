@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import './scss/_projectCard.scss';
+import React from 'react';
 import { Link } from 'react-router-dom';
 function ProjectCard({
   _id,
@@ -65,12 +66,16 @@ function ProjectCard({
               Reduces {features.emissions}kg CO2 emission p.a.
             </p>
           </div>
-          <div className="is-flex">
-            <p>
-              <span className="fa fa-line-chart" aria-hidden="true" />
-              {features.return}% expected annual return
-            </p>
-          </div>
+          {features.return ? (
+            <div className="is-flex">
+              <p>
+                <span className="fa fa-line-chart" aria-hidden="true" />
+                {features.return}% expected annual return
+              </p>
+            </div>
+          ) : (
+            <React.fragment></React.fragment>
+          )}
           <div className="is-flex">
             <p>
               <span className="fa fa-clock-o" aria-hidden="true" />
