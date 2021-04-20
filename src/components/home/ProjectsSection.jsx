@@ -1,11 +1,16 @@
-import { useEffect, useState } from 'react';
-import ProjectCard from '../../components/shared/ProjectCard';
-import { ReactComponent as SvgNext } from '../../assets/svg/right-chevron.svg';
-import { ReactComponent as SvgPrev } from '../../assets/svg/left-chevron.svg';
+import React, { useEffect, useState } from 'react';
+import ProjectCard from 'components/shared/ProjectCard';
+// Next and before
+import { ReactComponent as SvgNext } from 'assets/svg/right-chevron.svg';
+import { ReactComponent as SvgPrev } from 'assets/svg/left-chevron.svg';
+// Styles
 import './scss/_projectsSection.scss';
-import projectApi from '../../api/projectApi';
+// Api
+import projectApi from 'api/projectApi';
 //Pagination
 import Pagination from '@material-ui/lab/Pagination';
+//Loading gif
+import loading_gif from 'assets/img/utils/loading.gif';
 
 function ProjectsSection() {
   //Slice
@@ -111,21 +116,27 @@ function ProjectsSection() {
     >
       <h1 className="title has-text-centered has-text-dark">Trendy projects</h1>
       <div className="projects__cards is-flex is-justify-content-space-between is-align-items-center my-2">
-        <SvgPrev
-          className={page === 1 ? 'arrow-blocked' : 'arrow'}
-          onClick={() => handleArrow(-1)}
-        />
-        <div className="is-flex is-justify-content-center is-flex-wrap-wrap">
-          {projects ? (
-            projects.map((item) => <ProjectCard key={item._id} {...item} />)
-          ) : (
-            <div>Loading...</div>
-          )}
-        </div>
-        <SvgNext
-          className={page === totalSlices ? 'arrow-blocked' : 'arrow'}
-          onClick={() => handleArrow(1)}
-        />
+        {projects ? (
+          <React.Fragment>
+            <SvgPrev
+              className={page === 1 ? 'arrow-blocked' : 'arrow'}
+              onClick={() => handleArrow(-1)}
+            />
+            <div className="is-flex is-justify-content-center is-flex-wrap-wrap">
+              {projects.map((item) => (
+                <ProjectCard key={item._id} {...item} />
+              ))}
+            </div>
+            <SvgNext
+              className={page === totalSlices ? 'arrow-blocked' : 'arrow'}
+              onClick={() => handleArrow(1)}
+            />
+          </React.Fragment>
+        ) : (
+          <div className="is-flex is-justify-content-center is-flex-wrap-wrap">
+            <img src={loading_gif} alt="loading..."></img>
+          </div>
+        )}
       </div>
       <div className="projects__pagination">
         <Pagination count={totalSlices} page={page} onChange={handleChange} />

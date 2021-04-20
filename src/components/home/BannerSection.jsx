@@ -52,7 +52,7 @@ function bannerSection() {
           </button>
           <a href="#Projects">
             <button id="financeBtn" className="banner__button has-text-centered">
-              Invest in a renawable project
+              Support a renawable project
             </button>
           </a>
         </div>

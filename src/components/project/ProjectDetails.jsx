@@ -57,7 +57,7 @@ function ProjectDetails({
         id={supportBtn}
         className="project__button button is-align-self-center is-flex is-justify-content-center is-align-items-center is-size-4 title"
       >
-        Invest now
+        Support now
       </button>
       <SupportModal
         id={id}

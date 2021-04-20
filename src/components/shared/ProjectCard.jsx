@@ -88,11 +88,11 @@ function ProjectCard({
         <div className="buttons is-centered">
           {finished ? (
             <Link to={'/projects/' + _id} title={`Ver más detalles del proyecto ${name}`}>
-              <button className="button projectCard__button">Invest</button>
+              <button className="button projectCard__button">Support</button>
             </Link>
           ) : (
             <button className="button projectCard__button--unavailable" disabled>
-              Invest
+              Support
             </button>
           )}
         </div>
