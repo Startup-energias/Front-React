@@ -71,17 +71,15 @@ function ProjectDetails({
       <div className="project__details is-align-items-self-start m-4 px-2">
         <h1 className="title is-size-4 has-text-dark">Details</h1>
         <div className="project__badges is-flex is-align-content-space-between my-5">
-          {features.return ? (
-            <React.fragment>
+          {features.return > 0 && (
+            <React.Fragment>
               <div className="badge">
                 <img className="mb-2" src={chart_img} alt="chart" />
                 <p className="has-text-centered">{features.return}%</p>
                 <p className="badge__text--little has-text-centered">Annual return</p>
               </div>
               <div className="divisor" />
-            </React.fragment>
-          ) : (
-            <React.fragment></React.fragment>
+            </React.Fragment>
           )}
           <div className="badge">
             <img
@@ -90,7 +88,7 @@ function ProjectDetails({
               alt="user"
             />
             <p className="has-text-centered">{supporters}</p>
-            <p className="badge__text--little has-text-centered">Investors</p>
+            <p className="badge__text--little has-text-centered">Supporters</p>
           </div>
           <div className="divisor" />
           <div className="badge">

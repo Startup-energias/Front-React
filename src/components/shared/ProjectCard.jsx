@@ -67,7 +67,7 @@ function ProjectCard({
             </p>
           </div>
           <div className="is-flex">
-            {features.return ? (
+            {features.return > 0 ? (
               <p>
                 <span className="fa fa-line-chart" aria-hidden="true" />
                 {features.return}% expected annual return
