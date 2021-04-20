@@ -66,16 +66,19 @@ function ProjectCard({
               Reduces {features.emissions}kg CO2 emission p.a.
             </p>
           </div>
-          {features.return ? (
-            <div className="is-flex">
+          <div className="is-flex">
+            {features.return ? (
               <p>
                 <span className="fa fa-line-chart" aria-hidden="true" />
                 {features.return}% expected annual return
               </p>
-            </div>
-          ) : (
-            <React.fragment></React.fragment>
-          )}
+            ) : (
+              <p>
+                <span className="fa fa-line-chart" aria-hidden="true" />
+                No annual return
+              </p>
+            )}
+          </div>
           <div className="is-flex">
             <p>
               <span className="fa fa-clock-o" aria-hidden="true" />
