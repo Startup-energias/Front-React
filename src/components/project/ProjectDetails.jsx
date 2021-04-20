@@ -71,12 +71,18 @@ function ProjectDetails({
       <div className="project__details is-align-items-self-start m-4 px-2">
         <h1 className="title is-size-4 has-text-dark">Details</h1>
         <div className="project__badges is-flex is-align-content-space-between my-5">
-          <div className="badge">
-            <img className="mb-2" src={chart_img} alt="chart" />
-            <p className="has-text-centered">{features.return}%</p>
-            <p className="badge__text--little has-text-centered">Annual return</p>
-          </div>
-          <div className="divisor" />
+          {features.return ? (
+            <React.fragment>
+              <div className="badge">
+                <img className="mb-2" src={chart_img} alt="chart" />
+                <p className="has-text-centered">{features.return}%</p>
+                <p className="badge__text--little has-text-centered">Annual return</p>
+              </div>
+              <div className="divisor" />
+            </React.fragment>
+          ) : (
+            <React.fragment></React.fragment>
+          )}
           <div className="badge">
             <img
               className="mb-2"
